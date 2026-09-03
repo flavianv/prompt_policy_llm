@@ -1,0 +1,10 @@
+name: omni-math-rule
+verifiable: true
+primary_metric: exact_correctness
+dataset_url: https://raw.githubusercontent.com/KbsdJames/omni-math-rule/main/omni_math_rule.jsonl
+fields:
+  problem: problem
+  answer: answer
+  domain: domain
+  difficulty: difficulty
+

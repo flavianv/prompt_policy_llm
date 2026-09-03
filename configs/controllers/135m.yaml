@@ -1,0 +1,6 @@
+name: smollm2-135m-instruct
+model: HuggingFaceTB/SmolLM2-135M-Instruct
+parameters: 135000000
+max_instruction_tokens: 30
+trainable: true
+

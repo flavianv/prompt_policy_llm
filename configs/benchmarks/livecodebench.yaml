@@ -1,0 +1,4 @@
+name: livecodebench
+verifiable: true
+primary_metric: pass_rate
+

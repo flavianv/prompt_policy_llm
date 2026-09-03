@@ -1,0 +1,5 @@
+name: controller-600m
+parameters: 600000000
+max_instruction_tokens: 30
+trainable: true
+

@@ -1,0 +1,4 @@
+name: arc-agi
+verifiable: true
+primary_metric: task_accuracy
+

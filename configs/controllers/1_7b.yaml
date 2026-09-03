@@ -1,0 +1,5 @@
+name: controller-1.7b
+parameters: 1700000000
+max_instruction_tokens: 30
+trainable: true
+

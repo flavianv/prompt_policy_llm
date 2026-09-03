@@ -1,0 +1,5 @@
+name: controller-270m
+parameters: 270000000
+max_instruction_tokens: 30
+trainable: true
+
