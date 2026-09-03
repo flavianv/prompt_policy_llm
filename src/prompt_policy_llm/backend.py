@@ -11,6 +11,7 @@ from .schema import Generation
 
 LUNA_INPUT_USD_PER_MTOK = 0.20
 LUNA_OUTPUT_USD_PER_MTOK = 1.20
+THINK_MODE_CHOICES = ("none", "minimal", "low", "medium", "high", "xhigh")
 
 
 def estimate_luna_cost(input_tokens: int, output_tokens: int) -> float:
@@ -28,6 +29,7 @@ class LunaConfig:
     reasoning_effort: str = "none"
     max_output_tokens: int = 4096
     temperature: float | None = None
+    show_work: bool = False
 
 
 class LunaBackend:
@@ -47,8 +49,8 @@ class LunaBackend:
 
             self._client = OpenAI()
 
-        system = "You solve olympiad math problems. Return the final answer in \\boxed{}."
-        user = build_luna_prompt(problem, instruction)
+        system = build_solver_system_prompt(show_work=self.config.show_work)
+        user = build_luna_prompt(problem, instruction, show_work=self.config.show_work)
         kwargs: dict[str, Any] = {
             "model": self.config.model,
             "input": [
@@ -89,7 +91,10 @@ class LunaBackend:
     def _dry_generate(self, problem: str, instruction: str | None = None) -> Generation:
         del problem
         answer = "1" if instruction else "0"
-        text = f"Dry run response. Final answer: \\boxed{{{answer}}}."
+        if self.config.show_work:
+            text = f"Dry run derivation. Therefore, the final answer is \\boxed{{{answer}}}."
+        else:
+            text = f"Dry run response. Final answer: \\boxed{{{answer}}}."
         prompt_tokens = 200 + len((instruction or "").split())
         output_tokens = len(text.split())
         return Generation(
@@ -104,14 +109,42 @@ class LunaBackend:
         )
 
 
-def build_luna_prompt(problem: str, instruction: str | None = None) -> str:
+def build_solver_system_prompt(show_work: bool = False) -> str:
+    if show_work:
+        return (
+            "You solve olympiad math problems. Give a concise, verifiable derivation "
+            "of the solution, then end with the final answer in \\boxed{}."
+        )
+    return "You solve olympiad math problems. Return the final answer in \\boxed{}."
+
+
+def build_luna_prompt(
+    problem: str,
+    instruction: str | None = None,
+    show_work: bool = False,
+) -> str:
     prompt = ""
     if instruction:
         prompt += f"Controller instruction: {instruction.strip()}\n\n"
     prompt += "Problem:\n"
     prompt += problem.strip()
-    prompt += "\n\nReturn only the final answer in \\boxed{}. Do not include explanation."
+    if show_work:
+        prompt += "\n\nGive a concise derivation, then end with only one final answer in \\boxed{}."
+    else:
+        prompt += "\n\nReturn only the final answer in \\boxed{}. Do not include explanation."
     return prompt
+
+
+def resolve_reasoning_effort(
+    reasoning_effort: str,
+    think_mode: str | None = None,
+) -> str:
+    """Use the explicit think mode when supplied, retaining the legacy flag."""
+
+    resolved = think_mode if think_mode is not None else reasoning_effort
+    if resolved not in THINK_MODE_CHOICES:
+        raise ValueError(f"unsupported reasoning effort: {resolved}")
+    return resolved
 
 
 def extract_response_text(response: object) -> str:

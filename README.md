@@ -73,6 +73,18 @@ OPENAI_API_KEY=... compare-policy \
 Use `--dry-run` to check the display without calling Luna or loading the local
 controller model.
 
+To give Luna native reasoning budget and include a concise derivation in the
+saved trace, add `--think-mode` and `--show-work`:
+
+```bash
+python3 -m prompt_policy_llm.eval_omnimath \
+  --limit 10 --mode both --think-mode low --show-work --max-output-tokens 1024
+```
+
+`--think-mode` accepts `none`, `minimal`, `low`, `medium`, `high`, or `xhigh`.
+It controls Luna's native reasoning effort; `--show-work` controls whether the
+visible response contains a concise derivation before its boxed answer.
+
 The run writes:
 
 - `predictions.jsonl`: baseline and controlled responses.

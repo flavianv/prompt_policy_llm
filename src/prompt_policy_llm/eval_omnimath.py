@@ -6,7 +6,7 @@ import argparse
 from datetime import datetime, timezone
 from pathlib import Path
 
-from .backend import LunaBackend, LunaConfig
+from .backend import THINK_MODE_CHOICES, LunaBackend, LunaConfig, resolve_reasoning_effort
 from .controller import ControllerModelConfig, SMALLEST_CONTROLLER_MODEL, TinyController
 from .datasets import OMNI_MATH_RULE_URL, load_omni_math_rule
 from .evaluation import evaluate_problems
@@ -29,9 +29,10 @@ def main() -> None:
     backend = LunaBackend(
         LunaConfig(
             model=args.luna_model,
-            reasoning_effort=args.reasoning_effort,
+            reasoning_effort=resolve_reasoning_effort(args.reasoning_effort, args.think_mode),
             max_output_tokens=args.max_output_tokens,
             temperature=args.luna_temperature,
+            show_work=args.show_work,
         ),
         dry_run=args.dry_run,
     )
@@ -75,6 +76,16 @@ def parse_args() -> argparse.Namespace:
 
     parser.add_argument("--luna-model", default="gpt-5.6-luna")
     parser.add_argument("--reasoning-effort", default="none")
+    parser.add_argument(
+        "--think-mode",
+        choices=THINK_MODE_CHOICES,
+        help="Native Luna reasoning effort. Overrides --reasoning-effort when supplied.",
+    )
+    parser.add_argument(
+        "--show-work",
+        action="store_true",
+        help="Ask Luna for a concise derivation before the boxed final answer.",
+    )
     parser.add_argument("--max-output-tokens", type=int, default=4096)
     parser.add_argument("--luna-temperature", type=float)
 
