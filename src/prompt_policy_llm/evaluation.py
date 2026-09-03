@@ -11,6 +11,7 @@ from typing import Protocol
 from .answer import exact_match_score, extract_final_answer
 from .finetune import build_rollout_rows, build_sft_rows
 from .schema import ControllerAction, EvalItem, Generation, Problem
+from .traces import write_trace_report
 
 
 class BackendProtocol(Protocol):
@@ -36,6 +37,7 @@ def evaluate_problems(
     rollouts_path = output_dir / "controller_rollouts.jsonl"
     sft_path = output_dir / "controller_sft_seed.jsonl"
     summary_path = output_dir / "metrics.json"
+    traces_path = output_dir / "traces.txt"
 
     eval_items: list[EvalItem] = []
     started = time.perf_counter()
@@ -71,6 +73,7 @@ def evaluate_problems(
     sft_rows = build_sft_rows(eval_items)
     write_jsonl(rollouts_path, rollout_rows)
     write_jsonl(sft_path, sft_rows)
+    write_trace_report(traces_path, eval_items)
 
     summary = summarize(eval_items)
     summary["wall_time_s"] = round(time.perf_counter() - started, 6)
@@ -78,6 +81,7 @@ def evaluate_problems(
         "predictions": str(predictions_path),
         "controller_rollouts": str(rollouts_path),
         "controller_sft_seed": str(sft_path),
+        "traces": str(traces_path),
     }
     summary_path.write_text(json.dumps(summary, indent=2), encoding="utf-8")
     return summary

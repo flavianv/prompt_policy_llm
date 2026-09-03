@@ -56,12 +56,31 @@ Run the real Luna baseline plus SmolLM2-135M controller:
 OPENAI_API_KEY=... python3 -m prompt_policy_llm.eval_omnimath --limit 10 --mode both
 ```
 
+Compare One Problem
+
+For a direct, side-by-side inspection of a single problem, supply the problem and
+its reference answer. The command runs Luna once without a controller and once
+with the tiny controller's <=30-token instruction, then prints both raw outputs,
+extracted answers, reference answers, exact-match scores, latency, and Luna cost.
+
+```bash
+OPENAI_API_KEY=... compare-policy \
+  --problem 'What is 17 + 25?' \
+  --answer '42' \
+  --max-output-tokens 256
+```
+
+Use `--dry-run` to check the display without calling Luna or loading the local
+controller model.
+
 The run writes:
 
 - `predictions.jsonl`: baseline and controlled responses.
 - `metrics.json`: accuracy, lift, latency, token counts, and estimated Luna cost.
 - `controller_rollouts.jsonl`: reward-labeled controller actions for RL or GRPO-style training.
 - `controller_sft_seed.jsonl`: chat-format best-action rows for supervised warm starts.
+- `traces.txt`: one readable trace per problem, with prompt-policy hint, solver output,
+  extracted answer, reference answer, and score.
 
 ## Repository Shape
 
