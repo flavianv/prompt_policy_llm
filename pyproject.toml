@@ -12,15 +12,18 @@ dependencies = []
 [project.optional-dependencies]
 api = ["openai>=1.99"]
 controller = ["torch", "transformers>=4.48"]
+local-hints = ["torch", "transformers>=4.55"]
 train = ["accelerate>=0.34", "torch", "transformers>=4.48"]
 dev = ["pytest>=8"]
-all = ["accelerate>=0.34", "openai>=1.99", "torch", "transformers>=4.48", "pytest>=8"]
+all = ["accelerate>=0.34", "openai>=1.99", "torch", "transformers>=4.55", "pytest>=8"]
 
 [project.scripts]
 eval-omnimath = "prompt_policy_llm.eval_omnimath:main"
 train-controller = "prompt_policy_llm.train_controller:main"
 compare-policy = "prompt_policy_llm.compare_policy:main"
 render-traces = "prompt_policy_llm.traces:main"
+generate-teacher-hints = "prompt_policy_llm.teacher_hints:main"
+compare-critic-oracle = "prompt_policy_llm.critic_oracle:main"
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]

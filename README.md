@@ -85,6 +85,82 @@ python3 -m prompt_policy_llm.eval_omnimath \
 It controls Luna's native reasoning effort; `--show-work` controls whether the
 visible response contains a concise derivation before its boxed answer.
 
+## Teacher Hint Data
+
+Generate verified controller supervision with a selectable teacher, including Luna
+itself or a stronger configured model.
+The pipeline runs (or reads) a baseline, asks the teacher for bounded short hints,
+runs frozen Luna with every accepted hint, and retains structured examples where a
+baseline miss flips to a correct hinted answer. It never starts training.
+
+The command defaults to one problem and one candidate. By default it only calls
+the teacher on baseline misses; use `--teacher-on-all` to override that behavior.
+
+For a reproducible answer-aware Sol oracle upper bound, the harness first scores
+a fresh Luna baseline on at most 20 items, selects exactly five current failures,
+then gives Sol the original problem plus the trusted reference answer for private
+checking. Luna receives only the original problem plus a parser-approved hint,
+never the reference answer. If fewer than five failures are found, no hints are
+generated and the recorded shortage is reported. This is not deployment-valid.
+
+```bash
+OPENAI_API_KEY=... python3 -m prompt_policy_llm.teacher_hints \
+  --teacher-model gpt-5.6-sol --teacher-reasoning-effort low \
+  --think-mode low --max-output-tokens 1024 \
+  --answer-aware-teacher --candidates 1 --target-current-failures 5 \
+  --max-baseline-search 20 --output-dir runs/sol_oracle_current_failure_5
+```
+
+```bash
+OPENAI_API_KEY=... python3 -m prompt_policy_llm.teacher_hints \
+  --limit 1 --candidates 1 --teacher-on-all \
+  --max-output-tokens 512 --teacher-max-output-tokens 128
+```
+
+For a no-spend shape check, add `--dry-run`. To reuse a prior baseline run rather
+than call Luna again, pass `--baseline-predictions path/to/predictions.jsonl`.
+
+For oracle data generation, `--answer-aware-teacher` gives the teacher the trusted
+verifier answer for private checking only. The answerer never receives it: it gets
+only the original problem plus a leak-checked hint. This is an upper-bound data
+generation experiment, not a deployment evaluation.
+
+Each run writes `baselines.jsonl`, raw `teacher_proposals.jsonl`, verified
+`verified_teacher_candidates.jsonl`, flip-only `teacher_flips_sft.jsonl`, and
+`metrics.json` with teacher, solver, and total estimated cost.
+
+### Local LFM2 Hint Provider
+
+Use `LiquidAI/LFM2-350M-Math` locally as the deployment-valid controller-hint
+provider while keeping Luna as the frozen answerer:
+
+```bash
+OPENAI_API_KEY=... python3 -m prompt_policy_llm.teacher_hints \
+  --hint-model lfm2-350m-math --limit 1 --candidates 1 --teacher-on-all
+```
+
+The model is loaded lazily only when an eligible hint is requested. Install the
+local runtime with `pip install -e '.[local-hints]'`; LFM2 requires
+`transformers>=4.55`. The provider uses the model's single-turn chat template and
+never receives a trusted reference answer or baseline answer text. It targets
+8-16 tokens, uses a hard `max_new_tokens=30` cap, and then passes the existing
+30-word/leak parser before Luna receives any hint. `--answer-aware-teacher` is
+intentionally rejected with this provider. Use `--local-hint-device auto|cpu|cuda|mps`
+to select a local device.
+
+## Critic Oracle
+
+`compare-critic-oracle` compares direct Luna thinking with an answer-aware
+plan/critic/executor upper bound. The critic can see the trusted answer, but the
+final frozen executor receives only the original problem plus leak-checked plan
+and critique. This is explicitly not deployment-valid.
+
+```bash
+OPENAI_API_KEY=... python3 -m prompt_policy_llm.critic_oracle \
+  --problem-ids HMMT_11:620,HMMT_2:1320,fermat:885,HMMT_11:510,HMMT_2:1199 \
+  --min-difficulty 2.5 --max-difficulty 4
+```
+
 The run writes:
 
 - `predictions.jsonl`: baseline and controlled responses.
@@ -93,6 +169,11 @@ The run writes:
 - `controller_sft_seed.jsonl`: chat-format best-action rows for supervised warm starts.
 - `traces.txt`: one readable trace per problem, with prompt-policy hint, solver output,
   extracted answer, reference answer, and score.
+
+To isolate an answerer-budget change while preserving an oracle's exact accepted
+hints, pass `--cached-hints-from path/to/teacher_proposals.jsonl` with the same
+`--problem-ids`. This makes no teacher calls and writes SHA-256 source/replay hint
+identity records to `cached_hint_provenance.json`.
 
 ## Repository Shape
 
