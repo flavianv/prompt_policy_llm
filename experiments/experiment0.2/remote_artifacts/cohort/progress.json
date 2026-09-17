@@ -1,0 +1,90 @@
+{
+  "completed": 7,
+  "target": 10,
+  "users": [
+    {
+      "user": "user01",
+      "profile_reused": true,
+      "evaluated_elsewhere": true,
+      "name": "Maya Okafor",
+      "sessions": 10,
+      "questions": 20,
+      "statements": 86
+    },
+    {
+      "user": "user02",
+      "profile_reused": false,
+      "evaluated_elsewhere": false,
+      "generation_and_session_seconds": 30.22306749993004,
+      "name": "Evan Mercer",
+      "sessions": 10,
+      "questions": 20,
+      "statements": 73
+    },
+    {
+      "user": "user03",
+      "profile_reused": false,
+      "evaluated_elsewhere": false,
+      "generation_and_session_seconds": 36.46785835409537,
+      "name": "Aiko Nakamura",
+      "sessions": 10,
+      "questions": 20,
+      "statements": 79
+    },
+    {
+      "user": "user04",
+      "profile_reused": false,
+      "evaluated_elsewhere": false,
+      "generation_and_session_seconds": 35.64035610295832,
+      "name": "Rafael Mendes",
+      "sessions": 10,
+      "questions": 20,
+      "statements": 85
+    },
+    {
+      "user": "user08",
+      "profile_reused": false,
+      "evaluated_elsewhere": false,
+      "generation_and_session_seconds": 40.06012434582226,
+      "name": "Jonas Weber",
+      "sessions": 10,
+      "questions": 20,
+      "statements": 74
+    },
+    {
+      "user": "user09",
+      "profile_reused": false,
+      "evaluated_elsewhere": false,
+      "generation_and_session_seconds": 26.982748854905367,
+      "name": "Giulia Bianchi",
+      "sessions": 10,
+      "questions": 20,
+      "statements": 84
+    },
+    {
+      "user": "user10",
+      "profile_reused": false,
+      "evaluated_elsewhere": false,
+      "generation_and_session_seconds": 27.51713713607751,
+      "name": "Daniel Mwangi",
+      "sessions": 10,
+      "questions": 20,
+      "statements": 86
+    }
+  ],
+  "failures": [
+    {
+      "user": "user05",
+      "error_type": "ValueError"
+    },
+    {
+      "user": "user07",
+      "error_type": "ValueError"
+    },
+    {
+      "user": "user06",
+      "error_type": "ValueError"
+    }
+  ],
+  "elapsed_seconds": 99.57802477409132
+}

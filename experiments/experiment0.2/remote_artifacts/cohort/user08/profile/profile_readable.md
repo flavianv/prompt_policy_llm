@@ -1,0 +1,283 @@
+# Actual Luna-generated initial profile
+
+Model: gpt-5.6-luna
+
+- schema_version: user-profile-1.1
+- profile_id: user08
+- reference_date: 2026-03-01
+- personal / name: Jonas Weber
+- personal / gender: male
+- personal / birth_date: 1991-07-14
+- personal / age: 34
+- personal / race: White European
+- personal / nationality: German
+- personal / marital_status: partnered
+- residence / city: Leipzig
+- residence / region: Saxony
+- residence / country: Germany
+- residence / timezone: Europe/Berlin
+- languages [1] / language: German
+- languages [1] / proficiency: native
+- languages [2] / language: English
+- languages [2] / proficiency: fluent
+- languages [3] / language: French
+- languages [3] / proficiency: basic
+- professional / situation: employed
+- professional / occupation: user experience researcher
+- professional / industry: software and digital services
+- professional / education / level: master
+- professional / education / field: psychology
+- professional / income / amount: 5200
+- professional / income / currency: EUR
+- professional / income / period: month
+- physical / height / value: 181
+- physical / height / unit: cm
+- physical / weight / value: 78
+- physical / weight / unit: kg
+- physical / build: average
+- physical / hair_color: dark blond
+- physical / eye_color: blue
+- interests / hobbies: cycling, cooking, urban photography, reading historical nonfiction
+- interests / other_interests: public transit design, independent cinema, European architecture
+- general_preferences [1] / topic: food
+- general_preferences [1] / item: very spicy dishes
+- general_preferences [1] / stance: dislike
+- general_preferences [1] / scope: global
+- general_preferences [1] / category: explicitly unknown
+- general_preferences [1] / shopping_effect: background_only
+- general_preferences [2] / topic: books
+- general_preferences [2] / item: historical nonfiction
+- general_preferences [2] / stance: like
+- general_preferences [2] / scope: global
+- general_preferences [2] / category: explicitly unknown
+- general_preferences [2] / shopping_effect: background_only
+- general_preferences [3] / topic: clothing brands
+- general_preferences [3] / item: fast-fashion brands
+- general_preferences [3] / stance: dislike
+- general_preferences [3] / scope: global
+- general_preferences [3] / category: explicitly unknown
+- general_preferences [3] / shopping_effect: hard_exclusion
+- category_profiles [1] / category: shirts
+- category_profiles [1] / sizes [1] / brand: Selected Homme
+- category_profiles [1] / sizes [1] / sizing_system: ALPHA
+- category_profiles [1] / sizes [1] / size: M
+- category_profiles [1] / sizes [2] / brand: Uniqlo
+- category_profiles [1] / sizes [2] / sizing_system: ALPHA
+- category_profiles [1] / sizes [2] / size: M
+- category_profiles [1] / hard [1] / field: item_type
+- category_profiles [1] / hard [1] / op: in
+- category_profiles [1] / hard [1] / value: button-up shirt, casual shirt
+- category_profiles [1] / default_size / sizing_system: ALPHA
+- category_profiles [1] / default_size / size: M
+- category_profiles [1] / preferences / brands: Selected Homme, Arket
+- category_profiles [1] / preferences / materials: cotton, linen
+- category_profiles [1] / preferences / colors: navy, white, olive
+- category_profiles [1] / preferences / patterns: solid, subtle stripe
+- category_profiles [1] / preferences / cuts: regular
+- category_profiles [1] / preferences / fits: regular
+- category_profiles [1] / preferences / occasions: work, casual
+- category_profiles [1] / preferences / styles: minimal, smart casual
+- category_profiles [1] / scoped_overrides [1] / context / subtype: explicitly unknown
+- category_profiles [1] / scoped_overrides [1] / context / season: summer
+- category_profiles [1] / scoped_overrides [1] / context / occasion: explicitly unknown
+- category_profiles [1] / scoped_overrides [1] / preferences / brands: Arket
+- category_profiles [1] / scoped_overrides [1] / preferences / materials: linen, cotton
+- category_profiles [1] / scoped_overrides [1] / preferences / colors: white, light blue
+- category_profiles [1] / scoped_overrides [1] / preferences / patterns: solid
+- category_profiles [1] / scoped_overrides [1] / preferences / cuts: relaxed
+- category_profiles [1] / scoped_overrides [1] / preferences / fits: relaxed
+- category_profiles [1] / scoped_overrides [1] / preferences / occasions: casual
+- category_profiles [1] / scoped_overrides [1] / preferences / styles: minimal, summer casual
+- category_profiles [2] / category: shoes
+- category_profiles [2] / sizes [1] / brand: Ecco
+- category_profiles [2] / sizes [1] / sizing_system: EU
+- category_profiles [2] / sizes [1] / size: 43
+- category_profiles [2] / sizes [2] / brand: New Balance
+- category_profiles [2] / sizes [2] / sizing_system: EU
+- category_profiles [2] / sizes [2] / size: 43
+- category_profiles [2] / hard [1] / field: closure
+- category_profiles [2] / hard [1] / op: in
+- category_profiles [2] / hard [1] / value: lace-up, slip-on
+- category_profiles [2] / default_size / sizing_system: EU
+- category_profiles [2] / default_size / size: 43
+- category_profiles [2] / preferences / brands: Ecco, New Balance
+- category_profiles [2] / preferences / materials: leather, mesh
+- category_profiles [2] / preferences / colors: black, dark brown, gray
+- category_profiles [2] / preferences / patterns: solid
+- category_profiles [2] / preferences / cuts: low-top
+- category_profiles [2] / preferences / fits: regular
+- category_profiles [2] / preferences / occasions: walking, travel, casual
+- category_profiles [2] / preferences / styles: minimal, practical
+- category_profiles [2] / preferences / widths: regular
+- category_profiles [2] / scoped_overrides [1] / context / subtype: walking shoes
+- category_profiles [2] / scoped_overrides [1] / context / season: explicitly unknown
+- category_profiles [2] / scoped_overrides [1] / context / occasion: travel
+- category_profiles [2] / scoped_overrides [1] / preferences / brands: Ecco, New Balance
+- category_profiles [2] / scoped_overrides [1] / preferences / materials: mesh
+- category_profiles [2] / scoped_overrides [1] / preferences / colors: black, gray
+- category_profiles [2] / scoped_overrides [1] / preferences / patterns: solid
+- category_profiles [2] / scoped_overrides [1] / preferences / cuts: low-top
+- category_profiles [2] / scoped_overrides [1] / preferences / fits: regular
+- category_profiles [2] / scoped_overrides [1] / preferences / occasions: travel
+- category_profiles [2] / scoped_overrides [1] / preferences / styles: practical
+- category_profiles [2] / scoped_overrides [1] / preferences / widths: regular
+- category_profiles [3] / category: pants
+- category_profiles [3] / sizes [1] / brand: Arket
+- category_profiles [3] / sizes [1] / sizing_system: W_IN_L_IN
+- category_profiles [3] / sizes [1] / size: 32/32
+- category_profiles [3] / sizes [2] / brand: Levi's
+- category_profiles [3] / sizes [2] / sizing_system: W_IN_L_IN
+- category_profiles [3] / sizes [2] / size: 32/32
+- category_profiles [3] / hard [1] / field: fit
+- category_profiles [3] / hard [1] / op: not_in
+- category_profiles [3] / hard [1] / value: skinny
+- category_profiles [3] / default_size / sizing_system: W_IN_L_IN
+- category_profiles [3] / default_size / size: 32/32
+- category_profiles [3] / preferences / brands: Arket, Levi's
+- category_profiles [3] / preferences / materials: cotton
+- category_profiles [3] / preferences / colors: navy, charcoal, olive
+- category_profiles [3] / preferences / patterns: solid
+- category_profiles [3] / preferences / cuts: straight, tapered
+- category_profiles [3] / preferences / fits: regular, relaxed
+- category_profiles [3] / preferences / occasions: work, casual
+- category_profiles [3] / preferences / styles: minimal, smart casual
+- category_profiles [3] / scoped_overrides [1] / context / subtype: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / context / season: summer
+- category_profiles [3] / scoped_overrides [1] / context / occasion: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / brands: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / materials: linen, cotton
+- category_profiles [3] / scoped_overrides [1] / preferences / colors: beige, olive, navy
+- category_profiles [3] / scoped_overrides [1] / preferences / patterns: solid
+- category_profiles [3] / scoped_overrides [1] / preferences / cuts: straight, relaxed
+- category_profiles [3] / scoped_overrides [1] / preferences / fits: relaxed
+- category_profiles [3] / scoped_overrides [1] / preferences / occasions: casual, travel
+- category_profiles [3] / scoped_overrides [1] / preferences / styles: summer casual
+- category_profiles [4] / category: outerwear
+- category_profiles [4] / sizes [1] / brand: Patagonia
+- category_profiles [4] / sizes [1] / sizing_system: ALPHA
+- category_profiles [4] / sizes [1] / size: M
+- category_profiles [4] / sizes [2] / brand: Arket
+- category_profiles [4] / sizes [2] / sizing_system: ALPHA
+- category_profiles [4] / sizes [2] / size: M
+- category_profiles [4] / hard [1] / field: item_type
+- category_profiles [4] / hard [1] / op: not_in
+- category_profiles [4] / hard [1] / value: fur coat
+- category_profiles [4] / default_size / sizing_system: ALPHA
+- category_profiles [4] / default_size / size: M
+- category_profiles [4] / preferences / brands: Patagonia, Arket
+- category_profiles [4] / preferences / materials: recycled polyester, wool, cotton
+- category_profiles [4] / preferences / colors: navy, charcoal, olive
+- category_profiles [4] / preferences / patterns: solid
+- category_profiles [4] / preferences / cuts: regular, straight
+- category_profiles [4] / preferences / fits: regular
+- category_profiles [4] / preferences / occasions: commuting, travel, casual
+- category_profiles [4] / preferences / styles: minimal, functional
+- category_profiles [4] / scoped_overrides [1] / context / subtype: rain jacket
+- category_profiles [4] / scoped_overrides [1] / context / season: autumn
+- category_profiles [4] / scoped_overrides [1] / context / occasion: commuting
+- category_profiles [4] / scoped_overrides [1] / preferences / brands: Patagonia
+- category_profiles [4] / scoped_overrides [1] / preferences / materials: recycled polyester
+- category_profiles [4] / scoped_overrides [1] / preferences / colors: navy, olive
+- category_profiles [4] / scoped_overrides [1] / preferences / patterns: solid
+- category_profiles [4] / scoped_overrides [1] / preferences / cuts: straight
+- category_profiles [4] / scoped_overrides [1] / preferences / fits: regular
+- category_profiles [4] / scoped_overrides [1] / preferences / occasions: commuting
+- category_profiles [4] / scoped_overrides [1] / preferences / styles: functional
+- category_profiles [5] / category: hats
+- category_profiles [5] / sizes [1] / brand: Fjällräven
+- category_profiles [5] / sizes [1] / sizing_system: CM
+- category_profiles [5] / sizes [1] / size: 58
+- category_profiles [5] / hard [1] / field: material
+- category_profiles [5] / hard [1] / op: not_in
+- category_profiles [5] / hard [1] / value: fur
+- category_profiles [5] / default_size: explicitly unknown
+- category_profiles [5] / preferences / brands: Fjällräven, Patagonia
+- category_profiles [5] / preferences / materials: cotton, wool
+- category_profiles [5] / preferences / colors: navy, olive, gray
+- category_profiles [5] / preferences / patterns: solid
+- category_profiles [5] / preferences / cuts: six-panel, beanie
+- category_profiles [5] / preferences / fits: regular
+- category_profiles [5] / preferences / occasions: outdoor, casual
+- category_profiles [5] / preferences / styles: functional, minimal
+- category_profiles [5] / scoped_overrides [1] / context / subtype: beanie
+- category_profiles [5] / scoped_overrides [1] / context / season: winter
+- category_profiles [5] / scoped_overrides [1] / context / occasion: explicitly unknown
+- category_profiles [5] / scoped_overrides [1] / preferences / brands: Fjällräven
+- category_profiles [5] / scoped_overrides [1] / preferences / materials: wool
+- category_profiles [5] / scoped_overrides [1] / preferences / colors: gray, navy
+- category_profiles [5] / scoped_overrides [1] / preferences / patterns: solid
+- category_profiles [5] / scoped_overrides [1] / preferences / cuts: beanie
+- category_profiles [5] / scoped_overrides [1] / preferences / fits: regular
+- category_profiles [5] / scoped_overrides [1] / preferences / occasions: outdoor, casual
+- category_profiles [5] / scoped_overrides [1] / preferences / styles: minimal
+- category_profiles [6] / category: accessories
+- category_profiles [6] / sizes [1] / brand: Arket
+- category_profiles [6] / sizes [1] / sizing_system: ONE_SIZE
+- category_profiles [6] / sizes [1] / size: ONE_SIZE
+- category_profiles [6] / hard [1] / field: material
+- category_profiles [6] / hard [1] / op: not_in
+- category_profiles [6] / hard [1] / value: fur
+- category_profiles [6] / default_size / sizing_system: ONE_SIZE
+- category_profiles [6] / default_size / size: ONE_SIZE
+- category_profiles [6] / preferences / brands: Arket, Fjällräven
+- category_profiles [6] / preferences / materials: leather, cotton, wool
+- category_profiles [6] / preferences / colors: black, brown, navy
+- category_profiles [6] / preferences / patterns: explicitly no stated preference
+- category_profiles [6] / preferences / cuts: classic
+- category_profiles [6] / preferences / fits: regular
+- category_profiles [6] / preferences / occasions: work, travel, casual
+- category_profiles [6] / preferences / styles: minimal, functional
+- category_profiles [6] / scoped_overrides [1] / context / subtype: scarf
+- category_profiles [6] / scoped_overrides [1] / context / season: winter
+- category_profiles [6] / scoped_overrides [1] / context / occasion: explicitly unknown
+- category_profiles [6] / scoped_overrides [1] / preferences / brands: Arket
+- category_profiles [6] / scoped_overrides [1] / preferences / materials: wool
+- category_profiles [6] / scoped_overrides [1] / preferences / colors: navy, charcoal
+- category_profiles [6] / scoped_overrides [1] / preferences / patterns: explicitly no stated preference
+- category_profiles [6] / scoped_overrides [1] / preferences / cuts: classic
+- category_profiles [6] / scoped_overrides [1] / preferences / fits: regular
+- category_profiles [6] / scoped_overrides [1] / preferences / occasions: casual, travel
+- category_profiles [6] / scoped_overrides [1] / preferences / styles: minimal
+- purchase_intents [1] / id: future-trip
+- purchase_intents [1] / category: shoes
+- purchase_intents [1] / recipient: self
+- purchase_intents [1] / created_at: 2026-03-01T09:00:00Z
+- purchase_intents [1] / deadline: 2026-05-01T18:00:00Z
+- purchase_intents [1] / status: active
+- purchase_intents [1] / budget / amount: 180
+- purchase_intents [1] / budget / currency: EUR
+- purchase_intents [1] / sizes [1] / brand: Ecco
+- purchase_intents [1] / sizes [1] / sizing_system: EU
+- purchase_intents [1] / sizes [1] / size: 43
+- purchase_intents [1] / sizes [2] / brand: New Balance
+- purchase_intents [1] / sizes [2] / sizing_system: EU
+- purchase_intents [1] / sizes [2] / size: 43
+- purchase_intents [1] / hard [1] / field: purpose
+- purchase_intents [1] / hard [1] / op: eq
+- purchase_intents [1] / hard [1] / value: walking shoes
+- purchase_intents [1] / soft [1] / field: color
+- purchase_intents [1] / soft [1] / op: in
+- purchase_intents [1] / soft [1] / value: black, gray
+- purchase_intents [1] / soft [2] / field: width
+- purchase_intents [1] / soft [2] / op: eq
+- purchase_intents [1] / soft [2] / value: regular
+- purchase_intents [1] / use_general_preferences: True
+- purchase_intents [1] / excluded_preference_items: fast-fashion brands
+- purchase_intents [2] / id: urgent-gift
+- purchase_intents [2] / category: shirts
+- purchase_intents [2] / recipient: gift
+- purchase_intents [2] / created_at: 2026-03-01T09:00:00Z
+- purchase_intents [2] / deadline: 2026-03-02T18:00:00Z
+- purchase_intents [2] / status: active
+- purchase_intents [2] / budget / amount: 90
+- purchase_intents [2] / budget / currency: EUR
+- purchase_intents [2] / sizes: explicitly unknown
+- purchase_intents [2] / hard [1] / field: recipient_gender
+- purchase_intents [2] / hard [1] / op: eq
+- purchase_intents [2] / hard [1] / value: male
+- purchase_intents [2] / soft [1] / field: style
+- purchase_intents [2] / soft [1] / op: eq
+- purchase_intents [2] / soft [1] / value: smart casual
+- purchase_intents [2] / use_general_preferences: False
+- purchase_intents [2] / excluded_preference_items: explicitly no stated preference
+- coherence_notes: Jonas works in a research-oriented role and prefers practical, understated clothing for commuting, work, travel, and everyday use., The future-trip shoe intent is for Jonas himself; the urgent-shirt intent is a gift and does not inherit his personal size or preferences.

@@ -1,0 +1,242 @@
+# Actual Luna-generated initial profile
+
+Model: gpt-5.6-luna
+
+- schema_version: user-profile-1.1
+- profile_id: user10
+- reference_date: 2026-03-01
+- personal / name: Daniel Mwangi
+- personal / gender: male
+- personal / birth_date: 1991-07-14
+- personal / age: 34
+- personal / race: Black African
+- personal / nationality: Kenyan
+- personal / marital_status: married
+- residence / city: Nairobi
+- residence / region: Nairobi County
+- residence / country: Kenya
+- residence / timezone: Africa/Nairobi
+- languages [1] / language: English
+- languages [1] / proficiency: fluent
+- languages [2] / language: Swahili
+- languages [2] / proficiency: native
+- languages [3] / language: French
+- languages [3] / proficiency: basic
+- professional / situation: employed
+- professional / occupation: Project manager
+- professional / industry: Renewable energy
+- professional / education / level: master
+- professional / education / field: Project management
+- professional / income / amount: 285000
+- professional / income / currency: KES
+- professional / income / period: month
+- physical / height / value: 178
+- physical / height / unit: cm
+- physical / weight / value: 78
+- physical / weight / unit: kg
+- physical / build: medium
+- physical / hair_color: black
+- physical / eye_color: brown
+- interests / hobbies: cycling, photography, cooking, historical fiction
+- interests / other_interests: renewable energy, urban design, East African history
+- general_preferences [1] / topic: beverages
+- general_preferences [1] / item: black coffee
+- general_preferences [1] / stance: like
+- general_preferences [1] / scope: global
+- general_preferences [1] / category: explicitly unknown
+- general_preferences [1] / shopping_effect: soft_preference
+- general_preferences [2] / topic: literature
+- general_preferences [2] / item: historical fiction
+- general_preferences [2] / stance: like
+- general_preferences [2] / scope: global
+- general_preferences [2] / category: explicitly unknown
+- general_preferences [2] / shopping_effect: background_only
+- general_preferences [3] / topic: colors
+- general_preferences [3] / item: neon colors
+- general_preferences [3] / stance: dislike
+- general_preferences [3] / scope: global
+- general_preferences [3] / category: explicitly unknown
+- general_preferences [3] / shopping_effect: background_only
+- general_preferences [4] / topic: shopping
+- general_preferences [4] / item: online price comparison
+- general_preferences [4] / stance: like
+- general_preferences [4] / scope: global
+- general_preferences [4] / category: explicitly unknown
+- general_preferences [4] / shopping_effect: soft_preference
+- category_profiles [1] / category: shirts
+- category_profiles [1] / sizes [1] / brand: Jambo Wear
+- category_profiles [1] / sizes [1] / sizing_system: ALPHA
+- category_profiles [1] / sizes [1] / size: L
+- category_profiles [1] / sizes [2] / brand: Savanna Cotton
+- category_profiles [1] / sizes [2] / sizing_system: ALPHA
+- category_profiles [1] / sizes [2] / size: L
+- category_profiles [1] / hard [1] / field: material
+- category_profiles [1] / hard [1] / op: not_in
+- category_profiles [1] / hard [1] / value: polyester
+- category_profiles [1] / default_size / sizing_system: ALPHA
+- category_profiles [1] / default_size / size: L
+- category_profiles [1] / preferences / brands: Jambo Wear, Savanna Cotton
+- category_profiles [1] / preferences / materials: cotton, linen
+- category_profiles [1] / preferences / colors: white, light blue, olive
+- category_profiles [1] / preferences / patterns: solid, subtle stripes
+- category_profiles [1] / preferences / cuts: regular
+- category_profiles [1] / preferences / fits: regular
+- category_profiles [1] / preferences / occasions: work, casual
+- category_profiles [1] / preferences / styles: minimal, smart casual
+- category_profiles [1] / scoped_overrides [1] / context / subtype: explicitly unknown
+- category_profiles [1] / scoped_overrides [1] / context / season: summer
+- category_profiles [1] / scoped_overrides [1] / context / occasion: explicitly unknown
+- category_profiles [1] / scoped_overrides [1] / preferences / brands: explicitly unknown
+- category_profiles [1] / scoped_overrides [1] / preferences / materials: linen, cotton
+- category_profiles [1] / scoped_overrides [1] / preferences / colors: white, light blue
+- category_profiles [1] / scoped_overrides [1] / preferences / patterns: explicitly unknown
+- category_profiles [1] / scoped_overrides [1] / preferences / cuts: explicitly unknown
+- category_profiles [1] / scoped_overrides [1] / preferences / fits: explicitly unknown
+- category_profiles [1] / scoped_overrides [1] / preferences / occasions: explicitly unknown
+- category_profiles [1] / scoped_overrides [1] / preferences / styles: smart casual
+- category_profiles [2] / category: shoes
+- category_profiles [2] / sizes [1] / brand: Asili Footwear
+- category_profiles [2] / sizes [1] / sizing_system: EU
+- category_profiles [2] / sizes [1] / size: 42
+- category_profiles [2] / hard [1] / field: width
+- category_profiles [2] / hard [1] / op: in
+- category_profiles [2] / hard [1] / value: regular
+- category_profiles [2] / default_size / sizing_system: EU
+- category_profiles [2] / default_size / size: 42
+- category_profiles [2] / preferences / brands: Asili Footwear
+- category_profiles [2] / preferences / materials: leather, canvas
+- category_profiles [2] / preferences / colors: brown, black, white
+- category_profiles [2] / preferences / patterns: solid
+- category_profiles [2] / preferences / cuts: low-top
+- category_profiles [2] / preferences / fits: regular
+- category_profiles [2] / preferences / occasions: work, travel, casual
+- category_profiles [2] / preferences / styles: classic, minimal
+- category_profiles [2] / preferences / widths: regular
+- category_profiles [2] / scoped_overrides [1] / context / subtype: walking shoes
+- category_profiles [2] / scoped_overrides [1] / context / season: explicitly unknown
+- category_profiles [2] / scoped_overrides [1] / context / occasion: travel
+- category_profiles [2] / scoped_overrides [1] / preferences / brands: Asili Footwear
+- category_profiles [2] / scoped_overrides [1] / preferences / materials: leather, mesh
+- category_profiles [2] / scoped_overrides [1] / preferences / colors: black, brown
+- category_profiles [2] / scoped_overrides [1] / preferences / patterns: solid
+- category_profiles [2] / scoped_overrides [1] / preferences / cuts: low-top
+- category_profiles [2] / scoped_overrides [1] / preferences / fits: regular
+- category_profiles [2] / scoped_overrides [1] / preferences / occasions: travel
+- category_profiles [2] / scoped_overrides [1] / preferences / styles: practical
+- category_profiles [2] / scoped_overrides [1] / preferences / widths: regular
+- category_profiles [3] / category: pants
+- category_profiles [3] / sizes [1] / brand: Savanna Cotton
+- category_profiles [3] / sizes [1] / sizing_system: W_IN_L_IN
+- category_profiles [3] / sizes [1] / size: 32x32
+- category_profiles [3] / hard [1] / field: material
+- category_profiles [3] / hard [1] / op: in
+- category_profiles [3] / hard [1] / value: cotton, linen
+- category_profiles [3] / default_size / sizing_system: W_IN_L_IN
+- category_profiles [3] / default_size / size: 32x32
+- category_profiles [3] / preferences / brands: Savanna Cotton
+- category_profiles [3] / preferences / materials: cotton
+- category_profiles [3] / preferences / colors: navy, khaki, charcoal
+- category_profiles [3] / preferences / patterns: solid
+- category_profiles [3] / preferences / cuts: straight
+- category_profiles [3] / preferences / fits: regular
+- category_profiles [3] / preferences / occasions: work, casual
+- category_profiles [3] / preferences / styles: minimal, smart casual
+- category_profiles [3] / scoped_overrides [1] / context / subtype: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / context / season: summer
+- category_profiles [3] / scoped_overrides [1] / context / occasion: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / brands: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / materials: linen, cotton
+- category_profiles [3] / scoped_overrides [1] / preferences / colors: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / patterns: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / cuts: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / fits: regular
+- category_profiles [3] / scoped_overrides [1] / preferences / occasions: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / styles: explicitly unknown
+- category_profiles [4] / category: outerwear
+- category_profiles [4] / sizes [1] / brand: Highland Outfitters
+- category_profiles [4] / sizes [1] / sizing_system: ALPHA
+- category_profiles [4] / sizes [1] / size: L
+- category_profiles [4] / hard: explicitly no stated preference
+- category_profiles [4] / default_size / sizing_system: ALPHA
+- category_profiles [4] / default_size / size: L
+- category_profiles [4] / preferences / brands: Highland Outfitters
+- category_profiles [4] / preferences / materials: cotton, wool
+- category_profiles [4] / preferences / colors: navy, charcoal, olive
+- category_profiles [4] / preferences / patterns: solid
+- category_profiles [4] / preferences / cuts: regular
+- category_profiles [4] / preferences / fits: regular
+- category_profiles [4] / preferences / occasions: travel, casual
+- category_profiles [4] / preferences / styles: utility, minimal
+- category_profiles [4] / scoped_overrides: explicitly no stated preference
+- category_profiles [5] / category: hats
+- category_profiles [5] / sizes [1] / brand: Kijani Headwear
+- category_profiles [5] / sizes [1] / sizing_system: CM
+- category_profiles [5] / sizes [1] / size: 58
+- category_profiles [5] / hard: explicitly no stated preference
+- category_profiles [5] / default_size: explicitly unknown
+- category_profiles [5] / preferences / brands: Kijani Headwear
+- category_profiles [5] / preferences / materials: cotton
+- category_profiles [5] / preferences / colors: olive, navy, beige
+- category_profiles [5] / preferences / patterns: solid
+- category_profiles [5] / preferences / cuts: structured
+- category_profiles [5] / preferences / fits: regular
+- category_profiles [5] / preferences / occasions: casual, travel
+- category_profiles [5] / preferences / styles: classic
+- category_profiles [5] / scoped_overrides: explicitly no stated preference
+- category_profiles [6] / category: accessories
+- category_profiles [6] / sizes [1] / brand: Mara Goods
+- category_profiles [6] / sizes [1] / sizing_system: ONE_SIZE
+- category_profiles [6] / sizes [1] / size: ONE_SIZE
+- category_profiles [6] / hard: explicitly no stated preference
+- category_profiles [6] / default_size / sizing_system: ONE_SIZE
+- category_profiles [6] / default_size / size: ONE_SIZE
+- category_profiles [6] / preferences / brands: Mara Goods
+- category_profiles [6] / preferences / materials: leather, cotton
+- category_profiles [6] / preferences / colors: brown, black, olive
+- category_profiles [6] / preferences / patterns: explicitly no stated preference
+- category_profiles [6] / preferences / cuts: classic
+- category_profiles [6] / preferences / fits: regular
+- category_profiles [6] / preferences / occasions: work, travel
+- category_profiles [6] / preferences / styles: minimal
+- category_profiles [6] / scoped_overrides: explicitly no stated preference
+- purchase_intents [1] / id: future-trip
+- purchase_intents [1] / category: shoes
+- purchase_intents [1] / recipient: self
+- purchase_intents [1] / created_at: 2026-03-01T09:00:00Z
+- purchase_intents [1] / deadline: 2026-05-01T18:00:00Z
+- purchase_intents [1] / status: active
+- purchase_intents [1] / budget / amount: 18000
+- purchase_intents [1] / budget / currency: KES
+- purchase_intents [1] / sizes [1] / brand: Asili Footwear
+- purchase_intents [1] / sizes [1] / sizing_system: EU
+- purchase_intents [1] / sizes [1] / size: 42
+- purchase_intents [1] / hard [1] / field: width
+- purchase_intents [1] / hard [1] / op: eq
+- purchase_intents [1] / hard [1] / value: regular
+- purchase_intents [1] / soft [1] / field: occasion
+- purchase_intents [1] / soft [1] / op: in
+- purchase_intents [1] / soft [1] / value: travel, walking
+- purchase_intents [1] / soft [2] / field: color
+- purchase_intents [1] / soft [2] / op: in
+- purchase_intents [1] / soft [2] / value: black, brown
+- purchase_intents [1] / use_general_preferences: True
+- purchase_intents [1] / excluded_preference_items: explicitly no stated preference
+- purchase_intents [2] / id: urgent-gift
+- purchase_intents [2] / category: shirts
+- purchase_intents [2] / recipient: gift
+- purchase_intents [2] / created_at: 2026-03-01T09:00:00Z
+- purchase_intents [2] / deadline: 2026-03-02T18:00:00Z
+- purchase_intents [2] / status: active
+- purchase_intents [2] / budget / amount: 6000
+- purchase_intents [2] / budget / currency: KES
+- purchase_intents [2] / sizes: explicitly unknown
+- purchase_intents [2] / hard: explicitly no stated preference
+- purchase_intents [2] / soft [1] / field: occasion
+- purchase_intents [2] / soft [1] / op: eq
+- purchase_intents [2] / soft [1] / value: casual
+- purchase_intents [2] / soft [2] / field: color
+- purchase_intents [2] / soft [2] / op: in
+- purchase_intents [2] / soft [2] / value: blue, white
+- purchase_intents [2] / use_general_preferences: False
+- purchase_intents [2] / excluded_preference_items: explicitly no stated preference
+- coherence_notes: Daniel works in renewable energy project management and often dresses in minimal smart-casual clothing for work and travel., The urgent shirt purchase is a gift; the recipient's size and preferences are not yet known., Summer pants preferences explicitly allow linen or cotton, while the general pants material preference remains cotton.

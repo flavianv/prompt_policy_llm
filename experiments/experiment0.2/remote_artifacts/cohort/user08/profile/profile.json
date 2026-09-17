@@ -1,0 +1,770 @@
+{
+  "schema_version": "user-profile-1.1",
+  "profile_id": "user08",
+  "reference_date": "2026-03-01",
+  "personal": {
+    "name": "Jonas Weber",
+    "gender": "male",
+    "birth_date": "1991-07-14",
+    "age": 34,
+    "race": "White European",
+    "nationality": "German",
+    "marital_status": "partnered"
+  },
+  "residence": {
+    "city": "Leipzig",
+    "region": "Saxony",
+    "country": "Germany",
+    "timezone": "Europe/Berlin"
+  },
+  "languages": [
+    {
+      "language": "German",
+      "proficiency": "native"
+    },
+    {
+      "language": "English",
+      "proficiency": "fluent"
+    },
+    {
+      "language": "French",
+      "proficiency": "basic"
+    }
+  ],
+  "professional": {
+    "situation": "employed",
+    "occupation": "user experience researcher",
+    "industry": "software and digital services",
+    "education": {
+      "level": "master",
+      "field": "psychology"
+    },
+    "income": {
+      "amount": 5200,
+      "currency": "EUR",
+      "period": "month"
+    }
+  },
+  "physical": {
+    "height": {
+      "value": 181,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 78,
+      "unit": "kg"
+    },
+    "build": "average",
+    "hair_color": "dark blond",
+    "eye_color": "blue"
+  },
+  "interests": {
+    "hobbies": [
+      "cycling",
+      "cooking",
+      "urban photography",
+      "reading historical nonfiction"
+    ],
+    "other_interests": [
+      "public transit design",
+      "independent cinema",
+      "European architecture"
+    ]
+  },
+  "general_preferences": [
+    {
+      "topic": "food",
+      "item": "very spicy dishes",
+      "stance": "dislike",
+      "scope": "global",
+      "category": null,
+      "shopping_effect": "background_only"
+    },
+    {
+      "topic": "books",
+      "item": "historical nonfiction",
+      "stance": "like",
+      "scope": "global",
+      "category": null,
+      "shopping_effect": "background_only"
+    },
+    {
+      "topic": "clothing brands",
+      "item": "fast-fashion brands",
+      "stance": "dislike",
+      "scope": "global",
+      "category": null,
+      "shopping_effect": "hard_exclusion"
+    }
+  ],
+  "category_profiles": [
+    {
+      "category": "shirts",
+      "sizes": [
+        {
+          "brand": "Selected Homme",
+          "sizing_system": "ALPHA",
+          "size": "M"
+        },
+        {
+          "brand": "Uniqlo",
+          "sizing_system": "ALPHA",
+          "size": "M"
+        }
+      ],
+      "hard": [
+        {
+          "field": "item_type",
+          "op": "in",
+          "value": [
+            "button-up shirt",
+            "casual shirt"
+          ]
+        }
+      ],
+      "default_size": {
+        "sizing_system": "ALPHA",
+        "size": "M"
+      },
+      "preferences": {
+        "brands": [
+          "Selected Homme",
+          "Arket"
+        ],
+        "materials": [
+          "cotton",
+          "linen"
+        ],
+        "colors": [
+          "navy",
+          "white",
+          "olive"
+        ],
+        "patterns": [
+          "solid",
+          "subtle stripe"
+        ],
+        "cuts": [
+          "regular"
+        ],
+        "fits": [
+          "regular"
+        ],
+        "occasions": [
+          "work",
+          "casual"
+        ],
+        "styles": [
+          "minimal",
+          "smart casual"
+        ]
+      },
+      "scoped_overrides": [
+        {
+          "context": {
+            "subtype": null,
+            "season": "summer",
+            "occasion": null
+          },
+          "preferences": {
+            "brands": [
+              "Arket"
+            ],
+            "materials": [
+              "linen",
+              "cotton"
+            ],
+            "colors": [
+              "white",
+              "light blue"
+            ],
+            "patterns": [
+              "solid"
+            ],
+            "cuts": [
+              "relaxed"
+            ],
+            "fits": [
+              "relaxed"
+            ],
+            "occasions": [
+              "casual"
+            ],
+            "styles": [
+              "minimal",
+              "summer casual"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "category": "shoes",
+      "sizes": [
+        {
+          "brand": "Ecco",
+          "sizing_system": "EU",
+          "size": "43"
+        },
+        {
+          "brand": "New Balance",
+          "sizing_system": "EU",
+          "size": "43"
+        }
+      ],
+      "hard": [
+        {
+          "field": "closure",
+          "op": "in",
+          "value": [
+            "lace-up",
+            "slip-on"
+          ]
+        }
+      ],
+      "default_size": {
+        "sizing_system": "EU",
+        "size": "43"
+      },
+      "preferences": {
+        "brands": [
+          "Ecco",
+          "New Balance"
+        ],
+        "materials": [
+          "leather",
+          "mesh"
+        ],
+        "colors": [
+          "black",
+          "dark brown",
+          "gray"
+        ],
+        "patterns": [
+          "solid"
+        ],
+        "cuts": [
+          "low-top"
+        ],
+        "fits": [
+          "regular"
+        ],
+        "occasions": [
+          "walking",
+          "travel",
+          "casual"
+        ],
+        "styles": [
+          "minimal",
+          "practical"
+        ],
+        "widths": [
+          "regular"
+        ]
+      },
+      "scoped_overrides": [
+        {
+          "context": {
+            "subtype": "walking shoes",
+            "season": null,
+            "occasion": "travel"
+          },
+          "preferences": {
+            "brands": [
+              "Ecco",
+              "New Balance"
+            ],
+            "materials": [
+              "mesh"
+            ],
+            "colors": [
+              "black",
+              "gray"
+            ],
+            "patterns": [
+              "solid"
+            ],
+            "cuts": [
+              "low-top"
+            ],
+            "fits": [
+              "regular"
+            ],
+            "occasions": [
+              "travel"
+            ],
+            "styles": [
+              "practical"
+            ],
+            "widths": [
+              "regular"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "category": "pants",
+      "sizes": [
+        {
+          "brand": "Arket",
+          "sizing_system": "W_IN_L_IN",
+          "size": "32/32"
+        },
+        {
+          "brand": "Levi's",
+          "sizing_system": "W_IN_L_IN",
+          "size": "32/32"
+        }
+      ],
+      "hard": [
+        {
+          "field": "fit",
+          "op": "not_in",
+          "value": [
+            "skinny"
+          ]
+        }
+      ],
+      "default_size": {
+        "sizing_system": "W_IN_L_IN",
+        "size": "32/32"
+      },
+      "preferences": {
+        "brands": [
+          "Arket",
+          "Levi's"
+        ],
+        "materials": [
+          "cotton"
+        ],
+        "colors": [
+          "navy",
+          "charcoal",
+          "olive"
+        ],
+        "patterns": [
+          "solid"
+        ],
+        "cuts": [
+          "straight",
+          "tapered"
+        ],
+        "fits": [
+          "regular",
+          "relaxed"
+        ],
+        "occasions": [
+          "work",
+          "casual"
+        ],
+        "styles": [
+          "minimal",
+          "smart casual"
+        ]
+      },
+      "scoped_overrides": [
+        {
+          "context": {
+            "subtype": null,
+            "season": "summer",
+            "occasion": null
+          },
+          "preferences": {
+            "brands": null,
+            "materials": [
+              "linen",
+              "cotton"
+            ],
+            "colors": [
+              "beige",
+              "olive",
+              "navy"
+            ],
+            "patterns": [
+              "solid"
+            ],
+            "cuts": [
+              "straight",
+              "relaxed"
+            ],
+            "fits": [
+              "relaxed"
+            ],
+            "occasions": [
+              "casual",
+              "travel"
+            ],
+            "styles": [
+              "summer casual"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "category": "outerwear",
+      "sizes": [
+        {
+          "brand": "Patagonia",
+          "sizing_system": "ALPHA",
+          "size": "M"
+        },
+        {
+          "brand": "Arket",
+          "sizing_system": "ALPHA",
+          "size": "M"
+        }
+      ],
+      "hard": [
+        {
+          "field": "item_type",
+          "op": "not_in",
+          "value": [
+            "fur coat"
+          ]
+        }
+      ],
+      "default_size": {
+        "sizing_system": "ALPHA",
+        "size": "M"
+      },
+      "preferences": {
+        "brands": [
+          "Patagonia",
+          "Arket"
+        ],
+        "materials": [
+          "recycled polyester",
+          "wool",
+          "cotton"
+        ],
+        "colors": [
+          "navy",
+          "charcoal",
+          "olive"
+        ],
+        "patterns": [
+          "solid"
+        ],
+        "cuts": [
+          "regular",
+          "straight"
+        ],
+        "fits": [
+          "regular"
+        ],
+        "occasions": [
+          "commuting",
+          "travel",
+          "casual"
+        ],
+        "styles": [
+          "minimal",
+          "functional"
+        ]
+      },
+      "scoped_overrides": [
+        {
+          "context": {
+            "subtype": "rain jacket",
+            "season": "autumn",
+            "occasion": "commuting"
+          },
+          "preferences": {
+            "brands": [
+              "Patagonia"
+            ],
+            "materials": [
+              "recycled polyester"
+            ],
+            "colors": [
+              "navy",
+              "olive"
+            ],
+            "patterns": [
+              "solid"
+            ],
+            "cuts": [
+              "straight"
+            ],
+            "fits": [
+              "regular"
+            ],
+            "occasions": [
+              "commuting"
+            ],
+            "styles": [
+              "functional"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "category": "hats",
+      "sizes": [
+        {
+          "brand": "Fjällräven",
+          "sizing_system": "CM",
+          "size": "58"
+        }
+      ],
+      "hard": [
+        {
+          "field": "material",
+          "op": "not_in",
+          "value": [
+            "fur"
+          ]
+        }
+      ],
+      "default_size": null,
+      "preferences": {
+        "brands": [
+          "Fjällräven",
+          "Patagonia"
+        ],
+        "materials": [
+          "cotton",
+          "wool"
+        ],
+        "colors": [
+          "navy",
+          "olive",
+          "gray"
+        ],
+        "patterns": [
+          "solid"
+        ],
+        "cuts": [
+          "six-panel",
+          "beanie"
+        ],
+        "fits": [
+          "regular"
+        ],
+        "occasions": [
+          "outdoor",
+          "casual"
+        ],
+        "styles": [
+          "functional",
+          "minimal"
+        ]
+      },
+      "scoped_overrides": [
+        {
+          "context": {
+            "subtype": "beanie",
+            "season": "winter",
+            "occasion": null
+          },
+          "preferences": {
+            "brands": [
+              "Fjällräven"
+            ],
+            "materials": [
+              "wool"
+            ],
+            "colors": [
+              "gray",
+              "navy"
+            ],
+            "patterns": [
+              "solid"
+            ],
+            "cuts": [
+              "beanie"
+            ],
+            "fits": [
+              "regular"
+            ],
+            "occasions": [
+              "outdoor",
+              "casual"
+            ],
+            "styles": [
+              "minimal"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "category": "accessories",
+      "sizes": [
+        {
+          "brand": "Arket",
+          "sizing_system": "ONE_SIZE",
+          "size": "ONE_SIZE"
+        }
+      ],
+      "hard": [
+        {
+          "field": "material",
+          "op": "not_in",
+          "value": [
+            "fur"
+          ]
+        }
+      ],
+      "default_size": {
+        "sizing_system": "ONE_SIZE",
+        "size": "ONE_SIZE"
+      },
+      "preferences": {
+        "brands": [
+          "Arket",
+          "Fjällräven"
+        ],
+        "materials": [
+          "leather",
+          "cotton",
+          "wool"
+        ],
+        "colors": [
+          "black",
+          "brown",
+          "navy"
+        ],
+        "patterns": [],
+        "cuts": [
+          "classic"
+        ],
+        "fits": [
+          "regular"
+        ],
+        "occasions": [
+          "work",
+          "travel",
+          "casual"
+        ],
+        "styles": [
+          "minimal",
+          "functional"
+        ]
+      },
+      "scoped_overrides": [
+        {
+          "context": {
+            "subtype": "scarf",
+            "season": "winter",
+            "occasion": null
+          },
+          "preferences": {
+            "brands": [
+              "Arket"
+            ],
+            "materials": [
+              "wool"
+            ],
+            "colors": [
+              "navy",
+              "charcoal"
+            ],
+            "patterns": [],
+            "cuts": [
+              "classic"
+            ],
+            "fits": [
+              "regular"
+            ],
+            "occasions": [
+              "casual",
+              "travel"
+            ],
+            "styles": [
+              "minimal"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "purchase_intents": [
+    {
+      "id": "future-trip",
+      "category": "shoes",
+      "recipient": "self",
+      "created_at": "2026-03-01T09:00:00Z",
+      "deadline": "2026-05-01T18:00:00Z",
+      "status": "active",
+      "budget": {
+        "amount": 180,
+        "currency": "EUR"
+      },
+      "sizes": [
+        {
+          "brand": "Ecco",
+          "sizing_system": "EU",
+          "size": "43"
+        },
+        {
+          "brand": "New Balance",
+          "sizing_system": "EU",
+          "size": "43"
+        }
+      ],
+      "hard": [
+        {
+          "field": "purpose",
+          "op": "eq",
+          "value": "walking shoes"
+        }
+      ],
+      "soft": [
+        {
+          "field": "color",
+          "op": "in",
+          "value": [
+            "black",
+            "gray"
+          ]
+        },
+        {
+          "field": "width",
+          "op": "eq",
+          "value": "regular"
+        }
+      ],
+      "use_general_preferences": true,
+      "excluded_preference_items": [
+        "fast-fashion brands"
+      ]
+    },
+    {
+      "id": "urgent-gift",
+      "category": "shirts",
+      "recipient": "gift",
+      "created_at": "2026-03-01T09:00:00Z",
+      "deadline": "2026-03-02T18:00:00Z",
+      "status": "active",
+      "budget": {
+        "amount": 90,
+        "currency": "EUR"
+      },
+      "sizes": null,
+      "hard": [
+        {
+          "field": "recipient_gender",
+          "op": "eq",
+          "value": "male"
+        }
+      ],
+      "soft": [
+        {
+          "field": "style",
+          "op": "eq",
+          "value": "smart casual"
+        }
+      ],
+      "use_general_preferences": false,
+      "excluded_preference_items": []
+    }
+  ],
+  "coherence_notes": [
+    "Jonas works in a research-oriented role and prefers practical, understated clothing for commuting, work, travel, and everyday use.",
+    "The future-trip shoe intent is for Jonas himself; the urgent-shirt intent is a gift and does not inherit his personal size or preferences."
+  ]
+}

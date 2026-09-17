@@ -1,0 +1,29 @@
+{
+  "version": "experiment0.1",
+  "seeds": [
+    17,
+    29,
+    43,
+    59,
+    71,
+    89,
+    101,
+    113,
+    127,
+    139
+  ],
+  "split": "eval",
+  "luna_model": "gpt-5.6-luna",
+  "qwen_model": "Qwen/Qwen3-1.7B",
+  "qwen_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "qwen_fixed_weights": true,
+  "qwen_max_new_tokens": 384,
+  "qwen_thinking": false,
+  "qwen_do_sample": false,
+  "protocol": "independent Luna calls with current evidence versus identical evidence plus PRIOR notes, then update notes; reset per user",
+  "training": "none",
+  "schema_version": "schema-v4",
+  "preference_scoring": "one point per matched soft rule; hard feasibility first",
+  "missing_sizing_action": "ASK_SIZE",
+  "environment_file": "environment.json"
+}

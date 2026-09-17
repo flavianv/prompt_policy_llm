@@ -1,0 +1,379 @@
+{
+  "schema_version": "user-profile-1.1",
+  "profile_id": "illustrative-camille-001",
+  "reference_date": "2026-03-01",
+  "personal": {
+    "name": "Camille Martin",
+    "gender": "female",
+    "birth_date": "1987-03-12",
+    "age": 38,
+    "race": "Asian",
+    "nationality": "French",
+    "marital_status": "married"
+  },
+  "residence": {
+    "city": "Paris",
+    "region": "Île-de-France",
+    "country": "France",
+    "timezone": "Europe/Paris"
+  },
+  "languages": [
+    {
+      "language": "French",
+      "proficiency": "native"
+    },
+    {
+      "language": "English",
+      "proficiency": "fluent"
+    }
+  ],
+  "professional": {
+    "situation": "employed",
+    "occupation": "Data analyst",
+    "industry": "Retail technology",
+    "education": {
+      "level": "master",
+      "field": "Statistics"
+    },
+    "income": {
+      "amount": 55000,
+      "currency": "EUR",
+      "period": "year"
+    }
+  },
+  "physical": {
+    "height": {
+      "value": 165,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 65,
+      "unit": "kg"
+    },
+    "build": "average",
+    "hair_color": "brown",
+    "eye_color": "brown"
+  },
+  "interests": {
+    "hobbies": [
+      "hiking",
+      "reading"
+    ],
+    "other_interests": [
+      "independent cinema",
+      "gardening"
+    ]
+  },
+  "general_preferences": [
+    {
+      "topic": "cities",
+      "item": "Lyon",
+      "stance": "like",
+      "scope": "global",
+      "category": null,
+      "shopping_effect": "background_only"
+    },
+    {
+      "topic": "countryside",
+      "item": "mountains",
+      "stance": "like",
+      "scope": "global",
+      "category": null,
+      "shopping_effect": "background_only"
+    },
+    {
+      "topic": "movies",
+      "item": "Arrival",
+      "stance": "like",
+      "scope": "global",
+      "category": null,
+      "shopping_effect": "background_only"
+    },
+    {
+      "topic": "authors",
+      "item": "Italo Calvino",
+      "stance": "like",
+      "scope": "global",
+      "category": null,
+      "shopping_effect": "background_only"
+    },
+    {
+      "topic": "hobbies",
+      "item": "painting",
+      "stance": "dislike",
+      "scope": "global",
+      "category": null,
+      "shopping_effect": "background_only"
+    },
+    {
+      "topic": "clothing_brands",
+      "item": "Cedar",
+      "stance": "dislike",
+      "scope": "global",
+      "category": null,
+      "shopping_effect": "hard_exclusion"
+    }
+  ],
+  "category_profiles": [
+    {
+      "category": "shirts",
+      "sizes": [
+        {
+          "brand": "Aster",
+          "sizing_system": "ALPHA",
+          "size": "M"
+        },
+        {
+          "brand": "Boreal",
+          "sizing_system": "ALPHA",
+          "size": "L"
+        }
+      ],
+      "hard": [
+        {
+          "field": "fit",
+          "op": "eq",
+          "value": "relaxed"
+        },
+        {
+          "field": "department",
+          "op": "eq",
+          "value": "unisex"
+        }
+      ],
+      "default_size": {
+        "sizing_system": "ALPHA",
+        "size": "M"
+      },
+      "preferences": {
+        "brands": [
+          "Aster",
+          "Boreal"
+        ],
+        "materials": [
+          "cotton"
+        ],
+        "colors": [],
+        "patterns": [
+          "floral"
+        ],
+        "cuts": [],
+        "fits": [],
+        "occasions": [],
+        "styles": []
+      },
+      "scoped_overrides": []
+    },
+    {
+      "category": "shoes",
+      "sizes": [
+        {
+          "brand": "Aster",
+          "sizing_system": "EU",
+          "size": "40"
+        },
+        {
+          "brand": "Boreal",
+          "sizing_system": "EU",
+          "size": "41"
+        }
+      ],
+      "hard": [
+        {
+          "field": "width",
+          "op": "eq",
+          "value": "wide"
+        }
+      ],
+      "default_size": null,
+      "preferences": {
+        "brands": [
+          "Aster",
+          "Boreal"
+        ],
+        "materials": [],
+        "colors": [],
+        "patterns": [
+          "plain"
+        ],
+        "cuts": [],
+        "fits": [],
+        "occasions": [],
+        "styles": [],
+        "widths": []
+      },
+      "scoped_overrides": []
+    },
+    {
+      "category": "hats",
+      "sizes": [
+        {
+          "brand": "Aster",
+          "sizing_system": "CM",
+          "size": "58"
+        }
+      ],
+      "hard": [],
+      "default_size": null,
+      "preferences": {
+        "brands": [
+          "Aster",
+          "Boreal"
+        ],
+        "materials": [],
+        "colors": [
+          "navy"
+        ],
+        "patterns": [],
+        "cuts": [],
+        "fits": [],
+        "occasions": [],
+        "styles": []
+      },
+      "scoped_overrides": []
+    },
+    {
+      "category": "pants",
+      "sizes": [],
+      "hard": [],
+      "default_size": {
+        "sizing_system": "W_IN_L_IN",
+        "size": "32x30"
+      },
+      "preferences": {
+        "brands": null,
+        "materials": [
+          "cotton"
+        ],
+        "colors": null,
+        "patterns": null,
+        "cuts": null,
+        "fits": [
+          "regular",
+          "relaxed"
+        ],
+        "occasions": null,
+        "styles": null
+      },
+      "scoped_overrides": [
+        {
+          "context": {
+            "subtype": null,
+            "season": "summer",
+            "occasion": null
+          },
+          "preferences": {
+            "materials": [
+              "linen",
+              "cotton"
+            ],
+            "colors": [
+              "beige",
+              "navy"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "category": "outerwear",
+      "sizes": [],
+      "hard": [],
+      "default_size": null,
+      "preferences": {
+        "brands": null,
+        "materials": null,
+        "colors": null,
+        "patterns": null,
+        "cuts": null,
+        "fits": null,
+        "occasions": null,
+        "styles": null
+      },
+      "scoped_overrides": []
+    },
+    {
+      "category": "accessories",
+      "sizes": [],
+      "hard": [],
+      "default_size": null,
+      "preferences": {
+        "brands": null,
+        "materials": null,
+        "colors": null,
+        "patterns": null,
+        "cuts": null,
+        "fits": null,
+        "occasions": null,
+        "styles": null
+      },
+      "scoped_overrides": []
+    }
+  ],
+  "purchase_intents": [
+    {
+      "id": "trip-shoes",
+      "category": "shoes",
+      "recipient": "self",
+      "created_at": "2026-03-01T09:00:00Z",
+      "deadline": "2026-04-15T18:00:00Z",
+      "status": "active",
+      "budget": {
+        "amount": 120,
+        "currency": "EUR"
+      },
+      "sizes": null,
+      "hard": [
+        {
+          "field": "occasion",
+          "op": "eq",
+          "value": "travel"
+        }
+      ],
+      "soft": [],
+      "use_general_preferences": true,
+      "excluded_preference_items": []
+    },
+    {
+      "id": "gift-shirt",
+      "category": "shirts",
+      "recipient": "gift",
+      "created_at": "2026-03-01T09:00:00Z",
+      "deadline": "2026-03-05T18:00:00Z",
+      "status": "active",
+      "budget": {
+        "amount": 80,
+        "currency": "EUR"
+      },
+      "sizes": [
+        {
+          "brand": "Boreal",
+          "sizing_system": "ALPHA",
+          "size": "XL"
+        }
+      ],
+      "hard": [
+        {
+          "field": "department",
+          "op": "eq",
+          "value": "mens"
+        }
+      ],
+      "soft": [
+        {
+          "field": "style",
+          "op": "eq",
+          "value": "plain"
+        }
+      ],
+      "use_general_preferences": false,
+      "excluded_preference_items": []
+    }
+  ],
+  "coherence_notes": [
+    "Illustrative hand-authored example, not output from a live LLM.",
+    "Product department, fit, size and floral-shirt preference are explicitly chosen fictional facts; they are not inferred from gender, race, nationality or body measurements.",
+    "Annual income is separate from the two purchase-specific budgets.",
+    "Null is explicit unknown; [] is explicitly no stated preference; neither can be filled by demographic inference. Summer-pants material overrides do not apply to other pants or shirts."
+  ]
+}

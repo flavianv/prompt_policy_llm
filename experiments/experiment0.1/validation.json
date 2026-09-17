@@ -1,0 +1,20 @@
+{
+  "version": "experiment0.1",
+  "date": "2026-09-17",
+  "mode": "mock_only",
+  "live_run_executed": false,
+  "weight_training_executed": false,
+  "remote_staged": false,
+  "source_sha256": "81f488522b7d24dcf65ded62f5f2c3c187e58f88525bfd87a3b47a886bbf043b",
+  "focused_tests_passed": 13,
+  "mock_audit": {
+    "users": 10,
+    "sessions": 100,
+    "paired_questions": 400,
+    "independent_answer_calls": 200,
+    "valid": true
+  },
+  "mock_output": "/tmp/experiment01-mock-20260917-final",
+  "experiment0_0_original_validation": "passed",
+  "full_suite_tests_passed": 54
+}

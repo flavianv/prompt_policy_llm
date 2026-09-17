@@ -1,0 +1,480 @@
+{
+  "schema_version": "user-profile-1.1",
+  "profile_id": "user07",
+  "reference_date": "2026-03-01",
+  "personal": {
+    "name": "Valeria Hernández",
+    "gender": "female",
+    "birth_date": "1996-07-14",
+    "age": 29,
+    "race": "mestiza",
+    "nationality": "Mexican",
+    "marital_status": "single"
+  },
+  "residence": {
+    "city": "Querétaro",
+    "region": "Querétaro",
+    "country": "Mexico",
+    "timezone": "America/Mexico_City"
+  },
+  "languages": [
+    {
+      "language": "Spanish",
+      "proficiency": "native"
+    },
+    {
+      "language": "English",
+      "proficiency": "fluent"
+    }
+  ],
+  "professional": {
+    "situation": "employed",
+    "occupation": "product designer",
+    "industry": "software and digital services",
+    "education": {
+      "level": "bachelor",
+      "field": "industrial design"
+    },
+    "income": {
+      "amount": 42000,
+      "currency": "MXN",
+      "period": "month"
+    }
+  },
+  "physical": {
+    "height": {
+      "value": 164,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 62,
+      "unit": "kg"
+    },
+    "build": "medium",
+    "hair_color": "dark brown",
+    "eye_color": "brown"
+  },
+  "interests": {
+    "hobbies": [
+      "urban sketching",
+      "weekend cycling",
+      "cooking",
+      "visiting museums"
+    ],
+    "other_interests": [
+      "architecture",
+      "independent films",
+      "sustainable design"
+    ]
+  },
+  "general_preferences": [
+    {
+      "topic": "music",
+      "item": "indie rock",
+      "stance": "like",
+      "scope": "global",
+      "category": null,
+      "shopping_effect": "background_only"
+    },
+    {
+      "topic": "travel",
+      "item": "small-city cultural trips",
+      "stance": "like",
+      "scope": "global",
+      "category": null,
+      "shopping_effect": "background_only"
+    },
+    {
+      "topic": "shopping",
+      "item": "impulse purchases",
+      "stance": "dislike",
+      "scope": "global",
+      "category": null,
+      "shopping_effect": "hard_exclusion"
+    }
+  ],
+  "category_profiles": [
+    {
+      "category": "shirts",
+      "sizes": [
+        {
+          "brand": "Uniqlo",
+          "sizing_system": "ALPHA",
+          "size": "M"
+        },
+        {
+          "brand": "COS",
+          "sizing_system": "ALPHA",
+          "size": "S"
+        }
+      ],
+      "hard": [
+        {
+          "field": "material",
+          "op": "not_in",
+          "value": [
+            "itchy wool"
+          ]
+        }
+      ],
+      "default_size": {
+        "sizing_system": "ALPHA",
+        "size": "M"
+      },
+      "preferences": {
+        "brands": [
+          "Uniqlo",
+          "COS"
+        ],
+        "materials": [
+          "cotton",
+          "linen"
+        ],
+        "colors": [
+          "white",
+          "navy",
+          "terracotta"
+        ],
+        "patterns": [
+          "stripes"
+        ],
+        "cuts": [
+          "straight"
+        ],
+        "fits": [
+          "regular"
+        ],
+        "occasions": [
+          "work",
+          "casual"
+        ],
+        "styles": [
+          "minimal",
+          "smart casual"
+        ]
+      },
+      "scoped_overrides": []
+    },
+    {
+      "category": "shoes",
+      "sizes": [
+        {
+          "brand": "Veja",
+          "sizing_system": "EU",
+          "size": "38"
+        },
+        {
+          "brand": "Dr. Martens",
+          "sizing_system": "EU",
+          "size": "38"
+        }
+      ],
+      "hard": [
+        {
+          "field": "width",
+          "op": "eq",
+          "value": "standard"
+        }
+      ],
+      "default_size": {
+        "sizing_system": "EU",
+        "size": "38"
+      },
+      "preferences": {
+        "brands": [
+          "Veja",
+          "Dr. Martens"
+        ],
+        "materials": [
+          "leather",
+          "canvas"
+        ],
+        "colors": [
+          "white",
+          "black",
+          "brown"
+        ],
+        "patterns": null,
+        "cuts": null,
+        "fits": [
+          "standard"
+        ],
+        "occasions": [
+          "casual",
+          "travel"
+        ],
+        "styles": [
+          "minimal",
+          "heritage"
+        ],
+        "widths": [
+          "standard"
+        ]
+      },
+      "scoped_overrides": []
+    },
+    {
+      "category": "pants",
+      "sizes": [
+        {
+          "brand": "Levi's",
+          "sizing_system": "W_IN_L_IN",
+          "size": "28x30"
+        }
+      ],
+      "hard": [
+        {
+          "field": "fit",
+          "op": "not_in",
+          "value": [
+            "skinny"
+          ]
+        }
+      ],
+      "default_size": {
+        "sizing_system": "W_IN_L_IN",
+        "size": "28x30"
+      },
+      "preferences": {
+        "brands": [
+          "Levi's",
+          "Uniqlo"
+        ],
+        "materials": [
+          "cotton"
+        ],
+        "colors": [
+          "denim blue",
+          "black",
+          "olive"
+        ],
+        "patterns": [],
+        "cuts": [
+          "straight",
+          "wide-leg"
+        ],
+        "fits": [
+          "regular",
+          "relaxed"
+        ],
+        "occasions": [
+          "casual",
+          "work"
+        ],
+        "styles": [
+          "minimal",
+          "utility"
+        ]
+      },
+      "scoped_overrides": [
+        {
+          "context": {
+            "subtype": null,
+            "season": "summer",
+            "occasion": null
+          },
+          "preferences": {
+            "materials": [
+              "linen",
+              "cotton"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "category": "outerwear",
+      "sizes": [
+        {
+          "brand": "Patagonia",
+          "sizing_system": "ALPHA",
+          "size": "S"
+        }
+      ],
+      "hard": [
+        {
+          "field": "material",
+          "op": "not_in",
+          "value": [
+            "real fur"
+          ]
+        }
+      ],
+      "default_size": {
+        "sizing_system": "ALPHA",
+        "size": "S"
+      },
+      "preferences": {
+        "brands": [
+          "Patagonia",
+          "Everlane"
+        ],
+        "materials": [
+          "cotton",
+          "recycled polyester"
+        ],
+        "colors": [
+          "olive",
+          "navy",
+          "camel"
+        ],
+        "patterns": null,
+        "cuts": [
+          "straight"
+        ],
+        "fits": [
+          "regular"
+        ],
+        "occasions": [
+          "travel",
+          "casual"
+        ],
+        "styles": [
+          "minimal",
+          "outdoor"
+        ]
+      },
+      "scoped_overrides": []
+    },
+    {
+      "category": "hats",
+      "sizes": [],
+      "hard": [],
+      "default_size": null,
+      "preferences": {
+        "brands": [
+          "Brixton"
+        ],
+        "materials": [
+          "cotton"
+        ],
+        "colors": [
+          "navy",
+          "beige"
+        ],
+        "patterns": null,
+        "cuts": null,
+        "fits": [
+          "adjustable"
+        ],
+        "occasions": [
+          "travel",
+          "casual"
+        ],
+        "styles": [
+          "classic"
+        ]
+      },
+      "scoped_overrides": []
+    },
+    {
+      "category": "accessories",
+      "sizes": [
+        {
+          "brand": "Baggu",
+          "sizing_system": "ONE_SIZE",
+          "size": "ONE SIZE"
+        }
+      ],
+      "hard": [],
+      "default_size": {
+        "sizing_system": "ONE_SIZE",
+        "size": "ONE SIZE"
+      },
+      "preferences": {
+        "brands": [
+          "Baggu"
+        ],
+        "materials": [
+          "canvas",
+          "leather"
+        ],
+        "colors": [
+          "black",
+          "forest green"
+        ],
+        "patterns": [],
+        "cuts": null,
+        "fits": null,
+        "occasions": [
+          "travel",
+          "casual"
+        ],
+        "styles": [
+          "minimal"
+        ]
+      },
+      "scoped_overrides": []
+    }
+  ],
+  "purchase_intents": [
+    {
+      "id": "future-trip",
+      "category": "shoes",
+      "recipient": "self",
+      "created_at": "2026-03-01T09:00:00Z",
+      "deadline": "2026-05-01T18:00:00Z",
+      "status": "active",
+      "budget": {
+        "amount": 2500,
+        "currency": "MXN"
+      },
+      "sizes": [
+        {
+          "brand": "Veja",
+          "sizing_system": "EU",
+          "size": "38"
+        }
+      ],
+      "hard": [
+        {
+          "field": "width",
+          "op": "eq",
+          "value": "standard"
+        }
+      ],
+      "soft": [
+        {
+          "field": "occasion",
+          "op": "in",
+          "value": [
+            "travel",
+            "walking"
+          ]
+        }
+      ],
+      "use_general_preferences": true,
+      "excluded_preference_items": []
+    },
+    {
+      "id": "urgent-gift",
+      "category": "shirts",
+      "recipient": "gift",
+      "created_at": "2026-03-01T09:00:00Z",
+      "deadline": "2026-03-02T18:00:00Z",
+      "status": "active",
+      "budget": {
+        "amount": 1200,
+        "currency": "MXN"
+      },
+      "sizes": null,
+      "hard": [],
+      "soft": [
+        {
+          "field": "style",
+          "op": "in",
+          "value": [
+            "minimal",
+            "smart casual"
+          ]
+        }
+      ],
+      "use_general_preferences": false,
+      "excluded_preference_items": []
+    }
+  ],
+  "coherence_notes": [
+    "Valeria works in a design-oriented role and prefers practical, understated clothing for work, travel, and casual use.",
+    "Category sizes are explicit and are not inferred from physical measurements."
+  ]
+}

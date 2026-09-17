@@ -1,0 +1,233 @@
+{
+  "audit_passed": true,
+  "overall": {
+    "n": 20,
+    "baseline": {
+      "correct": 8,
+      "accuracy": 0.4,
+      "valid": 20
+    },
+    "memory": {
+      "correct": 10,
+      "accuracy": 0.5,
+      "valid": 20
+    }
+  },
+  "earlier_session_evidence": {
+    "n": 15,
+    "baseline": {
+      "correct": 3,
+      "accuracy": 0.2,
+      "valid": 15
+    },
+    "memory": {
+      "correct": 5,
+      "accuracy": 0.3333333333333333,
+      "valid": 15
+    }
+  },
+  "current_session_evidence": {
+    "n": 5,
+    "baseline": {
+      "correct": 5,
+      "accuracy": 1.0,
+      "valid": 5
+    },
+    "memory": {
+      "correct": 5,
+      "accuracy": 1.0,
+      "valid": 5
+    }
+  },
+  "historical": {
+    "n": 3,
+    "baseline": {
+      "correct": 0,
+      "accuracy": 0.0,
+      "valid": 3
+    },
+    "memory": {
+      "correct": 0,
+      "accuracy": 0.0,
+      "valid": 3
+    }
+  },
+  "current_time": {
+    "n": 17,
+    "baseline": {
+      "correct": 8,
+      "accuracy": 0.47058823529411764,
+      "valid": 17
+    },
+    "memory": {
+      "correct": 10,
+      "accuracy": 0.5882352941176471,
+      "valid": 17
+    }
+  },
+  "per_session": [
+    {
+      "session": 1,
+      "n": 2,
+      "baseline": {
+        "correct": 2,
+        "accuracy": 1.0,
+        "valid": 2
+      },
+      "memory": {
+        "correct": 2,
+        "accuracy": 1.0,
+        "valid": 2
+      }
+    },
+    {
+      "session": 2,
+      "n": 2,
+      "baseline": {
+        "correct": 1,
+        "accuracy": 0.5,
+        "valid": 2
+      },
+      "memory": {
+        "correct": 2,
+        "accuracy": 1.0,
+        "valid": 2
+      }
+    },
+    {
+      "session": 3,
+      "n": 2,
+      "baseline": {
+        "correct": 1,
+        "accuracy": 0.5,
+        "valid": 2
+      },
+      "memory": {
+        "correct": 1,
+        "accuracy": 0.5,
+        "valid": 2
+      }
+    },
+    {
+      "session": 4,
+      "n": 2,
+      "baseline": {
+        "correct": 1,
+        "accuracy": 0.5,
+        "valid": 2
+      },
+      "memory": {
+        "correct": 1,
+        "accuracy": 0.5,
+        "valid": 2
+      }
+    },
+    {
+      "session": 5,
+      "n": 2,
+      "baseline": {
+        "correct": 1,
+        "accuracy": 0.5,
+        "valid": 2
+      },
+      "memory": {
+        "correct": 1,
+        "accuracy": 0.5,
+        "valid": 2
+      }
+    },
+    {
+      "session": 6,
+      "n": 2,
+      "baseline": {
+        "correct": 0,
+        "accuracy": 0.0,
+        "valid": 2
+      },
+      "memory": {
+        "correct": 0,
+        "accuracy": 0.0,
+        "valid": 2
+      }
+    },
+    {
+      "session": 7,
+      "n": 2,
+      "baseline": {
+        "correct": 0,
+        "accuracy": 0.0,
+        "valid": 2
+      },
+      "memory": {
+        "correct": 0,
+        "accuracy": 0.0,
+        "valid": 2
+      }
+    },
+    {
+      "session": 8,
+      "n": 2,
+      "baseline": {
+        "correct": 1,
+        "accuracy": 0.5,
+        "valid": 2
+      },
+      "memory": {
+        "correct": 1,
+        "accuracy": 0.5,
+        "valid": 2
+      }
+    },
+    {
+      "session": 9,
+      "n": 2,
+      "baseline": {
+        "correct": 1,
+        "accuracy": 0.5,
+        "valid": 2
+      },
+      "memory": {
+        "correct": 1,
+        "accuracy": 0.5,
+        "valid": 2
+      }
+    },
+    {
+      "session": 10,
+      "n": 2,
+      "baseline": {
+        "correct": 0,
+        "accuracy": 0.0,
+        "valid": 2
+      },
+      "memory": {
+        "correct": 1,
+        "accuracy": 0.5,
+        "valid": 2
+      }
+    }
+  ],
+  "paired": {
+    "both_correct": 8,
+    "memory_only": 2,
+    "both_wrong": 10,
+    "baseline_only": 0
+  },
+  "identical_arm_payloads": true,
+  "note_error_counts": {
+    "malformed_json": 59,
+    "parse_or_other": 59,
+    "read once": 36,
+    "read before editing/finish": 25
+  },
+  "parsed_tool_names": {
+    "read_notes": 36,
+    "note": 11,
+    "put_note": 3,
+    "note_upsert": 11
+  },
+  "note_input_tokens": 200806,
+  "note_output_tokens": 16717,
+  "note_generation_seconds": 154.33136942912824,
+  "successful_note_rounds": 0
+}

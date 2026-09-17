@@ -1,0 +1,281 @@
+# Actual Luna-generated initial profile
+
+Model: gpt-5.6-luna
+
+- schema_version: user-profile-1.1
+- profile_id: user06
+- reference_date: 2026-03-01
+- personal / name: Arjun Mehta
+- personal / gender: male
+- personal / birth_date: 1992-08-17
+- personal / age: 33
+- personal / race: South Asian
+- personal / nationality: Indian
+- personal / marital_status: single
+- residence / city: Pune
+- residence / region: Maharashtra
+- residence / country: India
+- residence / timezone: Asia/Kolkata
+- languages [1] / language: Hindi
+- languages [1] / proficiency: native
+- languages [2] / language: English
+- languages [2] / proficiency: fluent
+- languages [3] / language: Marathi
+- languages [3] / proficiency: intermediate
+- professional / situation: employed
+- professional / occupation: Product analyst
+- professional / industry: Financial technology
+- professional / education / level: master
+- professional / education / field: Business analytics
+- professional / income / amount: 145000
+- professional / income / currency: INR
+- professional / income / period: month
+- physical / height / value: 178
+- physical / height / unit: cm
+- physical / weight / value: 76
+- physical / weight / unit: kg
+- physical / build: average
+- physical / hair_color: black
+- physical / eye_color: brown
+- interests / hobbies: street photography, cooking, weekend hiking, reading contemporary fiction
+- interests / other_interests: independent cinema, regional food traditions, urban design
+- general_preferences [1] / topic: books
+- general_preferences [1] / item: contemporary fiction
+- general_preferences [1] / stance: like
+- general_preferences [1] / scope: global
+- general_preferences [1] / category: explicitly unknown
+- general_preferences [1] / shopping_effect: background_only
+- general_preferences [2] / topic: travel
+- general_preferences [2] / item: walkable city neighborhoods
+- general_preferences [2] / stance: like
+- general_preferences [2] / scope: global
+- general_preferences [2] / category: explicitly unknown
+- general_preferences [2] / shopping_effect: background_only
+- general_preferences [3] / topic: shopping
+- general_preferences [3] / item: clear return policies
+- general_preferences [3] / stance: like
+- general_preferences [3] / scope: global
+- general_preferences [3] / category: explicitly unknown
+- general_preferences [3] / shopping_effect: soft_preference
+- general_preferences [4] / topic: clothing
+- general_preferences [4] / item: visible brand logos
+- general_preferences [4] / stance: dislike
+- general_preferences [4] / scope: global
+- general_preferences [4] / category: explicitly unknown
+- general_preferences [4] / shopping_effect: hard_exclusion
+- category_profiles [1] / category: shirts
+- category_profiles [1] / sizes [1] / brand: Uniqlo
+- category_profiles [1] / sizes [1] / sizing_system: ALPHA
+- category_profiles [1] / sizes [1] / size: M
+- category_profiles [1] / sizes [2] / brand: Charles Tyrwhitt
+- category_profiles [1] / sizes [2] / sizing_system: US_COLLAR_IN
+- category_profiles [1] / sizes [2] / size: 15.5/34
+- category_profiles [1] / hard [1] / field: fit
+- category_profiles [1] / hard [1] / op: not_in
+- category_profiles [1] / hard [1] / value: extra slim
+- category_profiles [1] / default_size / sizing_system: ALPHA
+- category_profiles [1] / default_size / size: M
+- category_profiles [1] / preferences / brands: Uniqlo, Muji
+- category_profiles [1] / preferences / materials: cotton, linen
+- category_profiles [1] / preferences / colors: white, navy, olive
+- category_profiles [1] / preferences / patterns: solid, subtle stripes
+- category_profiles [1] / preferences / cuts: button-down, camp collar
+- category_profiles [1] / preferences / fits: regular, relaxed
+- category_profiles [1] / preferences / occasions: casual, smart casual
+- category_profiles [1] / preferences / styles: minimal, classic
+- category_profiles [1] / scoped_overrides [1] / context / subtype: explicitly unknown
+- category_profiles [1] / scoped_overrides [1] / context / season: summer
+- category_profiles [1] / scoped_overrides [1] / context / occasion: explicitly unknown
+- category_profiles [1] / scoped_overrides [1] / preferences / brands: Uniqlo, Muji
+- category_profiles [1] / scoped_overrides [1] / preferences / materials: linen, cotton
+- category_profiles [1] / scoped_overrides [1] / preferences / colors: white, light blue
+- category_profiles [1] / scoped_overrides [1] / preferences / patterns: solid
+- category_profiles [1] / scoped_overrides [1] / preferences / cuts: camp collar
+- category_profiles [1] / scoped_overrides [1] / preferences / fits: relaxed
+- category_profiles [1] / scoped_overrides [1] / preferences / occasions: casual
+- category_profiles [1] / scoped_overrides [1] / preferences / styles: minimal
+- category_profiles [2] / category: shoes
+- category_profiles [2] / sizes [1] / brand: Clarks
+- category_profiles [2] / sizes [1] / sizing_system: EU
+- category_profiles [2] / sizes [1] / size: 42
+- category_profiles [2] / sizes [2] / brand: Nike
+- category_profiles [2] / sizes [2] / sizing_system: US_MEN
+- category_profiles [2] / sizes [2] / size: 9
+- category_profiles [2] / hard [1] / field: width
+- category_profiles [2] / hard [1] / op: not_in
+- category_profiles [2] / hard [1] / value: narrow
+- category_profiles [2] / default_size / sizing_system: EU
+- category_profiles [2] / default_size / size: 42
+- category_profiles [2] / preferences / brands: Clarks, Nike
+- category_profiles [2] / preferences / materials: leather, canvas
+- category_profiles [2] / preferences / colors: white, brown, black
+- category_profiles [2] / preferences / patterns: solid
+- category_profiles [2] / preferences / cuts: explicitly unknown
+- category_profiles [2] / preferences / fits: regular
+- category_profiles [2] / preferences / occasions: walking, travel, casual
+- category_profiles [2] / preferences / styles: minimal, low-top
+- category_profiles [2] / preferences / widths: regular, wide
+- category_profiles [2] / scoped_overrides [1] / context / subtype: walking shoes
+- category_profiles [2] / scoped_overrides [1] / context / season: explicitly unknown
+- category_profiles [2] / scoped_overrides [1] / context / occasion: travel
+- category_profiles [2] / scoped_overrides [1] / preferences / brands: Clarks, Nike
+- category_profiles [2] / scoped_overrides [1] / preferences / materials: leather, canvas
+- category_profiles [2] / scoped_overrides [1] / preferences / colors: black, brown
+- category_profiles [2] / scoped_overrides [1] / preferences / patterns: solid
+- category_profiles [2] / scoped_overrides [1] / preferences / cuts: explicitly unknown
+- category_profiles [2] / scoped_overrides [1] / preferences / fits: regular
+- category_profiles [2] / scoped_overrides [1] / preferences / occasions: travel
+- category_profiles [2] / scoped_overrides [1] / preferences / styles: supportive, minimal
+- category_profiles [2] / scoped_overrides [1] / preferences / widths: regular, wide
+- category_profiles [3] / category: pants
+- category_profiles [3] / sizes [1] / brand: Levi's
+- category_profiles [3] / sizes [1] / sizing_system: W_IN_L_IN
+- category_profiles [3] / sizes [1] / size: 32x32
+- category_profiles [3] / sizes [2] / brand: Uniqlo
+- category_profiles [3] / sizes [2] / sizing_system: ALPHA
+- category_profiles [3] / sizes [2] / size: M
+- category_profiles [3] / hard [1] / field: fit
+- category_profiles [3] / hard [1] / op: not_in
+- category_profiles [3] / hard [1] / value: skinny
+- category_profiles [3] / default_size / sizing_system: W_IN_L_IN
+- category_profiles [3] / default_size / size: 32x32
+- category_profiles [3] / preferences / brands: Levi's, Uniqlo
+- category_profiles [3] / preferences / materials: cotton
+- category_profiles [3] / preferences / colors: navy, charcoal, khaki
+- category_profiles [3] / preferences / patterns: solid
+- category_profiles [3] / preferences / cuts: straight, tapered
+- category_profiles [3] / preferences / fits: regular, relaxed
+- category_profiles [3] / preferences / occasions: casual, smart casual
+- category_profiles [3] / preferences / styles: minimal, classic
+- category_profiles [3] / scoped_overrides [1] / context / subtype: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / context / season: summer
+- category_profiles [3] / scoped_overrides [1] / context / occasion: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / brands: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / materials: linen, cotton
+- category_profiles [3] / scoped_overrides [1] / preferences / colors: beige, navy, olive
+- category_profiles [3] / scoped_overrides [1] / preferences / patterns: solid
+- category_profiles [3] / scoped_overrides [1] / preferences / cuts: straight, tapered
+- category_profiles [3] / scoped_overrides [1] / preferences / fits: relaxed
+- category_profiles [3] / scoped_overrides [1] / preferences / occasions: casual
+- category_profiles [3] / scoped_overrides [1] / preferences / styles: minimal, lightweight
+- category_profiles [4] / category: outerwear
+- category_profiles [4] / sizes [1] / brand: Uniqlo
+- category_profiles [4] / sizes [1] / sizing_system: ALPHA
+- category_profiles [4] / sizes [1] / size: M
+- category_profiles [4] / hard [1] / field: fit
+- category_profiles [4] / hard [1] / op: not_in
+- category_profiles [4] / hard [1] / value: extra slim
+- category_profiles [4] / default_size / sizing_system: ALPHA
+- category_profiles [4] / default_size / size: M
+- category_profiles [4] / preferences / brands: Uniqlo, Patagonia
+- category_profiles [4] / preferences / materials: cotton, nylon, fleece
+- category_profiles [4] / preferences / colors: navy, charcoal, olive
+- category_profiles [4] / preferences / patterns: solid
+- category_profiles [4] / preferences / cuts: jacket, overshirt
+- category_profiles [4] / preferences / fits: regular, relaxed
+- category_profiles [4] / preferences / occasions: travel, casual
+- category_profiles [4] / preferences / styles: minimal, utility
+- category_profiles [4] / scoped_overrides [1] / context / subtype: rain jacket
+- category_profiles [4] / scoped_overrides [1] / context / season: monsoon
+- category_profiles [4] / scoped_overrides [1] / context / occasion: explicitly unknown
+- category_profiles [4] / scoped_overrides [1] / preferences / brands: Patagonia, Uniqlo
+- category_profiles [4] / scoped_overrides [1] / preferences / materials: nylon
+- category_profiles [4] / scoped_overrides [1] / preferences / colors: navy, charcoal
+- category_profiles [4] / scoped_overrides [1] / preferences / patterns: solid
+- category_profiles [4] / scoped_overrides [1] / preferences / cuts: jacket
+- category_profiles [4] / scoped_overrides [1] / preferences / fits: regular
+- category_profiles [4] / scoped_overrides [1] / preferences / occasions: travel, outdoor
+- category_profiles [4] / scoped_overrides [1] / preferences / styles: utility
+- category_profiles [5] / category: hats
+- category_profiles [5] / sizes [1] / brand: Patagonia
+- category_profiles [5] / sizes [1] / sizing_system: ALPHA
+- category_profiles [5] / sizes [1] / size: M
+- category_profiles [5] / sizes [2] / brand: New Era
+- category_profiles [5] / sizes [2] / sizing_system: CM
+- category_profiles [5] / sizes [2] / size: 58
+- category_profiles [5] / hard: explicitly no stated preference
+- category_profiles [5] / default_size: explicitly unknown
+- category_profiles [5] / preferences / brands: Patagonia, New Era
+- category_profiles [5] / preferences / materials: cotton
+- category_profiles [5] / preferences / colors: navy, olive, beige
+- category_profiles [5] / preferences / patterns: solid
+- category_profiles [5] / preferences / cuts: baseball cap
+- category_profiles [5] / preferences / fits: adjustable
+- category_profiles [5] / preferences / occasions: outdoor, travel
+- category_profiles [5] / preferences / styles: casual, utility
+- category_profiles [5] / scoped_overrides: explicitly no stated preference
+- category_profiles [6] / category: accessories
+- category_profiles [6] / sizes [1] / brand: Bellroy
+- category_profiles [6] / sizes [1] / sizing_system: ONE_SIZE
+- category_profiles [6] / sizes [1] / size: ONE SIZE
+- category_profiles [6] / hard: explicitly no stated preference
+- category_profiles [6] / default_size / sizing_system: ONE_SIZE
+- category_profiles [6] / default_size / size: ONE SIZE
+- category_profiles [6] / preferences / brands: Bellroy, Muji
+- category_profiles [6] / preferences / materials: leather, canvas, cotton
+- category_profiles [6] / preferences / colors: black, brown, olive
+- category_profiles [6] / preferences / patterns: explicitly no stated preference
+- category_profiles [6] / preferences / cuts: explicitly unknown
+- category_profiles [6] / preferences / fits: explicitly unknown
+- category_profiles [6] / preferences / occasions: work, travel
+- category_profiles [6] / preferences / styles: minimal, functional
+- category_profiles [6] / scoped_overrides [1] / context / subtype: belt
+- category_profiles [6] / scoped_overrides [1] / context / season: explicitly unknown
+- category_profiles [6] / scoped_overrides [1] / context / occasion: explicitly unknown
+- category_profiles [6] / scoped_overrides [1] / preferences / brands: Bellroy
+- category_profiles [6] / scoped_overrides [1] / preferences / materials: leather
+- category_profiles [6] / scoped_overrides [1] / preferences / colors: black, brown
+- category_profiles [6] / scoped_overrides [1] / preferences / patterns: explicitly no stated preference
+- category_profiles [6] / scoped_overrides [1] / preferences / cuts: explicitly unknown
+- category_profiles [6] / scoped_overrides [1] / preferences / fits: explicitly unknown
+- category_profiles [6] / scoped_overrides [1] / preferences / occasions: work, smart casual
+- category_profiles [6] / scoped_overrides [1] / preferences / styles: minimal
+- purchase_intents [1] / id: future-trip
+- purchase_intents [1] / category: shoes
+- purchase_intents [1] / recipient: self
+- purchase_intents [1] / created_at: 2026-03-01T09:00:00Z
+- purchase_intents [1] / deadline: 2026-05-01T18:00:00Z
+- purchase_intents [1] / status: active
+- purchase_intents [1] / budget / amount: 9000
+- purchase_intents [1] / budget / currency: INR
+- purchase_intents [1] / sizes [1] / brand: Clarks
+- purchase_intents [1] / sizes [1] / sizing_system: EU
+- purchase_intents [1] / sizes [1] / size: 42
+- purchase_intents [1] / sizes [2] / brand: Nike
+- purchase_intents [1] / sizes [2] / sizing_system: US_MEN
+- purchase_intents [1] / sizes [2] / size: 9
+- purchase_intents [1] / hard [1] / field: width
+- purchase_intents [1] / hard [1] / op: not_in
+- purchase_intents [1] / hard [1] / value: narrow
+- purchase_intents [1] / hard [2] / field: occasion
+- purchase_intents [1] / hard [2] / op: in
+- purchase_intents [1] / hard [2] / value: travel, walking
+- purchase_intents [1] / soft [1] / field: color
+- purchase_intents [1] / soft [1] / op: in
+- purchase_intents [1] / soft [1] / value: black, brown
+- purchase_intents [1] / soft [2] / field: material
+- purchase_intents [1] / soft [2] / op: in
+- purchase_intents [1] / soft [2] / value: leather, canvas
+- purchase_intents [1] / use_general_preferences: True
+- purchase_intents [1] / excluded_preference_items: explicitly no stated preference
+- purchase_intents [2] / id: urgent-gift
+- purchase_intents [2] / category: shirts
+- purchase_intents [2] / recipient: gift
+- purchase_intents [2] / created_at: 2026-03-01T09:00:00Z
+- purchase_intents [2] / deadline: 2026-03-02T18:00:00Z
+- purchase_intents [2] / status: active
+- purchase_intents [2] / budget / amount: 3000
+- purchase_intents [2] / budget / currency: INR
+- purchase_intents [2] / sizes: explicitly unknown
+- purchase_intents [2] / hard [1] / field: occasion
+- purchase_intents [2] / hard [1] / op: in
+- purchase_intents [2] / hard [1] / value: casual, smart casual
+- purchase_intents [2] / soft [1] / field: color
+- purchase_intents [2] / soft [1] / op: in
+- purchase_intents [2] / soft [1] / value: navy, white, olive
+- purchase_intents [2] / soft [2] / field: pattern
+- purchase_intents [2] / soft [2] / op: in
+- purchase_intents [2] / soft [2] / value: solid, subtle stripes
+- purchase_intents [2] / use_general_preferences: False
+- purchase_intents [2] / excluded_preference_items: explicitly no stated preference
+- coherence_notes: Arjun lives in Pune and works in financial technology as a product analyst., His clothing preferences emphasize practical, understated, regular or relaxed fits without deriving size from physical measurements., The urgent shirt purchase is a gift, so the shopper's personal clothing preferences and sizes are not automatically applied.

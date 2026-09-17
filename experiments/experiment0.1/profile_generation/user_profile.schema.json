@@ -1,0 +1,933 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "user-profile-1.1"
+    },
+    "profile_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reference_date": {
+      "type": "string",
+      "minLength": 1,
+      "format": "date"
+    },
+    "personal": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "gender": {
+          "type": "string",
+          "enum": [
+            "male",
+            "female"
+          ]
+        },
+        "birth_date": {
+          "type": "string",
+          "minLength": 1,
+          "format": "date"
+        },
+        "age": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 120
+        },
+        "race": {
+          "type": "string",
+          "minLength": 1
+        },
+        "nationality": {
+          "type": "string",
+          "minLength": 1
+        },
+        "marital_status": {
+          "type": "string",
+          "enum": [
+            "single",
+            "married",
+            "partnered",
+            "divorced",
+            "widowed",
+            "other"
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "gender",
+        "birth_date",
+        "age",
+        "race",
+        "nationality",
+        "marital_status"
+      ],
+      "additionalProperties": false
+    },
+    "residence": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "minLength": 1
+        },
+        "region": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "country": {
+          "type": "string",
+          "minLength": 1
+        },
+        "timezone": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "city",
+        "region",
+        "country",
+        "timezone"
+      ],
+      "additionalProperties": false
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "type": "string",
+            "minLength": 1
+          },
+          "proficiency": {
+            "type": "string",
+            "enum": [
+              "native",
+              "fluent",
+              "intermediate",
+              "basic"
+            ]
+          }
+        },
+        "required": [
+          "language",
+          "proficiency"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "maxItems": 30
+    },
+    "professional": {
+      "type": "object",
+      "properties": {
+        "situation": {
+          "type": "string",
+          "enum": [
+            "employed",
+            "self_employed",
+            "student",
+            "unemployed",
+            "retired",
+            "other"
+          ]
+        },
+        "occupation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "industry": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "education": {
+          "type": "object",
+          "properties": {
+            "level": {
+              "type": "string",
+              "enum": [
+                "primary",
+                "secondary",
+                "vocational",
+                "bachelor",
+                "master",
+                "doctorate",
+                "other"
+              ]
+            },
+            "field": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "level",
+            "field"
+          ],
+          "additionalProperties": false
+        },
+        "income": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": "number",
+              "minimum": 0
+            },
+            "currency": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[A-Z]{3}$"
+            },
+            "period": {
+              "type": "string",
+              "enum": [
+                "month",
+                "year"
+              ]
+            }
+          },
+          "required": [
+            "amount",
+            "currency",
+            "period"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "situation",
+        "occupation",
+        "industry",
+        "education",
+        "income"
+      ],
+      "additionalProperties": false
+    },
+    "physical": {
+      "type": "object",
+      "properties": {
+        "height": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "number",
+              "minimum": 0,
+              "exclusiveMinimum": 0
+            },
+            "unit": {
+              "type": "string",
+              "enum": [
+                "cm",
+                "m",
+                "in"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "unit"
+          ],
+          "additionalProperties": false
+        },
+        "weight": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "number",
+              "minimum": 0,
+              "exclusiveMinimum": 0
+            },
+            "unit": {
+              "type": "string",
+              "enum": [
+                "kg",
+                "lb"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "unit"
+          ],
+          "additionalProperties": false
+        },
+        "build": {
+          "type": "string",
+          "minLength": 1
+        },
+        "hair_color": {
+          "type": "string",
+          "minLength": 1
+        },
+        "eye_color": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "height",
+        "weight",
+        "build",
+        "hair_color",
+        "eye_color"
+      ],
+      "additionalProperties": false
+    },
+    "interests": {
+      "type": "object",
+      "properties": {
+        "hobbies": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "maxItems": 30
+        },
+        "other_interests": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "maxItems": 30
+        }
+      },
+      "required": [
+        "hobbies",
+        "other_interests"
+      ],
+      "additionalProperties": false
+    },
+    "general_preferences": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/preference"
+      },
+      "minItems": 0,
+      "maxItems": 100
+    },
+    "category_profiles": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/category_profile"
+      },
+      "minItems": 0,
+      "maxItems": 50
+    },
+    "purchase_intents": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/purchase_intent"
+      },
+      "minItems": 0,
+      "maxItems": 50
+    },
+    "coherence_notes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0,
+      "maxItems": 30
+    }
+  },
+  "required": [
+    "schema_version",
+    "profile_id",
+    "reference_date",
+    "personal",
+    "residence",
+    "languages",
+    "professional",
+    "physical",
+    "interests",
+    "general_preferences",
+    "category_profiles",
+    "purchase_intents",
+    "coherence_notes"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:prompt-policy:user-profile:1.0",
+  "title": "Synthetic user initial profile",
+  "description": "Initial hidden profile generated once. Personal facts never imply product taste, size or budget. Semantic checks supplement JSON Schema for age/date consistency and constraints.",
+  "$defs": {
+    "rule": {
+      "type": "object",
+      "properties": {
+        "field": {
+          "type": "string",
+          "minLength": 1
+        },
+        "op": {
+          "type": "string",
+          "enum": [
+            "eq",
+            "ne",
+            "in",
+            "not_in",
+            "lte",
+            "gte"
+          ]
+        },
+        "value": {
+          "type": [
+            "string",
+            "number",
+            "array"
+          ]
+        }
+      },
+      "required": [
+        "field",
+        "op",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "size": {
+      "type": "object",
+      "properties": {
+        "brand": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sizing_system": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "size": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "brand",
+        "sizing_system",
+        "size"
+      ],
+      "additionalProperties": false
+    },
+    "money": {
+      "type": "object",
+      "properties": {
+        "amount": {
+          "type": "number",
+          "minimum": 0
+        },
+        "currency": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[A-Z]{3}$"
+        }
+      },
+      "required": [
+        "amount",
+        "currency"
+      ],
+      "additionalProperties": false
+    },
+    "preference": {
+      "type": "object",
+      "properties": {
+        "topic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "item": {
+          "type": "string",
+          "minLength": 1
+        },
+        "stance": {
+          "type": "string",
+          "enum": [
+            "like",
+            "dislike",
+            "retracted"
+          ]
+        },
+        "scope": {
+          "type": "string",
+          "enum": [
+            "global",
+            "category"
+          ]
+        },
+        "category": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "shopping_effect": {
+          "type": "string",
+          "enum": [
+            "background_only",
+            "soft_preference",
+            "hard_exclusion"
+          ]
+        }
+      },
+      "required": [
+        "topic",
+        "item",
+        "stance",
+        "scope",
+        "category",
+        "shopping_effect"
+      ],
+      "additionalProperties": false
+    },
+    "category_profile": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sizes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/size"
+          },
+          "minItems": 0,
+          "maxItems": 50
+        },
+        "hard": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/rule"
+          },
+          "minItems": 0,
+          "maxItems": 50
+        },
+        "default_size": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "sizing_system": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "size": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "sizing_system",
+            "size"
+          ],
+          "additionalProperties": false
+        },
+        "preferences": {
+          "type": "object",
+          "properties": {
+            "brands": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "maxItems": 30
+            },
+            "materials": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "maxItems": 30
+            },
+            "colors": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "maxItems": 30
+            },
+            "patterns": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "maxItems": 30
+            },
+            "cuts": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "maxItems": 30
+            },
+            "fits": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "maxItems": 30
+            },
+            "occasions": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "maxItems": 30
+            },
+            "styles": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "maxItems": 30
+            },
+            "widths": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "maxItems": 30
+            }
+          },
+          "additionalProperties": false
+        },
+        "scoped_overrides": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "context": {
+                "type": "object",
+                "properties": {
+                  "subtype": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "season": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "occasion": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "required": [
+                  "subtype",
+                  "season",
+                  "occasion"
+                ],
+                "additionalProperties": false
+              },
+              "preferences": {
+                "type": "object",
+                "properties": {
+                  "brands": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "maxItems": 30
+                  },
+                  "materials": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "maxItems": 30
+                  },
+                  "colors": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "maxItems": 30
+                  },
+                  "patterns": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "maxItems": 30
+                  },
+                  "cuts": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "maxItems": 30
+                  },
+                  "fits": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "maxItems": 30
+                  },
+                  "occasions": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "maxItems": 30
+                  },
+                  "styles": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "maxItems": 30
+                  },
+                  "widths": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "maxItems": 30
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "context",
+              "preferences"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 30
+        }
+      },
+      "required": [
+        "category",
+        "sizes",
+        "hard",
+        "default_size",
+        "preferences",
+        "scoped_overrides"
+      ],
+      "additionalProperties": false
+    },
+    "purchase_intent": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "category": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recipient": {
+          "type": "string",
+          "enum": [
+            "self",
+            "gift"
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "minLength": 1,
+          "format": "date-time"
+        },
+        "deadline": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "active",
+            "expired",
+            "completed",
+            "cancelled",
+            "uncertain"
+          ]
+        },
+        "budget": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "amount": {
+              "type": "number",
+              "minimum": 0
+            },
+            "currency": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[A-Z]{3}$"
+            }
+          },
+          "required": [
+            "amount",
+            "currency"
+          ],
+          "additionalProperties": false
+        },
+        "sizes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/size"
+          },
+          "maxItems": 50
+        },
+        "hard": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/rule"
+          },
+          "minItems": 0,
+          "maxItems": 50
+        },
+        "soft": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/rule"
+          },
+          "minItems": 0,
+          "maxItems": 50
+        },
+        "use_general_preferences": {
+          "type": "boolean"
+        },
+        "excluded_preference_items": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "maxItems": 50
+        }
+      },
+      "required": [
+        "id",
+        "category",
+        "recipient",
+        "created_at",
+        "deadline",
+        "status",
+        "budget",
+        "sizes",
+        "hard",
+        "soft",
+        "use_general_preferences",
+        "excluded_preference_items"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

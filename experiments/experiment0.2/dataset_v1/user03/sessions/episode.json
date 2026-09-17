@@ -1,0 +1,4377 @@
+{
+  "checkpoint": "experiment0.2-explicit-state",
+  "seed": 19,
+  "profile_id": "user03",
+  "cases": [
+    {
+      "session": 0,
+      "current_time": "2026-03-01T09:01:00Z",
+      "events": [
+        {
+          "id": "e0-0",
+          "timestamp": "2026-03-01T09:00:00Z",
+          "text": "For my own records, my name: Aiko Nakamura.",
+          "key": "personal:name",
+          "value": "Aiko Nakamura",
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e0-1",
+          "timestamp": "2026-03-01T09:00:01Z",
+          "text": "For my own records, my preferred materials for pants in context summer: linen, cotton.",
+          "key": "clothing:pants:scope0:materials",
+          "value": [
+            "linen",
+            "cotton"
+          ],
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e0-2",
+          "timestamp": "2026-03-01T09:00:02Z",
+          "text": "For my own records, my default size for hats: explicitly unknown.",
+          "key": "clothing:hats:default_size",
+          "value": null,
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e0-3",
+          "timestamp": "2026-03-01T09:00:03Z",
+          "text": "For my own records, my preferred patterns for accessories: no stated preference.",
+          "key": "clothing:accessories:patterns",
+          "value": [],
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e0-4",
+          "timestamp": "2026-03-01T09:00:04Z",
+          "text": "For my own records, the state of purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z.",
+          "key": "intent:future-trip:state",
+          "value": {
+            "status": "active",
+            "deadline": "2026-05-01T18:00:00Z"
+          },
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e0-5",
+          "timestamp": "2026-03-01T09:00:05Z",
+          "text": "For my own records, the state of purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z.",
+          "key": "intent:urgent-gift:state",
+          "value": {
+            "status": "active",
+            "deadline": "2026-03-02T18:00:00Z"
+          },
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e0-6",
+          "timestamp": "2026-03-01T09:00:06Z",
+          "text": "For my own records, my preferred occasions for hats in context sun hat, summer, hiking: hiking, sunny weather.",
+          "key": "clothing:hats:scope0:occasions",
+          "value": [
+            "hiking",
+            "sunny weather"
+          ],
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e0-7",
+          "timestamp": "2026-03-01T09:00:07Z",
+          "text": "A pigeon landed on the windowsill while I was waiting.",
+          "kind": "filler",
+          "key": null
+        },
+        {
+          "id": "e0-8",
+          "timestamp": "2026-03-01T09:00:08Z",
+          "text": "A shop window advertised striped linen shirts. I am only describing the display.",
+          "kind": "product_description",
+          "key": null
+        },
+        {
+          "id": "e0-9",
+          "timestamp": "2026-03-01T09:00:09Z",
+          "text": "An advert listed leather shoes in several sizes; that says nothing about my own size.",
+          "kind": "product_description",
+          "key": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "q0",
+          "question": "Which option matches my preferred materials for pants in context summer as of now?",
+          "options": {
+            "A": "wool",
+            "B": "no stated preference",
+            "C": "explicitly unknown",
+            "D": "linen, cotton"
+          }
+        },
+        {
+          "id": "q1",
+          "question": "Which option matches my preferred patterns for accessories as of now?",
+          "options": {
+            "A": "plain, striped",
+            "B": "no stated preference",
+            "C": "floral",
+            "D": "striped"
+          }
+        }
+      ],
+      "truth": {
+        "q0": {
+          "answer": "D",
+          "value": [
+            "linen",
+            "cotton"
+          ],
+          "key": "clothing:pants:scope0:materials",
+          "kind": "list",
+          "historical": false,
+          "at_time": "2026-03-01T09:01:00Z",
+          "support_ids": [
+            "e0-1"
+          ],
+          "earlier_session_required": false
+        },
+        "q1": {
+          "answer": "B",
+          "value": [],
+          "key": "clothing:accessories:patterns",
+          "kind": "list",
+          "historical": false,
+          "at_time": "2026-03-01T09:01:00Z",
+          "support_ids": [
+            "e0-3"
+          ],
+          "earlier_session_required": false
+        }
+      },
+      "revealed_state": {
+        "personal:name": {
+          "value": "Aiko Nakamura",
+          "history": [
+            {
+              "id": "e0-0",
+              "timestamp": "2026-03-01T09:00:00Z",
+              "text": "For my own records, my name: Aiko Nakamura.",
+              "key": "personal:name",
+              "value": "Aiko Nakamura",
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:pants:scope0:materials": {
+          "value": [
+            "linen",
+            "cotton"
+          ],
+          "history": [
+            {
+              "id": "e0-1",
+              "timestamp": "2026-03-01T09:00:01Z",
+              "text": "For my own records, my preferred materials for pants in context summer: linen, cotton.",
+              "key": "clothing:pants:scope0:materials",
+              "value": [
+                "linen",
+                "cotton"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:hats:default_size": {
+          "value": null,
+          "history": [
+            {
+              "id": "e0-2",
+              "timestamp": "2026-03-01T09:00:02Z",
+              "text": "For my own records, my default size for hats: explicitly unknown.",
+              "key": "clothing:hats:default_size",
+              "value": null,
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:accessories:patterns": {
+          "value": [],
+          "history": [
+            {
+              "id": "e0-3",
+              "timestamp": "2026-03-01T09:00:03Z",
+              "text": "For my own records, my preferred patterns for accessories: no stated preference.",
+              "key": "clothing:accessories:patterns",
+              "value": [],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "intent:future-trip:state": {
+          "value": "active",
+          "history": [
+            {
+              "id": "e0-4",
+              "timestamp": "2026-03-01T09:00:04Z",
+              "text": "For my own records, the state of purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z.",
+              "key": "intent:future-trip:state",
+              "value": {
+                "status": "active",
+                "deadline": "2026-05-01T18:00:00Z"
+              },
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "intent:urgent-gift:state": {
+          "value": "active",
+          "history": [
+            {
+              "id": "e0-5",
+              "timestamp": "2026-03-01T09:00:05Z",
+              "text": "For my own records, the state of purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z.",
+              "key": "intent:urgent-gift:state",
+              "value": {
+                "status": "active",
+                "deadline": "2026-03-02T18:00:00Z"
+              },
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:hats:scope0:occasions": {
+          "value": [
+            "hiking",
+            "sunny weather"
+          ],
+          "history": [
+            {
+              "id": "e0-6",
+              "timestamp": "2026-03-01T09:00:06Z",
+              "text": "For my own records, my preferred occasions for hats in context sun hat, summer, hiking: hiking, sunny weather.",
+              "key": "clothing:hats:scope0:occasions",
+              "value": [
+                "hiking",
+                "sunny weather"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "session": 1,
+      "current_time": "2026-03-06T09:01:00Z",
+      "events": [
+        {
+          "id": "e1-0",
+          "timestamp": "2026-03-06T09:00:00Z",
+          "text": "For this temporary period only, my preferred materials for pants in context summer: wool. This applies until 2026-03-09T09:00:00Z; after that, return to my prior preference.",
+          "key": "clothing:pants:scope0:materials",
+          "value": [
+            "wool"
+          ],
+          "until": "2026-03-09T09:00:00Z",
+          "kind": "temporary"
+        },
+        {
+          "id": "e1-1",
+          "timestamp": "2026-03-06T09:00:01Z",
+          "text": "For my own records, the languages I speak: language Japanese; proficiency native, language English; proficiency fluent, language French; proficiency basic.",
+          "key": "general:languages",
+          "value": [
+            {
+              "language": "Japanese",
+              "proficiency": "native"
+            },
+            {
+              "language": "English",
+              "proficiency": "fluent"
+            },
+            {
+              "language": "French",
+              "proficiency": "basic"
+            }
+          ],
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e1-2",
+          "timestamp": "2026-03-06T09:00:02Z",
+          "text": "The elevator stopped on every floor today.",
+          "kind": "filler",
+          "key": null
+        },
+        {
+          "id": "e1-3",
+          "timestamp": "2026-03-06T09:00:03Z",
+          "text": "A pigeon landed on the windowsill while I was waiting.",
+          "kind": "filler",
+          "key": null
+        },
+        {
+          "id": "e1-4",
+          "timestamp": "2026-03-06T09:00:04Z",
+          "text": "My neighbor was talking about learning the violin.",
+          "kind": "other_person",
+          "key": null
+        },
+        {
+          "id": "e1-5",
+          "timestamp": "2026-03-06T09:00:05Z",
+          "text": "A colleague said they love neon jackets; that is their taste, not mine.",
+          "kind": "other_person",
+          "key": null
+        },
+        {
+          "id": "e1-6",
+          "timestamp": "2026-03-06T09:00:06Z",
+          "text": "A shop window advertised striped linen shirts. I am only describing the display.",
+          "kind": "product_description",
+          "key": null
+        },
+        {
+          "id": "e1-7",
+          "timestamp": "2026-03-06T09:00:07Z",
+          "text": "A colleague said they love neon jackets; that is their taste, not mine.",
+          "kind": "other_person",
+          "key": null
+        },
+        {
+          "id": "e1-8",
+          "timestamp": "2026-03-06T09:00:08Z",
+          "text": "A shop window advertised striped linen shirts. I am only describing the display.",
+          "kind": "product_description",
+          "key": null
+        },
+        {
+          "id": "e1-9",
+          "timestamp": "2026-03-06T09:00:09Z",
+          "text": "Just confirming again: my default size for hats: explicitly unknown.",
+          "key": "clothing:hats:default_size",
+          "value": null,
+          "until": null,
+          "kind": "repeat"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q0",
+          "question": "Which option matches the state of purchase intent urgent-gift (shirts, recipient gift) as of now?",
+          "options": {
+            "A": "active",
+            "B": "expired",
+            "C": "completed",
+            "D": "cancelled"
+          }
+        },
+        {
+          "id": "q1",
+          "question": "Which option matches my preferred occasions for hats in context sun hat, summer, hiking as of now?",
+          "options": {
+            "A": "explicitly unknown",
+            "B": "hiking, sunny weather",
+            "C": "no stated preference",
+            "D": "formal"
+          }
+        }
+      ],
+      "truth": {
+        "q0": {
+          "answer": "B",
+          "value": "expired",
+          "key": "intent:urgent-gift:state",
+          "kind": "intent",
+          "historical": false,
+          "at_time": "2026-03-06T09:01:00Z",
+          "support_ids": [
+            "e0-5"
+          ],
+          "earlier_session_required": true
+        },
+        "q1": {
+          "answer": "B",
+          "value": [
+            "hiking",
+            "sunny weather"
+          ],
+          "key": "clothing:hats:scope0:occasions",
+          "kind": "list",
+          "historical": false,
+          "at_time": "2026-03-06T09:01:00Z",
+          "support_ids": [
+            "e0-6"
+          ],
+          "earlier_session_required": true
+        }
+      },
+      "revealed_state": {
+        "personal:name": {
+          "value": "Aiko Nakamura",
+          "history": [
+            {
+              "id": "e0-0",
+              "timestamp": "2026-03-01T09:00:00Z",
+              "text": "For my own records, my name: Aiko Nakamura.",
+              "key": "personal:name",
+              "value": "Aiko Nakamura",
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:pants:scope0:materials": {
+          "value": [
+            "wool"
+          ],
+          "history": [
+            {
+              "id": "e0-1",
+              "timestamp": "2026-03-01T09:00:01Z",
+              "text": "For my own records, my preferred materials for pants in context summer: linen, cotton.",
+              "key": "clothing:pants:scope0:materials",
+              "value": [
+                "linen",
+                "cotton"
+              ],
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e1-0",
+              "timestamp": "2026-03-06T09:00:00Z",
+              "text": "For this temporary period only, my preferred materials for pants in context summer: wool. This applies until 2026-03-09T09:00:00Z; after that, return to my prior preference.",
+              "key": "clothing:pants:scope0:materials",
+              "value": [
+                "wool"
+              ],
+              "until": "2026-03-09T09:00:00Z",
+              "kind": "temporary"
+            }
+          ]
+        },
+        "clothing:hats:default_size": {
+          "value": null,
+          "history": [
+            {
+              "id": "e0-2",
+              "timestamp": "2026-03-01T09:00:02Z",
+              "text": "For my own records, my default size for hats: explicitly unknown.",
+              "key": "clothing:hats:default_size",
+              "value": null,
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:accessories:patterns": {
+          "value": [],
+          "history": [
+            {
+              "id": "e0-3",
+              "timestamp": "2026-03-01T09:00:03Z",
+              "text": "For my own records, my preferred patterns for accessories: no stated preference.",
+              "key": "clothing:accessories:patterns",
+              "value": [],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "intent:future-trip:state": {
+          "value": "active",
+          "history": [
+            {
+              "id": "e0-4",
+              "timestamp": "2026-03-01T09:00:04Z",
+              "text": "For my own records, the state of purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z.",
+              "key": "intent:future-trip:state",
+              "value": {
+                "status": "active",
+                "deadline": "2026-05-01T18:00:00Z"
+              },
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "intent:urgent-gift:state": {
+          "value": "expired",
+          "history": [
+            {
+              "id": "e0-5",
+              "timestamp": "2026-03-01T09:00:05Z",
+              "text": "For my own records, the state of purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z.",
+              "key": "intent:urgent-gift:state",
+              "value": {
+                "status": "active",
+                "deadline": "2026-03-02T18:00:00Z"
+              },
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:hats:scope0:occasions": {
+          "value": [
+            "hiking",
+            "sunny weather"
+          ],
+          "history": [
+            {
+              "id": "e0-6",
+              "timestamp": "2026-03-01T09:00:06Z",
+              "text": "For my own records, my preferred occasions for hats in context sun hat, summer, hiking: hiking, sunny weather.",
+              "key": "clothing:hats:scope0:occasions",
+              "value": [
+                "hiking",
+                "sunny weather"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "general:languages": {
+          "value": [
+            {
+              "language": "Japanese",
+              "proficiency": "native"
+            },
+            {
+              "language": "English",
+              "proficiency": "fluent"
+            },
+            {
+              "language": "French",
+              "proficiency": "basic"
+            }
+          ],
+          "history": [
+            {
+              "id": "e1-1",
+              "timestamp": "2026-03-06T09:00:01Z",
+              "text": "For my own records, the languages I speak: language Japanese; proficiency native, language English; proficiency fluent, language French; proficiency basic.",
+              "key": "general:languages",
+              "value": [
+                {
+                  "language": "Japanese",
+                  "proficiency": "native"
+                },
+                {
+                  "language": "English",
+                  "proficiency": "fluent"
+                },
+                {
+                  "language": "French",
+                  "proficiency": "basic"
+                }
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "session": 2,
+      "current_time": "2026-03-11T09:01:00Z",
+      "events": [
+        {
+          "id": "e2-0",
+          "timestamp": "2026-03-11T09:00:00Z",
+          "text": "For my own records, my preferred brands for shirts: Uniqlo, Everlane.",
+          "key": "clothing:shirts:brands",
+          "value": [
+            "Uniqlo",
+            "Everlane"
+          ],
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e2-1",
+          "timestamp": "2026-03-11T09:00:01Z",
+          "text": "For my own records, my preferred patterns for pants in context summer: explicitly unknown.",
+          "key": "clothing:pants:scope0:patterns",
+          "value": null,
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e2-2",
+          "timestamp": "2026-03-11T09:00:02Z",
+          "text": "The elevator stopped on every floor today.",
+          "kind": "filler",
+          "key": null
+        },
+        {
+          "id": "e2-3",
+          "timestamp": "2026-03-11T09:00:03Z",
+          "text": "A pigeon landed on the windowsill while I was waiting.",
+          "kind": "filler",
+          "key": null
+        },
+        {
+          "id": "e2-4",
+          "timestamp": "2026-03-11T09:00:04Z",
+          "text": "A pigeon landed on the windowsill while I was waiting.",
+          "kind": "filler",
+          "key": null
+        },
+        {
+          "id": "e2-5",
+          "timestamp": "2026-03-11T09:00:05Z",
+          "text": "A colleague said they love neon jackets; that is their taste, not mine.",
+          "kind": "other_person",
+          "key": null
+        },
+        {
+          "id": "e2-6",
+          "timestamp": "2026-03-11T09:00:06Z",
+          "text": "A shop window advertised striped linen shirts. I am only describing the display.",
+          "kind": "product_description",
+          "key": null
+        },
+        {
+          "id": "e2-7",
+          "timestamp": "2026-03-11T09:00:07Z",
+          "text": "Just confirming again: my default size for hats: explicitly unknown.",
+          "key": "clothing:hats:default_size",
+          "value": null,
+          "until": null,
+          "kind": "repeat"
+        },
+        {
+          "id": "e2-8",
+          "timestamp": "2026-03-11T09:00:08Z",
+          "text": "Just confirming again: the state of purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z.",
+          "key": "intent:future-trip:state",
+          "value": {
+            "status": "active",
+            "deadline": "2026-05-01T18:00:00Z"
+          },
+          "until": null,
+          "kind": "repeat"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q0",
+          "question": "Which option matches my preferred materials for pants in context summer as of now?",
+          "options": {
+            "A": "explicitly unknown",
+            "B": "no stated preference",
+            "C": "linen, cotton"
+          }
+        },
+        {
+          "id": "q1",
+          "question": "Which option matches the state of purchase intent future-trip (shoes, recipient self) as of now?",
+          "options": {
+            "A": "cancelled",
+            "B": "expired",
+            "C": "completed",
+            "D": "active"
+          }
+        }
+      ],
+      "truth": {
+        "q0": {
+          "answer": "C",
+          "value": [
+            "linen",
+            "cotton"
+          ],
+          "key": "clothing:pants:scope0:materials",
+          "kind": "list",
+          "historical": false,
+          "at_time": "2026-03-11T09:01:00Z",
+          "support_ids": [
+            "e0-1",
+            "e1-0"
+          ],
+          "earlier_session_required": true
+        },
+        "q1": {
+          "answer": "D",
+          "value": "active",
+          "key": "intent:future-trip:state",
+          "kind": "intent",
+          "historical": false,
+          "at_time": "2026-03-11T09:01:00Z",
+          "support_ids": [
+            "e0-4"
+          ],
+          "earlier_session_required": false
+        }
+      },
+      "revealed_state": {
+        "personal:name": {
+          "value": "Aiko Nakamura",
+          "history": [
+            {
+              "id": "e0-0",
+              "timestamp": "2026-03-01T09:00:00Z",
+              "text": "For my own records, my name: Aiko Nakamura.",
+              "key": "personal:name",
+              "value": "Aiko Nakamura",
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:pants:scope0:materials": {
+          "value": [
+            "linen",
+            "cotton"
+          ],
+          "history": [
+            {
+              "id": "e0-1",
+              "timestamp": "2026-03-01T09:00:01Z",
+              "text": "For my own records, my preferred materials for pants in context summer: linen, cotton.",
+              "key": "clothing:pants:scope0:materials",
+              "value": [
+                "linen",
+                "cotton"
+              ],
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e1-0",
+              "timestamp": "2026-03-06T09:00:00Z",
+              "text": "For this temporary period only, my preferred materials for pants in context summer: wool. This applies until 2026-03-09T09:00:00Z; after that, return to my prior preference.",
+              "key": "clothing:pants:scope0:materials",
+              "value": [
+                "wool"
+              ],
+              "until": "2026-03-09T09:00:00Z",
+              "kind": "temporary"
+            }
+          ]
+        },
+        "clothing:hats:default_size": {
+          "value": null,
+          "history": [
+            {
+              "id": "e0-2",
+              "timestamp": "2026-03-01T09:00:02Z",
+              "text": "For my own records, my default size for hats: explicitly unknown.",
+              "key": "clothing:hats:default_size",
+              "value": null,
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:accessories:patterns": {
+          "value": [],
+          "history": [
+            {
+              "id": "e0-3",
+              "timestamp": "2026-03-01T09:00:03Z",
+              "text": "For my own records, my preferred patterns for accessories: no stated preference.",
+              "key": "clothing:accessories:patterns",
+              "value": [],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "intent:future-trip:state": {
+          "value": "active",
+          "history": [
+            {
+              "id": "e0-4",
+              "timestamp": "2026-03-01T09:00:04Z",
+              "text": "For my own records, the state of purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z.",
+              "key": "intent:future-trip:state",
+              "value": {
+                "status": "active",
+                "deadline": "2026-05-01T18:00:00Z"
+              },
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "intent:urgent-gift:state": {
+          "value": "expired",
+          "history": [
+            {
+              "id": "e0-5",
+              "timestamp": "2026-03-01T09:00:05Z",
+              "text": "For my own records, the state of purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z.",
+              "key": "intent:urgent-gift:state",
+              "value": {
+                "status": "active",
+                "deadline": "2026-03-02T18:00:00Z"
+              },
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:hats:scope0:occasions": {
+          "value": [
+            "hiking",
+            "sunny weather"
+          ],
+          "history": [
+            {
+              "id": "e0-6",
+              "timestamp": "2026-03-01T09:00:06Z",
+              "text": "For my own records, my preferred occasions for hats in context sun hat, summer, hiking: hiking, sunny weather.",
+              "key": "clothing:hats:scope0:occasions",
+              "value": [
+                "hiking",
+                "sunny weather"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "general:languages": {
+          "value": [
+            {
+              "language": "Japanese",
+              "proficiency": "native"
+            },
+            {
+              "language": "English",
+              "proficiency": "fluent"
+            },
+            {
+              "language": "French",
+              "proficiency": "basic"
+            }
+          ],
+          "history": [
+            {
+              "id": "e1-1",
+              "timestamp": "2026-03-06T09:00:01Z",
+              "text": "For my own records, the languages I speak: language Japanese; proficiency native, language English; proficiency fluent, language French; proficiency basic.",
+              "key": "general:languages",
+              "value": [
+                {
+                  "language": "Japanese",
+                  "proficiency": "native"
+                },
+                {
+                  "language": "English",
+                  "proficiency": "fluent"
+                },
+                {
+                  "language": "French",
+                  "proficiency": "basic"
+                }
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:shirts:brands": {
+          "value": [
+            "Uniqlo",
+            "Everlane"
+          ],
+          "history": [
+            {
+              "id": "e2-0",
+              "timestamp": "2026-03-11T09:00:00Z",
+              "text": "For my own records, my preferred brands for shirts: Uniqlo, Everlane.",
+              "key": "clothing:shirts:brands",
+              "value": [
+                "Uniqlo",
+                "Everlane"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:pants:scope0:patterns": {
+          "value": null,
+          "history": [
+            {
+              "id": "e2-1",
+              "timestamp": "2026-03-11T09:00:01Z",
+              "text": "For my own records, my preferred patterns for pants in context summer: explicitly unknown.",
+              "key": "clothing:pants:scope0:patterns",
+              "value": null,
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "session": 3,
+      "current_time": "2026-03-21T09:01:00Z",
+      "events": [
+        {
+          "id": "e3-0",
+          "timestamp": "2026-03-21T09:00:00Z",
+          "text": "Update my records from today: my preferred occasions for hats in context sun hat, summer, hiking is now casual, formal. This replaces the previous value from now onward.",
+          "key": "clothing:hats:scope0:occasions",
+          "value": [
+            "casual",
+            "formal"
+          ],
+          "until": null,
+          "kind": "change"
+        },
+        {
+          "id": "e3-1",
+          "timestamp": "2026-03-21T09:00:01Z",
+          "text": "For my own records, my preferred cuts for shoes in context walking shoes, travel: low-top.",
+          "key": "clothing:shoes:scope0:cuts",
+          "value": [
+            "low-top"
+          ],
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e3-2",
+          "timestamp": "2026-03-21T09:00:02Z",
+          "text": "A pigeon landed on the windowsill while I was waiting.",
+          "kind": "filler",
+          "key": null
+        },
+        {
+          "id": "e3-3",
+          "timestamp": "2026-03-21T09:00:03Z",
+          "text": "My neighbor was talking about learning the violin.",
+          "kind": "other_person",
+          "key": null
+        },
+        {
+          "id": "e3-4",
+          "timestamp": "2026-03-21T09:00:04Z",
+          "text": "Just confirming again: the state of purchase intent urgent-gift (shirts, recipient gift): expired; deadline 2026-03-02T18:00:00Z.",
+          "key": "intent:urgent-gift:state",
+          "value": {
+            "status": "expired",
+            "deadline": "2026-03-02T18:00:00Z"
+          },
+          "until": null,
+          "kind": "repeat"
+        },
+        {
+          "id": "e3-5",
+          "timestamp": "2026-03-21T09:00:05Z",
+          "text": "There was a long queue at the caf\u00e9 this morning.",
+          "kind": "filler",
+          "key": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "q0",
+          "question": "Which option matches my preferred brands for shirts as of now?",
+          "options": {
+            "A": "explicitly unknown",
+            "B": "no stated preference",
+            "C": "Uniqlo, Everlane",
+            "D": "Aster, Boreal"
+          }
+        },
+        {
+          "id": "q1",
+          "question": "Which option matches the languages I speak as of now?",
+          "options": {
+            "A": "explicitly unknown",
+            "B": "language Japanese; proficiency native, language English; proficiency fluent, language French; proficiency basic",
+            "C": "not specified",
+            "D": "explicitly withdrawn"
+          }
+        }
+      ],
+      "truth": {
+        "q0": {
+          "answer": "C",
+          "value": [
+            "Uniqlo",
+            "Everlane"
+          ],
+          "key": "clothing:shirts:brands",
+          "kind": "list",
+          "historical": false,
+          "at_time": "2026-03-21T09:01:00Z",
+          "support_ids": [
+            "e2-0"
+          ],
+          "earlier_session_required": true
+        },
+        "q1": {
+          "answer": "B",
+          "value": [
+            {
+              "language": "Japanese",
+              "proficiency": "native"
+            },
+            {
+              "language": "English",
+              "proficiency": "fluent"
+            },
+            {
+              "language": "French",
+              "proficiency": "basic"
+            }
+          ],
+          "key": "general:languages",
+          "kind": "fact",
+          "historical": false,
+          "at_time": "2026-03-21T09:01:00Z",
+          "support_ids": [
+            "e1-1"
+          ],
+          "earlier_session_required": true
+        }
+      },
+      "revealed_state": {
+        "personal:name": {
+          "value": "Aiko Nakamura",
+          "history": [
+            {
+              "id": "e0-0",
+              "timestamp": "2026-03-01T09:00:00Z",
+              "text": "For my own records, my name: Aiko Nakamura.",
+              "key": "personal:name",
+              "value": "Aiko Nakamura",
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:pants:scope0:materials": {
+          "value": [
+            "linen",
+            "cotton"
+          ],
+          "history": [
+            {
+              "id": "e0-1",
+              "timestamp": "2026-03-01T09:00:01Z",
+              "text": "For my own records, my preferred materials for pants in context summer: linen, cotton.",
+              "key": "clothing:pants:scope0:materials",
+              "value": [
+                "linen",
+                "cotton"
+              ],
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e1-0",
+              "timestamp": "2026-03-06T09:00:00Z",
+              "text": "For this temporary period only, my preferred materials for pants in context summer: wool. This applies until 2026-03-09T09:00:00Z; after that, return to my prior preference.",
+              "key": "clothing:pants:scope0:materials",
+              "value": [
+                "wool"
+              ],
+              "until": "2026-03-09T09:00:00Z",
+              "kind": "temporary"
+            }
+          ]
+        },
+        "clothing:hats:default_size": {
+          "value": null,
+          "history": [
+            {
+              "id": "e0-2",
+              "timestamp": "2026-03-01T09:00:02Z",
+              "text": "For my own records, my default size for hats: explicitly unknown.",
+              "key": "clothing:hats:default_size",
+              "value": null,
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:accessories:patterns": {
+          "value": [],
+          "history": [
+            {
+              "id": "e0-3",
+              "timestamp": "2026-03-01T09:00:03Z",
+              "text": "For my own records, my preferred patterns for accessories: no stated preference.",
+              "key": "clothing:accessories:patterns",
+              "value": [],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "intent:future-trip:state": {
+          "value": "active",
+          "history": [
+            {
+              "id": "e0-4",
+              "timestamp": "2026-03-01T09:00:04Z",
+              "text": "For my own records, the state of purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z.",
+              "key": "intent:future-trip:state",
+              "value": {
+                "status": "active",
+                "deadline": "2026-05-01T18:00:00Z"
+              },
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "intent:urgent-gift:state": {
+          "value": "expired",
+          "history": [
+            {
+              "id": "e0-5",
+              "timestamp": "2026-03-01T09:00:05Z",
+              "text": "For my own records, the state of purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z.",
+              "key": "intent:urgent-gift:state",
+              "value": {
+                "status": "active",
+                "deadline": "2026-03-02T18:00:00Z"
+              },
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:hats:scope0:occasions": {
+          "value": [
+            "casual",
+            "formal"
+          ],
+          "history": [
+            {
+              "id": "e0-6",
+              "timestamp": "2026-03-01T09:00:06Z",
+              "text": "For my own records, my preferred occasions for hats in context sun hat, summer, hiking: hiking, sunny weather.",
+              "key": "clothing:hats:scope0:occasions",
+              "value": [
+                "hiking",
+                "sunny weather"
+              ],
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e3-0",
+              "timestamp": "2026-03-21T09:00:00Z",
+              "text": "Update my records from today: my preferred occasions for hats in context sun hat, summer, hiking is now casual, formal. This replaces the previous value from now onward.",
+              "key": "clothing:hats:scope0:occasions",
+              "value": [
+                "casual",
+                "formal"
+              ],
+              "until": null,
+              "kind": "change"
+            }
+          ]
+        },
+        "general:languages": {
+          "value": [
+            {
+              "language": "Japanese",
+              "proficiency": "native"
+            },
+            {
+              "language": "English",
+              "proficiency": "fluent"
+            },
+            {
+              "language": "French",
+              "proficiency": "basic"
+            }
+          ],
+          "history": [
+            {
+              "id": "e1-1",
+              "timestamp": "2026-03-06T09:00:01Z",
+              "text": "For my own records, the languages I speak: language Japanese; proficiency native, language English; proficiency fluent, language French; proficiency basic.",
+              "key": "general:languages",
+              "value": [
+                {
+                  "language": "Japanese",
+                  "proficiency": "native"
+                },
+                {
+                  "language": "English",
+                  "proficiency": "fluent"
+                },
+                {
+                  "language": "French",
+                  "proficiency": "basic"
+                }
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:shirts:brands": {
+          "value": [
+            "Uniqlo",
+            "Everlane"
+          ],
+          "history": [
+            {
+              "id": "e2-0",
+              "timestamp": "2026-03-11T09:00:00Z",
+              "text": "For my own records, my preferred brands for shirts: Uniqlo, Everlane.",
+              "key": "clothing:shirts:brands",
+              "value": [
+                "Uniqlo",
+                "Everlane"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:pants:scope0:patterns": {
+          "value": null,
+          "history": [
+            {
+              "id": "e2-1",
+              "timestamp": "2026-03-11T09:00:01Z",
+              "text": "For my own records, my preferred patterns for pants in context summer: explicitly unknown.",
+              "key": "clothing:pants:scope0:patterns",
+              "value": null,
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:shoes:scope0:cuts": {
+          "value": [
+            "low-top"
+          ],
+          "history": [
+            {
+              "id": "e3-1",
+              "timestamp": "2026-03-21T09:00:01Z",
+              "text": "For my own records, my preferred cuts for shoes in context walking shoes, travel: low-top.",
+              "key": "clothing:shoes:scope0:cuts",
+              "value": [
+                "low-top"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "session": 4,
+      "current_time": "2026-03-31T09:01:00Z",
+      "events": [
+        {
+          "id": "e4-0",
+          "timestamp": "2026-03-31T09:00:00Z",
+          "text": "Update my records from today: the state of purchase intent urgent-gift (shirts, recipient gift) is now cancelled; deadline 2026-03-02T18:00:00Z. This replaces the previous value from now onward.",
+          "key": "intent:urgent-gift:state",
+          "value": {
+            "status": "cancelled",
+            "deadline": "2026-03-02T18:00:00Z"
+          },
+          "until": null,
+          "kind": "change"
+        },
+        {
+          "id": "e4-1",
+          "timestamp": "2026-03-31T09:00:01Z",
+          "text": "For my own records, my preferred cuts for hats: five-panel, bucket.",
+          "key": "clothing:hats:cuts",
+          "value": [
+            "five-panel",
+            "bucket"
+          ],
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e4-2",
+          "timestamp": "2026-03-31T09:00:02Z",
+          "text": "For my own records, my preferred patterns for outerwear: solid.",
+          "key": "clothing:outerwear:patterns",
+          "value": [
+            "solid"
+          ],
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e4-3",
+          "timestamp": "2026-03-31T09:00:03Z",
+          "text": "The elevator stopped on every floor today.",
+          "kind": "filler",
+          "key": null
+        },
+        {
+          "id": "e4-4",
+          "timestamp": "2026-03-31T09:00:04Z",
+          "text": "My neighbor was talking about learning the violin.",
+          "kind": "other_person",
+          "key": null
+        },
+        {
+          "id": "e4-5",
+          "timestamp": "2026-03-31T09:00:05Z",
+          "text": "A colleague said they love neon jackets; that is their taste, not mine.",
+          "kind": "other_person",
+          "key": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "q0",
+          "question": "Which option matches my preferred occasions for hats in context sun hat, summer, hiking at 2026-03-01T09:00:06Z?",
+          "options": {
+            "A": "formal",
+            "B": "casual, formal",
+            "C": "hiking, sunny weather",
+            "D": "casual"
+          }
+        },
+        {
+          "id": "q1",
+          "question": "Which option matches my preferred cuts for shoes in context walking shoes, travel as of now?",
+          "options": {
+            "A": "regular, relaxed",
+            "B": "no stated preference",
+            "C": "low-top",
+            "D": "relaxed"
+          }
+        }
+      ],
+      "truth": {
+        "q0": {
+          "answer": "C",
+          "value": [
+            "hiking",
+            "sunny weather"
+          ],
+          "key": "clothing:hats:scope0:occasions",
+          "kind": "list",
+          "historical": true,
+          "at_time": "2026-03-01T09:00:06Z",
+          "support_ids": [
+            "e0-6"
+          ],
+          "earlier_session_required": true
+        },
+        "q1": {
+          "answer": "C",
+          "value": [
+            "low-top"
+          ],
+          "key": "clothing:shoes:scope0:cuts",
+          "kind": "list",
+          "historical": false,
+          "at_time": "2026-03-31T09:01:00Z",
+          "support_ids": [
+            "e3-1"
+          ],
+          "earlier_session_required": true
+        }
+      },
+      "revealed_state": {
+        "personal:name": {
+          "value": "Aiko Nakamura",
+          "history": [
+            {
+              "id": "e0-0",
+              "timestamp": "2026-03-01T09:00:00Z",
+              "text": "For my own records, my name: Aiko Nakamura.",
+              "key": "personal:name",
+              "value": "Aiko Nakamura",
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:pants:scope0:materials": {
+          "value": [
+            "linen",
+            "cotton"
+          ],
+          "history": [
+            {
+              "id": "e0-1",
+              "timestamp": "2026-03-01T09:00:01Z",
+              "text": "For my own records, my preferred materials for pants in context summer: linen, cotton.",
+              "key": "clothing:pants:scope0:materials",
+              "value": [
+                "linen",
+                "cotton"
+              ],
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e1-0",
+              "timestamp": "2026-03-06T09:00:00Z",
+              "text": "For this temporary period only, my preferred materials for pants in context summer: wool. This applies until 2026-03-09T09:00:00Z; after that, return to my prior preference.",
+              "key": "clothing:pants:scope0:materials",
+              "value": [
+                "wool"
+              ],
+              "until": "2026-03-09T09:00:00Z",
+              "kind": "temporary"
+            }
+          ]
+        },
+        "clothing:hats:default_size": {
+          "value": null,
+          "history": [
+            {
+              "id": "e0-2",
+              "timestamp": "2026-03-01T09:00:02Z",
+              "text": "For my own records, my default size for hats: explicitly unknown.",
+              "key": "clothing:hats:default_size",
+              "value": null,
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:accessories:patterns": {
+          "value": [],
+          "history": [
+            {
+              "id": "e0-3",
+              "timestamp": "2026-03-01T09:00:03Z",
+              "text": "For my own records, my preferred patterns for accessories: no stated preference.",
+              "key": "clothing:accessories:patterns",
+              "value": [],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "intent:future-trip:state": {
+          "value": "active",
+          "history": [
+            {
+              "id": "e0-4",
+              "timestamp": "2026-03-01T09:00:04Z",
+              "text": "For my own records, the state of purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z.",
+              "key": "intent:future-trip:state",
+              "value": {
+                "status": "active",
+                "deadline": "2026-05-01T18:00:00Z"
+              },
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "intent:urgent-gift:state": {
+          "value": "cancelled",
+          "history": [
+            {
+              "id": "e0-5",
+              "timestamp": "2026-03-01T09:00:05Z",
+              "text": "For my own records, the state of purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z.",
+              "key": "intent:urgent-gift:state",
+              "value": {
+                "status": "active",
+                "deadline": "2026-03-02T18:00:00Z"
+              },
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e4-0",
+              "timestamp": "2026-03-31T09:00:00Z",
+              "text": "Update my records from today: the state of purchase intent urgent-gift (shirts, recipient gift) is now cancelled; deadline 2026-03-02T18:00:00Z. This replaces the previous value from now onward.",
+              "key": "intent:urgent-gift:state",
+              "value": {
+                "status": "cancelled",
+                "deadline": "2026-03-02T18:00:00Z"
+              },
+              "until": null,
+              "kind": "change"
+            }
+          ]
+        },
+        "clothing:hats:scope0:occasions": {
+          "value": [
+            "casual",
+            "formal"
+          ],
+          "history": [
+            {
+              "id": "e0-6",
+              "timestamp": "2026-03-01T09:00:06Z",
+              "text": "For my own records, my preferred occasions for hats in context sun hat, summer, hiking: hiking, sunny weather.",
+              "key": "clothing:hats:scope0:occasions",
+              "value": [
+                "hiking",
+                "sunny weather"
+              ],
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e3-0",
+              "timestamp": "2026-03-21T09:00:00Z",
+              "text": "Update my records from today: my preferred occasions for hats in context sun hat, summer, hiking is now casual, formal. This replaces the previous value from now onward.",
+              "key": "clothing:hats:scope0:occasions",
+              "value": [
+                "casual",
+                "formal"
+              ],
+              "until": null,
+              "kind": "change"
+            }
+          ]
+        },
+        "general:languages": {
+          "value": [
+            {
+              "language": "Japanese",
+              "proficiency": "native"
+            },
+            {
+              "language": "English",
+              "proficiency": "fluent"
+            },
+            {
+              "language": "French",
+              "proficiency": "basic"
+            }
+          ],
+          "history": [
+            {
+              "id": "e1-1",
+              "timestamp": "2026-03-06T09:00:01Z",
+              "text": "For my own records, the languages I speak: language Japanese; proficiency native, language English; proficiency fluent, language French; proficiency basic.",
+              "key": "general:languages",
+              "value": [
+                {
+                  "language": "Japanese",
+                  "proficiency": "native"
+                },
+                {
+                  "language": "English",
+                  "proficiency": "fluent"
+                },
+                {
+                  "language": "French",
+                  "proficiency": "basic"
+                }
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:shirts:brands": {
+          "value": [
+            "Uniqlo",
+            "Everlane"
+          ],
+          "history": [
+            {
+              "id": "e2-0",
+              "timestamp": "2026-03-11T09:00:00Z",
+              "text": "For my own records, my preferred brands for shirts: Uniqlo, Everlane.",
+              "key": "clothing:shirts:brands",
+              "value": [
+                "Uniqlo",
+                "Everlane"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:pants:scope0:patterns": {
+          "value": null,
+          "history": [
+            {
+              "id": "e2-1",
+              "timestamp": "2026-03-11T09:00:01Z",
+              "text": "For my own records, my preferred patterns for pants in context summer: explicitly unknown.",
+              "key": "clothing:pants:scope0:patterns",
+              "value": null,
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:shoes:scope0:cuts": {
+          "value": [
+            "low-top"
+          ],
+          "history": [
+            {
+              "id": "e3-1",
+              "timestamp": "2026-03-21T09:00:01Z",
+              "text": "For my own records, my preferred cuts for shoes in context walking shoes, travel: low-top.",
+              "key": "clothing:shoes:scope0:cuts",
+              "value": [
+                "low-top"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:hats:cuts": {
+          "value": [
+            "five-panel",
+            "bucket"
+          ],
+          "history": [
+            {
+              "id": "e4-1",
+              "timestamp": "2026-03-31T09:00:01Z",
+              "text": "For my own records, my preferred cuts for hats: five-panel, bucket.",
+              "key": "clothing:hats:cuts",
+              "value": [
+                "five-panel",
+                "bucket"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:outerwear:patterns": {
+          "value": [
+            "solid"
+          ],
+          "history": [
+            {
+              "id": "e4-2",
+              "timestamp": "2026-03-31T09:00:02Z",
+              "text": "For my own records, my preferred patterns for outerwear: solid.",
+              "key": "clothing:outerwear:patterns",
+              "value": [
+                "solid"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "session": 5,
+      "current_time": "2026-04-02T09:01:00Z",
+      "events": [
+        {
+          "id": "e5-0",
+          "timestamp": "2026-04-02T09:00:00Z",
+          "text": "Update my records from today: my preferred cuts for shoes in context walking shoes, travel is now regular, relaxed. This replaces the previous value from now onward.",
+          "key": "clothing:shoes:scope0:cuts",
+          "value": [
+            "regular",
+            "relaxed"
+          ],
+          "until": null,
+          "kind": "change"
+        },
+        {
+          "id": "e5-1",
+          "timestamp": "2026-04-02T09:00:01Z",
+          "text": "For my own records, my preferred styles for pants: minimal, smart casual.",
+          "key": "clothing:pants:styles",
+          "value": [
+            "minimal",
+            "smart casual"
+          ],
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e5-2",
+          "timestamp": "2026-04-02T09:00:02Z",
+          "text": "For my own records, my preferred cuts for accessories in context travel bag, travel: compact.",
+          "key": "clothing:accessories:scope0:cuts",
+          "value": [
+            "compact"
+          ],
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e5-3",
+          "timestamp": "2026-04-02T09:00:03Z",
+          "text": "There was a long queue at the caf\u00e9 this morning.",
+          "kind": "filler",
+          "key": null
+        },
+        {
+          "id": "e5-4",
+          "timestamp": "2026-04-02T09:00:04Z",
+          "text": "My neighbor was talking about learning the violin.",
+          "kind": "other_person",
+          "key": null
+        },
+        {
+          "id": "e5-5",
+          "timestamp": "2026-04-02T09:00:05Z",
+          "text": "There was a long queue at the caf\u00e9 this morning.",
+          "kind": "filler",
+          "key": null
+        },
+        {
+          "id": "e5-6",
+          "timestamp": "2026-04-02T09:00:06Z",
+          "text": "Just confirming again: my preferred patterns for pants in context summer: explicitly unknown.",
+          "key": "clothing:pants:scope0:patterns",
+          "value": null,
+          "until": null,
+          "kind": "repeat"
+        },
+        {
+          "id": "e5-7",
+          "timestamp": "2026-04-02T09:00:07Z",
+          "text": "My neighbor was talking about learning the violin.",
+          "kind": "other_person",
+          "key": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "q0",
+          "question": "Which option matches the state of purchase intent future-trip (shoes, recipient self) as of now?",
+          "options": {
+            "A": "cancelled",
+            "B": "expired",
+            "C": "active",
+            "D": "completed"
+          }
+        },
+        {
+          "id": "q1",
+          "question": "Which option matches my preferred styles for pants as of now?",
+          "options": {
+            "A": "casual, formal",
+            "B": "no stated preference",
+            "C": "formal",
+            "D": "minimal, smart casual"
+          }
+        }
+      ],
+      "truth": {
+        "q0": {
+          "answer": "C",
+          "value": "active",
+          "key": "intent:future-trip:state",
+          "kind": "intent",
+          "historical": false,
+          "at_time": "2026-04-02T09:01:00Z",
+          "support_ids": [
+            "e0-4"
+          ],
+          "earlier_session_required": true
+        },
+        "q1": {
+          "answer": "D",
+          "value": [
+            "minimal",
+            "smart casual"
+          ],
+          "key": "clothing:pants:styles",
+          "kind": "list",
+          "historical": false,
+          "at_time": "2026-04-02T09:01:00Z",
+          "support_ids": [
+            "e5-1"
+          ],
+          "earlier_session_required": false
+        }
+      },
+      "revealed_state": {
+        "personal:name": {
+          "value": "Aiko Nakamura",
+          "history": [
+            {
+              "id": "e0-0",
+              "timestamp": "2026-03-01T09:00:00Z",
+              "text": "For my own records, my name: Aiko Nakamura.",
+              "key": "personal:name",
+              "value": "Aiko Nakamura",
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:pants:scope0:materials": {
+          "value": [
+            "linen",
+            "cotton"
+          ],
+          "history": [
+            {
+              "id": "e0-1",
+              "timestamp": "2026-03-01T09:00:01Z",
+              "text": "For my own records, my preferred materials for pants in context summer: linen, cotton.",
+              "key": "clothing:pants:scope0:materials",
+              "value": [
+                "linen",
+                "cotton"
+              ],
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e1-0",
+              "timestamp": "2026-03-06T09:00:00Z",
+              "text": "For this temporary period only, my preferred materials for pants in context summer: wool. This applies until 2026-03-09T09:00:00Z; after that, return to my prior preference.",
+              "key": "clothing:pants:scope0:materials",
+              "value": [
+                "wool"
+              ],
+              "until": "2026-03-09T09:00:00Z",
+              "kind": "temporary"
+            }
+          ]
+        },
+        "clothing:hats:default_size": {
+          "value": null,
+          "history": [
+            {
+              "id": "e0-2",
+              "timestamp": "2026-03-01T09:00:02Z",
+              "text": "For my own records, my default size for hats: explicitly unknown.",
+              "key": "clothing:hats:default_size",
+              "value": null,
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:accessories:patterns": {
+          "value": [],
+          "history": [
+            {
+              "id": "e0-3",
+              "timestamp": "2026-03-01T09:00:03Z",
+              "text": "For my own records, my preferred patterns for accessories: no stated preference.",
+              "key": "clothing:accessories:patterns",
+              "value": [],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "intent:future-trip:state": {
+          "value": "active",
+          "history": [
+            {
+              "id": "e0-4",
+              "timestamp": "2026-03-01T09:00:04Z",
+              "text": "For my own records, the state of purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z.",
+              "key": "intent:future-trip:state",
+              "value": {
+                "status": "active",
+                "deadline": "2026-05-01T18:00:00Z"
+              },
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "intent:urgent-gift:state": {
+          "value": "cancelled",
+          "history": [
+            {
+              "id": "e0-5",
+              "timestamp": "2026-03-01T09:00:05Z",
+              "text": "For my own records, the state of purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z.",
+              "key": "intent:urgent-gift:state",
+              "value": {
+                "status": "active",
+                "deadline": "2026-03-02T18:00:00Z"
+              },
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e4-0",
+              "timestamp": "2026-03-31T09:00:00Z",
+              "text": "Update my records from today: the state of purchase intent urgent-gift (shirts, recipient gift) is now cancelled; deadline 2026-03-02T18:00:00Z. This replaces the previous value from now onward.",
+              "key": "intent:urgent-gift:state",
+              "value": {
+                "status": "cancelled",
+                "deadline": "2026-03-02T18:00:00Z"
+              },
+              "until": null,
+              "kind": "change"
+            }
+          ]
+        },
+        "clothing:hats:scope0:occasions": {
+          "value": [
+            "casual",
+            "formal"
+          ],
+          "history": [
+            {
+              "id": "e0-6",
+              "timestamp": "2026-03-01T09:00:06Z",
+              "text": "For my own records, my preferred occasions for hats in context sun hat, summer, hiking: hiking, sunny weather.",
+              "key": "clothing:hats:scope0:occasions",
+              "value": [
+                "hiking",
+                "sunny weather"
+              ],
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e3-0",
+              "timestamp": "2026-03-21T09:00:00Z",
+              "text": "Update my records from today: my preferred occasions for hats in context sun hat, summer, hiking is now casual, formal. This replaces the previous value from now onward.",
+              "key": "clothing:hats:scope0:occasions",
+              "value": [
+                "casual",
+                "formal"
+              ],
+              "until": null,
+              "kind": "change"
+            }
+          ]
+        },
+        "general:languages": {
+          "value": [
+            {
+              "language": "Japanese",
+              "proficiency": "native"
+            },
+            {
+              "language": "English",
+              "proficiency": "fluent"
+            },
+            {
+              "language": "French",
+              "proficiency": "basic"
+            }
+          ],
+          "history": [
+            {
+              "id": "e1-1",
+              "timestamp": "2026-03-06T09:00:01Z",
+              "text": "For my own records, the languages I speak: language Japanese; proficiency native, language English; proficiency fluent, language French; proficiency basic.",
+              "key": "general:languages",
+              "value": [
+                {
+                  "language": "Japanese",
+                  "proficiency": "native"
+                },
+                {
+                  "language": "English",
+                  "proficiency": "fluent"
+                },
+                {
+                  "language": "French",
+                  "proficiency": "basic"
+                }
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:shirts:brands": {
+          "value": [
+            "Uniqlo",
+            "Everlane"
+          ],
+          "history": [
+            {
+              "id": "e2-0",
+              "timestamp": "2026-03-11T09:00:00Z",
+              "text": "For my own records, my preferred brands for shirts: Uniqlo, Everlane.",
+              "key": "clothing:shirts:brands",
+              "value": [
+                "Uniqlo",
+                "Everlane"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:pants:scope0:patterns": {
+          "value": null,
+          "history": [
+            {
+              "id": "e2-1",
+              "timestamp": "2026-03-11T09:00:01Z",
+              "text": "For my own records, my preferred patterns for pants in context summer: explicitly unknown.",
+              "key": "clothing:pants:scope0:patterns",
+              "value": null,
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:shoes:scope0:cuts": {
+          "value": [
+            "regular",
+            "relaxed"
+          ],
+          "history": [
+            {
+              "id": "e3-1",
+              "timestamp": "2026-03-21T09:00:01Z",
+              "text": "For my own records, my preferred cuts for shoes in context walking shoes, travel: low-top.",
+              "key": "clothing:shoes:scope0:cuts",
+              "value": [
+                "low-top"
+              ],
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e5-0",
+              "timestamp": "2026-04-02T09:00:00Z",
+              "text": "Update my records from today: my preferred cuts for shoes in context walking shoes, travel is now regular, relaxed. This replaces the previous value from now onward.",
+              "key": "clothing:shoes:scope0:cuts",
+              "value": [
+                "regular",
+                "relaxed"
+              ],
+              "until": null,
+              "kind": "change"
+            }
+          ]
+        },
+        "clothing:hats:cuts": {
+          "value": [
+            "five-panel",
+            "bucket"
+          ],
+          "history": [
+            {
+              "id": "e4-1",
+              "timestamp": "2026-03-31T09:00:01Z",
+              "text": "For my own records, my preferred cuts for hats: five-panel, bucket.",
+              "key": "clothing:hats:cuts",
+              "value": [
+                "five-panel",
+                "bucket"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:outerwear:patterns": {
+          "value": [
+            "solid"
+          ],
+          "history": [
+            {
+              "id": "e4-2",
+              "timestamp": "2026-03-31T09:00:02Z",
+              "text": "For my own records, my preferred patterns for outerwear: solid.",
+              "key": "clothing:outerwear:patterns",
+              "value": [
+                "solid"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:pants:styles": {
+          "value": [
+            "minimal",
+            "smart casual"
+          ],
+          "history": [
+            {
+              "id": "e5-1",
+              "timestamp": "2026-04-02T09:00:01Z",
+              "text": "For my own records, my preferred styles for pants: minimal, smart casual.",
+              "key": "clothing:pants:styles",
+              "value": [
+                "minimal",
+                "smart casual"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:accessories:scope0:cuts": {
+          "value": [
+            "compact"
+          ],
+          "history": [
+            {
+              "id": "e5-2",
+              "timestamp": "2026-04-02T09:00:02Z",
+              "text": "For my own records, my preferred cuts for accessories in context travel bag, travel: compact.",
+              "key": "clothing:accessories:scope0:cuts",
+              "value": [
+                "compact"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "session": 6,
+      "current_time": "2026-04-12T09:01:00Z",
+      "events": [
+        {
+          "id": "e6-0",
+          "timestamp": "2026-04-12T09:00:00Z",
+          "text": "For my own records, my preferred brands for accessories: Muji, Baggu.",
+          "key": "clothing:accessories:brands",
+          "value": [
+            "Muji",
+            "Baggu"
+          ],
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e6-1",
+          "timestamp": "2026-04-12T09:00:01Z",
+          "text": "For my own records, my preferred colors for hats: navy, cream, olive.",
+          "key": "clothing:hats:colors",
+          "value": [
+            "navy",
+            "cream",
+            "olive"
+          ],
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e6-2",
+          "timestamp": "2026-04-12T09:00:02Z",
+          "text": "There was a long queue at the caf\u00e9 this morning.",
+          "kind": "filler",
+          "key": null
+        },
+        {
+          "id": "e6-3",
+          "timestamp": "2026-04-12T09:00:03Z",
+          "text": "The elevator stopped on every floor today.",
+          "kind": "filler",
+          "key": null
+        },
+        {
+          "id": "e6-4",
+          "timestamp": "2026-04-12T09:00:04Z",
+          "text": "Just confirming again: my preferred patterns for outerwear: solid.",
+          "key": "clothing:outerwear:patterns",
+          "value": [
+            "solid"
+          ],
+          "until": null,
+          "kind": "repeat"
+        },
+        {
+          "id": "e6-5",
+          "timestamp": "2026-04-12T09:00:05Z",
+          "text": "Just confirming again: the state of purchase intent urgent-gift (shirts, recipient gift): cancelled; deadline 2026-03-02T18:00:00Z.",
+          "key": "intent:urgent-gift:state",
+          "value": {
+            "status": "cancelled",
+            "deadline": "2026-03-02T18:00:00Z"
+          },
+          "until": null,
+          "kind": "repeat"
+        },
+        {
+          "id": "e6-6",
+          "timestamp": "2026-04-12T09:00:06Z",
+          "text": "There was a long queue at the caf\u00e9 this morning.",
+          "kind": "filler",
+          "key": null
+        },
+        {
+          "id": "e6-7",
+          "timestamp": "2026-04-12T09:00:07Z",
+          "text": "A shop window advertised striped linen shirts. I am only describing the display.",
+          "kind": "product_description",
+          "key": null
+        },
+        {
+          "id": "e6-8",
+          "timestamp": "2026-04-12T09:00:08Z",
+          "text": "My neighbor was talking about learning the violin.",
+          "kind": "other_person",
+          "key": null
+        },
+        {
+          "id": "e6-9",
+          "timestamp": "2026-04-12T09:00:09Z",
+          "text": "A colleague said they love neon jackets; that is their taste, not mine.",
+          "kind": "other_person",
+          "key": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "q0",
+          "question": "Which option matches my preferred patterns for pants in context summer as of now?",
+          "options": {
+            "A": "floral",
+            "B": "explicitly unknown",
+            "C": "plain, striped",
+            "D": "striped"
+          }
+        },
+        {
+          "id": "q1",
+          "question": "Which option matches my preferred styles for pants as of now?",
+          "options": {
+            "A": "explicitly unknown",
+            "B": "minimal, smart casual",
+            "C": "casual",
+            "D": "casual, formal"
+          }
+        }
+      ],
+      "truth": {
+        "q0": {
+          "answer": "B",
+          "value": null,
+          "key": "clothing:pants:scope0:patterns",
+          "kind": "list",
+          "historical": false,
+          "at_time": "2026-04-12T09:01:00Z",
+          "support_ids": [
+            "e2-1"
+          ],
+          "earlier_session_required": true
+        },
+        "q1": {
+          "answer": "B",
+          "value": [
+            "minimal",
+            "smart casual"
+          ],
+          "key": "clothing:pants:styles",
+          "kind": "list",
+          "historical": false,
+          "at_time": "2026-04-12T09:01:00Z",
+          "support_ids": [
+            "e5-1"
+          ],
+          "earlier_session_required": true
+        }
+      },
+      "revealed_state": {
+        "personal:name": {
+          "value": "Aiko Nakamura",
+          "history": [
+            {
+              "id": "e0-0",
+              "timestamp": "2026-03-01T09:00:00Z",
+              "text": "For my own records, my name: Aiko Nakamura.",
+              "key": "personal:name",
+              "value": "Aiko Nakamura",
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:pants:scope0:materials": {
+          "value": [
+            "linen",
+            "cotton"
+          ],
+          "history": [
+            {
+              "id": "e0-1",
+              "timestamp": "2026-03-01T09:00:01Z",
+              "text": "For my own records, my preferred materials for pants in context summer: linen, cotton.",
+              "key": "clothing:pants:scope0:materials",
+              "value": [
+                "linen",
+                "cotton"
+              ],
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e1-0",
+              "timestamp": "2026-03-06T09:00:00Z",
+              "text": "For this temporary period only, my preferred materials for pants in context summer: wool. This applies until 2026-03-09T09:00:00Z; after that, return to my prior preference.",
+              "key": "clothing:pants:scope0:materials",
+              "value": [
+                "wool"
+              ],
+              "until": "2026-03-09T09:00:00Z",
+              "kind": "temporary"
+            }
+          ]
+        },
+        "clothing:hats:default_size": {
+          "value": null,
+          "history": [
+            {
+              "id": "e0-2",
+              "timestamp": "2026-03-01T09:00:02Z",
+              "text": "For my own records, my default size for hats: explicitly unknown.",
+              "key": "clothing:hats:default_size",
+              "value": null,
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:accessories:patterns": {
+          "value": [],
+          "history": [
+            {
+              "id": "e0-3",
+              "timestamp": "2026-03-01T09:00:03Z",
+              "text": "For my own records, my preferred patterns for accessories: no stated preference.",
+              "key": "clothing:accessories:patterns",
+              "value": [],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "intent:future-trip:state": {
+          "value": "active",
+          "history": [
+            {
+              "id": "e0-4",
+              "timestamp": "2026-03-01T09:00:04Z",
+              "text": "For my own records, the state of purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z.",
+              "key": "intent:future-trip:state",
+              "value": {
+                "status": "active",
+                "deadline": "2026-05-01T18:00:00Z"
+              },
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "intent:urgent-gift:state": {
+          "value": "cancelled",
+          "history": [
+            {
+              "id": "e0-5",
+              "timestamp": "2026-03-01T09:00:05Z",
+              "text": "For my own records, the state of purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z.",
+              "key": "intent:urgent-gift:state",
+              "value": {
+                "status": "active",
+                "deadline": "2026-03-02T18:00:00Z"
+              },
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e4-0",
+              "timestamp": "2026-03-31T09:00:00Z",
+              "text": "Update my records from today: the state of purchase intent urgent-gift (shirts, recipient gift) is now cancelled; deadline 2026-03-02T18:00:00Z. This replaces the previous value from now onward.",
+              "key": "intent:urgent-gift:state",
+              "value": {
+                "status": "cancelled",
+                "deadline": "2026-03-02T18:00:00Z"
+              },
+              "until": null,
+              "kind": "change"
+            }
+          ]
+        },
+        "clothing:hats:scope0:occasions": {
+          "value": [
+            "casual",
+            "formal"
+          ],
+          "history": [
+            {
+              "id": "e0-6",
+              "timestamp": "2026-03-01T09:00:06Z",
+              "text": "For my own records, my preferred occasions for hats in context sun hat, summer, hiking: hiking, sunny weather.",
+              "key": "clothing:hats:scope0:occasions",
+              "value": [
+                "hiking",
+                "sunny weather"
+              ],
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e3-0",
+              "timestamp": "2026-03-21T09:00:00Z",
+              "text": "Update my records from today: my preferred occasions for hats in context sun hat, summer, hiking is now casual, formal. This replaces the previous value from now onward.",
+              "key": "clothing:hats:scope0:occasions",
+              "value": [
+                "casual",
+                "formal"
+              ],
+              "until": null,
+              "kind": "change"
+            }
+          ]
+        },
+        "general:languages": {
+          "value": [
+            {
+              "language": "Japanese",
+              "proficiency": "native"
+            },
+            {
+              "language": "English",
+              "proficiency": "fluent"
+            },
+            {
+              "language": "French",
+              "proficiency": "basic"
+            }
+          ],
+          "history": [
+            {
+              "id": "e1-1",
+              "timestamp": "2026-03-06T09:00:01Z",
+              "text": "For my own records, the languages I speak: language Japanese; proficiency native, language English; proficiency fluent, language French; proficiency basic.",
+              "key": "general:languages",
+              "value": [
+                {
+                  "language": "Japanese",
+                  "proficiency": "native"
+                },
+                {
+                  "language": "English",
+                  "proficiency": "fluent"
+                },
+                {
+                  "language": "French",
+                  "proficiency": "basic"
+                }
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:shirts:brands": {
+          "value": [
+            "Uniqlo",
+            "Everlane"
+          ],
+          "history": [
+            {
+              "id": "e2-0",
+              "timestamp": "2026-03-11T09:00:00Z",
+              "text": "For my own records, my preferred brands for shirts: Uniqlo, Everlane.",
+              "key": "clothing:shirts:brands",
+              "value": [
+                "Uniqlo",
+                "Everlane"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:pants:scope0:patterns": {
+          "value": null,
+          "history": [
+            {
+              "id": "e2-1",
+              "timestamp": "2026-03-11T09:00:01Z",
+              "text": "For my own records, my preferred patterns for pants in context summer: explicitly unknown.",
+              "key": "clothing:pants:scope0:patterns",
+              "value": null,
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:shoes:scope0:cuts": {
+          "value": [
+            "regular",
+            "relaxed"
+          ],
+          "history": [
+            {
+              "id": "e3-1",
+              "timestamp": "2026-03-21T09:00:01Z",
+              "text": "For my own records, my preferred cuts for shoes in context walking shoes, travel: low-top.",
+              "key": "clothing:shoes:scope0:cuts",
+              "value": [
+                "low-top"
+              ],
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e5-0",
+              "timestamp": "2026-04-02T09:00:00Z",
+              "text": "Update my records from today: my preferred cuts for shoes in context walking shoes, travel is now regular, relaxed. This replaces the previous value from now onward.",
+              "key": "clothing:shoes:scope0:cuts",
+              "value": [
+                "regular",
+                "relaxed"
+              ],
+              "until": null,
+              "kind": "change"
+            }
+          ]
+        },
+        "clothing:hats:cuts": {
+          "value": [
+            "five-panel",
+            "bucket"
+          ],
+          "history": [
+            {
+              "id": "e4-1",
+              "timestamp": "2026-03-31T09:00:01Z",
+              "text": "For my own records, my preferred cuts for hats: five-panel, bucket.",
+              "key": "clothing:hats:cuts",
+              "value": [
+                "five-panel",
+                "bucket"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:outerwear:patterns": {
+          "value": [
+            "solid"
+          ],
+          "history": [
+            {
+              "id": "e4-2",
+              "timestamp": "2026-03-31T09:00:02Z",
+              "text": "For my own records, my preferred patterns for outerwear: solid.",
+              "key": "clothing:outerwear:patterns",
+              "value": [
+                "solid"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:pants:styles": {
+          "value": [
+            "minimal",
+            "smart casual"
+          ],
+          "history": [
+            {
+              "id": "e5-1",
+              "timestamp": "2026-04-02T09:00:01Z",
+              "text": "For my own records, my preferred styles for pants: minimal, smart casual.",
+              "key": "clothing:pants:styles",
+              "value": [
+                "minimal",
+                "smart casual"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:accessories:scope0:cuts": {
+          "value": [
+            "compact"
+          ],
+          "history": [
+            {
+              "id": "e5-2",
+              "timestamp": "2026-04-02T09:00:02Z",
+              "text": "For my own records, my preferred cuts for accessories in context travel bag, travel: compact.",
+              "key": "clothing:accessories:scope0:cuts",
+              "value": [
+                "compact"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:accessories:brands": {
+          "value": [
+            "Muji",
+            "Baggu"
+          ],
+          "history": [
+            {
+              "id": "e6-0",
+              "timestamp": "2026-04-12T09:00:00Z",
+              "text": "For my own records, my preferred brands for accessories: Muji, Baggu.",
+              "key": "clothing:accessories:brands",
+              "value": [
+                "Muji",
+                "Baggu"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:hats:colors": {
+          "value": [
+            "navy",
+            "cream",
+            "olive"
+          ],
+          "history": [
+            {
+              "id": "e6-1",
+              "timestamp": "2026-04-12T09:00:01Z",
+              "text": "For my own records, my preferred colors for hats: navy, cream, olive.",
+              "key": "clothing:hats:colors",
+              "value": [
+                "navy",
+                "cream",
+                "olive"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "session": 7,
+      "current_time": "2026-04-13T09:01:00Z",
+      "events": [
+        {
+          "id": "e7-0",
+          "timestamp": "2026-04-13T09:00:00Z",
+          "text": "Update my records from today: my preferred cuts for accessories in context travel bag, travel is now explicitly unknown. This replaces the previous value from now onward.",
+          "key": "clothing:accessories:scope0:cuts",
+          "value": null,
+          "until": null,
+          "kind": "change"
+        },
+        {
+          "id": "e7-1",
+          "timestamp": "2026-04-13T09:00:01Z",
+          "text": "For my own records, my preferred occasions for shoes: walking, travel, work.",
+          "key": "clothing:shoes:occasions",
+          "value": [
+            "walking",
+            "travel",
+            "work"
+          ],
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e7-2",
+          "timestamp": "2026-04-13T09:00:02Z",
+          "text": "For my own records, my Baggu accessories size in ONE_SIZE: ONE_SIZE.",
+          "key": "clothing:accessories:brand_size:Baggu:ONE_SIZE",
+          "value": "ONE_SIZE",
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e7-3",
+          "timestamp": "2026-04-13T09:00:03Z",
+          "text": "There was a long queue at the caf\u00e9 this morning.",
+          "kind": "filler",
+          "key": null
+        },
+        {
+          "id": "e7-4",
+          "timestamp": "2026-04-13T09:00:04Z",
+          "text": "A colleague said they love neon jackets; that is their taste, not mine.",
+          "kind": "other_person",
+          "key": null
+        },
+        {
+          "id": "e7-5",
+          "timestamp": "2026-04-13T09:00:05Z",
+          "text": "Just confirming again: my preferred patterns for outerwear: solid.",
+          "key": "clothing:outerwear:patterns",
+          "value": [
+            "solid"
+          ],
+          "until": null,
+          "kind": "repeat"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q0",
+          "question": "Which option matches my preferred styles for pants as of now?",
+          "options": {
+            "A": "formal",
+            "B": "no stated preference",
+            "C": "explicitly unknown",
+            "D": "minimal, smart casual"
+          }
+        },
+        {
+          "id": "q1",
+          "question": "Which option matches my name at 2026-03-01T09:00:00Z?",
+          "options": {
+            "A": "Sofia Rossi",
+            "B": "Alex Martin",
+            "C": "Sam Weber",
+            "D": "Aiko Nakamura"
+          }
+        }
+      ],
+      "truth": {
+        "q0": {
+          "answer": "D",
+          "value": [
+            "minimal",
+            "smart casual"
+          ],
+          "key": "clothing:pants:styles",
+          "kind": "list",
+          "historical": false,
+          "at_time": "2026-04-13T09:01:00Z",
+          "support_ids": [
+            "e5-1"
+          ],
+          "earlier_session_required": true
+        },
+        "q1": {
+          "answer": "D",
+          "value": "Aiko Nakamura",
+          "key": "personal:name",
+          "kind": "fact",
+          "historical": true,
+          "at_time": "2026-03-01T09:00:00Z",
+          "support_ids": [
+            "e0-0"
+          ],
+          "earlier_session_required": true
+        }
+      },
+      "revealed_state": {
+        "personal:name": {
+          "value": "Aiko Nakamura",
+          "history": [
+            {
+              "id": "e0-0",
+              "timestamp": "2026-03-01T09:00:00Z",
+              "text": "For my own records, my name: Aiko Nakamura.",
+              "key": "personal:name",
+              "value": "Aiko Nakamura",
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:pants:scope0:materials": {
+          "value": [
+            "linen",
+            "cotton"
+          ],
+          "history": [
+            {
+              "id": "e0-1",
+              "timestamp": "2026-03-01T09:00:01Z",
+              "text": "For my own records, my preferred materials for pants in context summer: linen, cotton.",
+              "key": "clothing:pants:scope0:materials",
+              "value": [
+                "linen",
+                "cotton"
+              ],
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e1-0",
+              "timestamp": "2026-03-06T09:00:00Z",
+              "text": "For this temporary period only, my preferred materials for pants in context summer: wool. This applies until 2026-03-09T09:00:00Z; after that, return to my prior preference.",
+              "key": "clothing:pants:scope0:materials",
+              "value": [
+                "wool"
+              ],
+              "until": "2026-03-09T09:00:00Z",
+              "kind": "temporary"
+            }
+          ]
+        },
+        "clothing:hats:default_size": {
+          "value": null,
+          "history": [
+            {
+              "id": "e0-2",
+              "timestamp": "2026-03-01T09:00:02Z",
+              "text": "For my own records, my default size for hats: explicitly unknown.",
+              "key": "clothing:hats:default_size",
+              "value": null,
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:accessories:patterns": {
+          "value": [],
+          "history": [
+            {
+              "id": "e0-3",
+              "timestamp": "2026-03-01T09:00:03Z",
+              "text": "For my own records, my preferred patterns for accessories: no stated preference.",
+              "key": "clothing:accessories:patterns",
+              "value": [],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "intent:future-trip:state": {
+          "value": "active",
+          "history": [
+            {
+              "id": "e0-4",
+              "timestamp": "2026-03-01T09:00:04Z",
+              "text": "For my own records, the state of purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z.",
+              "key": "intent:future-trip:state",
+              "value": {
+                "status": "active",
+                "deadline": "2026-05-01T18:00:00Z"
+              },
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "intent:urgent-gift:state": {
+          "value": "cancelled",
+          "history": [
+            {
+              "id": "e0-5",
+              "timestamp": "2026-03-01T09:00:05Z",
+              "text": "For my own records, the state of purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z.",
+              "key": "intent:urgent-gift:state",
+              "value": {
+                "status": "active",
+                "deadline": "2026-03-02T18:00:00Z"
+              },
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e4-0",
+              "timestamp": "2026-03-31T09:00:00Z",
+              "text": "Update my records from today: the state of purchase intent urgent-gift (shirts, recipient gift) is now cancelled; deadline 2026-03-02T18:00:00Z. This replaces the previous value from now onward.",
+              "key": "intent:urgent-gift:state",
+              "value": {
+                "status": "cancelled",
+                "deadline": "2026-03-02T18:00:00Z"
+              },
+              "until": null,
+              "kind": "change"
+            }
+          ]
+        },
+        "clothing:hats:scope0:occasions": {
+          "value": [
+            "casual",
+            "formal"
+          ],
+          "history": [
+            {
+              "id": "e0-6",
+              "timestamp": "2026-03-01T09:00:06Z",
+              "text": "For my own records, my preferred occasions for hats in context sun hat, summer, hiking: hiking, sunny weather.",
+              "key": "clothing:hats:scope0:occasions",
+              "value": [
+                "hiking",
+                "sunny weather"
+              ],
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e3-0",
+              "timestamp": "2026-03-21T09:00:00Z",
+              "text": "Update my records from today: my preferred occasions for hats in context sun hat, summer, hiking is now casual, formal. This replaces the previous value from now onward.",
+              "key": "clothing:hats:scope0:occasions",
+              "value": [
+                "casual",
+                "formal"
+              ],
+              "until": null,
+              "kind": "change"
+            }
+          ]
+        },
+        "general:languages": {
+          "value": [
+            {
+              "language": "Japanese",
+              "proficiency": "native"
+            },
+            {
+              "language": "English",
+              "proficiency": "fluent"
+            },
+            {
+              "language": "French",
+              "proficiency": "basic"
+            }
+          ],
+          "history": [
+            {
+              "id": "e1-1",
+              "timestamp": "2026-03-06T09:00:01Z",
+              "text": "For my own records, the languages I speak: language Japanese; proficiency native, language English; proficiency fluent, language French; proficiency basic.",
+              "key": "general:languages",
+              "value": [
+                {
+                  "language": "Japanese",
+                  "proficiency": "native"
+                },
+                {
+                  "language": "English",
+                  "proficiency": "fluent"
+                },
+                {
+                  "language": "French",
+                  "proficiency": "basic"
+                }
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:shirts:brands": {
+          "value": [
+            "Uniqlo",
+            "Everlane"
+          ],
+          "history": [
+            {
+              "id": "e2-0",
+              "timestamp": "2026-03-11T09:00:00Z",
+              "text": "For my own records, my preferred brands for shirts: Uniqlo, Everlane.",
+              "key": "clothing:shirts:brands",
+              "value": [
+                "Uniqlo",
+                "Everlane"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:pants:scope0:patterns": {
+          "value": null,
+          "history": [
+            {
+              "id": "e2-1",
+              "timestamp": "2026-03-11T09:00:01Z",
+              "text": "For my own records, my preferred patterns for pants in context summer: explicitly unknown.",
+              "key": "clothing:pants:scope0:patterns",
+              "value": null,
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:shoes:scope0:cuts": {
+          "value": [
+            "regular",
+            "relaxed"
+          ],
+          "history": [
+            {
+              "id": "e3-1",
+              "timestamp": "2026-03-21T09:00:01Z",
+              "text": "For my own records, my preferred cuts for shoes in context walking shoes, travel: low-top.",
+              "key": "clothing:shoes:scope0:cuts",
+              "value": [
+                "low-top"
+              ],
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e5-0",
+              "timestamp": "2026-04-02T09:00:00Z",
+              "text": "Update my records from today: my preferred cuts for shoes in context walking shoes, travel is now regular, relaxed. This replaces the previous value from now onward.",
+              "key": "clothing:shoes:scope0:cuts",
+              "value": [
+                "regular",
+                "relaxed"
+              ],
+              "until": null,
+              "kind": "change"
+            }
+          ]
+        },
+        "clothing:hats:cuts": {
+          "value": [
+            "five-panel",
+            "bucket"
+          ],
+          "history": [
+            {
+              "id": "e4-1",
+              "timestamp": "2026-03-31T09:00:01Z",
+              "text": "For my own records, my preferred cuts for hats: five-panel, bucket.",
+              "key": "clothing:hats:cuts",
+              "value": [
+                "five-panel",
+                "bucket"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:outerwear:patterns": {
+          "value": [
+            "solid"
+          ],
+          "history": [
+            {
+              "id": "e4-2",
+              "timestamp": "2026-03-31T09:00:02Z",
+              "text": "For my own records, my preferred patterns for outerwear: solid.",
+              "key": "clothing:outerwear:patterns",
+              "value": [
+                "solid"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:pants:styles": {
+          "value": [
+            "minimal",
+            "smart casual"
+          ],
+          "history": [
+            {
+              "id": "e5-1",
+              "timestamp": "2026-04-02T09:00:01Z",
+              "text": "For my own records, my preferred styles for pants: minimal, smart casual.",
+              "key": "clothing:pants:styles",
+              "value": [
+                "minimal",
+                "smart casual"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:accessories:scope0:cuts": {
+          "value": null,
+          "history": [
+            {
+              "id": "e5-2",
+              "timestamp": "2026-04-02T09:00:02Z",
+              "text": "For my own records, my preferred cuts for accessories in context travel bag, travel: compact.",
+              "key": "clothing:accessories:scope0:cuts",
+              "value": [
+                "compact"
+              ],
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e7-0",
+              "timestamp": "2026-04-13T09:00:00Z",
+              "text": "Update my records from today: my preferred cuts for accessories in context travel bag, travel is now explicitly unknown. This replaces the previous value from now onward.",
+              "key": "clothing:accessories:scope0:cuts",
+              "value": null,
+              "until": null,
+              "kind": "change"
+            }
+          ]
+        },
+        "clothing:accessories:brands": {
+          "value": [
+            "Muji",
+            "Baggu"
+          ],
+          "history": [
+            {
+              "id": "e6-0",
+              "timestamp": "2026-04-12T09:00:00Z",
+              "text": "For my own records, my preferred brands for accessories: Muji, Baggu.",
+              "key": "clothing:accessories:brands",
+              "value": [
+                "Muji",
+                "Baggu"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:hats:colors": {
+          "value": [
+            "navy",
+            "cream",
+            "olive"
+          ],
+          "history": [
+            {
+              "id": "e6-1",
+              "timestamp": "2026-04-12T09:00:01Z",
+              "text": "For my own records, my preferred colors for hats: navy, cream, olive.",
+              "key": "clothing:hats:colors",
+              "value": [
+                "navy",
+                "cream",
+                "olive"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:shoes:occasions": {
+          "value": [
+            "walking",
+            "travel",
+            "work"
+          ],
+          "history": [
+            {
+              "id": "e7-1",
+              "timestamp": "2026-04-13T09:00:01Z",
+              "text": "For my own records, my preferred occasions for shoes: walking, travel, work.",
+              "key": "clothing:shoes:occasions",
+              "value": [
+                "walking",
+                "travel",
+                "work"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:accessories:brand_size:Baggu:ONE_SIZE": {
+          "value": "ONE_SIZE",
+          "history": [
+            {
+              "id": "e7-2",
+              "timestamp": "2026-04-13T09:00:02Z",
+              "text": "For my own records, my Baggu accessories size in ONE_SIZE: ONE_SIZE.",
+              "key": "clothing:accessories:brand_size:Baggu:ONE_SIZE",
+              "value": "ONE_SIZE",
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "session": 8,
+      "current_time": "2026-04-23T09:01:00Z",
+      "events": [
+        {
+          "id": "e8-0",
+          "timestamp": "2026-04-23T09:00:00Z",
+          "text": "Update my records from today: the state of purchase intent urgent-gift (shirts, recipient gift) is now active; deadline 2026-05-23T09:00:00Z. This replaces the previous value from now onward.",
+          "key": "intent:urgent-gift:state",
+          "value": {
+            "status": "active",
+            "deadline": "2026-05-23T09:00:00Z"
+          },
+          "until": null,
+          "kind": "change"
+        },
+        {
+          "id": "e8-1",
+          "timestamp": "2026-04-23T09:00:01Z",
+          "text": "For my own records, my occupation: user experience researcher.",
+          "key": "general:occupation",
+          "value": "user experience researcher",
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e8-2",
+          "timestamp": "2026-04-23T09:00:02Z",
+          "text": "There was a long queue at the caf\u00e9 this morning.",
+          "kind": "filler",
+          "key": null
+        },
+        {
+          "id": "e8-3",
+          "timestamp": "2026-04-23T09:00:03Z",
+          "text": "A colleague said they love neon jackets; that is their taste, not mine.",
+          "kind": "other_person",
+          "key": null
+        },
+        {
+          "id": "e8-4",
+          "timestamp": "2026-04-23T09:00:04Z",
+          "text": "An advert listed leather shoes in several sizes; that says nothing about my own size.",
+          "kind": "product_description",
+          "key": null
+        },
+        {
+          "id": "e8-5",
+          "timestamp": "2026-04-23T09:00:05Z",
+          "text": "Just confirming again: my preferred cuts for hats: five-panel, bucket.",
+          "key": "clothing:hats:cuts",
+          "value": [
+            "five-panel",
+            "bucket"
+          ],
+          "until": null,
+          "kind": "repeat"
+        },
+        {
+          "id": "e8-6",
+          "timestamp": "2026-04-23T09:00:06Z",
+          "text": "An advert listed leather shoes in several sizes; that says nothing about my own size.",
+          "kind": "product_description",
+          "key": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "q0",
+          "question": "Which option matches my preferred brands for shirts as of now?",
+          "options": {
+            "A": "Uniqlo, Everlane",
+            "B": "no stated preference",
+            "C": "explicitly unknown",
+            "D": "Aster"
+          }
+        },
+        {
+          "id": "q1",
+          "question": "Which option matches my preferred occasions for hats in context sun hat, summer, hiking as of now?",
+          "options": {
+            "A": "explicitly unknown",
+            "B": "no stated preference",
+            "C": "casual",
+            "D": "casual, formal"
+          }
+        }
+      ],
+      "truth": {
+        "q0": {
+          "answer": "A",
+          "value": [
+            "Uniqlo",
+            "Everlane"
+          ],
+          "key": "clothing:shirts:brands",
+          "kind": "list",
+          "historical": false,
+          "at_time": "2026-04-23T09:01:00Z",
+          "support_ids": [
+            "e2-0"
+          ],
+          "earlier_session_required": true
+        },
+        "q1": {
+          "answer": "D",
+          "value": [
+            "casual",
+            "formal"
+          ],
+          "key": "clothing:hats:scope0:occasions",
+          "kind": "list",
+          "historical": false,
+          "at_time": "2026-04-23T09:01:00Z",
+          "support_ids": [
+            "e0-6",
+            "e3-0"
+          ],
+          "earlier_session_required": true
+        }
+      },
+      "revealed_state": {
+        "personal:name": {
+          "value": "Aiko Nakamura",
+          "history": [
+            {
+              "id": "e0-0",
+              "timestamp": "2026-03-01T09:00:00Z",
+              "text": "For my own records, my name: Aiko Nakamura.",
+              "key": "personal:name",
+              "value": "Aiko Nakamura",
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:pants:scope0:materials": {
+          "value": [
+            "linen",
+            "cotton"
+          ],
+          "history": [
+            {
+              "id": "e0-1",
+              "timestamp": "2026-03-01T09:00:01Z",
+              "text": "For my own records, my preferred materials for pants in context summer: linen, cotton.",
+              "key": "clothing:pants:scope0:materials",
+              "value": [
+                "linen",
+                "cotton"
+              ],
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e1-0",
+              "timestamp": "2026-03-06T09:00:00Z",
+              "text": "For this temporary period only, my preferred materials for pants in context summer: wool. This applies until 2026-03-09T09:00:00Z; after that, return to my prior preference.",
+              "key": "clothing:pants:scope0:materials",
+              "value": [
+                "wool"
+              ],
+              "until": "2026-03-09T09:00:00Z",
+              "kind": "temporary"
+            }
+          ]
+        },
+        "clothing:hats:default_size": {
+          "value": null,
+          "history": [
+            {
+              "id": "e0-2",
+              "timestamp": "2026-03-01T09:00:02Z",
+              "text": "For my own records, my default size for hats: explicitly unknown.",
+              "key": "clothing:hats:default_size",
+              "value": null,
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:accessories:patterns": {
+          "value": [],
+          "history": [
+            {
+              "id": "e0-3",
+              "timestamp": "2026-03-01T09:00:03Z",
+              "text": "For my own records, my preferred patterns for accessories: no stated preference.",
+              "key": "clothing:accessories:patterns",
+              "value": [],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "intent:future-trip:state": {
+          "value": "active",
+          "history": [
+            {
+              "id": "e0-4",
+              "timestamp": "2026-03-01T09:00:04Z",
+              "text": "For my own records, the state of purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z.",
+              "key": "intent:future-trip:state",
+              "value": {
+                "status": "active",
+                "deadline": "2026-05-01T18:00:00Z"
+              },
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "intent:urgent-gift:state": {
+          "value": "active",
+          "history": [
+            {
+              "id": "e0-5",
+              "timestamp": "2026-03-01T09:00:05Z",
+              "text": "For my own records, the state of purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z.",
+              "key": "intent:urgent-gift:state",
+              "value": {
+                "status": "active",
+                "deadline": "2026-03-02T18:00:00Z"
+              },
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e4-0",
+              "timestamp": "2026-03-31T09:00:00Z",
+              "text": "Update my records from today: the state of purchase intent urgent-gift (shirts, recipient gift) is now cancelled; deadline 2026-03-02T18:00:00Z. This replaces the previous value from now onward.",
+              "key": "intent:urgent-gift:state",
+              "value": {
+                "status": "cancelled",
+                "deadline": "2026-03-02T18:00:00Z"
+              },
+              "until": null,
+              "kind": "change"
+            },
+            {
+              "id": "e8-0",
+              "timestamp": "2026-04-23T09:00:00Z",
+              "text": "Update my records from today: the state of purchase intent urgent-gift (shirts, recipient gift) is now active; deadline 2026-05-23T09:00:00Z. This replaces the previous value from now onward.",
+              "key": "intent:urgent-gift:state",
+              "value": {
+                "status": "active",
+                "deadline": "2026-05-23T09:00:00Z"
+              },
+              "until": null,
+              "kind": "change"
+            }
+          ]
+        },
+        "clothing:hats:scope0:occasions": {
+          "value": [
+            "casual",
+            "formal"
+          ],
+          "history": [
+            {
+              "id": "e0-6",
+              "timestamp": "2026-03-01T09:00:06Z",
+              "text": "For my own records, my preferred occasions for hats in context sun hat, summer, hiking: hiking, sunny weather.",
+              "key": "clothing:hats:scope0:occasions",
+              "value": [
+                "hiking",
+                "sunny weather"
+              ],
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e3-0",
+              "timestamp": "2026-03-21T09:00:00Z",
+              "text": "Update my records from today: my preferred occasions for hats in context sun hat, summer, hiking is now casual, formal. This replaces the previous value from now onward.",
+              "key": "clothing:hats:scope0:occasions",
+              "value": [
+                "casual",
+                "formal"
+              ],
+              "until": null,
+              "kind": "change"
+            }
+          ]
+        },
+        "general:languages": {
+          "value": [
+            {
+              "language": "Japanese",
+              "proficiency": "native"
+            },
+            {
+              "language": "English",
+              "proficiency": "fluent"
+            },
+            {
+              "language": "French",
+              "proficiency": "basic"
+            }
+          ],
+          "history": [
+            {
+              "id": "e1-1",
+              "timestamp": "2026-03-06T09:00:01Z",
+              "text": "For my own records, the languages I speak: language Japanese; proficiency native, language English; proficiency fluent, language French; proficiency basic.",
+              "key": "general:languages",
+              "value": [
+                {
+                  "language": "Japanese",
+                  "proficiency": "native"
+                },
+                {
+                  "language": "English",
+                  "proficiency": "fluent"
+                },
+                {
+                  "language": "French",
+                  "proficiency": "basic"
+                }
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:shirts:brands": {
+          "value": [
+            "Uniqlo",
+            "Everlane"
+          ],
+          "history": [
+            {
+              "id": "e2-0",
+              "timestamp": "2026-03-11T09:00:00Z",
+              "text": "For my own records, my preferred brands for shirts: Uniqlo, Everlane.",
+              "key": "clothing:shirts:brands",
+              "value": [
+                "Uniqlo",
+                "Everlane"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:pants:scope0:patterns": {
+          "value": null,
+          "history": [
+            {
+              "id": "e2-1",
+              "timestamp": "2026-03-11T09:00:01Z",
+              "text": "For my own records, my preferred patterns for pants in context summer: explicitly unknown.",
+              "key": "clothing:pants:scope0:patterns",
+              "value": null,
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:shoes:scope0:cuts": {
+          "value": [
+            "regular",
+            "relaxed"
+          ],
+          "history": [
+            {
+              "id": "e3-1",
+              "timestamp": "2026-03-21T09:00:01Z",
+              "text": "For my own records, my preferred cuts for shoes in context walking shoes, travel: low-top.",
+              "key": "clothing:shoes:scope0:cuts",
+              "value": [
+                "low-top"
+              ],
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e5-0",
+              "timestamp": "2026-04-02T09:00:00Z",
+              "text": "Update my records from today: my preferred cuts for shoes in context walking shoes, travel is now regular, relaxed. This replaces the previous value from now onward.",
+              "key": "clothing:shoes:scope0:cuts",
+              "value": [
+                "regular",
+                "relaxed"
+              ],
+              "until": null,
+              "kind": "change"
+            }
+          ]
+        },
+        "clothing:hats:cuts": {
+          "value": [
+            "five-panel",
+            "bucket"
+          ],
+          "history": [
+            {
+              "id": "e4-1",
+              "timestamp": "2026-03-31T09:00:01Z",
+              "text": "For my own records, my preferred cuts for hats: five-panel, bucket.",
+              "key": "clothing:hats:cuts",
+              "value": [
+                "five-panel",
+                "bucket"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:outerwear:patterns": {
+          "value": [
+            "solid"
+          ],
+          "history": [
+            {
+              "id": "e4-2",
+              "timestamp": "2026-03-31T09:00:02Z",
+              "text": "For my own records, my preferred patterns for outerwear: solid.",
+              "key": "clothing:outerwear:patterns",
+              "value": [
+                "solid"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:pants:styles": {
+          "value": [
+            "minimal",
+            "smart casual"
+          ],
+          "history": [
+            {
+              "id": "e5-1",
+              "timestamp": "2026-04-02T09:00:01Z",
+              "text": "For my own records, my preferred styles for pants: minimal, smart casual.",
+              "key": "clothing:pants:styles",
+              "value": [
+                "minimal",
+                "smart casual"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:accessories:scope0:cuts": {
+          "value": null,
+          "history": [
+            {
+              "id": "e5-2",
+              "timestamp": "2026-04-02T09:00:02Z",
+              "text": "For my own records, my preferred cuts for accessories in context travel bag, travel: compact.",
+              "key": "clothing:accessories:scope0:cuts",
+              "value": [
+                "compact"
+              ],
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e7-0",
+              "timestamp": "2026-04-13T09:00:00Z",
+              "text": "Update my records from today: my preferred cuts for accessories in context travel bag, travel is now explicitly unknown. This replaces the previous value from now onward.",
+              "key": "clothing:accessories:scope0:cuts",
+              "value": null,
+              "until": null,
+              "kind": "change"
+            }
+          ]
+        },
+        "clothing:accessories:brands": {
+          "value": [
+            "Muji",
+            "Baggu"
+          ],
+          "history": [
+            {
+              "id": "e6-0",
+              "timestamp": "2026-04-12T09:00:00Z",
+              "text": "For my own records, my preferred brands for accessories: Muji, Baggu.",
+              "key": "clothing:accessories:brands",
+              "value": [
+                "Muji",
+                "Baggu"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:hats:colors": {
+          "value": [
+            "navy",
+            "cream",
+            "olive"
+          ],
+          "history": [
+            {
+              "id": "e6-1",
+              "timestamp": "2026-04-12T09:00:01Z",
+              "text": "For my own records, my preferred colors for hats: navy, cream, olive.",
+              "key": "clothing:hats:colors",
+              "value": [
+                "navy",
+                "cream",
+                "olive"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:shoes:occasions": {
+          "value": [
+            "walking",
+            "travel",
+            "work"
+          ],
+          "history": [
+            {
+              "id": "e7-1",
+              "timestamp": "2026-04-13T09:00:01Z",
+              "text": "For my own records, my preferred occasions for shoes: walking, travel, work.",
+              "key": "clothing:shoes:occasions",
+              "value": [
+                "walking",
+                "travel",
+                "work"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:accessories:brand_size:Baggu:ONE_SIZE": {
+          "value": "ONE_SIZE",
+          "history": [
+            {
+              "id": "e7-2",
+              "timestamp": "2026-04-13T09:00:02Z",
+              "text": "For my own records, my Baggu accessories size in ONE_SIZE: ONE_SIZE.",
+              "key": "clothing:accessories:brand_size:Baggu:ONE_SIZE",
+              "value": "ONE_SIZE",
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "general:occupation": {
+          "value": "user experience researcher",
+          "history": [
+            {
+              "id": "e8-1",
+              "timestamp": "2026-04-23T09:00:01Z",
+              "text": "For my own records, my occupation: user experience researcher.",
+              "key": "general:occupation",
+              "value": "user experience researcher",
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "session": 9,
+      "current_time": "2026-04-28T09:01:00Z",
+      "events": [
+        {
+          "id": "e9-0",
+          "timestamp": "2026-04-28T09:00:00Z",
+          "text": "For my own records, my Clarks shoes size in EU: 37.",
+          "key": "clothing:shoes:brand_size:Clarks:EU",
+          "value": "37",
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e9-1",
+          "timestamp": "2026-04-28T09:00:01Z",
+          "text": "For my own records, my default size for shoes: size 37 in EU.",
+          "key": "clothing:shoes:default_size",
+          "value": {
+            "sizing_system": "EU",
+            "size": "37"
+          },
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e9-2",
+          "timestamp": "2026-04-28T09:00:02Z",
+          "text": "The elevator stopped on every floor today.",
+          "kind": "filler",
+          "key": null
+        },
+        {
+          "id": "e9-3",
+          "timestamp": "2026-04-28T09:00:03Z",
+          "text": "A colleague said they love neon jackets; that is their taste, not mine.",
+          "kind": "other_person",
+          "key": null
+        },
+        {
+          "id": "e9-4",
+          "timestamp": "2026-04-28T09:00:04Z",
+          "text": "A shop window advertised striped linen shirts. I am only describing the display.",
+          "kind": "product_description",
+          "key": null
+        },
+        {
+          "id": "e9-5",
+          "timestamp": "2026-04-28T09:00:05Z",
+          "text": "Just confirming again: the languages I speak: language Japanese; proficiency native, language English; proficiency fluent, language French; proficiency basic.",
+          "key": "general:languages",
+          "value": [
+            {
+              "language": "Japanese",
+              "proficiency": "native"
+            },
+            {
+              "language": "English",
+              "proficiency": "fluent"
+            },
+            {
+              "language": "French",
+              "proficiency": "basic"
+            }
+          ],
+          "until": null,
+          "kind": "repeat"
+        },
+        {
+          "id": "e9-6",
+          "timestamp": "2026-04-28T09:00:06Z",
+          "text": "A shop window advertised striped linen shirts. I am only describing the display.",
+          "kind": "product_description",
+          "key": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "q0",
+          "question": "Which option matches my Baggu accessories size in ONE_SIZE as of now?",
+          "options": {
+            "A": "S",
+            "B": "ONE_SIZE",
+            "C": "L",
+            "D": "M"
+          }
+        },
+        {
+          "id": "q1",
+          "question": "Which option matches my preferred patterns for pants in context summer as of now?",
+          "options": {
+            "A": "plain, striped",
+            "B": "explicitly unknown",
+            "C": "striped",
+            "D": "no stated preference"
+          }
+        }
+      ],
+      "truth": {
+        "q0": {
+          "answer": "B",
+          "value": "ONE_SIZE",
+          "key": "clothing:accessories:brand_size:Baggu:ONE_SIZE",
+          "kind": "brand_size",
+          "historical": false,
+          "at_time": "2026-04-28T09:01:00Z",
+          "support_ids": [
+            "e7-2"
+          ],
+          "earlier_session_required": true
+        },
+        "q1": {
+          "answer": "B",
+          "value": null,
+          "key": "clothing:pants:scope0:patterns",
+          "kind": "list",
+          "historical": false,
+          "at_time": "2026-04-28T09:01:00Z",
+          "support_ids": [
+            "e2-1"
+          ],
+          "earlier_session_required": true
+        }
+      },
+      "revealed_state": {
+        "personal:name": {
+          "value": "Aiko Nakamura",
+          "history": [
+            {
+              "id": "e0-0",
+              "timestamp": "2026-03-01T09:00:00Z",
+              "text": "For my own records, my name: Aiko Nakamura.",
+              "key": "personal:name",
+              "value": "Aiko Nakamura",
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:pants:scope0:materials": {
+          "value": [
+            "linen",
+            "cotton"
+          ],
+          "history": [
+            {
+              "id": "e0-1",
+              "timestamp": "2026-03-01T09:00:01Z",
+              "text": "For my own records, my preferred materials for pants in context summer: linen, cotton.",
+              "key": "clothing:pants:scope0:materials",
+              "value": [
+                "linen",
+                "cotton"
+              ],
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e1-0",
+              "timestamp": "2026-03-06T09:00:00Z",
+              "text": "For this temporary period only, my preferred materials for pants in context summer: wool. This applies until 2026-03-09T09:00:00Z; after that, return to my prior preference.",
+              "key": "clothing:pants:scope0:materials",
+              "value": [
+                "wool"
+              ],
+              "until": "2026-03-09T09:00:00Z",
+              "kind": "temporary"
+            }
+          ]
+        },
+        "clothing:hats:default_size": {
+          "value": null,
+          "history": [
+            {
+              "id": "e0-2",
+              "timestamp": "2026-03-01T09:00:02Z",
+              "text": "For my own records, my default size for hats: explicitly unknown.",
+              "key": "clothing:hats:default_size",
+              "value": null,
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:accessories:patterns": {
+          "value": [],
+          "history": [
+            {
+              "id": "e0-3",
+              "timestamp": "2026-03-01T09:00:03Z",
+              "text": "For my own records, my preferred patterns for accessories: no stated preference.",
+              "key": "clothing:accessories:patterns",
+              "value": [],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "intent:future-trip:state": {
+          "value": "active",
+          "history": [
+            {
+              "id": "e0-4",
+              "timestamp": "2026-03-01T09:00:04Z",
+              "text": "For my own records, the state of purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z.",
+              "key": "intent:future-trip:state",
+              "value": {
+                "status": "active",
+                "deadline": "2026-05-01T18:00:00Z"
+              },
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "intent:urgent-gift:state": {
+          "value": "active",
+          "history": [
+            {
+              "id": "e0-5",
+              "timestamp": "2026-03-01T09:00:05Z",
+              "text": "For my own records, the state of purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z.",
+              "key": "intent:urgent-gift:state",
+              "value": {
+                "status": "active",
+                "deadline": "2026-03-02T18:00:00Z"
+              },
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e4-0",
+              "timestamp": "2026-03-31T09:00:00Z",
+              "text": "Update my records from today: the state of purchase intent urgent-gift (shirts, recipient gift) is now cancelled; deadline 2026-03-02T18:00:00Z. This replaces the previous value from now onward.",
+              "key": "intent:urgent-gift:state",
+              "value": {
+                "status": "cancelled",
+                "deadline": "2026-03-02T18:00:00Z"
+              },
+              "until": null,
+              "kind": "change"
+            },
+            {
+              "id": "e8-0",
+              "timestamp": "2026-04-23T09:00:00Z",
+              "text": "Update my records from today: the state of purchase intent urgent-gift (shirts, recipient gift) is now active; deadline 2026-05-23T09:00:00Z. This replaces the previous value from now onward.",
+              "key": "intent:urgent-gift:state",
+              "value": {
+                "status": "active",
+                "deadline": "2026-05-23T09:00:00Z"
+              },
+              "until": null,
+              "kind": "change"
+            }
+          ]
+        },
+        "clothing:hats:scope0:occasions": {
+          "value": [
+            "casual",
+            "formal"
+          ],
+          "history": [
+            {
+              "id": "e0-6",
+              "timestamp": "2026-03-01T09:00:06Z",
+              "text": "For my own records, my preferred occasions for hats in context sun hat, summer, hiking: hiking, sunny weather.",
+              "key": "clothing:hats:scope0:occasions",
+              "value": [
+                "hiking",
+                "sunny weather"
+              ],
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e3-0",
+              "timestamp": "2026-03-21T09:00:00Z",
+              "text": "Update my records from today: my preferred occasions for hats in context sun hat, summer, hiking is now casual, formal. This replaces the previous value from now onward.",
+              "key": "clothing:hats:scope0:occasions",
+              "value": [
+                "casual",
+                "formal"
+              ],
+              "until": null,
+              "kind": "change"
+            }
+          ]
+        },
+        "general:languages": {
+          "value": [
+            {
+              "language": "Japanese",
+              "proficiency": "native"
+            },
+            {
+              "language": "English",
+              "proficiency": "fluent"
+            },
+            {
+              "language": "French",
+              "proficiency": "basic"
+            }
+          ],
+          "history": [
+            {
+              "id": "e1-1",
+              "timestamp": "2026-03-06T09:00:01Z",
+              "text": "For my own records, the languages I speak: language Japanese; proficiency native, language English; proficiency fluent, language French; proficiency basic.",
+              "key": "general:languages",
+              "value": [
+                {
+                  "language": "Japanese",
+                  "proficiency": "native"
+                },
+                {
+                  "language": "English",
+                  "proficiency": "fluent"
+                },
+                {
+                  "language": "French",
+                  "proficiency": "basic"
+                }
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:shirts:brands": {
+          "value": [
+            "Uniqlo",
+            "Everlane"
+          ],
+          "history": [
+            {
+              "id": "e2-0",
+              "timestamp": "2026-03-11T09:00:00Z",
+              "text": "For my own records, my preferred brands for shirts: Uniqlo, Everlane.",
+              "key": "clothing:shirts:brands",
+              "value": [
+                "Uniqlo",
+                "Everlane"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:pants:scope0:patterns": {
+          "value": null,
+          "history": [
+            {
+              "id": "e2-1",
+              "timestamp": "2026-03-11T09:00:01Z",
+              "text": "For my own records, my preferred patterns for pants in context summer: explicitly unknown.",
+              "key": "clothing:pants:scope0:patterns",
+              "value": null,
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:shoes:scope0:cuts": {
+          "value": [
+            "regular",
+            "relaxed"
+          ],
+          "history": [
+            {
+              "id": "e3-1",
+              "timestamp": "2026-03-21T09:00:01Z",
+              "text": "For my own records, my preferred cuts for shoes in context walking shoes, travel: low-top.",
+              "key": "clothing:shoes:scope0:cuts",
+              "value": [
+                "low-top"
+              ],
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e5-0",
+              "timestamp": "2026-04-02T09:00:00Z",
+              "text": "Update my records from today: my preferred cuts for shoes in context walking shoes, travel is now regular, relaxed. This replaces the previous value from now onward.",
+              "key": "clothing:shoes:scope0:cuts",
+              "value": [
+                "regular",
+                "relaxed"
+              ],
+              "until": null,
+              "kind": "change"
+            }
+          ]
+        },
+        "clothing:hats:cuts": {
+          "value": [
+            "five-panel",
+            "bucket"
+          ],
+          "history": [
+            {
+              "id": "e4-1",
+              "timestamp": "2026-03-31T09:00:01Z",
+              "text": "For my own records, my preferred cuts for hats: five-panel, bucket.",
+              "key": "clothing:hats:cuts",
+              "value": [
+                "five-panel",
+                "bucket"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:outerwear:patterns": {
+          "value": [
+            "solid"
+          ],
+          "history": [
+            {
+              "id": "e4-2",
+              "timestamp": "2026-03-31T09:00:02Z",
+              "text": "For my own records, my preferred patterns for outerwear: solid.",
+              "key": "clothing:outerwear:patterns",
+              "value": [
+                "solid"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:pants:styles": {
+          "value": [
+            "minimal",
+            "smart casual"
+          ],
+          "history": [
+            {
+              "id": "e5-1",
+              "timestamp": "2026-04-02T09:00:01Z",
+              "text": "For my own records, my preferred styles for pants: minimal, smart casual.",
+              "key": "clothing:pants:styles",
+              "value": [
+                "minimal",
+                "smart casual"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:accessories:scope0:cuts": {
+          "value": null,
+          "history": [
+            {
+              "id": "e5-2",
+              "timestamp": "2026-04-02T09:00:02Z",
+              "text": "For my own records, my preferred cuts for accessories in context travel bag, travel: compact.",
+              "key": "clothing:accessories:scope0:cuts",
+              "value": [
+                "compact"
+              ],
+              "until": null,
+              "kind": "reveal"
+            },
+            {
+              "id": "e7-0",
+              "timestamp": "2026-04-13T09:00:00Z",
+              "text": "Update my records from today: my preferred cuts for accessories in context travel bag, travel is now explicitly unknown. This replaces the previous value from now onward.",
+              "key": "clothing:accessories:scope0:cuts",
+              "value": null,
+              "until": null,
+              "kind": "change"
+            }
+          ]
+        },
+        "clothing:accessories:brands": {
+          "value": [
+            "Muji",
+            "Baggu"
+          ],
+          "history": [
+            {
+              "id": "e6-0",
+              "timestamp": "2026-04-12T09:00:00Z",
+              "text": "For my own records, my preferred brands for accessories: Muji, Baggu.",
+              "key": "clothing:accessories:brands",
+              "value": [
+                "Muji",
+                "Baggu"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:hats:colors": {
+          "value": [
+            "navy",
+            "cream",
+            "olive"
+          ],
+          "history": [
+            {
+              "id": "e6-1",
+              "timestamp": "2026-04-12T09:00:01Z",
+              "text": "For my own records, my preferred colors for hats: navy, cream, olive.",
+              "key": "clothing:hats:colors",
+              "value": [
+                "navy",
+                "cream",
+                "olive"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:shoes:occasions": {
+          "value": [
+            "walking",
+            "travel",
+            "work"
+          ],
+          "history": [
+            {
+              "id": "e7-1",
+              "timestamp": "2026-04-13T09:00:01Z",
+              "text": "For my own records, my preferred occasions for shoes: walking, travel, work.",
+              "key": "clothing:shoes:occasions",
+              "value": [
+                "walking",
+                "travel",
+                "work"
+              ],
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:accessories:brand_size:Baggu:ONE_SIZE": {
+          "value": "ONE_SIZE",
+          "history": [
+            {
+              "id": "e7-2",
+              "timestamp": "2026-04-13T09:00:02Z",
+              "text": "For my own records, my Baggu accessories size in ONE_SIZE: ONE_SIZE.",
+              "key": "clothing:accessories:brand_size:Baggu:ONE_SIZE",
+              "value": "ONE_SIZE",
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "general:occupation": {
+          "value": "user experience researcher",
+          "history": [
+            {
+              "id": "e8-1",
+              "timestamp": "2026-04-23T09:00:01Z",
+              "text": "For my own records, my occupation: user experience researcher.",
+              "key": "general:occupation",
+              "value": "user experience researcher",
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:shoes:brand_size:Clarks:EU": {
+          "value": "37",
+          "history": [
+            {
+              "id": "e9-0",
+              "timestamp": "2026-04-28T09:00:00Z",
+              "text": "For my own records, my Clarks shoes size in EU: 37.",
+              "key": "clothing:shoes:brand_size:Clarks:EU",
+              "value": "37",
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        },
+        "clothing:shoes:default_size": {
+          "value": {
+            "sizing_system": "EU",
+            "size": "37"
+          },
+          "history": [
+            {
+              "id": "e9-1",
+              "timestamp": "2026-04-28T09:00:01Z",
+              "text": "For my own records, my default size for shoes: size 37 in EU.",
+              "key": "clothing:shoes:default_size",
+              "value": {
+                "sizing_system": "EU",
+                "size": "37"
+              },
+              "until": null,
+              "kind": "reveal"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

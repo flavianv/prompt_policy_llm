@@ -1,0 +1,19 @@
+{
+  "label": "backpacks",
+  "attributes": {
+    "brand": {"type": "enum", "values": ["PackCo", "TrailCo"]},
+    "capacity_l": {"type": "integer", "values": [10, 20, 30, 40]},
+    "waterproof": {"type": "enum", "values": ["yes", "no"]},
+    "price": {"type": "number", "values": [20, 50, 100, 200]}
+  },
+  "size_systems": {},
+  "preference_topics": [],
+  "profile": {
+    "hard": [
+      {"field": "capacity_l", "op": "gte", "values": [20, 30]},
+      {"field": "price", "op": "lte", "values": [100]}
+    ],
+    "soft": [{"field": "waterproof", "op": "eq", "values": ["yes"]}]
+  },
+  "intent": {"hard": [], "soft": []}
+}
