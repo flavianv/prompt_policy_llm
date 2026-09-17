@@ -5,6 +5,7 @@ from dataclasses import asdict
 import hashlib
 import importlib.util
 import json
+import math
 from pathlib import Path
 import subprocess
 import sys
@@ -31,6 +32,17 @@ def parser():
     p.add_argument('--model-path', type=Path, help='verified local Qwen3-1.7B snapshot, required for real run')
     p.add_argument('--credentials', type=Path, help='existing private OpenAI .env; never copied or printed')
     return p
+
+
+def equivalent(a, b):
+    # Python versions differ in float summation; preserve exact integer counts.
+    if isinstance(a, float) and isinstance(b, float):
+        return math.isclose(a, b, rel_tol=1e-12, abs_tol=1e-12)
+    if isinstance(a, dict) and isinstance(b, dict):
+        return a.keys() == b.keys() and all(equivalent(a[k], b[k]) for k in a)
+    if isinstance(a, list) and isinstance(b, list):
+        return len(a) == len(b) and all(equivalent(x, y) for x, y in zip(a, b))
+    return a == b
 
 
 def validate():
@@ -69,8 +81,8 @@ def validate():
     computed = summarize(rows('scores.jsonl'), rows('note_traces.jsonl'))
     saved = json.loads((root/'metrics.json').read_text())
     for key, value in computed.items():
-        assert value == saved[key], 'Saved metric mismatch: ' + key
-    assert audit == json.loads((root/'audit.json').read_text()), 'Saved audit mismatch'
+        assert equivalent(value, saved[key]), 'Saved metric mismatch: ' + key
+    assert equivalent(audit, json.loads((root/'audit.json').read_text())), 'Saved audit mismatch'
     return manifest, computed, audit
 
 

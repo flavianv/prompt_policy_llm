@@ -1,0 +1,41 @@
+{
+  "prompt_policy_llm": {
+    "head": "3fe25f3e9215e0e2b0f78d395d85375a7c4a8f1c",
+    "status": " M .gitignore\n M README.md\n M configs/controllers/1_7b.yaml\n M docs/omnimath_eval.md\n M pyproject.toml\n M scripts/b200_launch_sft.sh\n M scripts/b200_validate_training.sh\n M src/prompt_policy_llm/local_hints.py\n?? configs/training/qwen3_1_7b_sft.yaml\n?? docs/adaptgym_pilot.md\n?? docs/movielens_pilot.md\n?? scripts/audit_adaptgym_pilot.py\n?? scripts/b200_adaptgym_detached.sh\n?? scripts/b200_adaptgym_pilot.sh\n?? src/prompt_policy_llm/adaptgym_pilot.py\n?? src/prompt_policy_llm/movielens_pilot.py\n?? tests/test_adaptgym_pilot.py\n?? tests/test_movielens_pilot.py\n",
+    "source_files": {
+      "src/prompt_policy_llm/backend.py": "553df92b8f21a5c51d83c65c666330b69eb6c6b7ee8bb98ff7bcca86e5dc7690",
+      "src/prompt_policy_llm/controller.py": "67ca7deda4594a866c471534aab2ae861b285a6a89f0887b3f556e5ca7adcf18",
+      "src/prompt_policy_llm/config.py": "9eae3d7d7f8a9e8f840431632adf75a28dcbbc06fb3dcb62925dd22470ef7aec",
+      "src/prompt_policy_llm/answer.py": "442d1ee3b00b705ca4b3ee5a7ebfe7c6a0585965544e455d420857ddb0a6ba77",
+      "src/prompt_policy_llm/training_data.py": "52a6a143d7d94b13b0812f89ff395a26b118da5739041a982a1f638f7e490f03",
+      "src/prompt_policy_llm/evaluation.py": "5bdc19b70ea513f580c6954fd9a1bae2543556db9965f810a7ea12849d09e400",
+      "src/prompt_policy_llm/datasets.py": "f52746359519b1a8138537a7fb26bd7c2a67a4bc7b75a09b8b748211617706ee",
+      "src/prompt_policy_llm/eval_omnimath.py": "8308ac705a2789bcc309d33d4b0ea1df16480c48feec6d120eb72c88e7d0a7bc",
+      "src/prompt_policy_llm/__init__.py": "8635b406b5ec8f569dcba54d2d7226d923b8b04b6bcbc35881226d5436bc88e8",
+      "src/prompt_policy_llm/teacher_hints.py": "b7a55707a8773d6a7899bc963de6edea0397ea425d78ced6fc2eda3b182cfe66",
+      "src/prompt_policy_llm/local_hints.py": "21829d12953e13d27eeac792b2e1b862067dce1bb76a08924247cb8e25c86591",
+      "src/prompt_policy_llm/train_controller.py": "1130d0f10cf526fbdbb7eed6371ecb77c08675b2ff0b9c8d2bf9582ca1f0b0e0",
+      "src/prompt_policy_llm/evaluation_types.py": "2a41d80daeb24d683f3dc0beb8031e4317605ab31adbf25acf732e04d104ff96",
+      "src/prompt_policy_llm/adaptgym_pilot.py": "8f5fcf0dfcd520b07f7a33f6bd7005de5cfe26bafc454a665dcc17e0b5e741bb",
+      "src/prompt_policy_llm/traces.py": "0e9d0edbdfd21890cbbc80a9055ee5d22a28b6d344c7f6c81fde851439013005",
+      "src/prompt_policy_llm/finetune.py": "4d43a714b2f167c99558be11e048a1c823ecc8a39b986230733f681a75a58133",
+      "src/prompt_policy_llm/movielens_pilot.py": "682cabcb8167b375d9b97cb7155fc75daac76daefdb4f6b1cac1788479fd8d9b",
+      "src/prompt_policy_llm/compare_policy.py": "d9aef00dd658e331f8d4071761b14b59e8a7d53720096a422d3d1aed23b03205",
+      "src/prompt_policy_llm/critic_oracle.py": "3d9ae7cee4d3b4fbb05ebd118953fa635c397afd5a30984e0311c03608cc0a7a",
+      "src/prompt_policy_llm/schema.py": "c318d856191dfad20f0dc40b590122d8ef08c4a0f10fc001dcbfe91ef2f4eaa4"
+    }
+  },
+  "adaptgym": {
+    "head": "f8e4d939505fe06dc83484c41e096070440d4ce0",
+    "status": "?? examples/export_hf_v0_sample.py\n?? examples/render_v0_trace_html.py\n",
+    "source_files": {
+      "src/adaptgym/baselines.py": "4171c3e568bc57a7c6b21d240070bb8f97683dc09c864dc08c7be7bde0390631",
+      "src/adaptgym/config.py": "965a067e5f793df3feda475df924459607c1493bc31a98618136c63c7c4480f1",
+      "src/adaptgym/memory.py": "f62054f166dce0d3131c726e4e8f4af2034eb2ae17e02b709709d06f5cd9da12",
+      "src/adaptgym/__init__.py": "a9e9ccccbdeae121e1f3a08e8ae2de5c6f30eb1448f67d423546acb0ab5f6e76",
+      "src/adaptgym/types.py": "597a91b2b34e02eaf2b79541e2dc08aa7a22c3dba009bd2c6740c5a70b7584b4",
+      "src/adaptgym/cli.py": "0e299db3a24a6444dc9e26cbe52fe6ef172b8473e51a6ae26c5127bb2118c8ff",
+      "src/adaptgym/environment.py": "bcc5c84b6ce95b9efdc8a5399d2437c6b0a6413cd2148419b4144d47d2f1faa9"
+    }
+  }
+}
