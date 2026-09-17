@@ -181,3 +181,16 @@ identity records to `cached_hint_provenance.json`.
 - `configs/` contains benchmark and controller configuration sketches.
 - `src/prompt_policy_llm/` contains the emerging Python package.
 - `tests/` contains smoke tests for configuration and harness code.
+
+## AdaptGym Session Memory Pilot
+
+`eval-adaptgym-pilot` compares frozen Luna with current-session evidence against
+identical Luna settings plus all prior-session notes maintained by fixed-weight
+Qwen3-1.7B. Every session is scored before the note update. Qwen executes validated
+read/write/update/no-op tools and never sees evaluator labels or future events.
+
+The bounded pilot uses ten synthetic users and ten sessions, with prefix-only
+preference questions, paired traces, action-validity metrics and temporal audits.
+Install the `adaptgym` extra and place the separate AdaptGym `src` on `PYTHONPATH`.
+See [the protocol and Coder launch instructions](docs/adaptgym_pilot.md).
+No controller training is performed.

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "adaptgym"
+version = "0.1.0"
+description = "Synthetic deterministic environments for studying agent adaptation."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [
+  { name = "AdaptGym contributors" }
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+adaptgym-v0 = "adaptgym.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/adaptgym"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
