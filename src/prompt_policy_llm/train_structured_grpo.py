@@ -9,7 +9,7 @@ import time
 from .note_model import load_model,verify_snapshot
 from .note_rollouts import action_logprobs
 from .structured_notes import score_extractions,score_candidate,SYSTEM,VERSION
-from .structured_note_rollouts import StructuredRollout,collect_candidates
+from .structured_note_rollouts import StructuredRollout,collect_candidates,NATIVE_SYSTEM,TOOLS
 
 
 def score_candidates(candidates,gold):
@@ -49,7 +49,7 @@ def run(args,cfg):
     optimizer=torch.optim.AdamW([p for p in model.parameters() if p.requires_grad],lr=cfg['learning_rate'])
     source_names=['structured_notes.py','structured_note_records.py','structured_note_rollouts.py','train_structured_grpo.py','train_note_grpo.py','note_model.py','note_rollouts.py','eval_structured_notes.py']
     run_config={'config':cfg,'base_revision':identity['revision'],'reward':'raw exact current-profile extraction count; no history requirement/penalty/normalization',
-        'policy_system':SYSTEM,'data_manifest':manifest,'api_calls':0,'only_lora_trainable':True,
+        'policy_system':NATIVE_SYSTEM,'policy_tools':TOOLS,'data_manifest':manifest,'api_calls':0,'only_lora_trainable':True,
         'all_sessions_training':full,'training_schedule':[{'user':u['user'],'session':s,'original_split':u['split']} for u,s in schedule],
         'evaluation_design':'four samples/context, fixed candidate0 carry, matched seeds; in-sample only',
         'primary_metric':'mean per-session normalized correct current fields across all4traces',

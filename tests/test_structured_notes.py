@@ -232,3 +232,23 @@ def test_sparse_updates_preserve_scopes_and_replace_values():
     assert apply_profile_update('{"profile":{}}',changed,at)==changed
     assert score_candidate({'notes':changed,'trace':{'finished':True}},changed)['exact_state']
     assert score_candidate({'notes':changed,'trace':{'finished':False}},changed)['reward']==0
+
+
+def test_native_sparse_update_strict_mapping():
+    from prompt_policy_llm.structured_note_rollouts import apply_native_update
+    from prompt_policy_llm.structured_notes import empty_notes
+    at='2026-03-01T09:01:00Z'
+    call='<tool_call>{"name":"update_profile","arguments":{"profile":{"personal":{"name":"Example"}}}}</tool_call>'
+    assert apply_native_update(call,empty_notes(),at)['profile']=={'personal':{'name':'Example'}}
+    for bad in [call+call,call+' explanation',call.replace('update_profile','put_note'),call.replace('"Example"','"Example","name":"Duplicate"')]:
+        with pytest.raises(ValueError):apply_native_update(bad,empty_notes(),at)
+
+
+def test_session_input_is_plain_text_without_json_wrapper():
+    from prompt_policy_llm.structured_note_rollouts import render_session_text
+    obs={'current_time':'2026-03-01T09:01:00Z','statements':[{'id':'hidden-id','timestamp':'2026-03-01T09:00:00Z','text':'My name is Example.'}]}
+    text=render_session_text(obs)
+    assert 'My name is Example.' in text
+    assert '2026-03-01T09:00:00Z' in text
+    assert 'hidden-id' not in text
+    assert '"statements"' not in text and '"text"' not in text

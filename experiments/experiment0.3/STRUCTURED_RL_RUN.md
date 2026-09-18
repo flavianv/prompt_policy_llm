@@ -17,3 +17,7 @@ Commands are recorded here, not auto-executed by this document. Use `structured_
 ## Sparse-update revision
 
 After smoke02 generated four malformed full documents, the policy interface was changed at user request to sparse JSON updates with profile and optional history. Omitted fields retain prior policy memory; present atomic fields replace the exact scope, including complete list/compound values. Null and empty lists preserve their original meaning. Runtime supplies version/as_of and scores the accumulated profile. Invalid updates still receive zero. Frozen baseline and trained evaluation share this interface. Gold targets and raw-count scoring remain unchanged. Smoke01 failed on optional torchao compatibility; runtime torchao alone was upgraded from 0.9 to 0.16 without dependencies. Smoke02 loaded the model and verified checkpoint reload but performed no optimizer update. Original remote smoke artifacts are retained.
+
+### Native tool and plain-text input revision
+
+Session input is now plain text: current time, then each unchanged statement text with its timestamp. Statement IDs and the JSON observation wrapper are not shown to the policy. Previous saved profile memory remains structured. The native Qwen tool schema exposes update_profile with sparse profile and optional history arguments. Exactly one well-formed tool call is required; no JSON repair or relaxed schema validation. Baseline, training and evaluation use the same rendering and tool interface.
