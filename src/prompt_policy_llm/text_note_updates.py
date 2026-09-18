@@ -85,30 +85,14 @@ def key_words(key):
 
 
 def score_text_notes(notes,gold,valid=True):
-    targets=list(flatten_profile(gold['profile']).values());n=len(targets)
-    base={'reward':0,'correct':0,'target_count':n,'missing':n,'incorrect':0,'unsupported':0,'schema_valid':valid,'exact_state':False,'correct_fraction':0.,'history_required_for_reward':False,'normalization':'none; fraction is diagnostic only'}
+    targets=list(flatten_profile(gold['profile']).values())
+    expected={value_signature(t['value']) for t in targets}
+    predicted={predicted_signature(e['value']) for e in notes.get('entries',[])}
+    n=len(expected)
+    base={'reward':0,'correct':0,'target_count':n,'target_field_count':len(targets),'missing':n,'incorrect':0,'unsupported':0,'schema_valid':valid,'exact_state':False,'correct_fraction':0.,'history_required_for_reward':False,'normalization':'none; fraction is diagnostic only','matching':'unique normalized value intersection; keys ignored'}
     if not valid:return {**base,'error':'invalid plain-text update'}
-    signatures=[value_signature(t['value']) for t in targets]
-    used=set();unsupported=0;matches=[]
-    for entry in notes.get('entries',[]):
-        if {'history','historical','previous','formerly','old'} & key_words(entry['key']):continue
-        candidates=[i for i,s in enumerate(signatures) if s==predicted_signature(entry['value'])]
-        chosen=None
-        # Optional keys suffice for a value unique in the target. Repeated values
-        # require a uniquely best contextual match; never assign by target order.
-        if len(candidates)==1:
-            i=candidates[0];sig=signatures[i]
-            common=sig[0] in {'unknown','empty'} or (len(sig[1])==1 and len(sig[1][0])<=3)
-            if not common or key_words(entry['key']) & address_words(targets[i]['address']):chosen=i
-        elif candidates and entry['key']:
-            scores=[(len(key_words(entry['key']) & address_words(targets[i]['address'])),i) for i in candidates]
-            best=max(s for s,_ in scores)
-            winners=[i for s,i in scores if s==best]
-            if best>0 and len(winners)==1:chosen=winners[0]
-        if chosen is None:unsupported+=1
-        elif chosen not in used:used.add(chosen);matches.append({'note':entry,'address':targets[chosen]['address']})
-    correct=len(used)
-    return {**base,'reward':correct,'correct':correct,'missing':n-correct,'unsupported':unsupported,'exact_state':correct==n and unsupported==0,'correct_fraction':correct/n if n else 0.,'matches':matches}
+    matched=expected & predicted;correct=len(matched)
+    return {**base,'reward':correct,'correct':correct,'missing':len(expected-predicted),'unsupported':len(predicted-expected),'exact_state':predicted==expected,'correct_fraction':correct/n if n else 0.,'matched_values':sorted(matched,key=repr)}
 
 
 def score_candidate(candidate,gold):

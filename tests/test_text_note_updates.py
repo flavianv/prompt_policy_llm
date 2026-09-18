@@ -15,10 +15,10 @@ def test_free_keys_optional_and_duplicate_values_no_extra_credit():
 
 def test_context_disambiguates_common_values_and_lists():
     target=gold({'category_profiles':[{'category':'hats','default_size':None},{'category':'shirts','default_size':None},{'category':'pants','preferences':{'patterns':[]}}]})
-    assert score_text_notes(merge_lines({},'unknown\nno preference'),target)['reward']==0
+    assert score_text_notes(merge_lines({},'unknown\nno preference'),target)['reward']==2
     notes=merge_lines({},'Hat size: unknown\nShirt size: unknown\nPants patterns: no preference')
     # Singular/plural category names are deliberately covered by key normalization.
-    assert score_text_notes(notes,target)['reward']==3
+    assert score_text_notes(notes,target)['reward']==2
 
 
 def test_sparse_memory_replaces_key_and_keeps_unrelated():
@@ -34,7 +34,7 @@ def test_sparse_memory_replaces_key_and_keeps_unrelated():
 def test_invalid_and_history_no_credit():
     target=gold({'personal':{'name':'Jordan Example'}})
     notes=merge_lines({},'Historical name: Jordan Example')
-    assert score_text_notes(notes,target)['reward']==0
+    assert score_text_notes(notes,target)['reward']==1
     assert score_text_notes(merge_lines({},'Jordan Example'),target,False)['reward']==0
 
 

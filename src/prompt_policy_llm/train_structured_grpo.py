@@ -49,7 +49,7 @@ def run(args,cfg):
     model.save_pretrained(args.output/'initial_adapter');tok.save_pretrained(args.output/'initial_adapter')
     optimizer=torch.optim.AdamW([p for p in model.parameters() if p.requires_grad],lr=cfg['learning_rate'])
     source_names=['text_note_updates.py','structured_notes.py','structured_note_records.py','structured_note_rollouts.py','train_structured_grpo.py','train_note_grpo.py','note_model.py','note_rollouts.py','eval_structured_notes.py']
-    run_config={'config':cfg,'base_revision':identity['revision'],'reward':'raw one-to-one current-field value matches from plain-text notes; flexible keys; ambiguous values require context; no penalty/normalization',
+    run_config={'config':cfg,'base_revision':identity['revision'],'reward':'raw size of unique normalized value intersection; keys ignored; no penalty/normalization',
         'policy_system':TEXT_SYSTEM,'policy_tools':[],'data_manifest':manifest,'api_calls':0,'only_lora_trainable':True,
         'all_sessions_training':full,'training_schedule':[{'user':u['user'],'session':s,'original_split':u['split']} for u,s in schedule],
         'evaluation_design':'four samples/context, fixed candidate0 carry, matched seeds; in-sample only',
