@@ -192,3 +192,28 @@ def test_existing_trainer_dispatches_luna_free_mode_without_credentials(monkeypa
     monkeypatch.setattr(sys,'argv',['trainer','--config',str(cfg),'--manifest','unused','--data','unused','--output',str(tmp_path/'not-created')])
     entry.main()
     assert calls==['extraction_count'] and not (tmp_path/'not-created').exists()
+
+
+def test_all100_schedule_includes_every_user_chronologically_regardless_of_old_split():
+    from prompt_policy_llm.train_structured_grpo import build_schedule
+    m=json.loads((ROOT/'experiments/experiment0.3/structured_notes_v1/manifest.json').read_text())
+    c=json.loads((ROOT/'experiments/experiment0.3/structured_all100_config.json').read_text())
+    schedule=build_schedule(m,c,100)
+    assert len(schedule)==len({(u['user'],s) for u,s in schedule})==100
+    for user in m['users']:assert [s for u,s in schedule if u['user']==user['user']]==list(range(10))
+    with pytest.raises(AssertionError):build_schedule(m,c,3)
+
+
+def test_pass4_primary_and_carry_are_not_cherry_picked():
+    from prompt_policy_llm.structured_note_rollouts import carry_candidate_zero
+    from prompt_policy_llm.eval_structured_notes import group_metrics,summarize
+    p,ep=source();gold=gold_notes(p,ep['cases'][:1]);correct={'reward':score(gold,gold),'notes':gold,'trace':{'finished':True}}
+    wrong=deepcopy(gold);wrong['profile']['personal']['name']='wrong'
+    first={'reward':score(wrong,gold),'notes':wrong,'trace':{'finished':True}}
+    candidates=[first,correct,deepcopy(first),deepcopy(correct)];m=group_metrics(candidates)
+    assert m['pass_at_4'] and m['candidate0_correct']==8 and m['best_correct']==9 and m['worst_correct']==8
+    assert m['mean_correct']==8.5 and m['mean_normalized_correct']==pytest.approx(8.5/9)
+    assert carry_candidate_zero(empty_notes(),candidates)==wrong
+    candidates[0]['trace']['finished']=False
+    assert carry_candidate_zero(empty_notes(),candidates)==empty_notes()
+    assert summarize([{'metrics':m}])['primary_mean_normalized_correct']==pytest.approx(8.5/9)

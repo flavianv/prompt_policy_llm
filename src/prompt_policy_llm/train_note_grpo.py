@@ -16,7 +16,7 @@ def train_group(model,optimizer,candidates,config):
     import torch
     rewards=[c['reward']['reward'] for c in candidates];advantages,std=group_advantages(rewards)
     if std<1e-8:return {'updated':False,'reason':'zero_variance','rewards':rewards,'advantages':advantages}
-    model.eval()  # Dropout disabled for matching generation and likelihoods; gradients remain enabled.
+    model.train()  # LoRA/attention dropout are zero; training mode enables activation checkpointing.
     for c in candidates:
         for seg in c['trace']['segments']:
             with torch.no_grad():
