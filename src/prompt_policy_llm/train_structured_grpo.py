@@ -8,13 +8,13 @@ import random
 import time
 from .note_model import load_model,verify_snapshot
 from .note_rollouts import action_logprobs
-from .structured_notes import score_extractions,SYSTEM,VERSION
+from .structured_notes import score_extractions,score_candidate,SYSTEM,VERSION
 from .structured_note_rollouts import StructuredRollout,collect_candidates
 
 
 def score_candidates(candidates,gold):
     for candidate in candidates:
-        candidate['reward']=score_extractions(candidate['trace'].get('raw_output',''),gold)
+        candidate['reward']=score_candidate(candidate,gold)
     return candidates
 
 

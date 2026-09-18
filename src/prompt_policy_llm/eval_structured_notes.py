@@ -2,7 +2,7 @@
 from copy import deepcopy
 import json,time
 from pathlib import Path
-from .structured_notes import empty_notes,score_extractions
+from .structured_notes import empty_notes,score_extractions,score_candidate
 from .structured_note_rollouts import group_from_prior,carry_candidate_zero
 
 
@@ -50,7 +50,7 @@ def evaluate(manager,data,users,output,phase,config):
             session=row['session'];torch.manual_seed(config['evaluation_seed']+int(uid[4:])*100+session)
             candidates=group_from_prior(manager,row['observation'],prior,4)
             gold=json.loads((data/'evaluator_only'/uid/f'session{session+1:02d}.json').read_text())
-            for c in candidates:c['reward']=score_extractions(c['trace']['raw_output'],gold)
+            for c in candidates:c['reward']=score_candidate(c,gold)
             carried=carry_candidate_zero(prior,candidates)
             record={'user':uid,'session':session,'observation':row['observation'],'prior_notes':deepcopy(prior),'candidates':candidates,'carried_notes':carried,'metrics':group_metrics(candidates)}
             (d/f'session{session+1:02d}.json').write_text(json.dumps(record));append_log(d/'SESSION_LOG.md',record)

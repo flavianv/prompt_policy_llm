@@ -26,21 +26,26 @@ ADDRESS_GUIDE={
  'atomic_units':'One scalar profile field, one complete compound value (height/weight, income, residence, education, default_size, budget), one entire typed preference/hobby/language collection, or one brand size; intent status and deadline count separately.',
  'identity_fields':'category; brand+sizing_system; scoped context; preference topic+item+scope+category; intent id+category+recipient identify records and give no standalone points.',
  'history':'Optional list of {address, events:[{at,until,value}]}; never part of the primary current-field reward.'}
-SYSTEM='''Update the accumulated partial user profile from current_session and your OWN previous_notes only.
-Return one strict JSON object: {"version":"partial-profile-notes-v1","as_of":"<current_session.current_time>","profile":{...},"history":[...optional...]}. No tools, prose or code fences.
+SYSTEM='''Emit a sparse update to the user profile using current_session and your OWN previous_notes only.
+Return one strict JSON object: {"profile":{only new or changed fields},"history":[optional changed history records]}. No tools, prose or code fences. The runtime merges your update into previous_notes and supplies version and as_of. Do not repeat unchanged fields. An empty update is {"profile":{}}.
 Use original profile field names/types. Fill only explicitly revealed fields; omit unrevealed fields instead of adding null defaults. null means explicitly unknown; [] means explicitly no preference. Do not infer age, sizes, brands, demographic preferences or hidden profile metadata.
+All sections below belong INSIDE profile, including purchase_intents. The only output root keys are profile and optional history. Omit every unmentioned field; never fill a template with null defaults.
 Allowed profile sections:
 personal: name,gender,birth_date,race,nationality,marital_status (text/null).
 residence: {city,region,country,timezone} or null.
 professional: occupation (text/null), income {amount,currency,period} or null, education {level,field} or null.
 languages: [{language,proficiency}] or null. interests: {hobbies:[text] or null}.
 physical: height/weight {value,unit} or null; build,hair_color,eye_color (text/null).
-category_profiles: one object per category with category, optional default_size {size,sizing_system} or null, sizes [{brand,sizing_system,size}], preferences {brands,materials,colors,patterns,cuts,fits,occasions,styles,widths}, scoped_overrides [{context:{subtype,season,occasion},preferences:{...}}]. Preference values are complete string lists or null; widths applies only to shoes. Include only stated scope dimensions (null allowed for unused context dimensions). Keep scoped values distinct from category defaults; never convert sizes.
+category_profiles: an ARRAY of objects (never an object keyed by category), one object per category with category, optional default_size {size,sizing_system} or null, sizes [{brand,sizing_system,size}], preferences {brands,materials,colors,patterns,cuts,fits,occasions,styles,widths}, scoped_overrides [{context:{subtype,season,occasion},preferences:{...}}]. Preference values are complete string lists or null; widths applies only to shoes. Include only stated scope dimensions (null allowed for unused context dimensions). Keep scoped values distinct from category defaults; never convert sizes.
 general_preferences: [{topic,item,scope:"global" or "category",category:null or category,stance:"like"/"dislike"/"retracted"/null}]. Identity keys give context, not extra facts.
 purchase_intents: [{id,category,recipient:"self"/"gift",status,deadline,budget:{amount,currency}}], omitting unrevealed fields. A budget-only record needs just id and budget; when status/deadline are known include their stated category and recipient. Status may be active,expired,completed,cancelled,uncertain or null; deadline is ISO timestamp/null.
-Each record/address has one current value. Duplicate identities or alternative guesses are invalid. Lists are complete typed collections, not a bag of possible answers. Retain all previously known unrelated facts; update values only on explicit changes or time transitions. Ignore filler, other-person facts and product descriptions. Repetition does not create a new fact.
+Each record/address has one current value. Duplicate identities or alternative guesses are invalid. Lists are complete typed collections, not a bag of possible answers. Unmentioned fields are retained automatically. Emit changed values on explicit changes or time transitions. Emit each changed list or compound value in full; null sets an explicitly unknown value and [] sets an explicitly empty preference, neither deletes a field. Ignore filler, other-person facts and product descriptions. Repetition does not create a new fact.
 Temporary changes expire at their exact exclusive until timestamp and then restore the prior applicable value. Intent deadlines are inclusive: active expires strictly after deadline unless completed/cancelled. Dates remain exactly as supplied. For faithful later restoration you may retain an optional history sidecar: [{"address":{...},"events":[{"at":timestamp,"until":timestamp or null,"value":original value}]}]. Address uses section personal/general/physical/clothing/preference/intent and field; clothing also category+context, brand_size also brand+sizing_system; preference also topic+item+scope+category; intent also intent_id and, for field state, category+recipient. Intent state history values have status+deadline. Preserve old changes when retaining history; confirmations are not changes. History accuracy is measured separately and does NOT gate correct current-field credit.
 Initial previous_notes may have as_of:null and profile:{}; it is an empty memory, not gold.
+Synthetic format illustration only (never copy these facts): if the only statements were "my name is Jordan Example" and "my preferred shirt colors are teal", an output shape would be:
+{"profile":{"personal":{"name":"Jordan Example"},"category_profiles":[{"category":"shirts","preferences":{"colors":["teal"]}}]}}
+This example has no gender, residence, budget, history or other absent fields. For scoped materials use a category entry shaped as {"category":"pants","scoped_overrides":[{"context":{"season":"winter"},"preferences":{"materials":["wool"]}}]}; for an explicitly unknown size use {"category":"hats","default_size":null}. These are syntax illustrations, not user facts.
+Before ending, ensure arrays use square brackets, all sections are nested inside profile, and each opened brace has exactly one closing brace.
 '''
 
 
@@ -158,7 +163,9 @@ def _profile_from_records(records):
   elif s=='intent':
    intent=item('purchase_intents',{'id':a['intent_id']})
    if f=='state':intent.update(category=a['category'],recipient=a['recipient'],**value)
-   else:intent[f]=value
+   else:
+    intent[f]=value
+    if f in {'status','deadline'}:intent.update(category=a['category'],recipient=a['recipient'])
  return profile
 
 
@@ -194,6 +201,36 @@ def parse_document(raw,as_of=None):
  def constant(x):raise ValueError('nonfinite JSON constant')
  if not isinstance(raw,str) or len(raw)>200000:raise ValueError('JSON size/type')
  return validate_document(json.loads(raw,object_pairs_hook=pairs,parse_constant=constant),as_of)
+
+
+def apply_profile_update(raw, prior, as_of):
+ """Validate a sparse model delta, then merge exact scoped fields without gold."""
+ # Reuse the strict duplicate-key parser before validating the output envelope.
+ envelope=parse_document('{"version":'+json.dumps(VERSION)+',"as_of":'+json.dumps(as_of)+',"profile":{},"history":[]}',as_of)
+ def pairs(items):
+  result={}
+  for key,value in items:
+   if key in result:raise ValueError('duplicate JSON key')
+   result[key]=value
+  return result
+ if not isinstance(raw,str) or len(raw)>200000:raise ValueError('JSON size/type')
+ delta=json.loads(raw,object_pairs_hook=pairs)
+ _dict(delta,{'profile','history'})
+ if 'profile' not in delta:raise ValueError('missing profile update')
+ envelope.update(delta);validate_document(envelope,as_of)
+ facts=flatten_profile(prior['profile']);facts.update(flatten_profile(delta['profile']))
+ result={'version':VERSION,'as_of':as_of,'profile':_profile_from_records(facts.values())}
+ history={canonical(r['address']):deepcopy(r) for r in prior.get('history',[])}
+ history.update({canonical(r['address']):deepcopy(r) for r in delta.get('history',[])})
+ if history:result['history']=list(history.values())
+ return validate_document(result,as_of)
+
+
+def score_candidate(candidate,gold):
+ trace=candidate['trace']
+ # Invalid actions still earn zero; a retained old state cannot rescue them.
+ raw=json.dumps(candidate['notes']) if trace['finished'] else ''
+ return score_extractions(raw,gold)
 
 
 def gold_notes(profile,prefix):

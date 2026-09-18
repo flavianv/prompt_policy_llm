@@ -217,3 +217,18 @@ def test_pass4_primary_and_carry_are_not_cherry_picked():
     candidates[0]['trace']['finished']=False
     assert carry_candidate_zero(empty_notes(),candidates)==empty_notes()
     assert summarize([{'metrics':m}])['primary_mean_normalized_correct']==pytest.approx(8.5/9)
+
+
+def test_sparse_updates_preserve_scopes_and_replace_values():
+    from prompt_policy_llm.structured_notes import apply_profile_update,empty_notes,score_candidate
+    at='2026-03-01T09:01:00Z'
+    prior=apply_profile_update(json.dumps({'profile':{'personal':{'name':'Example'},'category_profiles':[{'category':'shirts','preferences':{'colors':['red'],'materials':['cotton']}}],'purchase_intents':[{'id':'trip','category':'shoes','recipient':'self','status':'active','deadline':None}]}}),empty_notes(),at)
+    changed=apply_profile_update(json.dumps({'profile':{'category_profiles':[{'category':'shirts','preferences':{'colors':[]}}, {'category':'hats','default_size':None}],'purchase_intents':[{'id':'trip','category':'shoes','recipient':'self','status':'completed'}]}}),prior,at)
+    assert changed['profile']['personal']=={'name':'Example'}
+    assert changed['profile']['category_profiles'][0]['preferences']=={'colors':[],'materials':['cotton']}
+    assert changed['profile']['purchase_intents'][0]['deadline'] is None
+    assert changed['profile']['purchase_intents'][0]['status']=='completed'
+    assert prior['profile']['purchase_intents'][0]['status']=='active'
+    assert apply_profile_update('{"profile":{}}',changed,at)==changed
+    assert score_candidate({'notes':changed,'trace':{'finished':True}},changed)['exact_state']
+    assert score_candidate({'notes':changed,'trace':{'finished':False}},changed)['reward']==0

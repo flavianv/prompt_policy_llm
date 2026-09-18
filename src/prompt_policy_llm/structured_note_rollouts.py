@@ -1,7 +1,7 @@
 """Batched JSON continuations; each user carries only its own candidate-0 prediction."""
 from copy import deepcopy
 import json,time
-from .structured_notes import SYSTEM,empty_notes,parse_document
+from .structured_notes import SYSTEM,empty_notes,apply_profile_update
 
 class StructuredRollout:
     def __init__(self,model,tokenizer,config):self.model,self.tokenizer,self.config=model,tokenizer,config
@@ -34,7 +34,7 @@ class StructuredRollout:
             stop=next((j+1 for j,t in enumerate(tokens) if t in eos),len(tokens));tokens=tokens[:stop]
             raw=self.tokenizer.decode(tokens,skip_special_tokens=True);trace=traces[i];error=None
             try:
-                prediction=parse_document(raw,observations[i]['current_time']);note_states[i].clear();note_states[i].update(deepcopy(prediction));valid=True
+                prediction=apply_profile_update(raw,note_states[i],observations[i]['current_time']);note_states[i].clear();note_states[i].update(deepcopy(prediction));valid=True
             except (ValueError,TypeError,KeyError,OverflowError,RecursionError) as exc:error=str(exc);valid=False
             prompt_ids=inputs.input_ids[row][inputs.attention_mask[row].bool()].tolist()
             generation={'text':raw,'input_tokens':len(prompt_ids),'output_tokens':len(tokens),'hit_output_cap':len(tokens)>=cap,

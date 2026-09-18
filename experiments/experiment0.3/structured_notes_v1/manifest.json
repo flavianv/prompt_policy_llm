@@ -95,7 +95,7 @@
   "reward": "Unnormalized integer number of correct current original-profile fields (scope + typed value); no history requirement. Invalid document reward0. No utility, F1, cost or unsupported-fact penalty. Extra wrong addresses give no credit but do not subtract correctly recovered facts; diagnostics and exact-state flag expose this limitation.",
   "source_sha256": {
     "/Users/f.vasile/MyFolders/MyProjects/2026_Q3_PromptPolicyLLM/prompt_policy_llm/experiments/experiment0.3/export_structured_notes.py": "7065a2b35380a02481978fc5091d10759c7723b66b8e87b60822356fccbf2c9d",
-    "/Users/f.vasile/MyFolders/MyProjects/2026_Q3_PromptPolicyLLM/prompt_policy_llm/src/prompt_policy_llm/structured_notes.py": "8ede11009fcca63107603856ed76dc8ad1a7ca9ad71dbdf60f44b41dbd8d13e3",
+    "/Users/f.vasile/MyFolders/MyProjects/2026_Q3_PromptPolicyLLM/prompt_policy_llm/src/prompt_policy_llm/structured_notes.py": "2c205da8cb6adf3b206d4784a6fefb0f2a5c5bc0343dc3c8a55204d44b291a04",
     "/Users/f.vasile/MyFolders/MyProjects/2026_Q3_PromptPolicyLLM/prompt_policy_llm/src/prompt_policy_llm/structured_note_records.py": "b5f084447a3f30121622de78e71aac43039f17fa1aaa61f061e46057fba454db"
   },
   "files_sha256": {
@@ -202,7 +202,7 @@
     "evaluator_only/user10/session08.json": "1ceb411303661d96554b774b351a78dc96c9aa5e743baee27d19bc1d65de4789",
     "evaluator_only/user10/session09.json": "6951608e5d8f4737d383ccd157e63c22206f3cf4873a5c7495c906eb5936241a",
     "evaluator_only/user10/session10.json": "6c7fb35473695c84916c98bcdd8501d9e5c7169916987f1bd4aa2b9ab6d74cec",
-    "policy_system.txt": "c9aa955cbcab788eaf875e17c973c48644845839d70145e88317b6bf19a9b74c",
+    "policy_system.txt": "2f8eb8bf7c9a16f0feac8dc4e1f40d399aeb0bf0dafd510de8d4d81d2b594da6",
     "public/user01.json": "3f5de6a2c2d06ea3cbb39590d5d225f574b7b0fe1265160d932a23756a7cf3a4",
     "public/user02.json": "186b961bbec520db9246d376ab5aafa418ef01b531f4f615b5946d66f2eefe6e",
     "public/user03.json": "5e4df505d36f52491d2ee3ffbed2118aaddebd9ed44269caa47c563d97c33a08",
