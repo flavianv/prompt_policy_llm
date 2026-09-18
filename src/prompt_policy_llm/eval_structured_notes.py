@@ -2,7 +2,8 @@
 from copy import deepcopy
 import json,time
 from pathlib import Path
-from .structured_notes import empty_notes,score_extractions,score_candidate
+from .structured_notes import empty_notes,score_extractions
+from .text_note_updates import score_candidate
 from .structured_note_rollouts import group_from_prior,carry_candidate_zero
 
 

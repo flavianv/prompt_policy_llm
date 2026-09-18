@@ -3,6 +3,7 @@ from copy import deepcopy
 import json,time,re
 from .structured_notes import SYSTEM,SCHEMA,empty_notes,apply_profile_update
 from .adaptgym_pilot import strict_json
+from .text_note_updates import SYSTEM as TEXT_SYSTEM,merge_lines,render_notes
 
 def _object(properties,required=()):
     return {'type':'object','properties':properties,'required':list(required),'additionalProperties':False}
@@ -41,7 +42,7 @@ def render_session_text(observation):
 
 
 def render_policy_input(observation,notes):
-    return render_session_text(observation)+'\n\nPrevious saved notes (structured memory):\n'+json.dumps(notes,ensure_ascii=False)
+    return render_session_text(observation)+'\n\nPrevious saved notes:\n'+render_notes(notes)
 
 
 class StructuredRollout:
@@ -55,7 +56,7 @@ class StructuredRollout:
         cap=self.config['structured_max_output_tokens'];traces=[];active=[];prompts=[]
         for i,(obs,notes) in enumerate(zip(observations,note_states)):
             payload={'current_session':deepcopy(obs),'previous_notes':deepcopy(notes)}
-            prompt=self.tokenizer.apply_chat_template([{'role':'system','content':NATIVE_SYSTEM},{'role':'user','content':render_policy_input(obs,notes)}],tools=TOOLS,tokenize=False,add_generation_prompt=True,enable_thinking=False)
+            prompt=self.tokenizer.apply_chat_template([{'role':'system','content':TEXT_SYSTEM},{'role':'user','content':render_policy_input(obs,notes)}],tokenize=False,add_generation_prompt=True,enable_thinking=False)
             ids=self.tokenizer(prompt,add_special_tokens=False).input_ids
             trace={'payload':payload,'rendered_prompt':prompt,'notes_before':deepcopy(notes),'notes_after':deepcopy(notes),'segments':[],'rounds':[],'finished':False,'raw_output':''}
             if len(ids)+cap>self.config['max_context_tokens']:trace['error']='context_limit'
@@ -75,7 +76,7 @@ class StructuredRollout:
             stop=next((j+1 for j,t in enumerate(tokens) if t in eos),len(tokens));tokens=tokens[:stop]
             raw=self.tokenizer.decode(tokens,skip_special_tokens=True);trace=traces[i];error=None
             try:
-                prediction=apply_native_update(raw,note_states[i],observations[i]['current_time']);note_states[i].clear();note_states[i].update(deepcopy(prediction));valid=True
+                prediction=merge_lines(note_states[i],raw);note_states[i].clear();note_states[i].update(deepcopy(prediction));valid=True
             except (ValueError,TypeError,KeyError,OverflowError,RecursionError) as exc:error=str(exc);valid=False
             prompt_ids=inputs.input_ids[row][inputs.attention_mask[row].bool()].tolist()
             generation={'text':raw,'input_tokens':len(prompt_ids),'output_tokens':len(tokens),'hit_output_cap':len(tokens)>=cap,
