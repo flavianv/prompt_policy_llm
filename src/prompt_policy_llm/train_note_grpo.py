@@ -20,13 +20,13 @@ def train_group(model,optimizer,candidates,config):
     for c in candidates:
         for seg in c['trace']['segments']:
             with torch.no_grad():
-                seg['old_logprobs']=action_logprobs(model,seg).cpu().tolist()
-                with model.disable_adapter():seg['reference_logprobs']=action_logprobs(model,seg).cpu().tolist()
+                seg['old_logprobs']=action_logprobs(model,seg,temperature=config.get('temperature',1.0)).cpu().tolist()
+                with model.disable_adapter():seg['reference_logprobs']=action_logprobs(model,seg,temperature=config.get('temperature',1.0)).cpu().tolist()
     optimizer.zero_grad(set_to_none=True);total_tokens=sum(len(s['completion_ids']) for c in candidates for s in c['trace']['segments']);assert total_tokens>0
     loss_total=kl_total=0.
     for c,advantage in zip(candidates,advantages):
         for seg in c['trace']['segments']:
-            logp=action_logprobs(model,seg);old=torch.tensor(seg['old_logprobs'],device=logp.device);ref=torch.tensor(seg['reference_logprobs'],device=logp.device)
+            logp=action_logprobs(model,seg,temperature=config.get('temperature',1.0));old=torch.tensor(seg['old_logprobs'],device=logp.device);ref=torch.tensor(seg['reference_logprobs'],device=logp.device)
             ratio=torch.exp(logp-old);clipped=ratio.clamp(1-config['clip_epsilon'],1+config['clip_epsilon']);delta=(ref-logp).clamp(-20,20);kl=torch.exp(delta)-delta-1
             loss=(-torch.minimum(ratio*advantage,clipped*advantage)+config['kl_beta']*kl).sum()/total_tokens
             assert torch.isfinite(loss);loss.backward();loss_total+=loss.item();kl_total+=kl.detach().sum().item()/total_tokens

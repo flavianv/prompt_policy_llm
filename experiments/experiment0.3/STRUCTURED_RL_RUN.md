@@ -33,3 +33,7 @@ The user clarified that reward is simply the intersection of extracted note valu
 ### Cumulative session context
 
 At the user’s correction, each session t now receives raw statements from sessions1..t in chronological order, plus its own saved notes. Future sessions and evaluator targets remain excluded. Current time is that of session t. Baseline, GRPO and trained evaluation share this renderer; previously completed smokes used current-session plus prior notes and are not cumulative-context results.
+
+### Temperature 1.5 requested
+
+The user requested GRPO on all100sessions at temperature1.5 after observing baseline diversity at1.0. The previous temperature1 pipeline was stopped and retained. The new baseline, training samples and trained evaluation use1.5 consistently; GRPO token likelihoods also use temperature-scaled logits. This change supersedes earlier temperature1 decoding descriptions.

@@ -73,7 +73,7 @@ class StructuredRollout:
         inputs=self.tokenizer(prompts,padding=True,return_tensors='pt',add_special_tokens=False).to(self.model.device)
         self.model.eval();torch.cuda.synchronize();start=time.perf_counter()
         with torch.no_grad():
-            output=self.model.generate(**inputs,max_new_tokens=cap,do_sample=sample,temperature=1.0 if sample else None,
+            output=self.model.generate(**inputs,max_new_tokens=cap,do_sample=sample,temperature=self.config.get('temperature',1.0) if sample else None,
                 top_p=1.0 if sample else None,top_k=0 if sample else None,repetition_penalty=1.0,
                 pad_token_id=self.tokenizer.pad_token_id,use_cache=True)
         torch.cuda.synchronize();elapsed=time.perf_counter()-start

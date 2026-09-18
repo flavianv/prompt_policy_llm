@@ -30,7 +30,7 @@ class NativeRollout:
             if done:break
         return {'rounds':rounds,'finished':done,'segments':segments,'coverage_review_requested':checked}
 
-def action_logprobs(model,segment):
+def action_logprobs(model,segment,temperature=1.0):
     import torch
     p,c=segment['prompt_ids'],segment['completion_ids'];assert p and c
     ids=torch.tensor([p+c],device=model.device)
@@ -38,6 +38,7 @@ def action_logprobs(model,segment):
     logits=model(input_ids=ids,use_cache=False,logits_to_keep=len(c)+1).logits[0,:-1].float()
     assert logits.shape[0]==len(c)
     target=ids[0,-len(c):]
-    return torch.log_softmax(logits,dim=-1).gather(1,target[:,None]).squeeze(1)
+    assert temperature>0
+    return torch.log_softmax(logits/temperature,dim=-1).gather(1,target[:,None]).squeeze(1)
 
 def loss_mask(segment):return [0]*len(segment['prompt_ids'])+[1]*len(segment['completion_ids'])
