@@ -3,7 +3,7 @@ from copy import deepcopy
 import re,unicodedata
 from .structured_notes import flatten_profile
 
-SYSTEM='''Maintain notes for one user from the session text and your previous saved notes.
+SYSTEM='''Maintain notes for one user from the complete chronological session history and your previous saved notes. The input includes sessions one through the current session. Resolve later corrections and time-dependent changes at Current time; do not restore stale earlier values when rereading the history.
 Output only new or changed facts, one per line: a short descriptive key, a colon, and the value. Keys are free-form; there is no required internal schema. A distinctive value may appear alone if no key is needed. Use descriptive keys to preserve category, brand, season, occasion and which attribute changed, especially for unknown values or common sizes.
 Do not output JSON, tool calls, code fences, explanations or empty template fields. Keep list values together on one line separated by commas; include the complete current list. Use "unknown" for explicitly unknown and "no preference" for explicitly empty preferences. Never invent missing facts. Ignore chatter and facts about other people. Retain exact names, numbers, units and dates. Separate independent facts onto separate lines, including intent status and deadline. When changing a fact, reuse its previous key so it replaces that note. Unmentioned notes are retained automatically.
 Preserve current values as time advances: temporary changes end at their exclusive end time; active purchase intents expire strictly after their deadline unless completed or cancelled. You may retain dated historical facts on separate clearly labeled lines. If nothing changes, output only "No changes."

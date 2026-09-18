@@ -29,3 +29,7 @@ The current policy emits sparse descriptive key: value lines; keys are optional 
 ### Final reward clarification: value intersection
 
 The user clarified that reward is simply the intersection of extracted note values and target values; keys do not gate credit. Reward now counts unique normalized values in both sets, not distinct scoped fields sharing the same value. Both the unique-value denominator and original field count are recorded. Common values and historical/wrong-key mentions can therefore match; key/scope correctness is not claimed by this metric. No semantic judge, repair, or extra penalty is added. The first plain-text smoke used the earlier context-aware matcher and is preserved as an obsolete reward diagnostic; subsequent runs use value intersection.
+
+### Cumulative session context
+
+At the user’s correction, each session t now receives raw statements from sessions1..t in chronological order, plus its own saved notes. Future sessions and evaluator targets remain excluded. Current time is that of session t. Baseline, GRPO and trained evaluation share this renderer; previously completed smokes used current-session plus prior notes and are not cumulative-context results.

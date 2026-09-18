@@ -137,7 +137,9 @@ def test_policy_prefix_uses_only_own_predictions_and_candidate_states_are_isolat
     assert len(prefix)==2 and len(candidates)==4 and prior['profile']['personal']['name']=='OWN_PREDICTION'
     assert seen[0][1]['profile']=={}
     assert all(x[1]['profile']['personal']['name']=='OWN_PREDICTION' for x in seen[1:])
-    assert all(set(x[0])=={'current_time','statements'} for x in seen)
+    assert all(set(x[0])=={'current_time','statements','session_history'} for x in seen)
+    assert [len(x[0]['session_history']) for x in seen]==[1,2,3,3,3,3]
+    assert all(set(row)=={'current_time','statements'} for x in seen for row in x[0]['session_history'])
     candidates[0]['notes']['profile']['personal']['name']='MUTATED'
     assert candidates[1]['notes']['profile']['personal']['name']=='OWN_PREDICTION'
     assert prior['profile']['personal']['name']=='OWN_PREDICTION'

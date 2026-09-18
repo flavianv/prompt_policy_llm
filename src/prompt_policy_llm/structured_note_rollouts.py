@@ -36,9 +36,16 @@ def apply_native_update(raw,prior,as_of):
  return apply_profile_update(json.dumps(call['arguments']),prior,as_of)
 
 
+def cumulative_observation(public_sessions,session):
+    obs=deepcopy(public_sessions[session]['observation'])
+    obs['session_history']=[deepcopy(row['observation']) for row in public_sessions[:session+1]]
+    return obs
+
+
 def render_session_text(observation):
     """Render unchanged statement text as the session, never a serialized observation."""
-    return 'Current time: '+observation['current_time']+'\n\nSession statements:\n'+ '\n'.join('['+row['timestamp']+'] '+row['text'] for row in observation['statements'])
+    history=observation.get('session_history',[observation])
+    return 'Current time: '+observation['current_time']+'\n\n'+ '\n\n'.join('Session '+str(i+1)+':\n'+'\n'.join('['+row['timestamp']+'] '+row['text'] for row in obs['statements']) for i,obs in enumerate(history))
 
 
 def render_policy_input(observation,notes):
@@ -109,5 +116,5 @@ def carry_candidate_zero(prior,candidates):
 
 def collect_candidates(manager,public_sessions,session,group_size):
     prior=empty_notes();prefix=[]
-    for row in public_sessions[:session]:prefix.append(manager.update(deepcopy(row['observation']),prior,sample=False))
-    return prior,prefix,group_from_prior(manager,public_sessions[session]['observation'],prior,group_size)
+    for i,row in enumerate(public_sessions[:session]):prefix.append(manager.update(cumulative_observation(public_sessions,i),prior,sample=False))
+    return prior,prefix,group_from_prior(manager,cumulative_observation(public_sessions,session),prior,group_size)

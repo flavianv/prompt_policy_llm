@@ -10,7 +10,7 @@ from .note_model import load_model,verify_snapshot
 from .text_note_updates import score_candidate
 from .note_rollouts import action_logprobs
 from .structured_notes import score_extractions,SYSTEM,VERSION
-from .structured_note_rollouts import StructuredRollout,collect_candidates,TEXT_SYSTEM
+from .structured_note_rollouts import StructuredRollout,collect_candidates,TEXT_SYSTEM,cumulative_observation
 
 
 def score_candidates(candidates,gold):
@@ -65,13 +65,13 @@ def run(args,cfg):
         uid=user['user'];public=json.loads((args.data/'public'/f'{uid}.json').read_text())['sessions']
         if full:
             if uid!=previous_user:prior=empty_notes()
-            prefix=[];candidates=group_from_prior(manager,public[session]['observation'],prior,cfg['group_size'])
+            prefix=[];candidates=group_from_prior(manager,cumulative_observation(public,session),prior,cfg['group_size'])
         else:prior,prefix,candidates=collect_candidates(manager,public,session,cfg['group_size'])
         gold=json.loads((args.data/'evaluator_only'/uid/f'session{session+1:02d}.json').read_text());score_candidates(candidates,gold)
         carried=carry_candidate_zero(prior,candidates)
         if not any(c['trace']['finished'] for c in candidates):update={'updated':False,'reason':'all_invalid_json_trajectories'}
         else:update=train_group(model,optimizer,candidates,cfg)
-        record={'step':step,'user':uid,'session':session,'observation':public[session]['observation'],'prior_notes':deepcopy(prior),
+        record={'step':step,'user':uid,'session':session,'observation':cumulative_observation(public,session),'prior_notes':deepcopy(prior),
                 'prefix_traces':prefix,'candidates':candidates,'carried_notes':carried,'metrics':group_metrics(candidates),'optimizer':update,'api_calls':0}
         (args.output/f'step{step:03d}.json').write_text(json.dumps(record));steps.append(update);records.append(record)
         log=args.output/f'{uid}_TRAINING_LOG.md'

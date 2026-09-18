@@ -42,3 +42,13 @@ def test_dates_are_not_bags_of_numbers():
     target=gold({'personal':{'birth_date':'1990-03-01'}})
     assert score_text_notes(merge_lines({},'Birthday: 1990-01-03'),target)['reward']==0
     assert score_text_notes(merge_lines({},'Birthday: 1990-03-01'),target)['reward']==1
+
+
+def test_cumulative_plain_text_includes_prefix_not_future():
+    from prompt_policy_llm.structured_note_rollouts import cumulative_observation,render_session_text
+    rows=[{'observation':{'current_time':str(i),'statements':[{'timestamp':str(i),'text':text}]}} for i,text in enumerate(['first fact','second fact','future fact'])]
+    obs=cumulative_observation(rows,1)
+    text=render_session_text(obs)
+    assert 'first fact' in text and 'second fact' in text and 'future fact' not in text
+    assert text.startswith('Current time: 1')
+    assert 'session_history' not in rows[1]['observation']

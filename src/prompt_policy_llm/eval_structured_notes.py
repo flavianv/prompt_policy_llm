@@ -2,6 +2,7 @@
 from copy import deepcopy
 import json,time
 from pathlib import Path
+from .structured_note_rollouts import cumulative_observation
 from .structured_notes import empty_notes,score_extractions
 from .text_note_updates import score_candidate
 from .structured_note_rollouts import group_from_prior,carry_candidate_zero
@@ -49,11 +50,11 @@ def evaluate(manager,data,users,output,phase,config):
         public=json.loads((data/'public'/f'{uid}.json').read_text())['sessions']
         for row in public:
             session=row['session'];torch.manual_seed(config['evaluation_seed']+int(uid[4:])*100+session)
-            candidates=group_from_prior(manager,row['observation'],prior,4)
+            candidates=group_from_prior(manager,cumulative_observation(public,session),prior,4)
             gold=json.loads((data/'evaluator_only'/uid/f'session{session+1:02d}.json').read_text())
             for c in candidates:c['reward']=score_candidate(c,gold)
             carried=carry_candidate_zero(prior,candidates)
-            record={'user':uid,'session':session,'observation':row['observation'],'prior_notes':deepcopy(prior),'candidates':candidates,'carried_notes':carried,'metrics':group_metrics(candidates)}
+            record={'user':uid,'session':session,'observation':cumulative_observation(public,session),'prior_notes':deepcopy(prior),'candidates':candidates,'carried_notes':carried,'metrics':group_metrics(candidates)}
             (d/f'session{session+1:02d}.json').write_text(json.dumps(record));append_log(d/'SESSION_LOG.md',record)
             rows.append(record);userrows.append(record);prior=carried
             with (output/'scores.jsonl').open('a') as f:f.write(json.dumps({'user':uid,'session':session,**record['metrics']})+'\n')
