@@ -4,9 +4,26 @@ import json,time,re
 from .structured_notes import SYSTEM,SCHEMA,empty_notes,apply_profile_update
 from .adaptgym_pilot import strict_json
 
-TOOLS=[{'type':'function','function':{'name':'update_profile','description':'Apply new or changed user-profile fields to persistent notes. Omitted fields stay unchanged. Include all changes for this session in one call.',
- 'parameters':{'type':'object','additionalProperties':False,'required':['profile'],
- 'properties':{'profile':SCHEMA['properties']['profile'],'history':SCHEMA['properties']['history']}}}}]
+def _object(properties,required=()):
+    return {'type':'object','properties':properties,'required':list(required),'additionalProperties':False}
+
+
+def _array(items):return {'type':'array','items':items}
+
+
+_TEXT={'type':['string','null']}
+_LIST={'type':['array','null'],'items':{'type':'string'}}
+_PREFS=_object({k:_LIST for k in ['brands','materials','colors','patterns','cuts','fits','occasions','styles','widths']})
+_CATEGORY=_object({'category':{'type':'string'},'default_size':{'anyOf':[_object({'size':{'type':'string'},'sizing_system':{'type':'string'}},['size','sizing_system']),{'type':'null'}]},
+    'preferences':_PREFS,'sizes':_array(_object({'brand':{'type':'string'},'sizing_system':{'type':'string'},'size':_TEXT},['brand','sizing_system','size'])),
+    'scoped_overrides':_array(_object({'context':_object({k:_TEXT for k in ['season','occasion','subtype']}),'preferences':_PREFS},['context','preferences']))},['category'])
+_PROFILE=deepcopy(SCHEMA['properties']['profile'])
+_PROFILE['properties']['personal']=_object({k:_TEXT for k in ['name','gender','birth_date','race','nationality','marital_status']})
+_PROFILE['properties']['category_profiles']=_array(_CATEGORY)
+_PROFILE['properties']['purchase_intents']=_array(_object({'id':{'type':'string'},'category':{'type':'string'},'recipient':{'enum':['self','gift']},'status':_TEXT,'deadline':_TEXT,'budget':{'anyOf':[_object({'amount':{'type':'number'},'currency':{'type':'string'}},['amount','currency']),{'type':'null'}]}},['id']))
+_PROFILE['properties']['general_preferences']=_array(_object({'topic':{'type':'string'},'item':{'type':'string'},'scope':{'enum':['global','category']},'category':_TEXT,'stance':{'enum':['like','dislike','retracted',None]}},['topic','item','scope','category','stance']))
+TOOLS=[{'type':'function','function':{'name':'update_profile','description':'Merge only new or changed fields into saved notes. Omitted fields remain unchanged; null means explicitly unknown. Never supply absent facts.',
+ 'parameters':_object({'profile':_PROFILE,'history':SCHEMA['properties']['history']},['profile'])}}]
 NATIVE_SYSTEM=SYSTEM.replace('Return one strict JSON object:', 'Call update_profile exactly once using arguments shaped as:').replace('No tools, prose or code fences.', 'Use the supplied native tool. No prose or code fences.')
 
 
