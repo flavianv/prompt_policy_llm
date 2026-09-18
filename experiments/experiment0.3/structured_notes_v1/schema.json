@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "partial-profile-notes-v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "as_of",
+    "profile"
+  ],
+  "properties": {
+    "version": {
+      "const": "partial-profile-notes-v1"
+    },
+    "as_of": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "personal": {
+          "type": "object"
+        },
+        "residence": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "professional": {
+          "type": "object"
+        },
+        "languages": {
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "interests": {
+          "type": "object"
+        },
+        "physical": {
+          "type": "object"
+        },
+        "general_preferences": {
+          "type": "array"
+        },
+        "category_profiles": {
+          "type": "array"
+        },
+        "purchase_intents": {
+          "type": "array"
+        }
+      }
+    },
+    "history": {
+      "type": "array",
+      "maxItems": 128
+    }
+  },
+  "x-runtime-validation": "validate_document/flatten_profile are mandatory alongside this envelope schema. They enforce original field names/types, identity/scope keys, uniqueness, complete compound values, strict JSON and optional history chronology."
+}

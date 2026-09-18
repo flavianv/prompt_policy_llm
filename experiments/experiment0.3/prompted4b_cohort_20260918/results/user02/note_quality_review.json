@@ -1,0 +1,561 @@
+{
+  "method": "Manual review by Codex of full source statements and every session note snapshot; no extra model calls. Primary unit: unique revealed field at final session, not token, claim or question. Supported requires correct current value plus stated category/brand/system/recipient scope; intent deadline is checked too. Conflicting undated values count ambiguous; incorrect values/scopes count incorrect; missing fields count missing. History completeness is audited separately in observations. Counts are descriptive, uncalibrated single-reviewer judgments, not exhaustive hallucination precision/recall.",
+  "reviewed_sessions": 10,
+  "final_time": "2026-05-02T09:01:00Z",
+  "final_field_counts": {
+    "total": 20,
+    "supported": 15,
+    "ambiguous": 1,
+    "incorrect": 0,
+    "missing": 4,
+    "supported_fraction": 0.75
+  },
+  "unsupported_mutation_examples": 0,
+  "observations": [
+    {
+      "session": 2,
+      "type": "supported_temporal",
+      "evidence_ids": [
+        "e0-1",
+        "e1-0"
+      ],
+      "quote": "Temporary preference for materials for pants in summer: no stated preference (until 2026-03-09T09:00:00Z).",
+      "finding": "Keeps the linen/cotton baseline separately and distinguishes an explicitly empty temporary override from unknown."
+    },
+    {
+      "session": 4,
+      "type": "ambiguous_history",
+      "evidence_ids": [
+        "e1-1",
+        "e3-0"
+      ],
+      "finding": "Appends empty summer-shirt-pattern preference without dating/removing the solid claim. By session8 there are three conflicting undated values including unknown."
+    },
+    {
+      "session": 6,
+      "type": "forgetting",
+      "evidence_ids": [
+        "e4-0"
+      ],
+      "finding": "Previously accepted cancelled urgent-gift intent disappears entirely during unrelated color/fit updates."
+    },
+    {
+      "session": 6,
+      "type": "history_loss",
+      "evidence_ids": [
+        "e3-1",
+        "e5-0"
+      ],
+      "quote": "Preferred colors for hats: navy, green.",
+      "finding": "Current colors are correct, but old navy/olive/charcoal colors and change date are lost."
+    },
+    {
+      "session": 7,
+      "type": "supported_scope",
+      "evidence_ids": [
+        "e6-0"
+      ],
+      "quote": "Trailmark shoes size in EU: 43.",
+      "finding": "Brand/system-specific size retained accurately."
+    },
+    {
+      "session": 9,
+      "type": "omission",
+      "evidence_ids": [
+        "e8-1",
+        "e8-2"
+      ],
+      "finding": "New style and brand preferences are omitted while the future-trip deadline update is saved."
+    },
+    {
+      "session": 10,
+      "type": "no_irrelevant_retention_observed",
+      "finding": "Final notes contain no observed café/elevator/pigeon/neighbor/product-description filler. No wholly invented value found in this review; conflicting old values remain a factual-use risk."
+    }
+  ],
+  "fields": [
+    {
+      "key": "personal:name",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": "Evan Mercer",
+      "source_history": [
+        {
+          "id": "e0-0",
+          "timestamp": "2026-03-01T09:00:00Z",
+          "text": "For my own records, my name: Evan Mercer.",
+          "key": "personal:name",
+          "value": "Evan Mercer",
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:pants:scope0:materials",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [
+        "linen",
+        "cotton"
+      ],
+      "source_history": [
+        {
+          "id": "e0-1",
+          "timestamp": "2026-03-01T09:00:01Z",
+          "text": "For my own records, my preferred materials for pants in context summer: linen, cotton.",
+          "key": "clothing:pants:scope0:materials",
+          "value": [
+            "linen",
+            "cotton"
+          ],
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e1-0",
+          "timestamp": "2026-03-06T09:00:00Z",
+          "text": "For this temporary period only, my preferred materials for pants in context summer: no stated preference. This applies until 2026-03-09T09:00:00Z; after that, return to my prior preference.",
+          "key": "clothing:pants:scope0:materials",
+          "value": [],
+          "until": "2026-03-09T09:00:00Z",
+          "kind": "temporary"
+        }
+      ]
+    },
+    {
+      "key": "clothing:hats:default_size",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": null,
+      "source_history": [
+        {
+          "id": "e0-2",
+          "timestamp": "2026-03-01T09:00:02Z",
+          "text": "For my own records, my default size for hats: explicitly unknown.",
+          "key": "clothing:hats:default_size",
+          "value": null,
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:accessories:patterns",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [],
+      "source_history": [
+        {
+          "id": "e0-3",
+          "timestamp": "2026-03-01T09:00:03Z",
+          "text": "For my own records, my preferred patterns for accessories: no stated preference.",
+          "key": "clothing:accessories:patterns",
+          "value": [],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "intent:future-trip:state",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": "active",
+      "source_history": [
+        {
+          "id": "e0-4",
+          "timestamp": "2026-03-01T09:00:04Z",
+          "text": "For my own records, the state of purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z.",
+          "key": "intent:future-trip:state",
+          "value": {
+            "status": "active",
+            "deadline": "2026-05-01T18:00:00Z"
+          },
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e8-0",
+          "timestamp": "2026-04-27T09:00:00Z",
+          "text": "Update my records from today: the state of purchase intent future-trip (shoes, recipient self) is now active; deadline 2026-05-27T09:00:00Z. This replaces the previous value from now onward.",
+          "key": "intent:future-trip:state",
+          "value": {
+            "status": "active",
+            "deadline": "2026-05-27T09:00:00Z"
+          },
+          "until": null,
+          "kind": "change"
+        }
+      ]
+    },
+    {
+      "key": "intent:urgent-gift:state",
+      "status": "missing",
+      "reason": "Cancelled intent was recorded in session5, then lost when the entire note was rewritten in session6.",
+      "expected_current_value": "cancelled",
+      "source_history": [
+        {
+          "id": "e0-5",
+          "timestamp": "2026-03-01T09:00:05Z",
+          "text": "For my own records, the state of purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z.",
+          "key": "intent:urgent-gift:state",
+          "value": {
+            "status": "active",
+            "deadline": "2026-03-02T18:00:00Z"
+          },
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e4-0",
+          "timestamp": "2026-03-23T09:00:00Z",
+          "text": "Update my records from today: the state of purchase intent urgent-gift (shirts, recipient gift) is now cancelled; deadline 2026-03-02T18:00:00Z. This replaces the previous value from now onward.",
+          "key": "intent:urgent-gift:state",
+          "value": {
+            "status": "cancelled",
+            "deadline": "2026-03-02T18:00:00Z"
+          },
+          "until": null,
+          "kind": "change"
+        }
+      ]
+    },
+    {
+      "key": "clothing:shoes:cuts",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [
+        "low-top"
+      ],
+      "source_history": [
+        {
+          "id": "e0-6",
+          "timestamp": "2026-03-01T09:00:06Z",
+          "text": "For my own records, my preferred cuts for shoes: low-top.",
+          "key": "clothing:shoes:cuts",
+          "value": [
+            "low-top"
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:shirts:scope0:patterns",
+      "status": "ambiguous",
+      "reason": "Final note gives solid, no stated preference and explicitly unknown for the same summer scope with no dates or supersession labels.",
+      "expected_current_value": null,
+      "source_history": [
+        {
+          "id": "e1-1",
+          "timestamp": "2026-03-06T09:00:01Z",
+          "text": "For my own records, my preferred patterns for shirts in context summer: solid.",
+          "key": "clothing:shirts:scope0:patterns",
+          "value": [
+            "solid"
+          ],
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e3-0",
+          "timestamp": "2026-03-13T09:00:00Z",
+          "text": "Update my records from today: my preferred patterns for shirts in context summer is now no stated preference. This replaces the previous value from now onward.",
+          "key": "clothing:shirts:scope0:patterns",
+          "value": [],
+          "until": null,
+          "kind": "change"
+        },
+        {
+          "id": "e7-0",
+          "timestamp": "2026-04-17T09:00:00Z",
+          "text": "Update my records from today: my preferred patterns for shirts in context summer is now explicitly unknown. This replaces the previous value from now onward.",
+          "key": "clothing:shirts:scope0:patterns",
+          "value": null,
+          "until": null,
+          "kind": "change"
+        }
+      ]
+    },
+    {
+      "key": "clothing:shirts:scope0:fits",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [
+        "relaxed"
+      ],
+      "source_history": [
+        {
+          "id": "e2-0",
+          "timestamp": "2026-03-11T09:00:00Z",
+          "text": "For my own records, my preferred fits for shirts in context summer: relaxed.",
+          "key": "clothing:shirts:scope0:fits",
+          "value": [
+            "relaxed"
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:hats:colors",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [
+        "navy",
+        "green"
+      ],
+      "source_history": [
+        {
+          "id": "e3-1",
+          "timestamp": "2026-03-13T09:00:01Z",
+          "text": "For my own records, my preferred colors for hats: navy, olive, charcoal.",
+          "key": "clothing:hats:colors",
+          "value": [
+            "navy",
+            "olive",
+            "charcoal"
+          ],
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e5-0",
+          "timestamp": "2026-04-02T09:00:00Z",
+          "text": "Update my records from today: my preferred colors for hats is now navy, green. This replaces the previous value from now onward.",
+          "key": "clothing:hats:colors",
+          "value": [
+            "navy",
+            "green"
+          ],
+          "until": null,
+          "kind": "change"
+        }
+      ]
+    },
+    {
+      "key": "clothing:accessories:colors",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [
+        "brown",
+        "black",
+        "olive"
+      ],
+      "source_history": [
+        {
+          "id": "e3-2",
+          "timestamp": "2026-03-13T09:00:02Z",
+          "text": "For my own records, my preferred colors for accessories: brown, black, olive.",
+          "key": "clothing:accessories:colors",
+          "value": [
+            "brown",
+            "black",
+            "olive"
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:pants:patterns",
+      "status": "missing",
+      "reason": "Solid pants patterns revealed in session5 were omitted.",
+      "expected_current_value": [
+        "solid"
+      ],
+      "source_history": [
+        {
+          "id": "e4-1",
+          "timestamp": "2026-03-23T09:00:01Z",
+          "text": "For my own records, my preferred patterns for pants: solid.",
+          "key": "clothing:pants:patterns",
+          "value": [
+            "solid"
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:shirts:colors",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [
+        "navy",
+        "white",
+        "olive"
+      ],
+      "source_history": [
+        {
+          "id": "e5-1",
+          "timestamp": "2026-04-02T09:00:01Z",
+          "text": "For my own records, my preferred colors for shirts: navy, white, olive.",
+          "key": "clothing:shirts:colors",
+          "value": [
+            "navy",
+            "white",
+            "olive"
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:pants:fits",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [
+        "straight",
+        "relaxed"
+      ],
+      "source_history": [
+        {
+          "id": "e5-2",
+          "timestamp": "2026-04-02T09:00:02Z",
+          "text": "For my own records, my preferred fits for pants: straight, relaxed.",
+          "key": "clothing:pants:fits",
+          "value": [
+            "straight",
+            "relaxed"
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:shoes:brand_size:Trailmark:EU",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": "43",
+      "source_history": [
+        {
+          "id": "e6-0",
+          "timestamp": "2026-04-07T09:00:00Z",
+          "text": "For my own records, my Trailmark shoes size in EU: 43.",
+          "key": "clothing:shoes:brand_size:Trailmark:EU",
+          "value": "43",
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:shoes:patterns",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [
+        "solid"
+      ],
+      "source_history": [
+        {
+          "id": "e7-1",
+          "timestamp": "2026-04-17T09:00:01Z",
+          "text": "For my own records, my preferred patterns for shoes: solid.",
+          "key": "clothing:shoes:patterns",
+          "value": [
+            "solid"
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:shoes:fits",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [
+        "regular"
+      ],
+      "source_history": [
+        {
+          "id": "e7-2",
+          "timestamp": "2026-04-17T09:00:02Z",
+          "text": "For my own records, my preferred fits for shoes: regular.",
+          "key": "clothing:shoes:fits",
+          "value": [
+            "regular"
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:shoes:scope0:styles",
+      "status": "missing",
+      "reason": "Practical walking-shoes/travel style revealed in session9 was omitted.",
+      "expected_current_value": [
+        "practical"
+      ],
+      "source_history": [
+        {
+          "id": "e8-1",
+          "timestamp": "2026-04-27T09:00:01Z",
+          "text": "For my own records, my preferred styles for shoes in context walking shoes, travel: practical.",
+          "key": "clothing:shoes:scope0:styles",
+          "value": [
+            "practical"
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:shoes:brands",
+      "status": "missing",
+      "reason": "Trailmark/Cedar Run preference revealed in session9 was omitted; a brand-specific size alone is not a brand preference.",
+      "expected_current_value": [
+        "Trailmark",
+        "Cedar Run"
+      ],
+      "source_history": [
+        {
+          "id": "e8-2",
+          "timestamp": "2026-04-27T09:00:02Z",
+          "text": "For my own records, my preferred brands for shoes: Trailmark, Cedar Run.",
+          "key": "clothing:shoes:brands",
+          "value": [
+            "Trailmark",
+            "Cedar Run"
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:outerwear:patterns",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [
+        "solid"
+      ],
+      "source_history": [
+        {
+          "id": "e9-0",
+          "timestamp": "2026-05-02T09:00:00Z",
+          "text": "For my own records, my preferred patterns for outerwear: solid.",
+          "key": "clothing:outerwear:patterns",
+          "value": [
+            "solid"
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    }
+  ],
+  "final_note_snapshot": {
+    "user_info": "Name: Evan Mercer. Preferred colors for hats: navy, green. Preferred colors for shirts: navy, white, olive. Preferred fits for pants: straight, relaxed. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-27T09:00:00Z. Preferred patterns for accessories: no stated preference. Preferred materials for pants in summer: linen, cotton. Default size for hats: explicitly unknown. Preferred patterns for shirts in context summer: solid. Preferred fits for shirts in context summer: relaxed. Preferred cuts for shoes: low-top. Temporary preference for materials for pants in summer: no stated preference (until 2026-03-09T09:00:00Z). Preferred patterns for shirts in summer: no stated preference. Preferred colors for accessories: brown, black, olive. Trailmark shoes size in EU: 43. Preferred patterns for shirts in context summer: explicitly unknown. Preferred fits for shoes: regular. Preferred patterns for shoes: solid. Preferred patterns for outerwear: solid."
+  }
+}

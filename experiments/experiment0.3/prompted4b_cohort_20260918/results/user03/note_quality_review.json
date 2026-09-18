@@ -1,0 +1,644 @@
+{
+  "method": "Manual review by Codex of full source statements and every session note snapshot; no extra model calls. Primary unit: unique revealed field at final session, not token, claim or question. Supported requires correct current value plus stated category/brand/system/recipient scope; intent deadline is checked too. Conflicting undated values count ambiguous; incorrect values/scopes count incorrect; missing fields count missing. History completeness is audited separately in observations. Counts are descriptive, uncalibrated single-reviewer judgments, not exhaustive hallucination precision/recall.",
+  "reviewed_sessions": 10,
+  "final_time": "2026-04-28T09:01:00Z",
+  "final_field_counts": {
+    "total": 22,
+    "supported": 13,
+    "ambiguous": 0,
+    "incorrect": 1,
+    "missing": 8,
+    "supported_fraction": 0.5909090909090909
+  },
+  "unsupported_mutation_examples": 1,
+  "observations": [
+    {
+      "session": 1,
+      "type": "supported",
+      "evidence_ids": [
+        "e0-0",
+        "e0-1",
+        "e0-2",
+        "e0-3",
+        "e0-4",
+        "e0-5",
+        "e0-6"
+      ],
+      "finding": "All seven initial substantive facts recorded, including unknown versus empty and intent recipient/deadline."
+    },
+    {
+      "session": 2,
+      "type": "partial_coverage",
+      "evidence_ids": [
+        "e1-0",
+        "e1-1"
+      ],
+      "quote": "Temporary preference for materials for pants in summer: wool (until 2026-03-09T09:00:00Z).",
+      "finding": "Temporary value and deadline saved separately from baseline; all three language/proficiency pairs omitted."
+    },
+    {
+      "session": 4,
+      "type": "history_loss",
+      "evidence_ids": [
+        "e0-6",
+        "e3-0"
+      ],
+      "quote": "Preferred occasions for hats in sun hat, summer, hiking: casual, formal.",
+      "finding": "Current scoped value saved correctly; old hiking/sunny-weather history and effective change date lost."
+    },
+    {
+      "session": 6,
+      "type": "incorrect_update",
+      "evidence_ids": [
+        "e5-0"
+      ],
+      "quote": "Preferred cuts for shoes in context walking shoes, travel: low-top. This replaces the previous value from now onward.",
+      "finding": "Claims replacement but copies the old low-top value instead of the observed regular/relaxed update."
+    },
+    {
+      "session": 7,
+      "type": "forgetting",
+      "evidence_ids": [
+        "e0-1",
+        "e0-2",
+        "e0-3",
+        "e0-4",
+        "e2-0"
+      ],
+      "finding": "A whole-note rewrite deletes baseline summer materials, unknown hat size, empty accessory pattern, future-trip intent and shirt brands while adding current accessory brands and hat colors. This occurs far below the1600-word budget."
+    },
+    {
+      "session": 8,
+      "type": "scope_corruption",
+      "evidence_ids": [
+        "e7-0"
+      ],
+      "quote": "Preferred cuts for accessories in context travel bag, travel: compact. ... Travel is now explicitly unknown.",
+      "finding": "Unknown update loses the attribute/category binding; stale compact remains twice. Not an invented unknown token, but an unsupported reassignment and incorrect scoped state."
+    },
+    {
+      "session": 10,
+      "type": "supported_scope",
+      "evidence_ids": [
+        "e7-2",
+        "e9-0",
+        "e9-1"
+      ],
+      "quote": "Baggu accessories size in ONE_SIZE: ONE_SIZE. ... Clarks shoes size in EU: 37. Default size for shoes: size 37 in EU.",
+      "finding": "Brand/system-specific and default sizes retained correctly without conversions."
+    },
+    {
+      "session": 10,
+      "type": "no_irrelevant_retention_observed",
+      "finding": "No filler, other-person preference or product-description contamination found in final notes; retained temporary wool has an explicit expiry but lacks the baseline needed for restoration."
+    }
+  ],
+  "fields": [
+    {
+      "key": "personal:name",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": "Aiko Nakamura",
+      "source_history": [
+        {
+          "id": "e0-0",
+          "timestamp": "2026-03-01T09:00:00Z",
+          "text": "For my own records, my name: Aiko Nakamura.",
+          "key": "personal:name",
+          "value": "Aiko Nakamura",
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:pants:scope0:materials",
+      "status": "missing",
+      "reason": "Only the expired temporary wool override remains. The linen/cotton baseline required after expiry was deleted in session7.",
+      "expected_current_value": [
+        "linen",
+        "cotton"
+      ],
+      "source_history": [
+        {
+          "id": "e0-1",
+          "timestamp": "2026-03-01T09:00:01Z",
+          "text": "For my own records, my preferred materials for pants in context summer: linen, cotton.",
+          "key": "clothing:pants:scope0:materials",
+          "value": [
+            "linen",
+            "cotton"
+          ],
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e1-0",
+          "timestamp": "2026-03-06T09:00:00Z",
+          "text": "For this temporary period only, my preferred materials for pants in context summer: wool. This applies until 2026-03-09T09:00:00Z; after that, return to my prior preference.",
+          "key": "clothing:pants:scope0:materials",
+          "value": [
+            "wool"
+          ],
+          "until": "2026-03-09T09:00:00Z",
+          "kind": "temporary"
+        }
+      ]
+    },
+    {
+      "key": "clothing:hats:default_size",
+      "status": "missing",
+      "reason": "Explicitly unknown hats size was saved initially, then deleted in session7.",
+      "expected_current_value": null,
+      "source_history": [
+        {
+          "id": "e0-2",
+          "timestamp": "2026-03-01T09:00:02Z",
+          "text": "For my own records, my default size for hats: explicitly unknown.",
+          "key": "clothing:hats:default_size",
+          "value": null,
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:accessories:patterns",
+      "status": "missing",
+      "reason": "Explicitly empty accessories patterns were saved initially, then deleted in session7.",
+      "expected_current_value": [],
+      "source_history": [
+        {
+          "id": "e0-3",
+          "timestamp": "2026-03-01T09:00:03Z",
+          "text": "For my own records, my preferred patterns for accessories: no stated preference.",
+          "key": "clothing:accessories:patterns",
+          "value": [],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "intent:future-trip:state",
+      "status": "missing",
+      "reason": "Still-active future-trip intent and its May1 deadline were deleted in session7.",
+      "expected_current_value": "active",
+      "source_history": [
+        {
+          "id": "e0-4",
+          "timestamp": "2026-03-01T09:00:04Z",
+          "text": "For my own records, the state of purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z.",
+          "key": "intent:future-trip:state",
+          "value": {
+            "status": "active",
+            "deadline": "2026-05-01T18:00:00Z"
+          },
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "intent:urgent-gift:state",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": "active",
+      "source_history": [
+        {
+          "id": "e0-5",
+          "timestamp": "2026-03-01T09:00:05Z",
+          "text": "For my own records, the state of purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z.",
+          "key": "intent:urgent-gift:state",
+          "value": {
+            "status": "active",
+            "deadline": "2026-03-02T18:00:00Z"
+          },
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e4-0",
+          "timestamp": "2026-03-31T09:00:00Z",
+          "text": "Update my records from today: the state of purchase intent urgent-gift (shirts, recipient gift) is now cancelled; deadline 2026-03-02T18:00:00Z. This replaces the previous value from now onward.",
+          "key": "intent:urgent-gift:state",
+          "value": {
+            "status": "cancelled",
+            "deadline": "2026-03-02T18:00:00Z"
+          },
+          "until": null,
+          "kind": "change"
+        },
+        {
+          "id": "e8-0",
+          "timestamp": "2026-04-23T09:00:00Z",
+          "text": "Update my records from today: the state of purchase intent urgent-gift (shirts, recipient gift) is now active; deadline 2026-05-23T09:00:00Z. This replaces the previous value from now onward.",
+          "key": "intent:urgent-gift:state",
+          "value": {
+            "status": "active",
+            "deadline": "2026-05-23T09:00:00Z"
+          },
+          "until": null,
+          "kind": "change"
+        }
+      ]
+    },
+    {
+      "key": "clothing:hats:scope0:occasions",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [
+        "casual",
+        "formal"
+      ],
+      "source_history": [
+        {
+          "id": "e0-6",
+          "timestamp": "2026-03-01T09:00:06Z",
+          "text": "For my own records, my preferred occasions for hats in context sun hat, summer, hiking: hiking, sunny weather.",
+          "key": "clothing:hats:scope0:occasions",
+          "value": [
+            "hiking",
+            "sunny weather"
+          ],
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e3-0",
+          "timestamp": "2026-03-21T09:00:00Z",
+          "text": "Update my records from today: my preferred occasions for hats in context sun hat, summer, hiking is now casual, formal. This replaces the previous value from now onward.",
+          "key": "clothing:hats:scope0:occasions",
+          "value": [
+            "casual",
+            "formal"
+          ],
+          "until": null,
+          "kind": "change"
+        }
+      ]
+    },
+    {
+      "key": "general:languages",
+      "status": "missing",
+      "reason": "Japanese/native, English/fluent and French/basic from session2 were never saved.",
+      "expected_current_value": [
+        {
+          "language": "Japanese",
+          "proficiency": "native"
+        },
+        {
+          "language": "English",
+          "proficiency": "fluent"
+        },
+        {
+          "language": "French",
+          "proficiency": "basic"
+        }
+      ],
+      "source_history": [
+        {
+          "id": "e1-1",
+          "timestamp": "2026-03-06T09:00:01Z",
+          "text": "For my own records, the languages I speak: language Japanese; proficiency native, language English; proficiency fluent, language French; proficiency basic.",
+          "key": "general:languages",
+          "value": [
+            {
+              "language": "Japanese",
+              "proficiency": "native"
+            },
+            {
+              "language": "English",
+              "proficiency": "fluent"
+            },
+            {
+              "language": "French",
+              "proficiency": "basic"
+            }
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:shirts:brands",
+      "status": "missing",
+      "reason": "Uniqlo/Everlane brands were saved in session3 then deleted in session7.",
+      "expected_current_value": [
+        "Uniqlo",
+        "Everlane"
+      ],
+      "source_history": [
+        {
+          "id": "e2-0",
+          "timestamp": "2026-03-11T09:00:00Z",
+          "text": "For my own records, my preferred brands for shirts: Uniqlo, Everlane.",
+          "key": "clothing:shirts:brands",
+          "value": [
+            "Uniqlo",
+            "Everlane"
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:pants:scope0:patterns",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": null,
+      "source_history": [
+        {
+          "id": "e2-1",
+          "timestamp": "2026-03-11T09:00:01Z",
+          "text": "For my own records, my preferred patterns for pants in context summer: explicitly unknown.",
+          "key": "clothing:pants:scope0:patterns",
+          "value": null,
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:shoes:scope0:cuts",
+      "status": "missing",
+      "reason": "Session6 update to regular/relaxed was not applied; old low-top claim was duplicated, then removed entirely in session7.",
+      "expected_current_value": [
+        "regular",
+        "relaxed"
+      ],
+      "source_history": [
+        {
+          "id": "e3-1",
+          "timestamp": "2026-03-21T09:00:01Z",
+          "text": "For my own records, my preferred cuts for shoes in context walking shoes, travel: low-top.",
+          "key": "clothing:shoes:scope0:cuts",
+          "value": [
+            "low-top"
+          ],
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e5-0",
+          "timestamp": "2026-04-02T09:00:00Z",
+          "text": "Update my records from today: my preferred cuts for shoes in context walking shoes, travel is now regular, relaxed. This replaces the previous value from now onward.",
+          "key": "clothing:shoes:scope0:cuts",
+          "value": [
+            "regular",
+            "relaxed"
+          ],
+          "until": null,
+          "kind": "change"
+        }
+      ]
+    },
+    {
+      "key": "clothing:hats:cuts",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [
+        "five-panel",
+        "bucket"
+      ],
+      "source_history": [
+        {
+          "id": "e4-1",
+          "timestamp": "2026-03-31T09:00:01Z",
+          "text": "For my own records, my preferred cuts for hats: five-panel, bucket.",
+          "key": "clothing:hats:cuts",
+          "value": [
+            "five-panel",
+            "bucket"
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:outerwear:patterns",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [
+        "solid"
+      ],
+      "source_history": [
+        {
+          "id": "e4-2",
+          "timestamp": "2026-03-31T09:00:02Z",
+          "text": "For my own records, my preferred patterns for outerwear: solid.",
+          "key": "clothing:outerwear:patterns",
+          "value": [
+            "solid"
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:pants:styles",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [
+        "minimal",
+        "smart casual"
+      ],
+      "source_history": [
+        {
+          "id": "e5-1",
+          "timestamp": "2026-04-02T09:00:01Z",
+          "text": "For my own records, my preferred styles for pants: minimal, smart casual.",
+          "key": "clothing:pants:styles",
+          "value": [
+            "minimal",
+            "smart casual"
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:accessories:scope0:cuts",
+      "status": "incorrect",
+      "reason": "Session8 explicitly-unknown travel-bag cuts were attached to the vague phrase Travel is now explicitly unknown. The precise scoped field still says compact twice.",
+      "expected_current_value": null,
+      "source_history": [
+        {
+          "id": "e5-2",
+          "timestamp": "2026-04-02T09:00:02Z",
+          "text": "For my own records, my preferred cuts for accessories in context travel bag, travel: compact.",
+          "key": "clothing:accessories:scope0:cuts",
+          "value": [
+            "compact"
+          ],
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e7-0",
+          "timestamp": "2026-04-13T09:00:00Z",
+          "text": "Update my records from today: my preferred cuts for accessories in context travel bag, travel is now explicitly unknown. This replaces the previous value from now onward.",
+          "key": "clothing:accessories:scope0:cuts",
+          "value": null,
+          "until": null,
+          "kind": "change"
+        }
+      ]
+    },
+    {
+      "key": "clothing:accessories:brands",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [
+        "Muji",
+        "Baggu"
+      ],
+      "source_history": [
+        {
+          "id": "e6-0",
+          "timestamp": "2026-04-12T09:00:00Z",
+          "text": "For my own records, my preferred brands for accessories: Muji, Baggu.",
+          "key": "clothing:accessories:brands",
+          "value": [
+            "Muji",
+            "Baggu"
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:hats:colors",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [
+        "navy",
+        "cream",
+        "olive"
+      ],
+      "source_history": [
+        {
+          "id": "e6-1",
+          "timestamp": "2026-04-12T09:00:01Z",
+          "text": "For my own records, my preferred colors for hats: navy, cream, olive.",
+          "key": "clothing:hats:colors",
+          "value": [
+            "navy",
+            "cream",
+            "olive"
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:shoes:occasions",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [
+        "walking",
+        "travel",
+        "work"
+      ],
+      "source_history": [
+        {
+          "id": "e7-1",
+          "timestamp": "2026-04-13T09:00:01Z",
+          "text": "For my own records, my preferred occasions for shoes: walking, travel, work.",
+          "key": "clothing:shoes:occasions",
+          "value": [
+            "walking",
+            "travel",
+            "work"
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:accessories:brand_size:Baggu:ONE_SIZE",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": "ONE_SIZE",
+      "source_history": [
+        {
+          "id": "e7-2",
+          "timestamp": "2026-04-13T09:00:02Z",
+          "text": "For my own records, my Baggu accessories size in ONE_SIZE: ONE_SIZE.",
+          "key": "clothing:accessories:brand_size:Baggu:ONE_SIZE",
+          "value": "ONE_SIZE",
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "general:occupation",
+      "status": "missing",
+      "reason": "Occupation revealed in session9 was omitted.",
+      "expected_current_value": "user experience researcher",
+      "source_history": [
+        {
+          "id": "e8-1",
+          "timestamp": "2026-04-23T09:00:01Z",
+          "text": "For my own records, my occupation: user experience researcher.",
+          "key": "general:occupation",
+          "value": "user experience researcher",
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:shoes:brand_size:Clarks:EU",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": "37",
+      "source_history": [
+        {
+          "id": "e9-0",
+          "timestamp": "2026-04-28T09:00:00Z",
+          "text": "For my own records, my Clarks shoes size in EU: 37.",
+          "key": "clothing:shoes:brand_size:Clarks:EU",
+          "value": "37",
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:shoes:default_size",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": {
+        "sizing_system": "EU",
+        "size": "37"
+      },
+      "source_history": [
+        {
+          "id": "e9-1",
+          "timestamp": "2026-04-28T09:00:01Z",
+          "text": "For my own records, my default size for shoes: size 37 in EU.",
+          "key": "clothing:shoes:default_size",
+          "value": {
+            "sizing_system": "EU",
+            "size": "37"
+          },
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    }
+  ],
+  "final_note_snapshot": {
+    "user_info": "Name: Aiko Nakamura. Preferred brands for accessories: Muji, Baggu. Preferred colors for hats: navy, cream, olive. Preferred patterns for outerwear: solid. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-05-23T09:00:00Z. Preferred occasions for hats in sun hat, summer, hiking: casual, formal. Preferred cuts for hats: five-panel, bucket. Temporary preference for materials for pants in summer: wool (until 2026-03-09T09:00:00Z). Preferred styles for pants: minimal, smart casual. Preferred cuts for accessories in context travel bag, travel: compact. Preferred patterns for pants in context summer: explicitly unknown. Preferred occasions for shoes: walking, travel, work. Baggu accessories size in ONE_SIZE: ONE_SIZE. Preferred cuts for accessories in context travel bag, travel: compact. Preferred patterns for outerwear: solid. Travel is now explicitly unknown. Clarks shoes size in EU: 37. Default size for shoes: size 37 in EU."
+  }
+}

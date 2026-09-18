@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "sessions": 10,
+  "questions": 20,
+  "checks": [
+    "frozen episode/source hashes",
+    "chronological prior-note continuity",
+    "answer-before-update timestamps",
+    "strict tool parser/dispatcher replay including coverage review",
+    "private gold recomputation",
+    "exact answer payload whitelist and cache hashes",
+    "paired scoring and identical-input equality"
+  ],
+  "semantic_note_correctness": "Separate evidence review; protocol replay does not prove factual support."
+}

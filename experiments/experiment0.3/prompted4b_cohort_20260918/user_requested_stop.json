@@ -1,0 +1,38 @@
+{
+  "requested_users": 3,
+  "reason": "User requested stop after first three; no further evaluation authorized",
+  "observed_at_stop": [
+    {
+      "user": "user01",
+      "sessions": 10,
+      "questions_scored": 20,
+      "complete": true
+    },
+    {
+      "user": "user02",
+      "sessions": 10,
+      "questions_scored": 20,
+      "complete": true
+    },
+    {
+      "user": "user03",
+      "sessions": 10,
+      "questions_scored": 20,
+      "complete": true
+    },
+    {
+      "user": "user04",
+      "sessions": 10,
+      "questions_scored": 20,
+      "complete": true
+    },
+    {
+      "user": "user05",
+      "sessions": 8,
+      "questions_scored": 16,
+      "complete": false
+    }
+  ],
+  "time": 1789723461.7613437,
+  "verified_no_remaining_processes": true
+}

@@ -1,0 +1,287 @@
+{
+  "version": "partial-profile-notes-v1",
+  "as_of": "2026-03-11T09:01:00Z",
+  "profile": {
+    "category_profiles": [
+      {
+        "category": "accessories",
+        "preferences": {
+          "patterns": []
+        }
+      },
+      {
+        "category": "hats",
+        "scoped_overrides": [
+          {
+            "context": {
+              "subtype": "sun hat",
+              "season": "summer",
+              "occasion": "hiking"
+            },
+            "preferences": {
+              "occasions": [
+                "hiking",
+                "sunny weather"
+              ]
+            }
+          }
+        ],
+        "default_size": null
+      },
+      {
+        "category": "pants",
+        "scoped_overrides": [
+          {
+            "context": {
+              "subtype": null,
+              "season": "summer",
+              "occasion": null
+            },
+            "preferences": {
+              "materials": [
+                "linen",
+                "cotton"
+              ],
+              "patterns": null
+            }
+          }
+        ]
+      },
+      {
+        "category": "shirts",
+        "preferences": {
+          "brands": [
+            "Uniqlo",
+            "Everlane"
+          ]
+        }
+      }
+    ],
+    "purchase_intents": [
+      {
+        "id": "urgent-gift",
+        "category": "shirts",
+        "recipient": "gift",
+        "status": "expired",
+        "deadline": "2026-03-02T18:00:00Z"
+      },
+      {
+        "id": "future-trip",
+        "category": "shoes",
+        "recipient": "self",
+        "status": "active",
+        "deadline": "2026-05-01T18:00:00Z"
+      }
+    ],
+    "languages": [
+      {
+        "language": "Japanese",
+        "proficiency": "native"
+      },
+      {
+        "language": "English",
+        "proficiency": "fluent"
+      },
+      {
+        "language": "French",
+        "proficiency": "basic"
+      }
+    ],
+    "personal": {
+      "name": "Aiko Nakamura"
+    }
+  },
+  "history": [
+    {
+      "address": {
+        "section": "clothing",
+        "category": "accessories",
+        "field": "patterns",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:03Z",
+          "until": null,
+          "value": []
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "hats",
+        "field": "occasions",
+        "context": {
+          "subtype": "sun hat",
+          "season": "summer",
+          "occasion": "hiking"
+        }
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:06Z",
+          "until": null,
+          "value": [
+            "hiking",
+            "sunny weather"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "hats",
+        "field": "default_size",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:02Z",
+          "until": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "pants",
+        "field": "materials",
+        "context": {
+          "season": "summer"
+        }
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:01Z",
+          "until": null,
+          "value": [
+            "linen",
+            "cotton"
+          ]
+        },
+        {
+          "at": "2026-03-06T09:00:00Z",
+          "until": "2026-03-09T09:00:00Z",
+          "value": [
+            "wool"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "pants",
+        "field": "patterns",
+        "context": {
+          "season": "summer"
+        }
+      },
+      "events": [
+        {
+          "at": "2026-03-11T09:00:01Z",
+          "until": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "shirts",
+        "field": "brands",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-11T09:00:00Z",
+          "until": null,
+          "value": [
+            "Uniqlo",
+            "Everlane"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "intent",
+        "field": "state",
+        "intent_id": "urgent-gift",
+        "category": "shirts",
+        "recipient": "gift"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:05Z",
+          "until": null,
+          "value": {
+            "status": "active",
+            "deadline": "2026-03-02T18:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "intent",
+        "field": "state",
+        "intent_id": "future-trip",
+        "category": "shoes",
+        "recipient": "self"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:04Z",
+          "until": null,
+          "value": {
+            "status": "active",
+            "deadline": "2026-05-01T18:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "general",
+        "field": "languages"
+      },
+      "events": [
+        {
+          "at": "2026-03-06T09:00:01Z",
+          "until": null,
+          "value": [
+            {
+              "language": "Japanese",
+              "proficiency": "native"
+            },
+            {
+              "language": "English",
+              "proficiency": "fluent"
+            },
+            {
+              "language": "French",
+              "proficiency": "basic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "personal",
+        "field": "name"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:00Z",
+          "until": null,
+          "value": "Aiko Nakamura"
+        }
+      ]
+    }
+  ]
+}

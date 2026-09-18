@@ -57,3 +57,39 @@ def test_staged_config_matches_user_model_and_lora_choice():
  assert CFG['model']=='Qwen/Qwen3-4B' and not CFG['load_in_4bit']
  assert CFG['lora_rank']==16 and CFG['lora_alpha']==32 and CFG['init_lora_weights'] is True
  assert {'gate_proj','up_proj','down_proj'}<=set(CFG['lora_targets'])
+
+
+def test_sequential_evaluation_scores_prior_notes_before_update(tmp_path):
+ from prompt_policy_llm.eval_note_policy import evaluate_episode
+ p,ep=episode();ep['cases']=ep['cases'][:2];events=[]
+ class Client(FakeAnswerer):
+  def generate(self,system,payload,max_tokens):
+   events.append(('answer',deepcopy(payload)));return super().generate(system,payload,max_tokens)
+ class Manager:
+  def update(self,obs,notes):
+   events.append(('update',deepcopy(obs),dict(notes)));notes['fact']='Retained earlier evidence'
+   return {'rounds':[],'finished':True}
+ cache=AnswerCache(tmp_path/'cache',Client(),'gpt-5.6-luna')
+ evaluate_episode(ep,Manager(),cache,tmp_path/'run',{'test':True})
+ assert [e[0] for e in events]==['answer','update','answer','answer','update']
+ assert events[0][1]['prior_notes']=={}
+ assert events[2][1]['prior_notes']=={} and events[3][1]['prior_notes']=={'fact':'Retained earlier evidence'}
+ assert set(events[1][1])=={'current_time','statements'}
+ assert (tmp_path/'run/run_config.json').exists()
+
+
+def test_incremental_log_matches_offline_rebuild_without_api_calls(tmp_path):
+ from prompt_policy_llm.eval_note_policy import evaluate_episode
+ from prompt_policy_llm.note_eval_log import rebuild
+ p,ep=episode();ep['cases']=ep['cases'][:2]
+ class Manager:
+  def update(self,obs,notes):
+   log=(tmp_path/'run/SESSION_LOG.md').read_text()
+   assert log.count('## Session ')==len(notes)
+   notes[str(len(notes))]='A supported saved fact'
+   return {'rounds':[],'finished':True}
+ client=FakeAnswerer();cache=AnswerCache(tmp_path/'cache',client,'gpt-5.6-luna')
+ evaluate_episode(ep,Manager(),cache,tmp_path/'run',{'test':'exact prompt/settings'})
+ before=(tmp_path/'run/SESSION_LOG.md').read_bytes();calls=client.calls
+ assert rebuild(tmp_path/'run')==2
+ assert (tmp_path/'run/SESSION_LOG.md').read_bytes()==before and client.calls==calls

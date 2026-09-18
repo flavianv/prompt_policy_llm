@@ -36,8 +36,13 @@ def train_group(model,optimizer,candidates,config):
 
 def main():
     import torch
-    p=argparse.ArgumentParser();p.add_argument('--config',type=Path,required=True);p.add_argument('--manifest',type=Path,required=True);p.add_argument('--data',type=Path,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--cache',type=Path,required=True);p.add_argument('--credentials',type=Path,required=True);p.add_argument('--steps',type=int,default=3);a=p.parse_args()
-    cfg=json.loads(a.config.read_text());assert a.steps<=cfg['smoke_steps'],'pilot requires separate acceptance gate and config';torch.manual_seed(cfg['seed']);random.seed(cfg['seed']);load_credentials(a.credentials);identity=verify_snapshot(cfg['model_path'],a.manifest);a.output.mkdir(parents=True,exist_ok=False)
+    p=argparse.ArgumentParser();p.add_argument('--config',type=Path,required=True);p.add_argument('--manifest',type=Path,required=True);p.add_argument('--data',type=Path,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--cache',type=Path);p.add_argument('--credentials',type=Path);p.add_argument('--steps',type=int,default=3);a=p.parse_args()
+    cfg=json.loads(a.config.read_text())
+    if cfg.get('reward_mode')=='extraction_count':
+        from .train_structured_grpo import run
+        return run(a,cfg)
+    if a.cache is None or a.credentials is None:p.error('legacy Luna mode requires --cache and --credentials')
+    assert a.steps<=cfg['smoke_steps'],'pilot requires separate acceptance gate and config';torch.manual_seed(cfg['seed']);random.seed(cfg['seed']);load_credentials(a.credentials);identity=verify_snapshot(cfg['model_path'],a.manifest);a.output.mkdir(parents=True,exist_ok=False)
     model,tok=load_model(cfg,train=True);model.save_pretrained(a.output/'initial_adapter');tok.save_pretrained(a.output/'initial_adapter');manager=NativeRollout(model,tok,cfg);optimizer=torch.optim.AdamW([p for p in model.parameters() if p.requires_grad],lr=cfg['learning_rate'])
     manifest=json.loads((a.data/'manifest.json').read_text());assert manifest['complete'];train=[r for r in manifest['users'] if r['split']=='train'];cache=AnswerCache(a.cache,Luna(cfg['answer_model']),cfg['answer_model'],cfg['reward_max_api_calls']);steps=[];start=time.perf_counter()
     run={'config':cfg,'base_revision':identity['revision'],'algorithm':'custom synchronous GRPO; grouped normalized sequence reward, clipped token ratios, k3 reference KL, one update/group','dense_auxiliaries':'disabled; no calibrated semantic scorer','versions':{k:md.version(k) for k in ['torch','transformers','peft','trl','openai']},'gpu':torch.cuda.get_device_name(0),'only_lora_trainable':all('lora_' in n for n,p in model.named_parameters() if p.requires_grad),'trainable_parameters':sum(p.numel() for p in model.parameters() if p.requires_grad),'data_manifest':manifest}

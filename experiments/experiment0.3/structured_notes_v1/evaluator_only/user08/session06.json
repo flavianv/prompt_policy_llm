@@ -1,0 +1,410 @@
+{
+  "version": "partial-profile-notes-v1",
+  "as_of": "2026-03-28T09:01:00Z",
+  "profile": {
+    "category_profiles": [
+      {
+        "category": "accessories",
+        "preferences": {
+          "patterns": []
+        }
+      },
+      {
+        "category": "hats",
+        "preferences": {
+          "cuts": [
+            "six-panel",
+            "beanie"
+          ],
+          "occasions": [
+            "casual",
+            "formal"
+          ]
+        },
+        "default_size": null
+      },
+      {
+        "category": "outerwear",
+        "scoped_overrides": [
+          {
+            "context": {
+              "subtype": "rain jacket",
+              "season": "autumn",
+              "occasion": "commuting"
+            },
+            "preferences": {
+              "brands": [
+                "Patagonia"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "category": "pants",
+        "scoped_overrides": [
+          {
+            "context": {
+              "subtype": null,
+              "season": "summer",
+              "occasion": null
+            },
+            "preferences": {
+              "brands": null,
+              "cuts": [
+                "regular",
+                "relaxed"
+              ],
+              "materials": [
+                "linen",
+                "cotton"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "category": "shirts",
+        "scoped_overrides": [
+          {
+            "context": {
+              "subtype": null,
+              "season": "summer",
+              "occasion": null
+            },
+            "preferences": {
+              "materials": [
+                "linen",
+                "cotton"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "purchase_intents": [
+      {
+        "id": "urgent-gift",
+        "category": "shirts",
+        "recipient": "gift",
+        "status": "expired",
+        "deadline": "2026-03-02T18:00:00Z",
+        "budget": {
+          "amount": 90,
+          "currency": "EUR"
+        }
+      },
+      {
+        "id": "future-trip",
+        "category": "shoes",
+        "recipient": "self",
+        "status": "cancelled",
+        "deadline": "2026-05-01T18:00:00Z"
+      }
+    ],
+    "personal": {
+      "gender": "male",
+      "name": "Jonas Weber"
+    },
+    "residence": {
+      "city": "Leipzig",
+      "region": "Saxony",
+      "country": "Germany",
+      "timezone": "Europe/Berlin"
+    }
+  },
+  "history": [
+    {
+      "address": {
+        "section": "clothing",
+        "category": "accessories",
+        "field": "patterns",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:03Z",
+          "until": null,
+          "value": []
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "hats",
+        "field": "cuts",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-06T09:00:02Z",
+          "until": null,
+          "value": [
+            "six-panel",
+            "beanie"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "hats",
+        "field": "default_size",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:02Z",
+          "until": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "hats",
+        "field": "occasions",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-06T09:00:01Z",
+          "until": null,
+          "value": [
+            "outdoor",
+            "casual"
+          ]
+        },
+        {
+          "at": "2026-03-21T09:00:00Z",
+          "until": null,
+          "value": [
+            "casual",
+            "formal"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "outerwear",
+        "field": "brands",
+        "context": {
+          "subtype": "rain jacket",
+          "season": "autumn",
+          "occasion": "commuting"
+        }
+      },
+      "events": [
+        {
+          "at": "2026-03-11T09:00:00Z",
+          "until": null,
+          "value": [
+            "Patagonia"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "pants",
+        "field": "brands",
+        "context": {
+          "season": "summer"
+        }
+      },
+      "events": [
+        {
+          "at": "2026-03-28T09:00:01Z",
+          "until": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "pants",
+        "field": "cuts",
+        "context": {
+          "season": "summer"
+        }
+      },
+      "events": [
+        {
+          "at": "2026-03-11T09:00:01Z",
+          "until": null,
+          "value": [
+            "straight",
+            "relaxed"
+          ]
+        },
+        {
+          "at": "2026-03-28T09:00:00Z",
+          "until": null,
+          "value": [
+            "regular",
+            "relaxed"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "pants",
+        "field": "materials",
+        "context": {
+          "season": "summer"
+        }
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:01Z",
+          "until": null,
+          "value": [
+            "linen",
+            "cotton"
+          ]
+        },
+        {
+          "at": "2026-03-06T09:00:00Z",
+          "until": "2026-03-09T09:00:00Z",
+          "value": []
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "shirts",
+        "field": "materials",
+        "context": {
+          "season": "summer"
+        }
+      },
+      "events": [
+        {
+          "at": "2026-03-21T09:00:01Z",
+          "until": null,
+          "value": [
+            "linen",
+            "cotton"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "intent",
+        "field": "state",
+        "intent_id": "urgent-gift",
+        "category": "shirts",
+        "recipient": "gift"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:05Z",
+          "until": null,
+          "value": {
+            "status": "active",
+            "deadline": "2026-03-02T18:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "intent",
+        "field": "state",
+        "intent_id": "future-trip",
+        "category": "shoes",
+        "recipient": "self"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:04Z",
+          "until": null,
+          "value": {
+            "status": "active",
+            "deadline": "2026-05-01T18:00:00Z"
+          }
+        },
+        {
+          "at": "2026-03-26T09:00:00Z",
+          "until": null,
+          "value": {
+            "status": "cancelled",
+            "deadline": "2026-05-01T18:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "intent",
+        "field": "budget",
+        "intent_id": "urgent-gift"
+      },
+      "events": [
+        {
+          "at": "2026-03-26T09:00:01Z",
+          "until": null,
+          "value": {
+            "amount": 90,
+            "currency": "EUR"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "personal",
+        "field": "gender"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:06Z",
+          "until": null,
+          "value": "male"
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "personal",
+        "field": "name"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:00Z",
+          "until": null,
+          "value": "Jonas Weber"
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "general",
+        "field": "residence"
+      },
+      "events": [
+        {
+          "at": "2026-03-21T09:00:02Z",
+          "until": null,
+          "value": {
+            "city": "Leipzig",
+            "region": "Saxony",
+            "country": "Germany",
+            "timezone": "Europe/Berlin"
+          }
+        }
+      ]
+    }
+  ]
+}

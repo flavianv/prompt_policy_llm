@@ -1,0 +1,1953 @@
+<!doctype html><meta charset="utf-8"><title>user01 report</title><style>body{font:16px/1.5 system-ui;max-width:1100px;margin:40px auto;padding:0 24px;color:#17202a}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f4f6f8;padding:14px}table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccd2d9;padding:8px;text-align:left}h2{margin-top:48px}a{color:#1459ac}</style><h1>user01: Maya Okafor — frozen prompted Qwen3-4B notes</h1>
+<p>All 10 sessions / 20 questions complete. Luna only: <strong>10/20</strong>; Luna with prior Qwen notes: <strong>19/20</strong>. Gold labels below are <strong>evaluator-only</strong>, never supplied to the note writer or answerer.</p>
+<h2>Protocol and exact prompts</h2>
+<p>For each session, both Luna arms first receive the current time, full current user statements and questions. The baseline receives <code>{}</code> prior notes; the memory arm receives only the notes produced by earlier sessions. Both answers are scored before the current session is sent to Qwen to update notes for the next session. Qwen sees current statements, its system/tools and saved notes returned by read_notes; it never sees questions, gold, hidden profile or future statements. Each session starts a fresh Qwen conversation. Identical answer requests share the exact cached output.</p>
+<p><a href="../../PROMPTS.md">Exact shared system prompts, coverage prompt, schemas and settings</a>. <a href="run_config.json">This user’s run configuration</a>. Full rendered Qwen prompts/messages/token IDs are preserved in <a href="note_traces.jsonl">note_traces.jsonl</a>; exact Luna requests and raw output text are in <a href="../../answer_cache/user01/">answer cache</a>.</p>
+<p>Qwen/Qwen3-4B revision <code>1cfa9a7208912126459214e8b04321603b3df60c</code>; frozen BF16, no adapter, greedy decoding, thinking disabled. Luna actual model: <code>gpt-5.6-luna</code>, reasoning low. Qwen budget: 12 calls/session, 768 output tokens/call, 16384 context tokens; notes: 40 entries / 1600 whitespace words. Notes token count uses the Qwen tokenizer on json.dumps(notes), with keys/punctuation; words count note values only. There is no separate notes-token limit. Note text max5000 characters and name max96 characters are enforced by the dispatcher.</p>
+<h2>Summary</h2>
+<pre><code class="language-json">{
+  &quot;overall&quot;: {
+    &quot;questions&quot;: 20,
+    &quot;baseline&quot;: {
+      &quot;correct&quot;: 10,
+      &quot;accuracy&quot;: 0.5,
+      &quot;invalid&quot;: 0
+    },
+    &quot;memory&quot;: {
+      &quot;correct&quot;: 19,
+      &quot;accuracy&quot;: 0.95,
+      &quot;invalid&quot;: 0
+    }
+  },
+  &quot;earlier_session_evidence&quot;: {
+    &quot;questions&quot;: 15,
+    &quot;baseline&quot;: {
+      &quot;correct&quot;: 5,
+      &quot;accuracy&quot;: 0.3333333333333333,
+      &quot;invalid&quot;: 0
+    },
+    &quot;memory&quot;: {
+      &quot;correct&quot;: 14,
+      &quot;accuracy&quot;: 0.9333333333333333,
+      &quot;invalid&quot;: 0
+    }
+  },
+  &quot;current_session_evidence&quot;: {
+    &quot;questions&quot;: 5,
+    &quot;baseline&quot;: {
+      &quot;correct&quot;: 5,
+      &quot;accuracy&quot;: 1.0,
+      &quot;invalid&quot;: 0
+    },
+    &quot;memory&quot;: {
+      &quot;correct&quot;: 5,
+      &quot;accuracy&quot;: 1.0,
+      &quot;invalid&quot;: 0
+    }
+  },
+  &quot;historical&quot;: {
+    &quot;questions&quot;: 3,
+    &quot;baseline&quot;: {
+      &quot;correct&quot;: 0,
+      &quot;accuracy&quot;: 0.0,
+      &quot;invalid&quot;: 0
+    },
+    &quot;memory&quot;: {
+      &quot;correct&quot;: 3,
+      &quot;accuracy&quot;: 1.0,
+      &quot;invalid&quot;: 0
+    }
+  },
+  &quot;per_session&quot;: [
+    {
+      &quot;session&quot;: 1,
+      &quot;questions&quot;: 2,
+      &quot;baseline&quot;: {
+        &quot;correct&quot;: 2,
+        &quot;accuracy&quot;: 1.0,
+        &quot;invalid&quot;: 0
+      },
+      &quot;memory&quot;: {
+        &quot;correct&quot;: 2,
+        &quot;accuracy&quot;: 1.0,
+        &quot;invalid&quot;: 0
+      }
+    },
+    {
+      &quot;session&quot;: 2,
+      &quot;questions&quot;: 2,
+      &quot;baseline&quot;: {
+        &quot;correct&quot;: 2,
+        &quot;accuracy&quot;: 1.0,
+        &quot;invalid&quot;: 0
+      },
+      &quot;memory&quot;: {
+        &quot;correct&quot;: 2,
+        &quot;accuracy&quot;: 1.0,
+        &quot;invalid&quot;: 0
+      }
+    },
+    {
+      &quot;session&quot;: 3,
+      &quot;questions&quot;: 2,
+      &quot;baseline&quot;: {
+        &quot;correct&quot;: 1,
+        &quot;accuracy&quot;: 0.5,
+        &quot;invalid&quot;: 0
+      },
+      &quot;memory&quot;: {
+        &quot;correct&quot;: 2,
+        &quot;accuracy&quot;: 1.0,
+        &quot;invalid&quot;: 0
+      }
+    },
+    {
+      &quot;session&quot;: 4,
+      &quot;questions&quot;: 2,
+      &quot;baseline&quot;: {
+        &quot;correct&quot;: 1,
+        &quot;accuracy&quot;: 0.5,
+        &quot;invalid&quot;: 0
+      },
+      &quot;memory&quot;: {
+        &quot;correct&quot;: 2,
+        &quot;accuracy&quot;: 1.0,
+        &quot;invalid&quot;: 0
+      }
+    },
+    {
+      &quot;session&quot;: 5,
+      &quot;questions&quot;: 2,
+      &quot;baseline&quot;: {
+        &quot;correct&quot;: 1,
+        &quot;accuracy&quot;: 0.5,
+        &quot;invalid&quot;: 0
+      },
+      &quot;memory&quot;: {
+        &quot;correct&quot;: 2,
+        &quot;accuracy&quot;: 1.0,
+        &quot;invalid&quot;: 0
+      }
+    },
+    {
+      &quot;session&quot;: 6,
+      &quot;questions&quot;: 2,
+      &quot;baseline&quot;: {
+        &quot;correct&quot;: 0,
+        &quot;accuracy&quot;: 0.0,
+        &quot;invalid&quot;: 0
+      },
+      &quot;memory&quot;: {
+        &quot;correct&quot;: 1,
+        &quot;accuracy&quot;: 0.5,
+        &quot;invalid&quot;: 0
+      }
+    },
+    {
+      &quot;session&quot;: 7,
+      &quot;questions&quot;: 2,
+      &quot;baseline&quot;: {
+        &quot;correct&quot;: 0,
+        &quot;accuracy&quot;: 0.0,
+        &quot;invalid&quot;: 0
+      },
+      &quot;memory&quot;: {
+        &quot;correct&quot;: 2,
+        &quot;accuracy&quot;: 1.0,
+        &quot;invalid&quot;: 0
+      }
+    },
+    {
+      &quot;session&quot;: 8,
+      &quot;questions&quot;: 2,
+      &quot;baseline&quot;: {
+        &quot;correct&quot;: 1,
+        &quot;accuracy&quot;: 0.5,
+        &quot;invalid&quot;: 0
+      },
+      &quot;memory&quot;: {
+        &quot;correct&quot;: 2,
+        &quot;accuracy&quot;: 1.0,
+        &quot;invalid&quot;: 0
+      }
+    },
+    {
+      &quot;session&quot;: 9,
+      &quot;questions&quot;: 2,
+      &quot;baseline&quot;: {
+        &quot;correct&quot;: 1,
+        &quot;accuracy&quot;: 0.5,
+        &quot;invalid&quot;: 0
+      },
+      &quot;memory&quot;: {
+        &quot;correct&quot;: 2,
+        &quot;accuracy&quot;: 1.0,
+        &quot;invalid&quot;: 0
+      }
+    },
+    {
+      &quot;session&quot;: 10,
+      &quot;questions&quot;: 2,
+      &quot;baseline&quot;: {
+        &quot;correct&quot;: 1,
+        &quot;accuracy&quot;: 0.5,
+        &quot;invalid&quot;: 0
+      },
+      &quot;memory&quot;: {
+        &quot;correct&quot;: 2,
+        &quot;accuracy&quot;: 1.0,
+        &quot;invalid&quot;: 0
+      }
+    }
+  ],
+  &quot;paired&quot;: {
+    &quot;memory_only&quot;: 9,
+    &quot;baseline_only&quot;: 0,
+    &quot;both_correct&quot;: 10,
+    &quot;both_wrong&quot;: 1
+  },
+  &quot;note_rounds&quot;: 42,
+  &quot;invalid_note_rounds&quot;: 0,
+  &quot;note_sessions_finished&quot;: 10,
+  &quot;actual_answer_model&quot;: &quot;gpt-5.6-luna&quot;,
+  &quot;api_calls_this_process&quot;: 19,
+  &quot;cache_hits&quot;: 1,
+  &quot;wall_seconds&quot;: 100.97539377608337,
+  &quot;peak_gpu_memory_bytes&quot;: 8729640448,
+  &quot;completed_at&quot;: &quot;2026-09-18T09:18:59.803477+00:00&quot;
+}
+</code></pre>
+<p><a href="audit.json">Integrity audit</a>: passed. Failures remain in denominators; no failed session is omitted. <a href="SESSION_LOG.md">Pure computed session log without review narrative</a>.</p>
+<h2>Note quality review</h2>
+<p>Manual review by Codex of full source statements and every session note snapshot; no extra model calls. Primary unit: unique revealed field at final session, not token, claim or question. Supported requires correct current value plus stated category/brand/system/recipient scope; intent deadline is checked too. Conflicting undated values count ambiguous; incorrect values/scopes count incorrect; missing fields count missing. History completeness is audited separately in observations. Counts are descriptive, uncalibrated single-reviewer judgments, not exhaustive hallucination precision/recall.</p>
+<p>Final fields: <strong>18/23 supported</strong>, 1 ambiguous, 1 incorrect, 3 missing.</p>
+<p><a href="note_quality_review.json">Complete field-by-field review with source histories</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Revealed field</th>
+<th>Final status</th>
+<th>Finding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>personal:name</code></td>
+<td>supported</td>
+<td>Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.</td>
+</tr>
+<tr>
+<td><code>clothing:pants:scope0:materials</code></td>
+<td>supported</td>
+<td>Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.</td>
+</tr>
+<tr>
+<td><code>clothing:hats:default_size</code></td>
+<td>supported</td>
+<td>Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.</td>
+</tr>
+<tr>
+<td><code>clothing:accessories:patterns</code></td>
+<td>supported</td>
+<td>Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.</td>
+</tr>
+<tr>
+<td><code>intent:future-trip:state</code></td>
+<td>supported</td>
+<td>Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.</td>
+</tr>
+<tr>
+<td><code>intent:urgent-gift:state</code></td>
+<td>incorrect</td>
+<td>State active is correct at the final session, but the deadline was corrupted from 2026-05-09T09:00:00Z to 2026-05-09T09:09:00Z in session10.</td>
+</tr>
+<tr>
+<td><code>clothing:accessories:brands</code></td>
+<td>supported</td>
+<td>Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.</td>
+</tr>
+<tr>
+<td><code>clothing:outerwear:styles</code></td>
+<td>supported</td>
+<td>Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.</td>
+</tr>
+<tr>
+<td><code>general:occupation</code></td>
+<td>supported</td>
+<td>Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.</td>
+</tr>
+<tr>
+<td><code>general:income</code></td>
+<td>supported</td>
+<td>Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.</td>
+</tr>
+<tr>
+<td><code>clothing:pants:materials</code></td>
+<td>ambiguous</td>
+<td>The final note retains cotton/linen with the summer override deadline under general pants materials, then appends wool without an effective date. Current and historical/general and summer scope are mixed.</td>
+</tr>
+<tr>
+<td><code>clothing:shirts:cuts</code></td>
+<td>supported</td>
+<td>Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.</td>
+</tr>
+<tr>
+<td><code>clothing:pants:styles</code></td>
+<td>supported</td>
+<td>Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.</td>
+</tr>
+<tr>
+<td><code>preference:2</code></td>
+<td>supported</td>
+<td>Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.</td>
+</tr>
+<tr>
+<td><code>clothing:outerwear:colors</code></td>
+<td>supported</td>
+<td>Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.</td>
+</tr>
+<tr>
+<td><code>clothing:pants:patterns</code></td>
+<td>supported</td>
+<td>Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.</td>
+</tr>
+<tr>
+<td><code>clothing:outerwear:cuts</code></td>
+<td>supported</td>
+<td>Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.</td>
+</tr>
+<tr>
+<td><code>clothing:shoes:brand_size:New Balance:US_WOMEN</code></td>
+<td>supported</td>
+<td>Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.</td>
+</tr>
+<tr>
+<td><code>clothing:outerwear:fits</code></td>
+<td>supported</td>
+<td>Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.</td>
+</tr>
+<tr>
+<td><code>intent:future-trip:budget</code></td>
+<td>supported</td>
+<td>Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.</td>
+</tr>
+<tr>
+<td><code>clothing:accessories:default_size</code></td>
+<td>missing</td>
+<td>Session9 one-size / ONE_SIZE value was never saved.</td>
+</tr>
+<tr>
+<td><code>general:languages</code></td>
+<td>missing</td>
+<td>Session9 English/fluent, Yoruba/intermediate and French/basic were never saved.</td>
+</tr>
+<tr>
+<td><code>clothing:pants:occasions</code></td>
+<td>missing</td>
+<td>Session10 casual/work occasions were not saved.</td>
+</tr>
+</tbody>
+</table>
+<h3>Concrete support and failure observations</h3>
+<p><strong>Session 1 — supported</strong>: All seven substantive first-session facts are saved with category/recipient/deadline and unknown-versus-empty distinctions; café filler is excluded.</p>
+<p>Evidence: e0-0, e0-1, e0-2, e0-3, e0-4, e0-5, e0-6.</p>
+<p><strong>Session 2 — temporal_ambiguity</strong>: Retains deadline but leaves linen alongside cotton rather than clearly recording a cotton-only override and subsequent restoration.</p>
+<p>Evidence: e1-0.</p>
+<pre><code class="language-text">Preferred materials for pants in summer: cotton (temporary until 2026-03-09T09:00:00Z), linen.
+</code></pre>
+<p><strong>Session 4 — scope_corruption</strong>: Prior summer history is moved into the general pants field, conflicting with the independently revealed general cotton preference.</p>
+<p>Evidence: e2-1, e3-0.</p>
+<pre><code class="language-text">Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen.
+</code></pre>
+<p><strong>Session 5 — missed_update</strong>: Completed status is omitted. In session6 both answer arms choose expired instead of completed; this explains the sole memory-arm question failure.</p>
+<p>Evidence: e4-0.</p>
+<pre><code class="language-text">Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z.
+</code></pre>
+<p><strong>Session 5 — irrelevant_retention</strong>: Three irrelevant filler/other-person statements enter notes and persist through session10. They are observed text, not invented preferences.</p>
+<p>Evidence: e4-3, e4-4, e4-5.</p>
+<pre><code class="language-text">Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today.
+</code></pre>
+<p><strong>Session 6 — history_loss</strong>: Current brand and effective date are correct, but prior Baggu/Cuyana history disappears.</p>
+<p>Evidence: e0-6, e5-0.</p>
+<pre><code class="language-text">Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z).
+</code></pre>
+<p><strong>Session 7 — supported_scope</strong>: Brand and sizing system retained without conversion.</p>
+<p>Evidence: e6-1.</p>
+<pre><code class="language-text">my New Balance shoes size in US_WOMEN: 9.
+</code></pre>
+<p><strong>Session 10 — hallucinated_value</strong>: Nine-minute unsupported deadline mutation; no current statement authorized it.</p>
+<p>Evidence: e8-0.</p>
+<pre><code class="language-text">deadline 2026-05-09T09:09:00Z
+</code></pre>
+<h2>Observed answer failures</h2>
+<ul>
+<li>Session 6, q1: Which option matches the state of purchase intent urgent-gift (shirts, recipient gift) as of now? Memory chose <strong>B: expired</strong>; evaluator gold <strong>A: completed</strong>. Baseline correct=False.</li>
+</ul>
+<h2>Tool-use interpretation</h2>
+<p>Invocation: every first-three-user call parsed and executed successfully (124/124); each of30 sessions reached the second finish call after coverage review. Dependency: replay verified read-before-write, exact state transitions and prior-session continuity. Intent alignment/context: valid calls still omitted facts, lost history and mixed scopes; see the semantic review. Robustness: no output caps or context-limit failures were observed in the reviewed users; tool outages were not injected, so unavailable-tool recovery is untested. Traceability: exact model text, prompts, tool results, token counts, timing and answer cache payloads are saved. No hidden reasoning was requested (thinking disabled).</p>
+<h2>Chronological session log</h2>
+<table>
+<thead>
+<tr>
+<th>Session</th>
+<th style="text-align: right;">Luna only</th>
+<th style="text-align: right;">With prior notes</th>
+<th>Notes before → after (words / tokens)</th>
+<th style="text-align: right;">Tool rounds / invalid</th>
+<th>Finalized</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: right;">2/2</td>
+<td style="text-align: right;">2/2</td>
+<td>0 / 1 → 48 / 127</td>
+<td style="text-align: right;">4 / 0</td>
+<td>True</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">2/2</td>
+<td style="text-align: right;">2/2</td>
+<td>48 / 127 → 61 / 167</td>
+<td style="text-align: right;">4 / 0</td>
+<td>True</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">1/2</td>
+<td style="text-align: right;">2/2</td>
+<td>61 / 167 → 71 / 185</td>
+<td style="text-align: right;">4 / 0</td>
+<td>True</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">1/2</td>
+<td style="text-align: right;">2/2</td>
+<td>71 / 185 → 80 / 219</td>
+<td style="text-align: right;">4 / 0</td>
+<td>True</td>
+</tr>
+<tr>
+<td>5</td>
+<td style="text-align: right;">1/2</td>
+<td style="text-align: right;">2/2</td>
+<td>80 / 219 → 120 / 272</td>
+<td style="text-align: right;">6 / 0</td>
+<td>True</td>
+</tr>
+<tr>
+<td>6</td>
+<td style="text-align: right;">0/2</td>
+<td style="text-align: right;">1/2</td>
+<td>120 / 272 → 133 / 309</td>
+<td style="text-align: right;">4 / 0</td>
+<td>True</td>
+</tr>
+<tr>
+<td>7</td>
+<td style="text-align: right;">0/2</td>
+<td style="text-align: right;">2/2</td>
+<td>133 / 309 → 167 / 359</td>
+<td style="text-align: right;">4 / 0</td>
+<td>True</td>
+</tr>
+<tr>
+<td>8</td>
+<td style="text-align: right;">1/2</td>
+<td style="text-align: right;">2/2</td>
+<td>167 / 359 → 206 / 413</td>
+<td style="text-align: right;">4 / 0</td>
+<td>True</td>
+</tr>
+<tr>
+<td>9</td>
+<td style="text-align: right;">1/2</td>
+<td style="text-align: right;">2/2</td>
+<td>206 / 413 → 206 / 413</td>
+<td style="text-align: right;">4 / 0</td>
+<td>True</td>
+</tr>
+<tr>
+<td>10</td>
+<td style="text-align: right;">1/2</td>
+<td style="text-align: right;">2/2</td>
+<td>206 / 413 → 206 / 413</td>
+<td style="text-align: right;">4 / 0</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+<h2>Session 1 — 2026-03-01T09:01:00Z</h2>
+<p>Execution UTC: began 2026-09-18T09:17:18.830298+00:00; both answers complete 2026-09-18T09:17:21.482035+00:00; notes update complete 2026-09-18T09:17:24.250787+00:00.</p>
+<h3>1. Prior notes available BEFORE answering</h3>
+<p><strong>Empty notes: <code>{}</code>.</strong></p>
+<p>The baseline prior notes were empty. The memory arm received the complete notes above, plus the current evidence below.</p>
+<h3>2. Current user evidence (full statements)</h3>
+<p><strong>e0-0 — 2026-03-01T09:00:00Z</strong></p>
+<pre><code class="language-text">For my own records, my name: Maya Okafor.
+</code></pre>
+<p><strong>e0-1 — 2026-03-01T09:00:01Z</strong></p>
+<pre><code class="language-text">For my own records, my preferred materials for pants in context summer: linen, cotton.
+</code></pre>
+<p><strong>e0-2 — 2026-03-01T09:00:02Z</strong></p>
+<pre><code class="language-text">For my own records, my default size for hats: explicitly unknown.
+</code></pre>
+<p><strong>e0-3 — 2026-03-01T09:00:03Z</strong></p>
+<pre><code class="language-text">For my own records, my preferred patterns for accessories: no stated preference.
+</code></pre>
+<p><strong>e0-4 — 2026-03-01T09:00:04Z</strong></p>
+<pre><code class="language-text">For my own records, the state of purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z.
+</code></pre>
+<p><strong>e0-5 — 2026-03-01T09:00:05Z</strong></p>
+<pre><code class="language-text">For my own records, the state of purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z.
+</code></pre>
+<p><strong>e0-6 — 2026-03-01T09:00:06Z</strong></p>
+<pre><code class="language-text">For my own records, my preferred brands for accessories: Baggu, Cuyana.
+</code></pre>
+<p><strong>e0-7 — 2026-03-01T09:00:07Z</strong></p>
+<pre><code class="language-text">There was a long queue at the café this morning.
+</code></pre>
+<h3>3. Questions and decisions BEFORE updating notes</h3>
+<p><strong>q0: Which option matches the state of purchase intent future-trip (shoes, recipient self) as of now?</strong></p>
+<pre><code class="language-json">{
+  &quot;A&quot;: &quot;cancelled&quot;,
+  &quot;B&quot;: &quot;active&quot;,
+  &quot;C&quot;: &quot;expired&quot;,
+  &quot;D&quot;: &quot;completed&quot;
+}
+</code></pre>
+<p>Luna only: <strong>B — active</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/4c4e90f2e0a9c05c61ed0333786fd9e50f75dd20cb64d69313df50833cfd49d3.json">Exact request and output</a>.</p>
+<p>Luna with prior notes: <strong>B — active</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/4c4e90f2e0a9c05c61ed0333786fd9e50f75dd20cb64d69313df50833cfd49d3.json">Exact request and output</a>.</p>
+<p>Evaluator-only gold: <strong>B — active</strong>; earlier-session evidence required=False; historical=False; evidence IDs=e0-4; evaluated time=2026-03-01T09:01:00Z.</p>
+<p><strong>q1: Which option matches the state of purchase intent urgent-gift (shirts, recipient gift) as of now?</strong></p>
+<pre><code class="language-json">{
+  &quot;A&quot;: &quot;completed&quot;,
+  &quot;B&quot;: &quot;cancelled&quot;,
+  &quot;C&quot;: &quot;expired&quot;,
+  &quot;D&quot;: &quot;active&quot;
+}
+</code></pre>
+<p>Luna only: <strong>D — active</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/4c4e90f2e0a9c05c61ed0333786fd9e50f75dd20cb64d69313df50833cfd49d3.json">Exact request and output</a>.</p>
+<p>Luna with prior notes: <strong>D — active</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/4c4e90f2e0a9c05c61ed0333786fd9e50f75dd20cb64d69313df50833cfd49d3.json">Exact request and output</a>.</p>
+<p>Evaluator-only gold: <strong>D — active</strong>; earlier-session evidence required=False; historical=False; evidence IDs=e0-5; evaluated time=2026-03-01T09:01:00Z.</p>
+<h3>4. Qwen tool decisions AFTER answering</h3>
+<p>Finished=True; error=none. Accepted writes persist even when later calls fail or the session does not finalize.</p>
+<h4>Tool round 1</h4>
+<p>Valid=True; input/output tokens=1227/16; output cap hit=False; model latency=0.491s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;read_notes&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;notes&quot;: {}
+}
+</code></pre>
+<h4>Tool round 2</h4>
+<p>Valid=True; input/output tokens=1260/147; output cap hit=False; model latency=1.801s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;put_note&quot;, &quot;arguments&quot;: {&quot;name&quot;: &quot;user_info&quot;, &quot;text&quot;: &quot;Name: Maya Okafor. Preferred materials for pants in summer: linen, cotton. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana.&quot;}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true
+}
+</code></pre>
+<h4>Tool round 3</h4>
+<p>Valid=True; input/output tokens=1424/16; output cap hit=False; model latency=0.222s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;no_op&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true,
+  &quot;finished&quot;: false,
+  &quot;review_required&quot;: &quot;Coverage checkpoint before finishing: compare EVERY current statement against the notes just saved. Preserve every useful user fact and its scope, explicit unknown/empty lists, request status/deadline and timestamps. Keep prior facts/history. Ignore filler, other people and ads. If anything useful is missing or distorted, call put_note to fix it. Otherwise call no_op. This is a review request, not permission to invent facts.&quot;,
+  &quot;saved_notes&quot;: {
+    &quot;user_info&quot;: &quot;Name: Maya Okafor. Preferred materials for pants in summer: linen, cotton. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana.&quot;
+  }
+}
+</code></pre>
+<h4>Tool round 4</h4>
+<p>Valid=True; input/output tokens=1681/16; output cap hit=False; model latency=0.229s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;no_op&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true
+}
+</code></pre>
+<h3>5. Updated notes for the NEXT session</h3>
+<p><strong>user_info</strong></p>
+<pre><code class="language-text">Name: Maya Okafor. Preferred materials for pants in summer: linen, cotton. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana.
+</code></pre>
+<h3>6. Explicit changes and accumulated size</h3>
+<pre><code class="language-json">{
+  &quot;added&quot;: [
+    &quot;user_info&quot;
+  ],
+  &quot;changed&quot;: [],
+  &quot;deleted&quot;: [],
+  &quot;size_before&quot;: {
+    &quot;count&quot;: 0,
+    &quot;words&quot;: 0,
+    &quot;serialized_tokens&quot;: 1
+  },
+  &quot;size_after&quot;: {
+    &quot;count&quot;: 1,
+    &quot;words&quot;: 48,
+    &quot;serialized_tokens&quot;: 127
+  },
+  &quot;word_budget&quot;: 1600,
+  &quot;entry_budget&quot;: 40
+}
+</code></pre>
+<pre><code class="language-diff">--- BEFORE/user_info
++++ AFTER/user_info
+@@ -0,0 +1 @@
++Name: Maya Okafor. Preferred materials for pants in summer: linen, cotton. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana.
+</code></pre>
+<h2>Session 2 — 2026-03-06T09:01:00Z</h2>
+<p>Execution UTC: began 2026-09-18T09:17:24.251708+00:00; both answers complete 2026-09-18T09:17:29.092180+00:00; notes update complete 2026-09-18T09:17:32.068384+00:00.</p>
+<h3>1. Prior notes available BEFORE answering</h3>
+<p><strong>user_info</strong></p>
+<pre><code class="language-text">Name: Maya Okafor. Preferred materials for pants in summer: linen, cotton. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana.
+</code></pre>
+<p>The baseline prior notes were empty. The memory arm received the complete notes above, plus the current evidence below.</p>
+<h3>2. Current user evidence (full statements)</h3>
+<p><strong>e1-0 — 2026-03-06T09:00:00Z</strong></p>
+<pre><code class="language-text">For this temporary period only, my preferred materials for pants in context summer: cotton. This applies until 2026-03-09T09:00:00Z; after that, return to my prior preference.
+</code></pre>
+<p><strong>e1-1 — 2026-03-06T09:00:01Z</strong></p>
+<pre><code class="language-text">For my own records, my preferred styles for outerwear: functional, modern.
+</code></pre>
+<p><strong>e1-2 — 2026-03-06T09:00:02Z</strong></p>
+<pre><code class="language-text">For my own records, my occupation: User experience researcher.
+</code></pre>
+<p><strong>e1-3 — 2026-03-06T09:00:03Z</strong></p>
+<pre><code class="language-text">The elevator stopped on every floor today.
+</code></pre>
+<p><strong>e1-4 — 2026-03-06T09:00:04Z</strong></p>
+<pre><code class="language-text">A shop window advertised striped linen shirts. I am only describing the display.
+</code></pre>
+<p><strong>e1-5 — 2026-03-06T09:00:05Z</strong></p>
+<pre><code class="language-text">Just confirming again: my name: Maya Okafor.
+</code></pre>
+<p><strong>e1-6 — 2026-03-06T09:00:06Z</strong></p>
+<pre><code class="language-text">My neighbor was talking about learning the violin.
+</code></pre>
+<h3>3. Questions and decisions BEFORE updating notes</h3>
+<p><strong>q0: Which option matches the state of purchase intent urgent-gift (shirts, recipient gift) as of now?</strong></p>
+<pre><code class="language-json">{
+  &quot;A&quot;: &quot;active&quot;,
+  &quot;B&quot;: &quot;cancelled&quot;,
+  &quot;C&quot;: &quot;expired&quot;,
+  &quot;D&quot;: &quot;completed&quot;
+}
+</code></pre>
+<p>Luna only: <strong>C — expired</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/0f03111beed70cd7ba46c25ed3e494a97f10366db97d6224524b0f9ef6e694c3.json">Exact request and output</a>.</p>
+<p>Luna with prior notes: <strong>C — expired</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/a104deaf83c89fc695d187b11f8b9b1ed7fcbf77611861ee691a4c96fcbf22c3.json">Exact request and output</a>.</p>
+<p>Evaluator-only gold: <strong>C — expired</strong>; earlier-session evidence required=True; historical=False; evidence IDs=e0-5; evaluated time=2026-03-06T09:01:00Z.</p>
+<p><strong>q1: Which option matches my preferred styles for outerwear as of now?</strong></p>
+<pre><code class="language-json">{
+  &quot;A&quot;: &quot;no stated preference&quot;,
+  &quot;B&quot;: &quot;functional, modern&quot;,
+  &quot;C&quot;: &quot;casual, formal&quot;,
+  &quot;D&quot;: &quot;explicitly unknown&quot;
+}
+</code></pre>
+<p>Luna only: <strong>B — functional, modern</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/0f03111beed70cd7ba46c25ed3e494a97f10366db97d6224524b0f9ef6e694c3.json">Exact request and output</a>.</p>
+<p>Luna with prior notes: <strong>B — functional, modern</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/a104deaf83c89fc695d187b11f8b9b1ed7fcbf77611861ee691a4c96fcbf22c3.json">Exact request and output</a>.</p>
+<p>Evaluator-only gold: <strong>B — functional, modern</strong>; earlier-session evidence required=False; historical=False; evidence IDs=e1-1; evaluated time=2026-03-06T09:01:00Z.</p>
+<h3>4. Qwen tool decisions AFTER answering</h3>
+<p>Finished=True; error=none. Accepted writes persist even when later calls fail or the session does not finalize.</p>
+<h4>Tool round 1</h4>
+<p>Valid=True; input/output tokens=1127/16; output cap hit=False; model latency=0.219s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;read_notes&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;notes&quot;: {
+    &quot;user_info&quot;: &quot;Name: Maya Okafor. Preferred materials for pants in summer: linen, cotton. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana.&quot;
+  }
+}
+</code></pre>
+<h4>Tool round 2</h4>
+<p>Valid=True; input/output tokens=1285/187; output cap hit=False; model latency=2.289s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;put_note&quot;, &quot;arguments&quot;: {&quot;name&quot;: &quot;user_info&quot;, &quot;text&quot;: &quot;Name: Maya Okafor. Preferred materials for pants in summer: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher.&quot;}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true
+}
+</code></pre>
+<h4>Tool round 3</h4>
+<p>Valid=True; input/output tokens=1489/16; output cap hit=False; model latency=0.225s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;no_op&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true,
+  &quot;finished&quot;: false,
+  &quot;review_required&quot;: &quot;Coverage checkpoint before finishing: compare EVERY current statement against the notes just saved. Preserve every useful user fact and its scope, explicit unknown/empty lists, request status/deadline and timestamps. Keep prior facts/history. Ignore filler, other people and ads. If anything useful is missing or distorted, call put_note to fix it. Otherwise call no_op. This is a review request, not permission to invent facts.&quot;,
+  &quot;saved_notes&quot;: {
+    &quot;user_info&quot;: &quot;Name: Maya Okafor. Preferred materials for pants in summer: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher.&quot;
+  }
+}
+</code></pre>
+<h4>Tool round 4</h4>
+<p>Valid=True; input/output tokens=1786/16; output cap hit=False; model latency=0.231s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;no_op&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true
+}
+</code></pre>
+<h3>5. Updated notes for the NEXT session</h3>
+<p><strong>user_info</strong></p>
+<pre><code class="language-text">Name: Maya Okafor. Preferred materials for pants in summer: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher.
+</code></pre>
+<h3>6. Explicit changes and accumulated size</h3>
+<pre><code class="language-json">{
+  &quot;added&quot;: [],
+  &quot;changed&quot;: [
+    &quot;user_info&quot;
+  ],
+  &quot;deleted&quot;: [],
+  &quot;size_before&quot;: {
+    &quot;count&quot;: 1,
+    &quot;words&quot;: 48,
+    &quot;serialized_tokens&quot;: 127
+  },
+  &quot;size_after&quot;: {
+    &quot;count&quot;: 1,
+    &quot;words&quot;: 61,
+    &quot;serialized_tokens&quot;: 167
+  },
+  &quot;word_budget&quot;: 1600,
+  &quot;entry_budget&quot;: 40
+}
+</code></pre>
+<pre><code class="language-diff">--- BEFORE/user_info
++++ AFTER/user_info
+@@ -1 +1 @@
+-Name: Maya Okafor. Preferred materials for pants in summer: linen, cotton. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana.
++Name: Maya Okafor. Preferred materials for pants in summer: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher.
+</code></pre>
+<h2>Session 3 — 2026-03-11T09:01:00Z</h2>
+<p>Execution UTC: began 2026-09-18T09:17:32.069488+00:00; both answers complete 2026-09-18T09:17:44.792584+00:00; notes update complete 2026-09-18T09:17:47.986596+00:00.</p>
+<h3>1. Prior notes available BEFORE answering</h3>
+<p><strong>user_info</strong></p>
+<pre><code class="language-text">Name: Maya Okafor. Preferred materials for pants in summer: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher.
+</code></pre>
+<p>The baseline prior notes were empty. The memory arm received the complete notes above, plus the current evidence below.</p>
+<h3>2. Current user evidence (full statements)</h3>
+<p><strong>e2-0 — 2026-03-11T09:00:00Z</strong></p>
+<pre><code class="language-text">For my own records, my income: 8400 CAD per month.
+</code></pre>
+<p><strong>e2-1 — 2026-03-11T09:00:01Z</strong></p>
+<pre><code class="language-text">For my own records, my preferred materials for pants: cotton.
+</code></pre>
+<p><strong>e2-2 — 2026-03-11T09:00:02Z</strong></p>
+<pre><code class="language-text">There was a long queue at the café this morning.
+</code></pre>
+<p><strong>e2-3 — 2026-03-11T09:00:03Z</strong></p>
+<pre><code class="language-text">My neighbor was talking about learning the violin.
+</code></pre>
+<p><strong>e2-4 — 2026-03-11T09:00:04Z</strong></p>
+<pre><code class="language-text">A shop window advertised striped linen shirts. I am only describing the display.
+</code></pre>
+<p><strong>e2-5 — 2026-03-11T09:00:05Z</strong></p>
+<pre><code class="language-text">My neighbor was talking about learning the violin.
+</code></pre>
+<p><strong>e2-6 — 2026-03-11T09:00:06Z</strong></p>
+<pre><code class="language-text">Just confirming again: the state of purchase intent urgent-gift (shirts, recipient gift): expired; deadline 2026-03-02T18:00:00Z.
+</code></pre>
+<p><strong>e2-7 — 2026-03-11T09:00:07Z</strong></p>
+<pre><code class="language-text">Just confirming again: my income: 8400 CAD per month.
+</code></pre>
+<p><strong>e2-8 — 2026-03-11T09:00:08Z</strong></p>
+<pre><code class="language-text">A pigeon landed on the windowsill while I was waiting.
+</code></pre>
+<p><strong>e2-9 — 2026-03-11T09:00:09Z</strong></p>
+<pre><code class="language-text">A pigeon landed on the windowsill while I was waiting.
+</code></pre>
+<h3>3. Questions and decisions BEFORE updating notes</h3>
+<p><strong>q0: Which option matches my preferred materials for pants in context summer as of now?</strong></p>
+<pre><code class="language-json">{
+  &quot;A&quot;: &quot;explicitly unknown&quot;,
+  &quot;B&quot;: &quot;linen, cotton&quot;,
+  &quot;C&quot;: &quot;wool&quot;,
+  &quot;D&quot;: &quot;no stated preference&quot;
+}
+</code></pre>
+<p>Luna only: <strong>D — no stated preference</strong>; correct=False; valid=True. <a href="../../answer_cache/user01/93c97fea934f5ee952b41e47d4e8f1564101a99d2ee9ac9d5219cd65bfb8ed73.json">Exact request and output</a>.</p>
+<p>Luna with prior notes: <strong>B — linen, cotton</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/71a7096e1e453f42b86671217634625f5e60f15d0c2ed6814e1313859ba6a653.json">Exact request and output</a>.</p>
+<p>Evaluator-only gold: <strong>B — linen, cotton</strong>; earlier-session evidence required=True; historical=False; evidence IDs=e0-1, e1-0; evaluated time=2026-03-11T09:01:00Z.</p>
+<p><strong>q1: Which option matches the state of purchase intent future-trip (shoes, recipient self) as of now?</strong></p>
+<pre><code class="language-json">{
+  &quot;A&quot;: &quot;completed&quot;,
+  &quot;B&quot;: &quot;cancelled&quot;,
+  &quot;C&quot;: &quot;expired&quot;,
+  &quot;D&quot;: &quot;active&quot;
+}
+</code></pre>
+<p>Luna only: <strong>D — active</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/93c97fea934f5ee952b41e47d4e8f1564101a99d2ee9ac9d5219cd65bfb8ed73.json">Exact request and output</a>.</p>
+<p>Luna with prior notes: <strong>D — active</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/71a7096e1e453f42b86671217634625f5e60f15d0c2ed6814e1313859ba6a653.json">Exact request and output</a>.</p>
+<p>Evaluator-only gold: <strong>D — active</strong>; earlier-session evidence required=True; historical=False; evidence IDs=e0-4; evaluated time=2026-03-11T09:01:00Z.</p>
+<h3>4. Qwen tool decisions AFTER answering</h3>
+<p>Finished=True; error=none. Accepted writes persist even when later calls fail or the session does not finalize.</p>
+<h4>Tool round 1</h4>
+<p>Valid=True; input/output tokens=1284/16; output cap hit=False; model latency=0.228s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;read_notes&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;notes&quot;: {
+    &quot;user_info&quot;: &quot;Name: Maya Okafor. Preferred materials for pants in summer: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher.&quot;
+  }
+}
+</code></pre>
+<h4>Tool round 2</h4>
+<p>Valid=True; input/output tokens=1482/205; output cap hit=False; model latency=2.488s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;put_note&quot;, &quot;arguments&quot;: {&quot;name&quot;: &quot;user_info&quot;, &quot;text&quot;: &quot;Name: Maya Okafor. Preferred materials for pants in summer: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred materials for pants: cotton.&quot;}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true
+}
+</code></pre>
+<h4>Tool round 3</h4>
+<p>Valid=True; input/output tokens=1704/16; output cap hit=False; model latency=0.230s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;no_op&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true,
+  &quot;finished&quot;: false,
+  &quot;review_required&quot;: &quot;Coverage checkpoint before finishing: compare EVERY current statement against the notes just saved. Preserve every useful user fact and its scope, explicit unknown/empty lists, request status/deadline and timestamps. Keep prior facts/history. Ignore filler, other people and ads. If anything useful is missing or distorted, call put_note to fix it. Otherwise call no_op. This is a review request, not permission to invent facts.&quot;,
+  &quot;saved_notes&quot;: {
+    &quot;user_info&quot;: &quot;Name: Maya Okafor. Preferred materials for pants in summer: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred materials for pants: cotton.&quot;
+  }
+}
+</code></pre>
+<h4>Tool round 4</h4>
+<p>Valid=True; input/output tokens=2019/16; output cap hit=False; model latency=0.236s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;no_op&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true
+}
+</code></pre>
+<h3>5. Updated notes for the NEXT session</h3>
+<p><strong>user_info</strong></p>
+<pre><code class="language-text">Name: Maya Okafor. Preferred materials for pants in summer: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred materials for pants: cotton.
+</code></pre>
+<h3>6. Explicit changes and accumulated size</h3>
+<pre><code class="language-json">{
+  &quot;added&quot;: [],
+  &quot;changed&quot;: [
+    &quot;user_info&quot;
+  ],
+  &quot;deleted&quot;: [],
+  &quot;size_before&quot;: {
+    &quot;count&quot;: 1,
+    &quot;words&quot;: 61,
+    &quot;serialized_tokens&quot;: 167
+  },
+  &quot;size_after&quot;: {
+    &quot;count&quot;: 1,
+    &quot;words&quot;: 71,
+    &quot;serialized_tokens&quot;: 185
+  },
+  &quot;word_budget&quot;: 1600,
+  &quot;entry_budget&quot;: 40
+}
+</code></pre>
+<pre><code class="language-diff">--- BEFORE/user_info
++++ AFTER/user_info
+@@ -1 +1 @@
+-Name: Maya Okafor. Preferred materials for pants in summer: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher.
++Name: Maya Okafor. Preferred materials for pants in summer: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred materials for pants: cotton.
+</code></pre>
+<h2>Session 4 — 2026-03-21T09:01:00Z</h2>
+<p>Execution UTC: began 2026-09-18T09:17:47.987759+00:00; both answers complete 2026-09-18T09:17:53.076640+00:00; notes update complete 2026-09-18T09:17:56.653007+00:00.</p>
+<h3>1. Prior notes available BEFORE answering</h3>
+<p><strong>user_info</strong></p>
+<pre><code class="language-text">Name: Maya Okafor. Preferred materials for pants in summer: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred materials for pants: cotton.
+</code></pre>
+<p>The baseline prior notes were empty. The memory arm received the complete notes above, plus the current evidence below.</p>
+<h3>2. Current user evidence (full statements)</h3>
+<p><strong>e3-0 — 2026-03-21T09:00:00Z</strong></p>
+<pre><code class="language-text">Update my records from today: my preferred materials for pants in context summer is now wool. This replaces the previous value from now onward.
+</code></pre>
+<p><strong>e3-1 — 2026-03-21T09:00:01Z</strong></p>
+<pre><code class="language-text">For my own records, my preferred cuts for shirts: button-down, camp collar.
+</code></pre>
+<p><strong>e3-2 — 2026-03-21T09:00:02Z</strong></p>
+<pre><code class="language-text">The elevator stopped on every floor today.
+</code></pre>
+<p><strong>e3-3 — 2026-03-21T09:00:03Z</strong></p>
+<pre><code class="language-text">An advert listed leather shoes in several sizes; that says nothing about my own size.
+</code></pre>
+<p><strong>e3-4 — 2026-03-21T09:00:04Z</strong></p>
+<pre><code class="language-text">An advert listed leather shoes in several sizes; that says nothing about my own size.
+</code></pre>
+<p><strong>e3-5 — 2026-03-21T09:00:05Z</strong></p>
+<pre><code class="language-text">Just confirming again: my name: Maya Okafor.
+</code></pre>
+<p><strong>e3-6 — 2026-03-21T09:00:06Z</strong></p>
+<pre><code class="language-text">A shop window advertised striped linen shirts. I am only describing the display.
+</code></pre>
+<p><strong>e3-7 — 2026-03-21T09:00:07Z</strong></p>
+<pre><code class="language-text">A pigeon landed on the windowsill while I was waiting.
+</code></pre>
+<p><strong>e3-8 — 2026-03-21T09:00:08Z</strong></p>
+<pre><code class="language-text">An advert listed leather shoes in several sizes; that says nothing about my own size.
+</code></pre>
+<p><strong>e3-9 — 2026-03-21T09:00:09Z</strong></p>
+<pre><code class="language-text">A shop window advertised striped linen shirts. I am only describing the display.
+</code></pre>
+<h3>3. Questions and decisions BEFORE updating notes</h3>
+<p><strong>q0: Which option matches the state of purchase intent urgent-gift (shirts, recipient gift) as of now?</strong></p>
+<pre><code class="language-json">{
+  &quot;A&quot;: &quot;expired&quot;,
+  &quot;B&quot;: &quot;completed&quot;,
+  &quot;C&quot;: &quot;cancelled&quot;,
+  &quot;D&quot;: &quot;active&quot;
+}
+</code></pre>
+<p>Luna only: <strong>D — active</strong>; correct=False; valid=True. <a href="../../answer_cache/user01/171514ef8b920f7133493591ca4a3bf3f7a32b7e3247ec3e697a536a9f6197dd.json">Exact request and output</a>.</p>
+<p>Luna with prior notes: <strong>A — expired</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/fee442e3d0a54d9df71dd67faab08e1edab99da47d60a116b518c78ededd7f7e.json">Exact request and output</a>.</p>
+<p>Evaluator-only gold: <strong>A — expired</strong>; earlier-session evidence required=True; historical=False; evidence IDs=e0-5; evaluated time=2026-03-21T09:01:00Z.</p>
+<p><strong>q1: Which option matches my default size for hats as of now?</strong></p>
+<pre><code class="language-json">{
+  &quot;A&quot;: &quot;size 56 in CM&quot;,
+  &quot;B&quot;: &quot;size 60 in CM&quot;,
+  &quot;C&quot;: &quot;explicitly unknown&quot;,
+  &quot;D&quot;: &quot;size 58 in CM&quot;
+}
+</code></pre>
+<p>Luna only: <strong>C — explicitly unknown</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/171514ef8b920f7133493591ca4a3bf3f7a32b7e3247ec3e697a536a9f6197dd.json">Exact request and output</a>.</p>
+<p>Luna with prior notes: <strong>C — explicitly unknown</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/fee442e3d0a54d9df71dd67faab08e1edab99da47d60a116b518c78ededd7f7e.json">Exact request and output</a>.</p>
+<p>Evaluator-only gold: <strong>C — explicitly unknown</strong>; earlier-session evidence required=True; historical=False; evidence IDs=e0-2; evaluated time=2026-03-21T09:01:00Z.</p>
+<h3>4. Qwen tool decisions AFTER answering</h3>
+<p>Finished=True; error=none. Accepted writes persist even when later calls fail or the session does not finalize.</p>
+<h4>Tool round 1</h4>
+<p>Valid=True; input/output tokens=1278/16; output cap hit=False; model latency=0.217s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;read_notes&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;notes&quot;: {
+    &quot;user_info&quot;: &quot;Name: Maya Okafor. Preferred materials for pants in summer: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred materials for pants: cotton.&quot;
+  }
+}
+</code></pre>
+<h4>Tool round 2</h4>
+<p>Valid=True; input/output tokens=1494/239; output cap hit=False; model latency=2.884s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;put_note&quot;, &quot;arguments&quot;: {&quot;name&quot;: &quot;user_info&quot;, &quot;text&quot;: &quot;Name: Maya Okafor. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month.&quot;}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true
+}
+</code></pre>
+<h4>Tool round 3</h4>
+<p>Valid=True; input/output tokens=1750/16; output cap hit=False; model latency=0.227s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;no_op&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true,
+  &quot;finished&quot;: false,
+  &quot;review_required&quot;: &quot;Coverage checkpoint before finishing: compare EVERY current statement against the notes just saved. Preserve every useful user fact and its scope, explicit unknown/empty lists, request status/deadline and timestamps. Keep prior facts/history. Ignore filler, other people and ads. If anything useful is missing or distorted, call put_note to fix it. Otherwise call no_op. This is a review request, not permission to invent facts.&quot;,
+  &quot;saved_notes&quot;: {
+    &quot;user_info&quot;: &quot;Name: Maya Okafor. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month.&quot;
+  }
+}
+</code></pre>
+<h4>Tool round 4</h4>
+<p>Valid=True; input/output tokens=2099/16; output cap hit=False; model latency=0.237s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;no_op&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true
+}
+</code></pre>
+<h3>5. Updated notes for the NEXT session</h3>
+<p><strong>user_info</strong></p>
+<pre><code class="language-text">Name: Maya Okafor. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month.
+</code></pre>
+<h3>6. Explicit changes and accumulated size</h3>
+<pre><code class="language-json">{
+  &quot;added&quot;: [],
+  &quot;changed&quot;: [
+    &quot;user_info&quot;
+  ],
+  &quot;deleted&quot;: [],
+  &quot;size_before&quot;: {
+    &quot;count&quot;: 1,
+    &quot;words&quot;: 71,
+    &quot;serialized_tokens&quot;: 185
+  },
+  &quot;size_after&quot;: {
+    &quot;count&quot;: 1,
+    &quot;words&quot;: 80,
+    &quot;serialized_tokens&quot;: 219
+  },
+  &quot;word_budget&quot;: 1600,
+  &quot;entry_budget&quot;: 40
+}
+</code></pre>
+<pre><code class="language-diff">--- BEFORE/user_info
++++ AFTER/user_info
+@@ -1 +1 @@
+-Name: Maya Okafor. Preferred materials for pants in summer: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred materials for pants: cotton.
++Name: Maya Okafor. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month.
+</code></pre>
+<h2>Session 5 — 2026-03-31T09:01:00Z</h2>
+<p>Execution UTC: began 2026-09-18T09:17:56.654183+00:00; both answers complete 2026-09-18T09:17:59.387545+00:00; notes update complete 2026-09-18T09:18:09.707601+00:00.</p>
+<h3>1. Prior notes available BEFORE answering</h3>
+<p><strong>user_info</strong></p>
+<pre><code class="language-text">Name: Maya Okafor. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month.
+</code></pre>
+<p>The baseline prior notes were empty. The memory arm received the complete notes above, plus the current evidence below.</p>
+<h3>2. Current user evidence (full statements)</h3>
+<p><strong>e4-0 — 2026-03-31T09:00:00Z</strong></p>
+<pre><code class="language-text">Update my records from today: the state of purchase intent urgent-gift (shirts, recipient gift) is now completed; deadline 2026-03-02T18:00:00Z. This replaces the previous value from now onward.
+</code></pre>
+<p><strong>e4-1 — 2026-03-31T09:00:01Z</strong></p>
+<pre><code class="language-text">For my own records, my preferred styles for pants: minimal, utility.
+</code></pre>
+<p><strong>e4-2 — 2026-03-31T09:00:02Z</strong></p>
+<pre><code class="language-text">For my own records, my stance toward fast fashion (shopping, globally): dislike.
+</code></pre>
+<p><strong>e4-3 — 2026-03-31T09:00:03Z</strong></p>
+<pre><code class="language-text">A pigeon landed on the windowsill while I was waiting.
+</code></pre>
+<p><strong>e4-4 — 2026-03-31T09:00:04Z</strong></p>
+<pre><code class="language-text">My neighbor was talking about learning the violin.
+</code></pre>
+<p><strong>e4-5 — 2026-03-31T09:00:05Z</strong></p>
+<pre><code class="language-text">The elevator stopped on every floor today.
+</code></pre>
+<p><strong>e4-6 — 2026-03-31T09:00:06Z</strong></p>
+<pre><code class="language-text">Just confirming again: my occupation: User experience researcher.
+</code></pre>
+<h3>3. Questions and decisions BEFORE updating notes</h3>
+<p><strong>q0: Which option matches my preferred brands for accessories as of now?</strong></p>
+<pre><code class="language-json">{
+  &quot;A&quot;: &quot;explicitly unknown&quot;,
+  &quot;B&quot;: &quot;Boreal&quot;,
+  &quot;C&quot;: &quot;Cedar&quot;,
+  &quot;D&quot;: &quot;Baggu, Cuyana&quot;
+}
+</code></pre>
+<p>Luna only: <strong>A — explicitly unknown</strong>; correct=False; valid=True. <a href="../../answer_cache/user01/3b9ae2bea46cb6bb3f0805cdae3eea4a89beb903763936dd19e9654458c8923f.json">Exact request and output</a>.</p>
+<p>Luna with prior notes: <strong>D — Baggu, Cuyana</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/da5288d84ec414465ef8f41ef3fc70f33b790efc9413236580d49592b3dd181d.json">Exact request and output</a>.</p>
+<p>Evaluator-only gold: <strong>D — Baggu, Cuyana</strong>; earlier-session evidence required=True; historical=False; evidence IDs=e0-6; evaluated time=2026-03-31T09:01:00Z.</p>
+<p><strong>q1: Which option matches my stance toward fast fashion (shopping, globally) as of now?</strong></p>
+<pre><code class="language-json">{
+  &quot;A&quot;: &quot;dislike&quot;,
+  &quot;B&quot;: &quot;explicitly unknown&quot;,
+  &quot;C&quot;: &quot;like&quot;,
+  &quot;D&quot;: &quot;retracted&quot;
+}
+</code></pre>
+<p>Luna only: <strong>A — dislike</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/3b9ae2bea46cb6bb3f0805cdae3eea4a89beb903763936dd19e9654458c8923f.json">Exact request and output</a>.</p>
+<p>Luna with prior notes: <strong>A — dislike</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/da5288d84ec414465ef8f41ef3fc70f33b790efc9413236580d49592b3dd181d.json">Exact request and output</a>.</p>
+<p>Evaluator-only gold: <strong>A — dislike</strong>; earlier-session evidence required=False; historical=False; evidence IDs=e4-2; evaluated time=2026-03-31T09:01:00Z.</p>
+<h3>4. Qwen tool decisions AFTER answering</h3>
+<p>Finished=True; error=none. Accepted writes persist even when later calls fail or the session does not finalize.</p>
+<h4>Tool round 1</h4>
+<p>Valid=True; input/output tokens=1133/16; output cap hit=False; model latency=0.211s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;read_notes&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;notes&quot;: {
+    &quot;user_info&quot;: &quot;Name: Maya Okafor. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month.&quot;
+  }
+}
+</code></pre>
+<h4>Tool round 2</h4>
+<p>Valid=True; input/output tokens=1383/248; output cap hit=False; model latency=2.964s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;put_note&quot;, &quot;arguments&quot;: {&quot;name&quot;: &quot;user_info&quot;, &quot;text&quot;: &quot;Name: Maya Okafor. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility.&quot;}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true
+}
+</code></pre>
+<h4>Tool round 3</h4>
+<p>Valid=True; input/output tokens=1648/260; output cap hit=False; model latency=3.119s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;put_note&quot;, &quot;arguments&quot;: {&quot;name&quot;: &quot;user_info&quot;, &quot;text&quot;: &quot;Name: Maya Okafor. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike.&quot;}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true
+}
+</code></pre>
+<h4>Tool round 4</h4>
+<p>Valid=True; input/output tokens=1925/292; output cap hit=False; model latency=3.514s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;put_note&quot;, &quot;arguments&quot;: {&quot;name&quot;: &quot;user_info&quot;, &quot;text&quot;: &quot;Name: Maya Okafor. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today.&quot;}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true
+}
+</code></pre>
+<h4>Tool round 5</h4>
+<p>Valid=True; input/output tokens=2234/16; output cap hit=False; model latency=0.241s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;no_op&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true,
+  &quot;finished&quot;: false,
+  &quot;review_required&quot;: &quot;Coverage checkpoint before finishing: compare EVERY current statement against the notes just saved. Preserve every useful user fact and its scope, explicit unknown/empty lists, request status/deadline and timestamps. Keep prior facts/history. Ignore filler, other people and ads. If anything useful is missing or distorted, call put_note to fix it. Otherwise call no_op. This is a review request, not permission to invent facts.&quot;,
+  &quot;saved_notes&quot;: {
+    &quot;user_info&quot;: &quot;Name: Maya Okafor. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today.&quot;
+  }
+}
+</code></pre>
+<h4>Tool round 6</h4>
+<p>Valid=True; input/output tokens=2636/16; output cap hit=False; model latency=0.252s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;no_op&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true
+}
+</code></pre>
+<h3>5. Updated notes for the NEXT session</h3>
+<p><strong>user_info</strong></p>
+<pre><code class="language-text">Name: Maya Okafor. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today.
+</code></pre>
+<h3>6. Explicit changes and accumulated size</h3>
+<pre><code class="language-json">{
+  &quot;added&quot;: [],
+  &quot;changed&quot;: [
+    &quot;user_info&quot;
+  ],
+  &quot;deleted&quot;: [],
+  &quot;size_before&quot;: {
+    &quot;count&quot;: 1,
+    &quot;words&quot;: 80,
+    &quot;serialized_tokens&quot;: 219
+  },
+  &quot;size_after&quot;: {
+    &quot;count&quot;: 1,
+    &quot;words&quot;: 120,
+    &quot;serialized_tokens&quot;: 272
+  },
+  &quot;word_budget&quot;: 1600,
+  &quot;entry_budget&quot;: 40
+}
+</code></pre>
+<pre><code class="language-diff">--- BEFORE/user_info
++++ AFTER/user_info
+@@ -1 +1 @@
+-Name: Maya Okafor. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month.
++Name: Maya Okafor. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today.
+</code></pre>
+<h2>Session 6 — 2026-04-05T09:01:00Z</h2>
+<p>Execution UTC: began 2026-09-18T09:18:09.709177+00:00; both answers complete 2026-09-18T09:18:16.196780+00:00; notes update complete 2026-09-18T09:18:20.862336+00:00.</p>
+<h3>1. Prior notes available BEFORE answering</h3>
+<p><strong>user_info</strong></p>
+<pre><code class="language-text">Name: Maya Okafor. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today.
+</code></pre>
+<p>The baseline prior notes were empty. The memory arm received the complete notes above, plus the current evidence below.</p>
+<h3>2. Current user evidence (full statements)</h3>
+<p><strong>e5-0 — 2026-04-05T09:00:00Z</strong></p>
+<pre><code class="language-text">Update my records from today: my preferred brands for accessories is now Aster. This replaces the previous value from now onward.
+</code></pre>
+<p><strong>e5-1 — 2026-04-05T09:00:01Z</strong></p>
+<pre><code class="language-text">For my own records, my preferred colors for outerwear: black, olive, camel.
+</code></pre>
+<p><strong>e5-2 — 2026-04-05T09:00:02Z</strong></p>
+<pre><code class="language-text">For my own records, my preferred patterns for pants: solid.
+</code></pre>
+<p><strong>e5-3 — 2026-04-05T09:00:03Z</strong></p>
+<pre><code class="language-text">A pigeon landed on the windowsill while I was waiting.
+</code></pre>
+<p><strong>e5-4 — 2026-04-05T09:00:04Z</strong></p>
+<pre><code class="language-text">My neighbor was talking about learning the violin.
+</code></pre>
+<p><strong>e5-5 — 2026-04-05T09:00:05Z</strong></p>
+<pre><code class="language-text">A pigeon landed on the windowsill while I was waiting.
+</code></pre>
+<p><strong>e5-6 — 2026-04-05T09:00:06Z</strong></p>
+<pre><code class="language-text">A shop window advertised striped linen shirts. I am only describing the display.
+</code></pre>
+<p><strong>e5-7 — 2026-04-05T09:00:07Z</strong></p>
+<pre><code class="language-text">A colleague said they love neon jackets; that is their taste, not mine.
+</code></pre>
+<p><strong>e5-8 — 2026-04-05T09:00:08Z</strong></p>
+<pre><code class="language-text">An advert listed leather shoes in several sizes; that says nothing about my own size.
+</code></pre>
+<p><strong>e5-9 — 2026-04-05T09:00:09Z</strong></p>
+<pre><code class="language-text">Just confirming again: my occupation: User experience researcher.
+</code></pre>
+<h3>3. Questions and decisions BEFORE updating notes</h3>
+<p><strong>q0: Which option matches my preferred materials for pants in context summer as of now?</strong></p>
+<pre><code class="language-json">{
+  &quot;A&quot;: &quot;explicitly unknown&quot;,
+  &quot;B&quot;: &quot;wool&quot;,
+  &quot;C&quot;: &quot;linen, cotton&quot;,
+  &quot;D&quot;: &quot;no stated preference&quot;
+}
+</code></pre>
+<p>Luna only: <strong>D — no stated preference</strong>; correct=False; valid=True. <a href="../../answer_cache/user01/58fb416c340b3e99484db70e0adb535b1b68cefbdc948ff798e9d65bde9707cd.json">Exact request and output</a>.</p>
+<p>Luna with prior notes: <strong>B — wool</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/3f230ea127a44a9ee2b5a66220034bab05c645989ba392503dbcb07f896f3279.json">Exact request and output</a>.</p>
+<p>Evaluator-only gold: <strong>B — wool</strong>; earlier-session evidence required=True; historical=False; evidence IDs=e0-1, e1-0, e3-0; evaluated time=2026-04-05T09:01:00Z.</p>
+<p><strong>q1: Which option matches the state of purchase intent urgent-gift (shirts, recipient gift) as of now?</strong></p>
+<pre><code class="language-json">{
+  &quot;A&quot;: &quot;completed&quot;,
+  &quot;B&quot;: &quot;expired&quot;,
+  &quot;C&quot;: &quot;active&quot;,
+  &quot;D&quot;: &quot;cancelled&quot;
+}
+</code></pre>
+<p>Luna only: <strong>B — expired</strong>; correct=False; valid=True. <a href="../../answer_cache/user01/58fb416c340b3e99484db70e0adb535b1b68cefbdc948ff798e9d65bde9707cd.json">Exact request and output</a>.</p>
+<p>Luna with prior notes: <strong>B — expired</strong>; correct=False; valid=True. <a href="../../answer_cache/user01/3f230ea127a44a9ee2b5a66220034bab05c645989ba392503dbcb07f896f3279.json">Exact request and output</a>.</p>
+<p>Evaluator-only gold: <strong>A — completed</strong>; earlier-session evidence required=True; historical=False; evidence IDs=e0-5, e4-0; evaluated time=2026-04-05T09:01:00Z.</p>
+<h3>4. Qwen tool decisions AFTER answering</h3>
+<p>Finished=True; error=none. Accepted writes persist even when later calls fail or the session does not finalize.</p>
+<h4>Tool round 1</h4>
+<p>Valid=True; input/output tokens=1268/16; output cap hit=False; model latency=0.220s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;read_notes&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;notes&quot;: {
+    &quot;user_info&quot;: &quot;Name: Maya Okafor. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today.&quot;
+  }
+}
+</code></pre>
+<h4>Tool round 2</h4>
+<p>Valid=True; input/output tokens=1571/329; output cap hit=False; model latency=3.953s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;put_note&quot;, &quot;arguments&quot;: {&quot;name&quot;: &quot;user_info&quot;, &quot;text&quot;: &quot;Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today.&quot;}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true
+}
+</code></pre>
+<h4>Tool round 3</h4>
+<p>Valid=True; input/output tokens=1917/16; output cap hit=False; model latency=0.232s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;no_op&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true,
+  &quot;finished&quot;: false,
+  &quot;review_required&quot;: &quot;Coverage checkpoint before finishing: compare EVERY current statement against the notes just saved. Preserve every useful user fact and its scope, explicit unknown/empty lists, request status/deadline and timestamps. Keep prior facts/history. Ignore filler, other people and ads. If anything useful is missing or distorted, call put_note to fix it. Otherwise call no_op. This is a review request, not permission to invent facts.&quot;,
+  &quot;saved_notes&quot;: {
+    &quot;user_info&quot;: &quot;Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today.&quot;
+  }
+}
+</code></pre>
+<h4>Tool round 4</h4>
+<p>Valid=True; input/output tokens=2356/16; output cap hit=False; model latency=0.247s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;no_op&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true
+}
+</code></pre>
+<h3>5. Updated notes for the NEXT session</h3>
+<p><strong>user_info</strong></p>
+<pre><code class="language-text">Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today.
+</code></pre>
+<h3>6. Explicit changes and accumulated size</h3>
+<pre><code class="language-json">{
+  &quot;added&quot;: [],
+  &quot;changed&quot;: [
+    &quot;user_info&quot;
+  ],
+  &quot;deleted&quot;: [],
+  &quot;size_before&quot;: {
+    &quot;count&quot;: 1,
+    &quot;words&quot;: 120,
+    &quot;serialized_tokens&quot;: 272
+  },
+  &quot;size_after&quot;: {
+    &quot;count&quot;: 1,
+    &quot;words&quot;: 133,
+    &quot;serialized_tokens&quot;: 309
+  },
+  &quot;word_budget&quot;: 1600,
+  &quot;entry_budget&quot;: 40
+}
+</code></pre>
+<pre><code class="language-diff">--- BEFORE/user_info
++++ AFTER/user_info
+@@ -1 +1 @@
+-Name: Maya Okafor. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred brands for accessories: Baggu, Cuyana. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today.
++Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today.
+</code></pre>
+<h2>Session 7 — 2026-04-07T09:01:00Z</h2>
+<p>Execution UTC: began 2026-09-18T09:18:20.863923+00:00; both answers complete 2026-09-18T09:18:23.932801+00:00; notes update complete 2026-09-18T09:18:29.167302+00:00.</p>
+<h3>1. Prior notes available BEFORE answering</h3>
+<p><strong>user_info</strong></p>
+<pre><code class="language-text">Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today.
+</code></pre>
+<p>The baseline prior notes were empty. The memory arm received the complete notes above, plus the current evidence below.</p>
+<h3>2. Current user evidence (full statements)</h3>
+<p><strong>e6-0 — 2026-04-07T09:00:00Z</strong></p>
+<pre><code class="language-text">For my own records, my preferred cuts for outerwear: parka, trench.
+</code></pre>
+<p><strong>e6-1 — 2026-04-07T09:00:01Z</strong></p>
+<pre><code class="language-text">For my own records, my New Balance shoes size in US_WOMEN: 9.
+</code></pre>
+<p><strong>e6-2 — 2026-04-07T09:00:02Z</strong></p>
+<pre><code class="language-text">The elevator stopped on every floor today.
+</code></pre>
+<p><strong>e6-3 — 2026-04-07T09:00:03Z</strong></p>
+<pre><code class="language-text">The elevator stopped on every floor today.
+</code></pre>
+<p><strong>e6-4 — 2026-04-07T09:00:04Z</strong></p>
+<pre><code class="language-text">The elevator stopped on every floor today.
+</code></pre>
+<p><strong>e6-5 — 2026-04-07T09:00:05Z</strong></p>
+<pre><code class="language-text">Just confirming again: my preferred patterns for accessories: no stated preference.
+</code></pre>
+<p><strong>e6-6 — 2026-04-07T09:00:06Z</strong></p>
+<pre><code class="language-text">My neighbor was talking about learning the violin.
+</code></pre>
+<h3>3. Questions and decisions BEFORE updating notes</h3>
+<p><strong>q0: Which option matches my name as of now?</strong></p>
+<pre><code class="language-json">{
+  &quot;A&quot;: &quot;Sofia Rossi&quot;,
+  &quot;B&quot;: &quot;Sam Weber&quot;,
+  &quot;C&quot;: &quot;Maya Okafor&quot;,
+  &quot;D&quot;: &quot;Alex Martin&quot;
+}
+</code></pre>
+<p>Luna only: <strong>A — Sofia Rossi</strong>; correct=False; valid=True. <a href="../../answer_cache/user01/8656158ea251f86140586ae6884401246bc46ebb06e21ef41aea0704228ef376.json">Exact request and output</a>.</p>
+<p>Luna with prior notes: <strong>C — Maya Okafor</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/f3009ff6d57dc86ac8fae059b1ffedcb9cc416c50e8863fa89023e79a9021633.json">Exact request and output</a>.</p>
+<p>Evaluator-only gold: <strong>C — Maya Okafor</strong>; earlier-session evidence required=True; historical=False; evidence IDs=e0-0; evaluated time=2026-04-07T09:01:00Z.</p>
+<p><strong>q1: Which option matches my income at 2026-03-11T09:00:00Z?</strong></p>
+<pre><code class="language-json">{
+  &quot;A&quot;: &quot;8460 CAD per month&quot;,
+  &quot;B&quot;: &quot;8400 CAD per month&quot;,
+  &quot;C&quot;: &quot;8360 CAD per month&quot;,
+  &quot;D&quot;: &quot;8420 CAD per month&quot;
+}
+</code></pre>
+<p>Luna only: <strong>A — 8460 CAD per month</strong>; correct=False; valid=True. <a href="../../answer_cache/user01/8656158ea251f86140586ae6884401246bc46ebb06e21ef41aea0704228ef376.json">Exact request and output</a>.</p>
+<p>Luna with prior notes: <strong>B — 8400 CAD per month</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/f3009ff6d57dc86ac8fae059b1ffedcb9cc416c50e8863fa89023e79a9021633.json">Exact request and output</a>.</p>
+<p>Evaluator-only gold: <strong>B — 8400 CAD per month</strong>; earlier-session evidence required=True; historical=True; evidence IDs=e2-0; evaluated time=2026-03-11T09:00:00Z.</p>
+<h3>4. Qwen tool decisions AFTER answering</h3>
+<p>Finished=True; error=none. Accepted writes persist even when later calls fail or the session does not finalize.</p>
+<h4>Tool round 1</h4>
+<p>Valid=True; input/output tokens=1087/16; output cap hit=False; model latency=0.216s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;read_notes&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;notes&quot;: {
+    &quot;user_info&quot;: &quot;Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today.&quot;
+  }
+}
+</code></pre>
+<h4>Tool round 2</h4>
+<p>Valid=True; input/output tokens=1427/379; output cap hit=False; model latency=4.532s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;put_note&quot;, &quot;arguments&quot;: {&quot;name&quot;: &quot;user_info&quot;, &quot;text&quot;: &quot;Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today. For my own records, my preferred cuts for outerwear: parka, trench. For my own records, my New Balance shoes size in US_WOMEN: 9. Just confirming again: my preferred patterns for accessories: no stated preference.&quot;}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true
+}
+</code></pre>
+<h4>Tool round 3</h4>
+<p>Valid=True; input/output tokens=1823/16; output cap hit=False; model latency=0.230s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;no_op&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true,
+  &quot;finished&quot;: false,
+  &quot;review_required&quot;: &quot;Coverage checkpoint before finishing: compare EVERY current statement against the notes just saved. Preserve every useful user fact and its scope, explicit unknown/empty lists, request status/deadline and timestamps. Keep prior facts/history. Ignore filler, other people and ads. If anything useful is missing or distorted, call put_note to fix it. Otherwise call no_op. This is a review request, not permission to invent facts.&quot;,
+  &quot;saved_notes&quot;: {
+    &quot;user_info&quot;: &quot;Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today. For my own records, my preferred cuts for outerwear: parka, trench. For my own records, my New Balance shoes size in US_WOMEN: 9. Just confirming again: my preferred patterns for accessories: no stated preference.&quot;
+  }
+}
+</code></pre>
+<h4>Tool round 4</h4>
+<p>Valid=True; input/output tokens=2312/16; output cap hit=False; model latency=0.244s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;no_op&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true
+}
+</code></pre>
+<h3>5. Updated notes for the NEXT session</h3>
+<p><strong>user_info</strong></p>
+<pre><code class="language-text">Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today. For my own records, my preferred cuts for outerwear: parka, trench. For my own records, my New Balance shoes size in US_WOMEN: 9. Just confirming again: my preferred patterns for accessories: no stated preference.
+</code></pre>
+<h3>6. Explicit changes and accumulated size</h3>
+<pre><code class="language-json">{
+  &quot;added&quot;: [],
+  &quot;changed&quot;: [
+    &quot;user_info&quot;
+  ],
+  &quot;deleted&quot;: [],
+  &quot;size_before&quot;: {
+    &quot;count&quot;: 1,
+    &quot;words&quot;: 133,
+    &quot;serialized_tokens&quot;: 309
+  },
+  &quot;size_after&quot;: {
+    &quot;count&quot;: 1,
+    &quot;words&quot;: 167,
+    &quot;serialized_tokens&quot;: 359
+  },
+  &quot;word_budget&quot;: 1600,
+  &quot;entry_budget&quot;: 40
+}
+</code></pre>
+<pre><code class="language-diff">--- BEFORE/user_info
++++ AFTER/user_info
+@@ -1 +1 @@
+-Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today.
++Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today. For my own records, my preferred cuts for outerwear: parka, trench. For my own records, my New Balance shoes size in US_WOMEN: 9. Just confirming again: my preferred patterns for accessories: no stated preference.
+</code></pre>
+<h2>Session 8 — 2026-04-08T09:01:00Z</h2>
+<p>Execution UTC: began 2026-09-18T09:18:29.168811+00:00; both answers complete 2026-09-18T09:18:34.668330+00:00; notes update complete 2026-09-18T09:18:40.562915+00:00.</p>
+<h3>1. Prior notes available BEFORE answering</h3>
+<p><strong>user_info</strong></p>
+<pre><code class="language-text">Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today. For my own records, my preferred cuts for outerwear: parka, trench. For my own records, my New Balance shoes size in US_WOMEN: 9. Just confirming again: my preferred patterns for accessories: no stated preference.
+</code></pre>
+<p>The baseline prior notes were empty. The memory arm received the complete notes above, plus the current evidence below.</p>
+<h3>2. Current user evidence (full statements)</h3>
+<p><strong>e7-0 — 2026-04-08T09:00:00Z</strong></p>
+<pre><code class="language-text">Update my records from today: my preferred materials for pants is now wool. This replaces the previous value from now onward.
+</code></pre>
+<p><strong>e7-1 — 2026-04-08T09:00:01Z</strong></p>
+<pre><code class="language-text">For my own records, my preferred fits for outerwear: regular, relaxed.
+</code></pre>
+<p><strong>e7-2 — 2026-04-08T09:00:02Z</strong></p>
+<pre><code class="language-text">For my own records, the budget for purchase intent future-trip: 180 CAD.
+</code></pre>
+<p><strong>e7-3 — 2026-04-08T09:00:03Z</strong></p>
+<pre><code class="language-text">A pigeon landed on the windowsill while I was waiting.
+</code></pre>
+<p><strong>e7-4 — 2026-04-08T09:00:04Z</strong></p>
+<pre><code class="language-text">A pigeon landed on the windowsill while I was waiting.
+</code></pre>
+<p><strong>e7-5 — 2026-04-08T09:00:05Z</strong></p>
+<pre><code class="language-text">A pigeon landed on the windowsill while I was waiting.
+</code></pre>
+<p><strong>e7-6 — 2026-04-08T09:00:06Z</strong></p>
+<pre><code class="language-text">A shop window advertised striped linen shirts. I am only describing the display.
+</code></pre>
+<p><strong>e7-7 — 2026-04-08T09:00:07Z</strong></p>
+<pre><code class="language-text">The elevator stopped on every floor today.
+</code></pre>
+<h3>3. Questions and decisions BEFORE updating notes</h3>
+<p><strong>q0: Which option matches my income as of now?</strong></p>
+<pre><code class="language-json">{
+  &quot;A&quot;: &quot;8460 CAD per month&quot;,
+  &quot;B&quot;: &quot;8400 CAD per month&quot;,
+  &quot;C&quot;: &quot;8420 CAD per month&quot;,
+  &quot;D&quot;: &quot;8360 CAD per month&quot;
+}
+</code></pre>
+<p>Luna only: <strong>B — 8400 CAD per month</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/deb78cc90cf97b5c81bc22537c5fc9630b8d0e2f2248c33b3a4c07c32e1590bc.json">Exact request and output</a>.</p>
+<p>Luna with prior notes: <strong>B — 8400 CAD per month</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/1325452deb794e518b6d69a2d0758ddf5371dcab8c59ce062be5d0290b695ac0.json">Exact request and output</a>.</p>
+<p>Evaluator-only gold: <strong>B — 8400 CAD per month</strong>; earlier-session evidence required=True; historical=False; evidence IDs=e2-0; evaluated time=2026-04-08T09:01:00Z.</p>
+<p><strong>q1: Which option matches my preferred styles for pants at 2026-03-31T09:00:01Z?</strong></p>
+<pre><code class="language-json">{
+  &quot;A&quot;: &quot;explicitly unknown&quot;,
+  &quot;B&quot;: &quot;no stated preference&quot;,
+  &quot;C&quot;: &quot;minimal, utility&quot;,
+  &quot;D&quot;: &quot;casual, formal&quot;
+}
+</code></pre>
+<p>Luna only: <strong>B — no stated preference</strong>; correct=False; valid=True. <a href="../../answer_cache/user01/deb78cc90cf97b5c81bc22537c5fc9630b8d0e2f2248c33b3a4c07c32e1590bc.json">Exact request and output</a>.</p>
+<p>Luna with prior notes: <strong>C — minimal, utility</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/1325452deb794e518b6d69a2d0758ddf5371dcab8c59ce062be5d0290b695ac0.json">Exact request and output</a>.</p>
+<p>Evaluator-only gold: <strong>C — minimal, utility</strong>; earlier-session evidence required=True; historical=True; evidence IDs=e4-1; evaluated time=2026-03-31T09:00:01Z.</p>
+<h3>4. Qwen tool decisions AFTER answering</h3>
+<p>Finished=True; error=none. Accepted writes persist even when later calls fail or the session does not finalize.</p>
+<h4>Tool round 1</h4>
+<p>Valid=True; input/output tokens=1162/16; output cap hit=False; model latency=0.218s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;read_notes&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;notes&quot;: {
+    &quot;user_info&quot;: &quot;Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today. For my own records, my preferred cuts for outerwear: parka, trench. For my own records, my New Balance shoes size in US_WOMEN: 9. Just confirming again: my preferred patterns for accessories: no stated preference.&quot;
+  }
+}
+</code></pre>
+<h4>Tool round 2</h4>
+<p>Valid=True; input/output tokens=1552/433; output cap hit=False; model latency=5.182s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;put_note&quot;, &quot;arguments&quot;: {&quot;name&quot;: &quot;user_info&quot;, &quot;text&quot;: &quot;Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today. For my own records, my preferred cuts for outerwear: parka, trench. For my own records, my New Balance shoes size in US_WOMEN: 9. Just confirming again: my preferred patterns for accessories: no stated preference. My preferred materials for pants is now wool. This replaces the previous value from now onward. For my own records, my preferred fits for outerwear: regular, relaxed. For my own records, the budget for purchase intent future-trip: 180 CAD.&quot;}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true
+}
+</code></pre>
+<h4>Tool round 3</h4>
+<p>Valid=True; input/output tokens=2002/16; output cap hit=False; model latency=0.232s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;no_op&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true,
+  &quot;finished&quot;: false,
+  &quot;review_required&quot;: &quot;Coverage checkpoint before finishing: compare EVERY current statement against the notes just saved. Preserve every useful user fact and its scope, explicit unknown/empty lists, request status/deadline and timestamps. Keep prior facts/history. Ignore filler, other people and ads. If anything useful is missing or distorted, call put_note to fix it. Otherwise call no_op. This is a review request, not permission to invent facts.&quot;,
+  &quot;saved_notes&quot;: {
+    &quot;user_info&quot;: &quot;Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today. For my own records, my preferred cuts for outerwear: parka, trench. For my own records, my New Balance shoes size in US_WOMEN: 9. Just confirming again: my preferred patterns for accessories: no stated preference. My preferred materials for pants is now wool. This replaces the previous value from now onward. For my own records, my preferred fits for outerwear: regular, relaxed. For my own records, the budget for purchase intent future-trip: 180 CAD.&quot;
+  }
+}
+</code></pre>
+<h4>Tool round 4</h4>
+<p>Valid=True; input/output tokens=2545/16; output cap hit=False; model latency=0.249s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;no_op&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true
+}
+</code></pre>
+<h3>5. Updated notes for the NEXT session</h3>
+<p><strong>user_info</strong></p>
+<pre><code class="language-text">Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today. For my own records, my preferred cuts for outerwear: parka, trench. For my own records, my New Balance shoes size in US_WOMEN: 9. Just confirming again: my preferred patterns for accessories: no stated preference. My preferred materials for pants is now wool. This replaces the previous value from now onward. For my own records, my preferred fits for outerwear: regular, relaxed. For my own records, the budget for purchase intent future-trip: 180 CAD.
+</code></pre>
+<h3>6. Explicit changes and accumulated size</h3>
+<pre><code class="language-json">{
+  &quot;added&quot;: [],
+  &quot;changed&quot;: [
+    &quot;user_info&quot;
+  ],
+  &quot;deleted&quot;: [],
+  &quot;size_before&quot;: {
+    &quot;count&quot;: 1,
+    &quot;words&quot;: 167,
+    &quot;serialized_tokens&quot;: 359
+  },
+  &quot;size_after&quot;: {
+    &quot;count&quot;: 1,
+    &quot;words&quot;: 206,
+    &quot;serialized_tokens&quot;: 413
+  },
+  &quot;word_budget&quot;: 1600,
+  &quot;entry_budget&quot;: 40
+}
+</code></pre>
+<pre><code class="language-diff">--- BEFORE/user_info
++++ AFTER/user_info
+@@ -1 +1 @@
+-Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today. For my own records, my preferred cuts for outerwear: parka, trench. For my own records, my New Balance shoes size in US_WOMEN: 9. Just confirming again: my preferred patterns for accessories: no stated preference.
++Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today. For my own records, my preferred cuts for outerwear: parka, trench. For my own records, my New Balance shoes size in US_WOMEN: 9. Just confirming again: my preferred patterns for accessories: no stated preference. My preferred materials for pants is now wool. This replaces the previous value from now onward. For my own records, my preferred fits for outerwear: regular, relaxed. For my own records, the budget for purchase intent future-trip: 180 CAD.
+</code></pre>
+<h2>Session 9 — 2026-04-09T09:01:00Z</h2>
+<p>Execution UTC: began 2026-09-18T09:18:40.564646+00:00; both answers complete 2026-09-18T09:18:43.339534+00:00; notes update complete 2026-09-18T09:18:49.235714+00:00.</p>
+<h3>1. Prior notes available BEFORE answering</h3>
+<p><strong>user_info</strong></p>
+<pre><code class="language-text">Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today. For my own records, my preferred cuts for outerwear: parka, trench. For my own records, my New Balance shoes size in US_WOMEN: 9. Just confirming again: my preferred patterns for accessories: no stated preference. My preferred materials for pants is now wool. This replaces the previous value from now onward. For my own records, my preferred fits for outerwear: regular, relaxed. For my own records, the budget for purchase intent future-trip: 180 CAD.
+</code></pre>
+<p>The baseline prior notes were empty. The memory arm received the complete notes above, plus the current evidence below.</p>
+<h3>2. Current user evidence (full statements)</h3>
+<p><strong>e8-0 — 2026-04-09T09:00:00Z</strong></p>
+<pre><code class="language-text">Update my records from today: the state of purchase intent urgent-gift (shirts, recipient gift) is now active; deadline 2026-05-09T09:00:00Z. This replaces the previous value from now onward.
+</code></pre>
+<p><strong>e8-1 — 2026-04-09T09:00:01Z</strong></p>
+<pre><code class="language-text">For my own records, my default size for accessories: size one-size in ONE_SIZE.
+</code></pre>
+<p><strong>e8-2 — 2026-04-09T09:00:02Z</strong></p>
+<pre><code class="language-text">For my own records, the languages I speak: language English; proficiency fluent, language Yoruba; proficiency intermediate, language French; proficiency basic.
+</code></pre>
+<p><strong>e8-3 — 2026-04-09T09:00:03Z</strong></p>
+<pre><code class="language-text">There was a long queue at the café this morning.
+</code></pre>
+<p><strong>e8-4 — 2026-04-09T09:00:04Z</strong></p>
+<pre><code class="language-text">Just confirming again: my income: 8400 CAD per month.
+</code></pre>
+<p><strong>e8-5 — 2026-04-09T09:00:05Z</strong></p>
+<pre><code class="language-text">A pigeon landed on the windowsill while I was waiting.
+</code></pre>
+<p><strong>e8-6 — 2026-04-09T09:00:06Z</strong></p>
+<pre><code class="language-text">A colleague said they love neon jackets; that is their taste, not mine.
+</code></pre>
+<p><strong>e8-7 — 2026-04-09T09:00:07Z</strong></p>
+<pre><code class="language-text">A shop window advertised striped linen shirts. I am only describing the display.
+</code></pre>
+<p><strong>e8-8 — 2026-04-09T09:00:08Z</strong></p>
+<pre><code class="language-text">A colleague said they love neon jackets; that is their taste, not mine.
+</code></pre>
+<h3>3. Questions and decisions BEFORE updating notes</h3>
+<p><strong>q0: Which option matches my income as of now?</strong></p>
+<pre><code class="language-json">{
+  &quot;A&quot;: &quot;8420 CAD per month&quot;,
+  &quot;B&quot;: &quot;8460 CAD per month&quot;,
+  &quot;C&quot;: &quot;8360 CAD per month&quot;,
+  &quot;D&quot;: &quot;8400 CAD per month&quot;
+}
+</code></pre>
+<p>Luna only: <strong>D — 8400 CAD per month</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/9b81efd03d312c05830e7999ff751086100cf9eff2bc5c5d5f6da5aa7753380b.json">Exact request and output</a>.</p>
+<p>Luna with prior notes: <strong>D — 8400 CAD per month</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/2f588d6f26e884453d9fd9ff76492bf6daa14337297c1033b5fb1bd7142335b2.json">Exact request and output</a>.</p>
+<p>Evaluator-only gold: <strong>D — 8400 CAD per month</strong>; earlier-session evidence required=False; historical=False; evidence IDs=e2-0; evaluated time=2026-04-09T09:01:00Z.</p>
+<p><strong>q1: Which option matches my preferred colors for outerwear as of now?</strong></p>
+<pre><code class="language-json">{
+  &quot;A&quot;: &quot;no stated preference&quot;,
+  &quot;B&quot;: &quot;black, olive, camel&quot;,
+  &quot;C&quot;: &quot;explicitly unknown&quot;,
+  &quot;D&quot;: &quot;navy, green&quot;
+}
+</code></pre>
+<p>Luna only: <strong>A — no stated preference</strong>; correct=False; valid=True. <a href="../../answer_cache/user01/9b81efd03d312c05830e7999ff751086100cf9eff2bc5c5d5f6da5aa7753380b.json">Exact request and output</a>.</p>
+<p>Luna with prior notes: <strong>B — black, olive, camel</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/2f588d6f26e884453d9fd9ff76492bf6daa14337297c1033b5fb1bd7142335b2.json">Exact request and output</a>.</p>
+<p>Evaluator-only gold: <strong>B — black, olive, camel</strong>; earlier-session evidence required=True; historical=False; evidence IDs=e5-1; evaluated time=2026-04-09T09:01:00Z.</p>
+<h3>4. Qwen tool decisions AFTER answering</h3>
+<p>Finished=True; error=none. Accepted writes persist even when later calls fail or the session does not finalize.</p>
+<h4>Tool round 1</h4>
+<p>Valid=True; input/output tokens=1278/16; output cap hit=False; model latency=0.219s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;read_notes&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;notes&quot;: {
+    &quot;user_info&quot;: &quot;Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today. For my own records, my preferred cuts for outerwear: parka, trench. For my own records, my New Balance shoes size in US_WOMEN: 9. Just confirming again: my preferred patterns for accessories: no stated preference. My preferred materials for pants is now wool. This replaces the previous value from now onward. For my own records, my preferred fits for outerwear: regular, relaxed. For my own records, the budget for purchase intent future-trip: 180 CAD.&quot;
+  }
+}
+</code></pre>
+<h4>Tool round 2</h4>
+<p>Valid=True; input/output tokens=1722/433; output cap hit=False; model latency=5.169s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;put_note&quot;, &quot;arguments&quot;: {&quot;name&quot;: &quot;user_info&quot;, &quot;text&quot;: &quot;Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-05-09T09:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today. For my own records, my preferred cuts for outerwear: parka, trench. For my own records, my New Balance shoes size in US_WOMEN: 9. Just confirming again: my preferred patterns for accessories: no stated preference. My preferred materials for pants is now wool. This replaces the previous value from now onward. For my own records, my preferred fits for outerwear: regular, relaxed. For my own records, the budget for purchase intent future-trip: 180 CAD.&quot;}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true
+}
+</code></pre>
+<h4>Tool round 3</h4>
+<p>Valid=True; input/output tokens=2172/16; output cap hit=False; model latency=0.237s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;no_op&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true,
+  &quot;finished&quot;: false,
+  &quot;review_required&quot;: &quot;Coverage checkpoint before finishing: compare EVERY current statement against the notes just saved. Preserve every useful user fact and its scope, explicit unknown/empty lists, request status/deadline and timestamps. Keep prior facts/history. Ignore filler, other people and ads. If anything useful is missing or distorted, call put_note to fix it. Otherwise call no_op. This is a review request, not permission to invent facts.&quot;,
+  &quot;saved_notes&quot;: {
+    &quot;user_info&quot;: &quot;Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-05-09T09:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today. For my own records, my preferred cuts for outerwear: parka, trench. For my own records, my New Balance shoes size in US_WOMEN: 9. Just confirming again: my preferred patterns for accessories: no stated preference. My preferred materials for pants is now wool. This replaces the previous value from now onward. For my own records, my preferred fits for outerwear: regular, relaxed. For my own records, the budget for purchase intent future-trip: 180 CAD.&quot;
+  }
+}
+</code></pre>
+<h4>Tool round 4</h4>
+<p>Valid=True; input/output tokens=2715/16; output cap hit=False; model latency=0.257s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;no_op&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true
+}
+</code></pre>
+<h3>5. Updated notes for the NEXT session</h3>
+<p><strong>user_info</strong></p>
+<pre><code class="language-text">Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-05-09T09:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today. For my own records, my preferred cuts for outerwear: parka, trench. For my own records, my New Balance shoes size in US_WOMEN: 9. Just confirming again: my preferred patterns for accessories: no stated preference. My preferred materials for pants is now wool. This replaces the previous value from now onward. For my own records, my preferred fits for outerwear: regular, relaxed. For my own records, the budget for purchase intent future-trip: 180 CAD.
+</code></pre>
+<h3>6. Explicit changes and accumulated size</h3>
+<pre><code class="language-json">{
+  &quot;added&quot;: [],
+  &quot;changed&quot;: [
+    &quot;user_info&quot;
+  ],
+  &quot;deleted&quot;: [],
+  &quot;size_before&quot;: {
+    &quot;count&quot;: 1,
+    &quot;words&quot;: 206,
+    &quot;serialized_tokens&quot;: 413
+  },
+  &quot;size_after&quot;: {
+    &quot;count&quot;: 1,
+    &quot;words&quot;: 206,
+    &quot;serialized_tokens&quot;: 413
+  },
+  &quot;word_budget&quot;: 1600,
+  &quot;entry_budget&quot;: 40
+}
+</code></pre>
+<pre><code class="language-diff">--- BEFORE/user_info
++++ AFTER/user_info
+@@ -1 +1 @@
+-Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today. For my own records, my preferred cuts for outerwear: parka, trench. For my own records, my New Balance shoes size in US_WOMEN: 9. Just confirming again: my preferred patterns for accessories: no stated preference. My preferred materials for pants is now wool. This replaces the previous value from now onward. For my own records, my preferred fits for outerwear: regular, relaxed. For my own records, the budget for purchase intent future-trip: 180 CAD.
++Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-05-09T09:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today. For my own records, my preferred cuts for outerwear: parka, trench. For my own records, my New Balance shoes size in US_WOMEN: 9. Just confirming again: my preferred patterns for accessories: no stated preference. My preferred materials for pants is now wool. This replaces the previous value from now onward. For my own records, my preferred fits for outerwear: regular, relaxed. For my own records, the budget for purchase intent future-trip: 180 CAD.
+</code></pre>
+<h2>Session 10 — 2026-04-10T09:01:00Z</h2>
+<p>Execution UTC: began 2026-09-18T09:18:49.237457+00:00; both answers complete 2026-09-18T09:18:53.938642+00:00; notes update complete 2026-09-18T09:18:59.800199+00:00.</p>
+<h3>1. Prior notes available BEFORE answering</h3>
+<p><strong>user_info</strong></p>
+<pre><code class="language-text">Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-05-09T09:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today. For my own records, my preferred cuts for outerwear: parka, trench. For my own records, my New Balance shoes size in US_WOMEN: 9. Just confirming again: my preferred patterns for accessories: no stated preference. My preferred materials for pants is now wool. This replaces the previous value from now onward. For my own records, my preferred fits for outerwear: regular, relaxed. For my own records, the budget for purchase intent future-trip: 180 CAD.
+</code></pre>
+<p>The baseline prior notes were empty. The memory arm received the complete notes above, plus the current evidence below.</p>
+<h3>2. Current user evidence (full statements)</h3>
+<p><strong>e9-0 — 2026-04-10T09:00:00Z</strong></p>
+<pre><code class="language-text">For my own records, my preferred occasions for pants: casual, work.
+</code></pre>
+<p><strong>e9-1 — 2026-04-10T09:00:01Z</strong></p>
+<pre><code class="language-text">The elevator stopped on every floor today.
+</code></pre>
+<p><strong>e9-2 — 2026-04-10T09:00:02Z</strong></p>
+<pre><code class="language-text">My neighbor was talking about learning the violin.
+</code></pre>
+<p><strong>e9-3 — 2026-04-10T09:00:03Z</strong></p>
+<pre><code class="language-text">A shop window advertised striped linen shirts. I am only describing the display.
+</code></pre>
+<p><strong>e9-4 — 2026-04-10T09:00:04Z</strong></p>
+<pre><code class="language-text">An advert listed leather shoes in several sizes; that says nothing about my own size.
+</code></pre>
+<p><strong>e9-5 — 2026-04-10T09:00:05Z</strong></p>
+<pre><code class="language-text">Just confirming again: my preferred patterns for accessories: no stated preference.
+</code></pre>
+<p><strong>e9-6 — 2026-04-10T09:00:06Z</strong></p>
+<pre><code class="language-text">A colleague said they love neon jackets; that is their taste, not mine.
+</code></pre>
+<p><strong>e9-7 — 2026-04-10T09:00:07Z</strong></p>
+<pre><code class="language-text">My neighbor was talking about learning the violin.
+</code></pre>
+<p><strong>e9-8 — 2026-04-10T09:00:08Z</strong></p>
+<pre><code class="language-text">My neighbor was talking about learning the violin.
+</code></pre>
+<p><strong>e9-9 — 2026-04-10T09:00:09Z</strong></p>
+<pre><code class="language-text">There was a long queue at the café this morning.
+</code></pre>
+<h3>3. Questions and decisions BEFORE updating notes</h3>
+<p><strong>q0: Which option matches the state of purchase intent urgent-gift (shirts, recipient gift) as of now?</strong></p>
+<pre><code class="language-json">{
+  &quot;A&quot;: &quot;completed&quot;,
+  &quot;B&quot;: &quot;expired&quot;,
+  &quot;C&quot;: &quot;active&quot;,
+  &quot;D&quot;: &quot;cancelled&quot;
+}
+</code></pre>
+<p>Luna only: <strong>C — active</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/9ebd2c54df380b80425dce35a2cf804bed1e79b87a4e652bb0fc97aaf3399457.json">Exact request and output</a>.</p>
+<p>Luna with prior notes: <strong>C — active</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/eb8381a11c6a19d07d101d8748673ab97c86bfc84ea1cf334c989833fb8ba976.json">Exact request and output</a>.</p>
+<p>Evaluator-only gold: <strong>C — active</strong>; earlier-session evidence required=True; historical=False; evidence IDs=e0-5, e4-0, e8-0; evaluated time=2026-04-10T09:01:00Z.</p>
+<p><strong>q1: Which option matches my stance toward fast fashion (shopping, globally) at 2026-03-31T09:00:02Z?</strong></p>
+<pre><code class="language-json">{
+  &quot;A&quot;: &quot;explicitly unknown&quot;,
+  &quot;B&quot;: &quot;like&quot;,
+  &quot;C&quot;: &quot;retracted&quot;,
+  &quot;D&quot;: &quot;dislike&quot;
+}
+</code></pre>
+<p>Luna only: <strong>A — explicitly unknown</strong>; correct=False; valid=True. <a href="../../answer_cache/user01/9ebd2c54df380b80425dce35a2cf804bed1e79b87a4e652bb0fc97aaf3399457.json">Exact request and output</a>.</p>
+<p>Luna with prior notes: <strong>D — dislike</strong>; correct=True; valid=True. <a href="../../answer_cache/user01/eb8381a11c6a19d07d101d8748673ab97c86bfc84ea1cf334c989833fb8ba976.json">Exact request and output</a>.</p>
+<p>Evaluator-only gold: <strong>D — dislike</strong>; earlier-session evidence required=True; historical=True; evidence IDs=e4-2; evaluated time=2026-03-31T09:00:02Z.</p>
+<h3>4. Qwen tool decisions AFTER answering</h3>
+<p>Finished=True; error=none. Accepted writes persist even when later calls fail or the session does not finalize.</p>
+<h4>Tool round 1</h4>
+<p>Valid=True; input/output tokens=1249/16; output cap hit=False; model latency=0.214s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;read_notes&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;notes&quot;: {
+    &quot;user_info&quot;: &quot;Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-05-09T09:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today. For my own records, my preferred cuts for outerwear: parka, trench. For my own records, my New Balance shoes size in US_WOMEN: 9. Just confirming again: my preferred patterns for accessories: no stated preference. My preferred materials for pants is now wool. This replaces the previous value from now onward. For my own records, my preferred fits for outerwear: regular, relaxed. For my own records, the budget for purchase intent future-trip: 180 CAD.&quot;
+  }
+}
+</code></pre>
+<h4>Tool round 2</h4>
+<p>Valid=True; input/output tokens=1693/433; output cap hit=False; model latency=5.143s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;put_note&quot;, &quot;arguments&quot;: {&quot;name&quot;: &quot;user_info&quot;, &quot;text&quot;: &quot;Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-05-09T09:09:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today. For my own records, my preferred cuts for outerwear: parka, trench. For my own records, my New Balance shoes size in US_WOMEN: 9. Just confirming again: my preferred patterns for accessories: no stated preference. My preferred materials for pants is now wool. This replaces the previous value from now onward. For my own records, my preferred fits for outerwear: regular, relaxed. For my own records, the budget for purchase intent future-trip: 180 CAD.&quot;}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true
+}
+</code></pre>
+<h4>Tool round 3</h4>
+<p>Valid=True; input/output tokens=2143/16; output cap hit=False; model latency=0.237s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;no_op&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true,
+  &quot;finished&quot;: false,
+  &quot;review_required&quot;: &quot;Coverage checkpoint before finishing: compare EVERY current statement against the notes just saved. Preserve every useful user fact and its scope, explicit unknown/empty lists, request status/deadline and timestamps. Keep prior facts/history. Ignore filler, other people and ads. If anything useful is missing or distorted, call put_note to fix it. Otherwise call no_op. This is a review request, not permission to invent facts.&quot;,
+  &quot;saved_notes&quot;: {
+    &quot;user_info&quot;: &quot;Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-05-09T09:09:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today. For my own records, my preferred cuts for outerwear: parka, trench. For my own records, my New Balance shoes size in US_WOMEN: 9. Just confirming again: my preferred patterns for accessories: no stated preference. My preferred materials for pants is now wool. This replaces the previous value from now onward. For my own records, my preferred fits for outerwear: regular, relaxed. For my own records, the budget for purchase intent future-trip: 180 CAD.&quot;
+  }
+}
+</code></pre>
+<h4>Tool round 4</h4>
+<p>Valid=True; input/output tokens=2686/16; output cap hit=False; model latency=0.254s.</p>
+<p>Exact generated decision:</p>
+<pre><code class="language-text">&lt;tool_call&gt;
+{&quot;name&quot;: &quot;no_op&quot;, &quot;arguments&quot;: {}}
+&lt;/tool_call&gt;
+</code></pre>
+<p>Exact tool result / error:</p>
+<pre><code class="language-json">{
+  &quot;ok&quot;: true
+}
+</code></pre>
+<h3>5. Updated notes for the NEXT session</h3>
+<p><strong>user_info</strong></p>
+<pre><code class="language-text">Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-05-09T09:09:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today. For my own records, my preferred cuts for outerwear: parka, trench. For my own records, my New Balance shoes size in US_WOMEN: 9. Just confirming again: my preferred patterns for accessories: no stated preference. My preferred materials for pants is now wool. This replaces the previous value from now onward. For my own records, my preferred fits for outerwear: regular, relaxed. For my own records, the budget for purchase intent future-trip: 180 CAD.
+</code></pre>
+<h3>6. Explicit changes and accumulated size</h3>
+<pre><code class="language-json">{
+  &quot;added&quot;: [],
+  &quot;changed&quot;: [
+    &quot;user_info&quot;
+  ],
+  &quot;deleted&quot;: [],
+  &quot;size_before&quot;: {
+    &quot;count&quot;: 1,
+    &quot;words&quot;: 206,
+    &quot;serialized_tokens&quot;: 413
+  },
+  &quot;size_after&quot;: {
+    &quot;count&quot;: 1,
+    &quot;words&quot;: 206,
+    &quot;serialized_tokens&quot;: 413
+  },
+  &quot;word_budget&quot;: 1600,
+  &quot;entry_budget&quot;: 40
+}
+</code></pre>
+<pre><code class="language-diff">--- BEFORE/user_info
++++ AFTER/user_info
+@@ -1 +1 @@
+-Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-05-09T09:00:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today. For my own records, my preferred cuts for outerwear: parka, trench. For my own records, my New Balance shoes size in US_WOMEN: 9. Just confirming again: my preferred patterns for accessories: no stated preference. My preferred materials for pants is now wool. This replaces the previous value from now onward. For my own records, my preferred fits for outerwear: regular, relaxed. For my own records, the budget for purchase intent future-trip: 180 CAD.
++Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-05-09T09:09:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today. For my own records, my preferred cuts for outerwear: parka, trench. For my own records, my New Balance shoes size in US_WOMEN: 9. Just confirming again: my preferred patterns for accessories: no stated preference. My preferred materials for pants is now wool. This replaces the previous value from now onward. For my own records, my preferred fits for outerwear: regular, relaxed. For my own records, the budget for purchase intent future-trip: 180 CAD.
+</code></pre>
+<h2>Raw reproducibility artifacts</h2>
+<p><a href="episode.json">Episode with private evaluator state</a>, <a href="scores.jsonl">scores</a>, <a href="note_traces.jsonl">complete tool traces</a>, <a href="metrics.json">metrics</a>, <a href="run_config.json">run configuration</a>, <a href="audit.json">audit</a>. The frozen dataset and exact executed sources are retained under ../../frozen/.</p>
+<h2>Comparison limits</h2>
+<p>Earlier Qwen3-1.7B runs used different prompts/interfaces. The original Maya run produced no valid notes and independent Luna draws gave a spurious 8/20 versus10/20 difference on identical inputs. Native-interface repair probes covered only early sessions. This 4B cohort changes model, prompt/interface and cache handling together; it is not an isolated model-size effect or training improvement. No training occurred.</p>

@@ -1,0 +1,764 @@
+{
+  "review_users_requested": 3,
+  "users_complete": 3,
+  "sessions": 30,
+  "questions": 60,
+  "users": [
+    {
+      "user": "user01",
+      "name": "Maya Okafor",
+      "metrics": {
+        "overall": {
+          "questions": 20,
+          "baseline": {
+            "correct": 10,
+            "accuracy": 0.5,
+            "invalid": 0
+          },
+          "memory": {
+            "correct": 19,
+            "accuracy": 0.95,
+            "invalid": 0
+          }
+        },
+        "earlier_session_evidence": {
+          "questions": 15,
+          "baseline": {
+            "correct": 5,
+            "accuracy": 0.3333333333333333,
+            "invalid": 0
+          },
+          "memory": {
+            "correct": 14,
+            "accuracy": 0.9333333333333333,
+            "invalid": 0
+          }
+        },
+        "current_session_evidence": {
+          "questions": 5,
+          "baseline": {
+            "correct": 5,
+            "accuracy": 1.0,
+            "invalid": 0
+          },
+          "memory": {
+            "correct": 5,
+            "accuracy": 1.0,
+            "invalid": 0
+          }
+        },
+        "historical": {
+          "questions": 3,
+          "baseline": {
+            "correct": 0,
+            "accuracy": 0.0,
+            "invalid": 0
+          },
+          "memory": {
+            "correct": 3,
+            "accuracy": 1.0,
+            "invalid": 0
+          }
+        },
+        "per_session": [
+          {
+            "session": 1,
+            "questions": 2,
+            "baseline": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 2,
+            "questions": 2,
+            "baseline": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 3,
+            "questions": 2,
+            "baseline": {
+              "correct": 1,
+              "accuracy": 0.5,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 4,
+            "questions": 2,
+            "baseline": {
+              "correct": 1,
+              "accuracy": 0.5,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 5,
+            "questions": 2,
+            "baseline": {
+              "correct": 1,
+              "accuracy": 0.5,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 6,
+            "questions": 2,
+            "baseline": {
+              "correct": 0,
+              "accuracy": 0.0,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 1,
+              "accuracy": 0.5,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 7,
+            "questions": 2,
+            "baseline": {
+              "correct": 0,
+              "accuracy": 0.0,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 8,
+            "questions": 2,
+            "baseline": {
+              "correct": 1,
+              "accuracy": 0.5,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 9,
+            "questions": 2,
+            "baseline": {
+              "correct": 1,
+              "accuracy": 0.5,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 10,
+            "questions": 2,
+            "baseline": {
+              "correct": 1,
+              "accuracy": 0.5,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            }
+          }
+        ],
+        "paired": {
+          "memory_only": 9,
+          "baseline_only": 0,
+          "both_correct": 10,
+          "both_wrong": 1
+        },
+        "note_rounds": 42,
+        "invalid_note_rounds": 0,
+        "note_sessions_finished": 10,
+        "actual_answer_model": "gpt-5.6-luna",
+        "api_calls_this_process": 19,
+        "cache_hits": 1,
+        "wall_seconds": 100.97539377608337,
+        "peak_gpu_memory_bytes": 8729640448,
+        "completed_at": "2026-09-18T09:18:59.803477+00:00"
+      }
+    },
+    {
+      "user": "user02",
+      "name": "Evan Mercer",
+      "metrics": {
+        "overall": {
+          "questions": 20,
+          "baseline": {
+            "correct": 15,
+            "accuracy": 0.75,
+            "invalid": 0
+          },
+          "memory": {
+            "correct": 20,
+            "accuracy": 1.0,
+            "invalid": 0
+          }
+        },
+        "earlier_session_evidence": {
+          "questions": 15,
+          "baseline": {
+            "correct": 10,
+            "accuracy": 0.6666666666666666,
+            "invalid": 0
+          },
+          "memory": {
+            "correct": 15,
+            "accuracy": 1.0,
+            "invalid": 0
+          }
+        },
+        "current_session_evidence": {
+          "questions": 5,
+          "baseline": {
+            "correct": 5,
+            "accuracy": 1.0,
+            "invalid": 0
+          },
+          "memory": {
+            "correct": 5,
+            "accuracy": 1.0,
+            "invalid": 0
+          }
+        },
+        "historical": {
+          "questions": 6,
+          "baseline": {
+            "correct": 4,
+            "accuracy": 0.6666666666666666,
+            "invalid": 0
+          },
+          "memory": {
+            "correct": 6,
+            "accuracy": 1.0,
+            "invalid": 0
+          }
+        },
+        "per_session": [
+          {
+            "session": 1,
+            "questions": 2,
+            "baseline": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 2,
+            "questions": 2,
+            "baseline": {
+              "correct": 1,
+              "accuracy": 0.5,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 3,
+            "questions": 2,
+            "baseline": {
+              "correct": 1,
+              "accuracy": 0.5,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 4,
+            "questions": 2,
+            "baseline": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 5,
+            "questions": 2,
+            "baseline": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 6,
+            "questions": 2,
+            "baseline": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 7,
+            "questions": 2,
+            "baseline": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 8,
+            "questions": 2,
+            "baseline": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 9,
+            "questions": 2,
+            "baseline": {
+              "correct": 1,
+              "accuracy": 0.5,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 10,
+            "questions": 2,
+            "baseline": {
+              "correct": 0,
+              "accuracy": 0.0,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            }
+          }
+        ],
+        "paired": {
+          "memory_only": 5,
+          "baseline_only": 0,
+          "both_correct": 15,
+          "both_wrong": 0
+        },
+        "note_rounds": 40,
+        "invalid_note_rounds": 0,
+        "note_sessions_finished": 10,
+        "actual_answer_model": "gpt-5.6-luna",
+        "api_calls_this_process": 19,
+        "cache_hits": 1,
+        "wall_seconds": 77.1832000229042,
+        "peak_gpu_memory_bytes": 8586173440,
+        "completed_at": "2026-09-18T09:20:16.990985+00:00"
+      }
+    },
+    {
+      "user": "user03",
+      "name": "Aiko Nakamura",
+      "metrics": {
+        "overall": {
+          "questions": 20,
+          "baseline": {
+            "correct": 9,
+            "accuracy": 0.45,
+            "invalid": 0
+          },
+          "memory": {
+            "correct": 16,
+            "accuracy": 0.8,
+            "invalid": 0
+          }
+        },
+        "earlier_session_evidence": {
+          "questions": 16,
+          "baseline": {
+            "correct": 5,
+            "accuracy": 0.3125,
+            "invalid": 0
+          },
+          "memory": {
+            "correct": 12,
+            "accuracy": 0.75,
+            "invalid": 0
+          }
+        },
+        "current_session_evidence": {
+          "questions": 4,
+          "baseline": {
+            "correct": 4,
+            "accuracy": 1.0,
+            "invalid": 0
+          },
+          "memory": {
+            "correct": 4,
+            "accuracy": 1.0,
+            "invalid": 0
+          }
+        },
+        "historical": {
+          "questions": 2,
+          "baseline": {
+            "correct": 1,
+            "accuracy": 0.5,
+            "invalid": 0
+          },
+          "memory": {
+            "correct": 1,
+            "accuracy": 0.5,
+            "invalid": 0
+          }
+        },
+        "per_session": [
+          {
+            "session": 1,
+            "questions": 2,
+            "baseline": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 2,
+            "questions": 2,
+            "baseline": {
+              "correct": 1,
+              "accuracy": 0.5,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 3,
+            "questions": 2,
+            "baseline": {
+              "correct": 1,
+              "accuracy": 0.5,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 1,
+              "accuracy": 0.5,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 4,
+            "questions": 2,
+            "baseline": {
+              "correct": 0,
+              "accuracy": 0.0,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 1,
+              "accuracy": 0.5,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 5,
+            "questions": 2,
+            "baseline": {
+              "correct": 1,
+              "accuracy": 0.5,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 1,
+              "accuracy": 0.5,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 6,
+            "questions": 2,
+            "baseline": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 7,
+            "questions": 2,
+            "baseline": {
+              "correct": 1,
+              "accuracy": 0.5,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 8,
+            "questions": 2,
+            "baseline": {
+              "correct": 0,
+              "accuracy": 0.0,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 9,
+            "questions": 2,
+            "baseline": {
+              "correct": 0,
+              "accuracy": 0.0,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 1,
+              "accuracy": 0.5,
+              "invalid": 0
+            }
+          },
+          {
+            "session": 10,
+            "questions": 2,
+            "baseline": {
+              "correct": 1,
+              "accuracy": 0.5,
+              "invalid": 0
+            },
+            "memory": {
+              "correct": 2,
+              "accuracy": 1.0,
+              "invalid": 0
+            }
+          }
+        ],
+        "paired": {
+          "memory_only": 8,
+          "baseline_only": 1,
+          "both_correct": 8,
+          "both_wrong": 3
+        },
+        "note_rounds": 42,
+        "invalid_note_rounds": 0,
+        "note_sessions_finished": 10,
+        "actual_answer_model": "gpt-5.6-luna",
+        "api_calls_this_process": 19,
+        "cache_hits": 1,
+        "wall_seconds": 94.92625497491099,
+        "peak_gpu_memory_bytes": 8659269632,
+        "completed_at": "2026-09-18T09:21:51.921480+00:00"
+      }
+    }
+  ],
+  "note_quality": {
+    "total": 65,
+    "supported": 46,
+    "ambiguous": 2,
+    "incorrect": 2,
+    "missing": 15,
+    "users_reviewed": 3,
+    "unit": "Unique revealed current-state field in final notes; manual single-reviewer audit, not question accuracy or complete history coverage."
+  },
+  "stop_state": {
+    "requested_users": 3,
+    "reason": "User requested stop after first three; no further evaluation authorized",
+    "observed_at_stop": [
+      {
+        "user": "user01",
+        "sessions": 10,
+        "questions_scored": 20,
+        "complete": true
+      },
+      {
+        "user": "user02",
+        "sessions": 10,
+        "questions_scored": 20,
+        "complete": true
+      },
+      {
+        "user": "user03",
+        "sessions": 10,
+        "questions_scored": 20,
+        "complete": true
+      },
+      {
+        "user": "user04",
+        "sessions": 10,
+        "questions_scored": 20,
+        "complete": true
+      },
+      {
+        "user": "user05",
+        "sessions": 8,
+        "questions_scored": 16,
+        "complete": false
+      }
+    ],
+    "time": 1789723461.7613437,
+    "verified_no_remaining_processes": true
+  },
+  "overall": {
+    "questions": 60,
+    "baseline": {
+      "correct": 34,
+      "accuracy": 0.5666666666666667,
+      "invalid": 0
+    },
+    "memory": {
+      "correct": 55,
+      "accuracy": 0.9166666666666666,
+      "invalid": 0
+    }
+  },
+  "earlier_session_evidence": {
+    "questions": 46,
+    "baseline": {
+      "correct": 20,
+      "accuracy": 0.43478260869565216,
+      "invalid": 0
+    },
+    "memory": {
+      "correct": 41,
+      "accuracy": 0.8913043478260869,
+      "invalid": 0
+    }
+  },
+  "current_session_evidence": {
+    "questions": 14,
+    "baseline": {
+      "correct": 14,
+      "accuracy": 1.0,
+      "invalid": 0
+    },
+    "memory": {
+      "correct": 14,
+      "accuracy": 1.0,
+      "invalid": 0
+    }
+  },
+  "historical": {
+    "questions": 11,
+    "baseline": {
+      "correct": 5,
+      "accuracy": 0.45454545454545453,
+      "invalid": 0
+    },
+    "memory": {
+      "correct": 10,
+      "accuracy": 0.9090909090909091,
+      "invalid": 0
+    }
+  },
+  "paired": {
+    "memory_only": 22,
+    "baseline_only": 1,
+    "both_correct": 33,
+    "both_wrong": 4
+  },
+  "note_rounds": 124,
+  "invalid_note_rounds": 0,
+  "note_sessions_finished": 30,
+  "api_calls_this_process": 57,
+  "cache_hits": 3,
+  "wall_seconds": 273.08484877389856
+}
