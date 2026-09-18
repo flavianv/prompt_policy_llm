@@ -1,0 +1,5 @@
+{"profile_ready": true, "name": "Nora Lindholm", "model": "gpt-5.6-luna", "attempts": 2}
+{"generated": {"user": "user11", "name": "Nora Lindholm", "sessions": 10, "seed": 20260929, "profile_reused": false, "split": "test"}}
+{"profile_ready": true, "name": "Omar Haddad", "model": "gpt-5.6-luna", "attempts": 2}
+{"generated": {"user": "user12", "name": "Omar Haddad", "sessions": 10, "seed": 20260930, "profile_reused": false, "split": "test"}}
+{"complete": true, "users": 2, "sessions": 20}

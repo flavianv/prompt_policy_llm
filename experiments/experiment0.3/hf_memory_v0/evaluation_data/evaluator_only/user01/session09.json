@@ -1,0 +1,582 @@
+{
+  "version": "partial-profile-notes-v1",
+  "as_of": "2026-04-09T09:01:00Z",
+  "profile": {
+    "category_profiles": [
+      {
+        "category": "shoes",
+        "sizes": [
+          {
+            "brand": "New Balance",
+            "sizing_system": "US_WOMEN",
+            "size": "9"
+          }
+        ]
+      },
+      {
+        "category": "accessories",
+        "preferences": {
+          "brands": [
+            "Aster"
+          ],
+          "patterns": []
+        },
+        "default_size": {
+          "sizing_system": "ONE_SIZE",
+          "size": "one-size"
+        }
+      },
+      {
+        "category": "hats",
+        "default_size": null
+      },
+      {
+        "category": "outerwear",
+        "preferences": {
+          "colors": [
+            "black",
+            "olive",
+            "camel"
+          ],
+          "cuts": [
+            "parka",
+            "trench"
+          ],
+          "fits": [
+            "regular",
+            "relaxed"
+          ],
+          "styles": [
+            "functional",
+            "modern"
+          ]
+        }
+      },
+      {
+        "category": "pants",
+        "scoped_overrides": [
+          {
+            "context": {
+              "subtype": null,
+              "season": "summer",
+              "occasion": null
+            },
+            "preferences": {
+              "materials": [
+                "wool"
+              ]
+            }
+          }
+        ],
+        "preferences": {
+          "materials": [
+            "wool"
+          ],
+          "patterns": [
+            "solid"
+          ],
+          "styles": [
+            "minimal",
+            "utility"
+          ]
+        }
+      },
+      {
+        "category": "shirts",
+        "preferences": {
+          "cuts": [
+            "button-down",
+            "camp collar"
+          ]
+        }
+      }
+    ],
+    "general_preferences": [
+      {
+        "topic": "shopping",
+        "item": "fast fashion",
+        "scope": "global",
+        "category": null,
+        "stance": "dislike"
+      }
+    ],
+    "purchase_intents": [
+      {
+        "id": "urgent-gift",
+        "category": "shirts",
+        "recipient": "gift",
+        "status": "active",
+        "deadline": "2026-05-09T09:00:00Z"
+      },
+      {
+        "id": "future-trip",
+        "category": "shoes",
+        "recipient": "self",
+        "status": "active",
+        "deadline": "2026-05-01T18:00:00Z",
+        "budget": {
+          "amount": 180,
+          "currency": "CAD"
+        }
+      }
+    ],
+    "professional": {
+      "income": {
+        "amount": 8400,
+        "currency": "CAD",
+        "period": "month"
+      },
+      "occupation": "User experience researcher"
+    },
+    "languages": [
+      {
+        "language": "English",
+        "proficiency": "fluent"
+      },
+      {
+        "language": "Yoruba",
+        "proficiency": "intermediate"
+      },
+      {
+        "language": "French",
+        "proficiency": "basic"
+      }
+    ],
+    "personal": {
+      "name": "Maya Okafor"
+    }
+  },
+  "history": [
+    {
+      "address": {
+        "section": "clothing",
+        "category": "shoes",
+        "field": "brand_size",
+        "context": {},
+        "brand": "New Balance",
+        "sizing_system": "US_WOMEN"
+      },
+      "events": [
+        {
+          "at": "2026-04-07T09:00:01Z",
+          "until": null,
+          "value": "9"
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "preference",
+        "field": "stance",
+        "topic": "shopping",
+        "item": "fast fashion",
+        "scope": "global",
+        "category": null
+      },
+      "events": [
+        {
+          "at": "2026-03-31T09:00:02Z",
+          "until": null,
+          "value": "dislike"
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "accessories",
+        "field": "brands",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:06Z",
+          "until": null,
+          "value": [
+            "Baggu",
+            "Cuyana"
+          ]
+        },
+        {
+          "at": "2026-04-05T09:00:00Z",
+          "until": null,
+          "value": [
+            "Aster"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "accessories",
+        "field": "default_size",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-04-09T09:00:01Z",
+          "until": null,
+          "value": {
+            "sizing_system": "ONE_SIZE",
+            "size": "one-size"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "accessories",
+        "field": "patterns",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:03Z",
+          "until": null,
+          "value": []
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "hats",
+        "field": "default_size",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:02Z",
+          "until": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "outerwear",
+        "field": "colors",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-04-05T09:00:01Z",
+          "until": null,
+          "value": [
+            "black",
+            "olive",
+            "camel"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "outerwear",
+        "field": "cuts",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-04-07T09:00:00Z",
+          "until": null,
+          "value": [
+            "parka",
+            "trench"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "outerwear",
+        "field": "fits",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-04-08T09:00:01Z",
+          "until": null,
+          "value": [
+            "regular",
+            "relaxed"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "outerwear",
+        "field": "styles",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-06T09:00:01Z",
+          "until": null,
+          "value": [
+            "functional",
+            "modern"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "pants",
+        "field": "materials",
+        "context": {
+          "season": "summer"
+        }
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:01Z",
+          "until": null,
+          "value": [
+            "linen",
+            "cotton"
+          ]
+        },
+        {
+          "at": "2026-03-06T09:00:00Z",
+          "until": "2026-03-09T09:00:00Z",
+          "value": [
+            "cotton"
+          ]
+        },
+        {
+          "at": "2026-03-21T09:00:00Z",
+          "until": null,
+          "value": [
+            "wool"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "pants",
+        "field": "materials",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-11T09:00:01Z",
+          "until": null,
+          "value": [
+            "cotton"
+          ]
+        },
+        {
+          "at": "2026-04-08T09:00:00Z",
+          "until": null,
+          "value": [
+            "wool"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "pants",
+        "field": "patterns",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-04-05T09:00:02Z",
+          "until": null,
+          "value": [
+            "solid"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "pants",
+        "field": "styles",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-31T09:00:01Z",
+          "until": null,
+          "value": [
+            "minimal",
+            "utility"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "shirts",
+        "field": "cuts",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-21T09:00:01Z",
+          "until": null,
+          "value": [
+            "button-down",
+            "camp collar"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "intent",
+        "field": "state",
+        "intent_id": "urgent-gift",
+        "category": "shirts",
+        "recipient": "gift"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:05Z",
+          "until": null,
+          "value": {
+            "status": "active",
+            "deadline": "2026-03-02T18:00:00Z"
+          }
+        },
+        {
+          "at": "2026-03-31T09:00:00Z",
+          "until": null,
+          "value": {
+            "status": "completed",
+            "deadline": "2026-03-02T18:00:00Z"
+          }
+        },
+        {
+          "at": "2026-04-09T09:00:00Z",
+          "until": null,
+          "value": {
+            "status": "active",
+            "deadline": "2026-05-09T09:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "intent",
+        "field": "state",
+        "intent_id": "future-trip",
+        "category": "shoes",
+        "recipient": "self"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:04Z",
+          "until": null,
+          "value": {
+            "status": "active",
+            "deadline": "2026-05-01T18:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "intent",
+        "field": "budget",
+        "intent_id": "future-trip"
+      },
+      "events": [
+        {
+          "at": "2026-04-08T09:00:02Z",
+          "until": null,
+          "value": {
+            "amount": 180,
+            "currency": "CAD"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "general",
+        "field": "income"
+      },
+      "events": [
+        {
+          "at": "2026-03-11T09:00:00Z",
+          "until": null,
+          "value": {
+            "amount": 8400,
+            "currency": "CAD",
+            "period": "month"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "general",
+        "field": "languages"
+      },
+      "events": [
+        {
+          "at": "2026-04-09T09:00:02Z",
+          "until": null,
+          "value": [
+            {
+              "language": "English",
+              "proficiency": "fluent"
+            },
+            {
+              "language": "Yoruba",
+              "proficiency": "intermediate"
+            },
+            {
+              "language": "French",
+              "proficiency": "basic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "personal",
+        "field": "name"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:00Z",
+          "until": null,
+          "value": "Maya Okafor"
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "general",
+        "field": "occupation"
+      },
+      "events": [
+        {
+          "at": "2026-03-06T09:00:02Z",
+          "until": null,
+          "value": "User experience researcher"
+        }
+      ]
+    }
+  ]
+}

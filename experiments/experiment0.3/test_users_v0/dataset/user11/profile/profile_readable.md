@@ -1,0 +1,209 @@
+# Actual Luna-generated initial profile
+
+Model: gpt-5.6-luna
+
+- schema_version: user-profile-1.1
+- profile_id: user11
+- reference_date: 2026-03-01
+- personal / name: Nora Lindholm
+- personal / gender: female
+- personal / birth_date: 1991-08-14
+- personal / age: 34
+- personal / race: White
+- personal / nationality: Swedish
+- personal / marital_status: partnered
+- residence / city: Gothenburg
+- residence / region: Västra Götaland
+- residence / country: Sweden
+- residence / timezone: Europe/Stockholm
+- languages [1] / language: Swedish
+- languages [1] / proficiency: native
+- languages [2] / language: English
+- languages [2] / proficiency: fluent
+- languages [3] / language: French
+- languages [3] / proficiency: intermediate
+- professional / situation: employed
+- professional / occupation: urban planner
+- professional / industry: municipal government
+- professional / education / level: master
+- professional / education / field: urban planning
+- professional / income / amount: 48000
+- professional / income / currency: SEK
+- professional / income / period: year
+- physical / height / value: 168
+- physical / height / unit: cm
+- physical / weight / value: 63
+- physical / weight / unit: kg
+- physical / build: medium
+- physical / hair_color: dark blonde
+- physical / eye_color: blue
+- interests / hobbies: sea kayaking, bread baking, photography
+- interests / other_interests: architecture, independent cinema, Nordic design
+- general_preferences [1] / topic: coffee
+- general_preferences [1] / item: light roast coffee
+- general_preferences [1] / stance: like
+- general_preferences [1] / scope: global
+- general_preferences [1] / category: explicitly unknown
+- general_preferences [1] / shopping_effect: background_only
+- general_preferences [2] / topic: travel
+- general_preferences [2] / item: rail travel
+- general_preferences [2] / stance: like
+- general_preferences [2] / scope: global
+- general_preferences [2] / category: explicitly unknown
+- general_preferences [2] / shopping_effect: background_only
+- general_preferences [3] / topic: clothing
+- general_preferences [3] / item: visible brand logos
+- general_preferences [3] / stance: dislike
+- general_preferences [3] / scope: global
+- general_preferences [3] / category: explicitly unknown
+- general_preferences [3] / shopping_effect: hard_exclusion
+- category_profiles [1] / category: shirts
+- category_profiles [1] / sizes [1] / brand: Arket
+- category_profiles [1] / sizes [1] / sizing_system: ALPHA
+- category_profiles [1] / sizes [1] / size: S
+- category_profiles [1] / sizes [2] / brand: Uniqlo
+- category_profiles [1] / sizes [2] / sizing_system: ALPHA
+- category_profiles [1] / sizes [2] / size: S
+- category_profiles [1] / hard [1] / field: material
+- category_profiles [1] / hard [1] / op: not_in
+- category_profiles [1] / hard [1] / value: polyester
+- category_profiles [1] / default_size / sizing_system: ALPHA
+- category_profiles [1] / default_size / size: S
+- category_profiles [1] / preferences / brands: Arket, Uniqlo
+- category_profiles [1] / preferences / materials: cotton, linen
+- category_profiles [1] / preferences / colors: white, navy, pale blue
+- category_profiles [1] / preferences / patterns: stripes
+- category_profiles [1] / preferences / cuts: straight
+- category_profiles [1] / preferences / fits: regular
+- category_profiles [1] / preferences / occasions: work, casual
+- category_profiles [1] / preferences / styles: minimalist
+- category_profiles [1] / scoped_overrides: explicitly no stated preference
+- category_profiles [2] / category: shoes
+- category_profiles [2] / sizes [1] / brand: Ecco
+- category_profiles [2] / sizes [1] / sizing_system: EU
+- category_profiles [2] / sizes [1] / size: 39
+- category_profiles [2] / hard [1] / field: width
+- category_profiles [2] / hard [1] / op: in
+- category_profiles [2] / hard [1] / value: regular, wide
+- category_profiles [2] / default_size / sizing_system: EU
+- category_profiles [2] / default_size / size: 39
+- category_profiles [2] / preferences / brands: Ecco, Veja
+- category_profiles [2] / preferences / materials: leather, canvas
+- category_profiles [2] / preferences / colors: white, black, tan
+- category_profiles [2] / preferences / patterns: explicitly no stated preference
+- category_profiles [2] / preferences / cuts: explicitly unknown
+- category_profiles [2] / preferences / fits: comfortable
+- category_profiles [2] / preferences / occasions: walking, casual, travel
+- category_profiles [2] / preferences / styles: minimalist, practical
+- category_profiles [2] / preferences / widths: regular, wide
+- category_profiles [2] / scoped_overrides: explicitly no stated preference
+- category_profiles [3] / category: pants
+- category_profiles [3] / sizes [1] / brand: Arket
+- category_profiles [3] / sizes [1] / sizing_system: EU
+- category_profiles [3] / sizes [1] / size: 36
+- category_profiles [3] / hard [1] / field: material
+- category_profiles [3] / hard [1] / op: in
+- category_profiles [3] / hard [1] / value: cotton, linen
+- category_profiles [3] / default_size / sizing_system: EU
+- category_profiles [3] / default_size / size: 36
+- category_profiles [3] / preferences / brands: Arket, Weekday
+- category_profiles [3] / preferences / materials: cotton
+- category_profiles [3] / preferences / colors: navy, black, olive
+- category_profiles [3] / preferences / patterns: explicitly no stated preference
+- category_profiles [3] / preferences / cuts: straight, wide-leg
+- category_profiles [3] / preferences / fits: regular, relaxed
+- category_profiles [3] / preferences / occasions: work, casual
+- category_profiles [3] / preferences / styles: minimalist, utilitarian
+- category_profiles [3] / scoped_overrides [1] / context / subtype: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / context / season: summer
+- category_profiles [3] / scoped_overrides [1] / context / occasion: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / brands: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / materials: linen, cotton
+- category_profiles [3] / scoped_overrides [1] / preferences / colors: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / patterns: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / cuts: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / fits: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / occasions: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / styles: explicitly unknown
+- category_profiles [4] / category: outerwear
+- category_profiles [4] / sizes [1] / brand: Rains
+- category_profiles [4] / sizes [1] / sizing_system: ALPHA
+- category_profiles [4] / sizes [1] / size: S
+- category_profiles [4] / hard: explicitly no stated preference
+- category_profiles [4] / default_size / sizing_system: ALPHA
+- category_profiles [4] / default_size / size: S
+- category_profiles [4] / preferences / brands: Rains, Patagonia
+- category_profiles [4] / preferences / materials: recycled polyester, cotton
+- category_profiles [4] / preferences / colors: navy, olive, black
+- category_profiles [4] / preferences / patterns: explicitly no stated preference
+- category_profiles [4] / preferences / cuts: straight
+- category_profiles [4] / preferences / fits: regular, relaxed
+- category_profiles [4] / preferences / occasions: rainy weather, travel, casual
+- category_profiles [4] / preferences / styles: minimalist, functional
+- category_profiles [4] / scoped_overrides: explicitly no stated preference
+- category_profiles [5] / category: hats
+- category_profiles [5] / sizes: explicitly no stated preference
+- category_profiles [5] / hard: explicitly no stated preference
+- category_profiles [5] / default_size: explicitly unknown
+- category_profiles [5] / preferences / brands: Fjällräven
+- category_profiles [5] / preferences / materials: wool, cotton
+- category_profiles [5] / preferences / colors: navy, olive
+- category_profiles [5] / preferences / patterns: explicitly no stated preference
+- category_profiles [5] / preferences / cuts: beanie, baseball cap
+- category_profiles [5] / preferences / fits: regular
+- category_profiles [5] / preferences / occasions: outdoor, casual
+- category_profiles [5] / preferences / styles: practical
+- category_profiles [5] / scoped_overrides: explicitly no stated preference
+- category_profiles [6] / category: accessories
+- category_profiles [6] / sizes [1] / brand: Unknown
+- category_profiles [6] / sizes [1] / sizing_system: ONE_SIZE
+- category_profiles [6] / sizes [1] / size: one size
+- category_profiles [6] / hard: explicitly no stated preference
+- category_profiles [6] / default_size / sizing_system: ONE_SIZE
+- category_profiles [6] / default_size / size: one size
+- category_profiles [6] / preferences / brands: Sandqvist
+- category_profiles [6] / preferences / materials: leather, cotton
+- category_profiles [6] / preferences / colors: black, tan, navy
+- category_profiles [6] / preferences / patterns: explicitly no stated preference
+- category_profiles [6] / preferences / cuts: explicitly unknown
+- category_profiles [6] / preferences / fits: explicitly unknown
+- category_profiles [6] / preferences / occasions: work, travel, casual
+- category_profiles [6] / preferences / styles: minimalist, functional
+- category_profiles [6] / scoped_overrides: explicitly no stated preference
+- purchase_intents [1] / id: future-trip
+- purchase_intents [1] / category: shoes
+- purchase_intents [1] / recipient: self
+- purchase_intents [1] / created_at: 2026-03-01T09:00:00Z
+- purchase_intents [1] / deadline: 2026-05-01T18:00:00Z
+- purchase_intents [1] / status: active
+- purchase_intents [1] / budget / amount: 1800
+- purchase_intents [1] / budget / currency: SEK
+- purchase_intents [1] / sizes [1] / brand: Ecco
+- purchase_intents [1] / sizes [1] / sizing_system: EU
+- purchase_intents [1] / sizes [1] / size: 39
+- purchase_intents [1] / hard [1] / field: width
+- purchase_intents [1] / hard [1] / op: in
+- purchase_intents [1] / hard [1] / value: regular, wide
+- purchase_intents [1] / soft [1] / field: occasion
+- purchase_intents [1] / soft [1] / op: in
+- purchase_intents [1] / soft [1] / value: walking, travel
+- purchase_intents [1] / use_general_preferences: True
+- purchase_intents [1] / excluded_preference_items: visible brand logos
+- purchase_intents [2] / id: urgent-gift
+- purchase_intents [2] / category: shirts
+- purchase_intents [2] / recipient: gift
+- purchase_intents [2] / created_at: 2026-03-01T09:00:00Z
+- purchase_intents [2] / deadline: 2026-03-02T18:00:00Z
+- purchase_intents [2] / status: active
+- purchase_intents [2] / budget / amount: 700
+- purchase_intents [2] / budget / currency: SEK
+- purchase_intents [2] / sizes: explicitly unknown
+- purchase_intents [2] / hard [1] / field: color
+- purchase_intents [2] / hard [1] / op: in
+- purchase_intents [2] / hard [1] / value: blue, white
+- purchase_intents [2] / soft [1] / field: style
+- purchase_intents [2] / soft [1] / op: eq
+- purchase_intents [2] / soft [1] / value: minimalist
+- purchase_intents [2] / use_general_preferences: False
+- purchase_intents [2] / excluded_preference_items: explicitly no stated preference
+- coherence_notes: Nora works in municipal urban planning and lives in Gothenburg., The future-trip shoe intent is for Nora; the urgent shirt intent is a gift and therefore does not inherit Nora's clothing sizes.

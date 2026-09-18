@@ -1,0 +1,53 @@
+{
+  "version": "v0",
+  "users": [
+    {
+      "user": "user11",
+      "name": "Nora Lindholm",
+      "sessions": 10,
+      "seed": 20260929,
+      "profile_reused": false,
+      "split": "test"
+    },
+    {
+      "user": "user12",
+      "name": "Omar Haddad",
+      "sessions": 10,
+      "seed": 20260930,
+      "profile_reused": false,
+      "split": "test"
+    }
+  ],
+  "total_sessions": 20,
+  "failures": [],
+  "complete": true,
+  "elapsed_seconds": 30.144454361870885,
+  "generation": "fresh Luna profiles; unchanged seeded session templates; no model training",
+  "split_limitations": "Unseen users and session seeds, but shared schema, templates and fixed temporal probes with training.",
+  "files_sha256": {
+    "user11/session_config.json": "fbea55195fe9f4ca736157917a3548e2a13d8acb70268e0c36464c66e2edd6f7",
+    "user12/session_config.json": "c77f30fdaf84f46206b1c0d7e97e3c9162aa01430056449412ecba34e53b97a2",
+    "user11/profile/profile_attempt_1.json": "30b88d20b30b491e474cb1f8933bd97287a396b92fcea1ef6fa9501ff592fc94",
+    "user11/profile/profile_readable.md": "a686d45ce74551957f26e0faca41955c59a9e042ea50bc1f1c9851e23848f521",
+    "user11/profile/profile.json": "526734aa95368abfb9489a1ba56b94a3edfdedacf5bf1047c4cf15cc7be38fa7",
+    "user11/profile/profile_validation.json": "bd1bc8f2f359a95b4e43ec7dbc2c23f5eb5c2a12e35b22204ed085b60e717b63",
+    "user11/profile/profile_attempt_0.json": "01c5e530548f3bea6a28107a12882fd735bf54ec30d55a6f85113bc283bbad04",
+    "user11/profile/generation_parameters.json": "215f17a15b9b2e4c784b4489210d4ccd842357ce48ebf955b796fcaf6dc11c5c",
+    "user11/profile/profile_prompt.txt": "83b996a814db13b05dc85debfc7caf64beb9fe939d128c0d676c917caa244bb1",
+    "user11/profile/fixed_constraints.json": "a1769be0c9f7f286cf9f6c75d36e9dea9d3715c846386ea489e25c2ef15dbfef",
+    "user11/sessions/episode.json": "2e3f15f9c0467d153c72b334b0991702ca5a34833f7deea392deb2fa3939bb84",
+    "user11/sessions/sessions_and_questions.md": "88f722f770c667e33634c3ea644adaff138e0e50634094fe6d77c3d350cc1c22",
+    "user11/sessions/answer_key.md": "edccfeda76cc2d4f3ea46ab5060550c3a99331da2976ba523477cb449de24649",
+    "user12/profile/profile_attempt_1.json": "1b55c0fbead4c8b07d2558bb397a1759ef5c060578e927bf45a457db6fa15735",
+    "user12/profile/profile_readable.md": "adb9cd61453fcc5a74bc8268f84cda811e495437bba95f0a61531a54b016fb81",
+    "user12/profile/profile.json": "137d2f8450e241f5f6e38e303f1e798911430eefa188e0350816571a6ec1034a",
+    "user12/profile/profile_validation.json": "bd1bc8f2f359a95b4e43ec7dbc2c23f5eb5c2a12e35b22204ed085b60e717b63",
+    "user12/profile/profile_attempt_0.json": "94757f94df1b9b90cead108887b81c104d25cdecbf5d9ee0046db058bd738b8f",
+    "user12/profile/generation_parameters.json": "215f17a15b9b2e4c784b4489210d4ccd842357ce48ebf955b796fcaf6dc11c5c",
+    "user12/profile/profile_prompt.txt": "0f6939878cc5540a192d8dac25623bc0d80d1f90ba179bcbad70ba103ad1b3bd",
+    "user12/profile/fixed_constraints.json": "63ddb577800e354bcb64bc9ef40284be31bb9d6bbb8309e09abaa92dfcebf903",
+    "user12/sessions/episode.json": "7092c403824a97ec1072c67a6657bb01fcd8eb0084565cb42305ce4a28b7b32d",
+    "user12/sessions/sessions_and_questions.md": "625290b1969f08608af3cf98ad0a798fd96bf31baa0abebdd532e94d6ec01611",
+    "user12/sessions/answer_key.md": "c65f4eeb0d848e1d216b59e3d4af76147ddbc7b91c710463d682764b098770be"
+  }
+}

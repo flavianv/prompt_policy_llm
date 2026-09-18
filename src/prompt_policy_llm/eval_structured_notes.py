@@ -43,10 +43,10 @@ def append_log(path,record):
 def evaluate(manager,data,users,output,phase,config):
     import torch
     output=Path(output);output.mkdir(parents=True,exist_ok=False);rows=[];start=time.perf_counter()
-    (output/'config.json').write_text(json.dumps({'phase':phase,'config':config,'comparison':'in-sample; all100sessions used for training','carry':'fixed candidate0; invalid retains previous prediction','pass_at_4':'any candidate has exact current revealed state, schema-valid, zero unsupported','decoding':{'do_sample':True,'temperature':config.get('temperature',1.0),'top_p':1.,'top_k':0,'group_size':4}},indent=2))
+    (output/'config.json').write_text(json.dumps({'phase':phase,'config':config,'comparison':config.get('evaluation_scope','in-sample; all100sessions used for training'),'carry':'fixed candidate0; invalid retains previous prediction','pass_at_4':'any candidate has exact current revealed state, schema-valid, zero unsupported','decoding':{'do_sample':True,'temperature':config.get('temperature',1.0),'top_p':1.,'top_k':0,'group_size':4}},indent=2))
     for user in users:
         uid=user['user'];d=output/uid;d.mkdir();prior=empty_notes();userrows=[]
-        (d/'SESSION_LOG.md').write_text(f'# {phase}: {uid}\n\nFour sampled traces per context; current-field raw counts. All comparisons are in-sample.\n')
+        (d/'SESSION_LOG.md').write_text(f"# {phase}: {uid}\n\nFour sampled traces per context; current-field raw counts. Comparison: {config.get('evaluation_scope', 'in-sample')}.\n")
         public=json.loads((data/'public'/f'{uid}.json').read_text())['sessions']
         for row in public:
             session=row['session'];torch.manual_seed(config['evaluation_seed']+int(uid[4:])*100+session)
@@ -60,6 +60,6 @@ def evaluate(manager,data,users,output,phase,config):
             with (output/'scores.jsonl').open('a') as f:f.write(json.dumps({'user':uid,'session':session,**record['metrics']})+'\n')
             print(json.dumps({'phase':phase,'user':uid,'session_done':session+1,'sessions_complete':len(rows),**record['metrics']}),flush=True)
         (d/'metrics.json').write_text(json.dumps(summarize(userrows),indent=2))
-    metrics={**summarize(rows),'wall_seconds':time.perf_counter()-start,'api_calls':0,'phase':phase,'in_sample':True}
+    metrics={**summarize(rows),'wall_seconds':time.perf_counter()-start,'api_calls':0,'phase':phase,'in_sample':config.get('in_sample',True)}
     (output/'metrics.json').write_text(json.dumps(metrics,indent=2));print(json.dumps({'phase_complete':phase,'metrics':metrics}),flush=True)
     return metrics

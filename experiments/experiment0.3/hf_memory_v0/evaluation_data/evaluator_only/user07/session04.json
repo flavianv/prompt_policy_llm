@@ -1,0 +1,321 @@
+{
+  "version": "partial-profile-notes-v1",
+  "as_of": "2026-03-16T09:01:00Z",
+  "profile": {
+    "category_profiles": [
+      {
+        "category": "outerwear",
+        "sizes": [
+          {
+            "brand": "Patagonia",
+            "sizing_system": "ALPHA",
+            "size": "S"
+          }
+        ],
+        "preferences": {
+          "brands": [
+            "Aster",
+            "Boreal"
+          ],
+          "colors": [
+            "olive",
+            "navy",
+            "camel"
+          ]
+        }
+      },
+      {
+        "category": "accessories",
+        "preferences": {
+          "patterns": []
+        }
+      },
+      {
+        "category": "hats",
+        "default_size": null
+      },
+      {
+        "category": "pants",
+        "scoped_overrides": [
+          {
+            "context": {
+              "subtype": null,
+              "season": "summer",
+              "occasion": null
+            },
+            "preferences": {
+              "materials": [
+                "linen",
+                "cotton"
+              ]
+            }
+          }
+        ],
+        "preferences": {
+          "fits": [
+            "regular",
+            "relaxed"
+          ]
+        }
+      },
+      {
+        "category": "shoes",
+        "preferences": {
+          "colors": [
+            "white",
+            "black",
+            "brown"
+          ],
+          "fits": [
+            "standard"
+          ]
+        }
+      }
+    ],
+    "purchase_intents": [
+      {
+        "id": "urgent-gift",
+        "category": "shirts",
+        "recipient": "gift",
+        "status": "expired",
+        "deadline": "2026-03-02T18:00:00Z"
+      },
+      {
+        "id": "future-trip",
+        "category": "shoes",
+        "recipient": "self",
+        "status": "active",
+        "deadline": "2026-05-01T18:00:00Z"
+      }
+    ],
+    "personal": {
+      "name": "Valeria Hernández"
+    }
+  },
+  "history": [
+    {
+      "address": {
+        "section": "clothing",
+        "category": "outerwear",
+        "field": "brand_size",
+        "context": {},
+        "brand": "Patagonia",
+        "sizing_system": "ALPHA"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:06Z",
+          "until": null,
+          "value": "S"
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "accessories",
+        "field": "patterns",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:03Z",
+          "until": null,
+          "value": []
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "hats",
+        "field": "default_size",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:02Z",
+          "until": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "outerwear",
+        "field": "brands",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-11T09:00:01Z",
+          "until": null,
+          "value": [
+            "Patagonia",
+            "Everlane"
+          ]
+        },
+        {
+          "at": "2026-03-16T09:00:00Z",
+          "until": null,
+          "value": [
+            "Aster",
+            "Boreal"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "outerwear",
+        "field": "colors",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-11T09:00:00Z",
+          "until": null,
+          "value": [
+            "olive",
+            "navy",
+            "camel"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "pants",
+        "field": "materials",
+        "context": {
+          "season": "summer"
+        }
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:01Z",
+          "until": null,
+          "value": [
+            "linen",
+            "cotton"
+          ]
+        },
+        {
+          "at": "2026-03-06T09:00:00Z",
+          "until": "2026-03-09T09:00:00Z",
+          "value": [
+            "wool"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "pants",
+        "field": "fits",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-06T09:00:01Z",
+          "until": null,
+          "value": [
+            "regular",
+            "relaxed"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "intent",
+        "field": "state",
+        "intent_id": "urgent-gift",
+        "category": "shirts",
+        "recipient": "gift"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:05Z",
+          "until": null,
+          "value": {
+            "status": "active",
+            "deadline": "2026-03-02T18:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "shoes",
+        "field": "colors",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-16T09:00:02Z",
+          "until": null,
+          "value": [
+            "white",
+            "black",
+            "brown"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "shoes",
+        "field": "fits",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-16T09:00:01Z",
+          "until": null,
+          "value": [
+            "standard"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "intent",
+        "field": "state",
+        "intent_id": "future-trip",
+        "category": "shoes",
+        "recipient": "self"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:04Z",
+          "until": null,
+          "value": {
+            "status": "active",
+            "deadline": "2026-05-01T18:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "personal",
+        "field": "name"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:00Z",
+          "until": null,
+          "value": "Valeria Hernández"
+        }
+      ]
+    }
+  ]
+}

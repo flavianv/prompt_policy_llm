@@ -1,0 +1,337 @@
+{
+  "version": "partial-profile-notes-v1",
+  "as_of": "2026-03-14T09:01:00Z",
+  "profile": {
+    "category_profiles": [
+      {
+        "category": "accessories",
+        "preferences": {
+          "colors": [
+            "black",
+            "tan",
+            "navy"
+          ],
+          "patterns": []
+        }
+      },
+      {
+        "category": "hats",
+        "default_size": null
+      },
+      {
+        "category": "outerwear",
+        "preferences": {
+          "fits": [
+            "regular"
+          ]
+        }
+      },
+      {
+        "category": "pants",
+        "scoped_overrides": [
+          {
+            "context": {
+              "subtype": null,
+              "season": "summer",
+              "occasion": null
+            },
+            "preferences": {
+              "materials": [
+                "wool"
+              ]
+            }
+          }
+        ],
+        "preferences": {
+          "styles": [
+            "minimal",
+            "classic"
+          ]
+        }
+      },
+      {
+        "category": "shirts",
+        "default_size": {
+          "sizing_system": "ALPHA",
+          "size": "S"
+        }
+      },
+      {
+        "category": "shoes",
+        "preferences": {
+          "styles": [
+            "minimal",
+            "classic"
+          ]
+        }
+      }
+    ],
+    "purchase_intents": [
+      {
+        "id": "urgent-gift",
+        "category": "shirts",
+        "recipient": "gift",
+        "status": "completed",
+        "deadline": "2026-03-02T18:00:00Z",
+        "budget": {
+          "amount": 80,
+          "currency": "EUR"
+        }
+      },
+      {
+        "id": "future-trip",
+        "category": "shoes",
+        "recipient": "self",
+        "status": "active",
+        "deadline": "2026-05-01T18:00:00Z"
+      }
+    ],
+    "personal": {
+      "birth_date": "1993-07-14",
+      "name": "Claire Moreau"
+    }
+  },
+  "history": [
+    {
+      "address": {
+        "section": "clothing",
+        "category": "accessories",
+        "field": "colors",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:06Z",
+          "until": null,
+          "value": [
+            "black",
+            "tan",
+            "navy"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "accessories",
+        "field": "patterns",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:03Z",
+          "until": null,
+          "value": []
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "hats",
+        "field": "default_size",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:02Z",
+          "until": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "outerwear",
+        "field": "fits",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-12T09:00:01Z",
+          "until": null,
+          "value": [
+            "regular"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "pants",
+        "field": "materials",
+        "context": {
+          "season": "summer"
+        }
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:01Z",
+          "until": null,
+          "value": [
+            "linen",
+            "cotton"
+          ]
+        },
+        {
+          "at": "2026-03-06T09:00:00Z",
+          "until": "2026-03-09T09:00:00Z",
+          "value": null
+        },
+        {
+          "at": "2026-03-12T09:00:00Z",
+          "until": null,
+          "value": [
+            "wool"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "pants",
+        "field": "styles",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-14T09:00:01Z",
+          "until": null,
+          "value": [
+            "minimal",
+            "classic"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "shirts",
+        "field": "default_size",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-14T09:00:02Z",
+          "until": null,
+          "value": {
+            "sizing_system": "ALPHA",
+            "size": "S"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "intent",
+        "field": "state",
+        "intent_id": "urgent-gift",
+        "category": "shirts",
+        "recipient": "gift"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:05Z",
+          "until": null,
+          "value": {
+            "status": "active",
+            "deadline": "2026-03-02T18:00:00Z"
+          }
+        },
+        {
+          "at": "2026-03-14T09:00:00Z",
+          "until": null,
+          "value": {
+            "status": "completed",
+            "deadline": "2026-03-02T18:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "shoes",
+        "field": "styles",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-12T09:00:02Z",
+          "until": null,
+          "value": [
+            "minimal",
+            "classic"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "intent",
+        "field": "state",
+        "intent_id": "future-trip",
+        "category": "shoes",
+        "recipient": "self"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:04Z",
+          "until": null,
+          "value": {
+            "status": "active",
+            "deadline": "2026-05-01T18:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "personal",
+        "field": "birth_date"
+      },
+      "events": [
+        {
+          "at": "2026-03-11T09:00:00Z",
+          "until": null,
+          "value": "1993-07-14"
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "intent",
+        "field": "budget",
+        "intent_id": "urgent-gift"
+      },
+      "events": [
+        {
+          "at": "2026-03-06T09:00:01Z",
+          "until": null,
+          "value": {
+            "amount": 80,
+            "currency": "EUR"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "personal",
+        "field": "name"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:00Z",
+          "until": null,
+          "value": "Claire Moreau"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "sessions": 10,
+  "target_fields": 166,
+  "candidates": 40,
+  "valid_candidates": 40,
+  "pass_at_4_sessions": 1,
+  "exact_candidate_count": 4,
+  "primary_mean_normalized_correct": 0.9159413774631165,
+  "candidate0_correct": 152,
+  "mean_correct": 151.75,
+  "best_correct": 153,
+  "worst_correct": 150,
+  "mean_missing": 14.25,
+  "mean_incorrect": 0.0,
+  "mean_unsupported": 10.75,
+  "candidate0_correct_micro_fraction": 0.9156626506024096,
+  "mean_correct_micro_fraction": 0.9141566265060241,
+  "best_correct_micro_fraction": 0.9216867469879518,
+  "worst_correct_micro_fraction": 0.9036144578313253
+}
