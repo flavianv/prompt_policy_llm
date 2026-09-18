@@ -36,3 +36,9 @@ def test_invalid_and_history_no_credit():
     notes=merge_lines({},'Historical name: Jordan Example')
     assert score_text_notes(notes,target)['reward']==0
     assert score_text_notes(merge_lines({},'Jordan Example'),target,False)['reward']==0
+
+
+def test_dates_are_not_bags_of_numbers():
+    target=gold({'personal':{'birth_date':'1990-03-01'}})
+    assert score_text_notes(merge_lines({},'Birthday: 1990-01-03'),target)['reward']==0
+    assert score_text_notes(merge_lines({},'Birthday: 1990-03-01'),target)['reward']==1

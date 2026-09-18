@@ -12,7 +12,7 @@ Preserve current values as time advances: temporary changes end at their exclusi
 def words(text):
     text=unicodedata.normalize('NFKC',str(text)).casefold()
     aliases={'colours':'colors','colour':'color','colours':'colors','centimeters':'cm','centimetres':'cm','kilograms':'kg','kilogram':'kg','dollars':'usd','dollar':'usd','euros':'eur','euro':'eur'}
-    return [aliases.get(w,w) for w in re.findall(r'[^\W_]+(?:\.\d+)?',text)]
+    return [aliases.get(w,w) for w in re.findall(r'\d{4}-\d{2}-\d{2}(?:t\d{2}:\d{2}(?::\d{2})?(?:z|[+-]\d{2}:\d{2})?)?|[^\W_]+(?:\.\d+)?',text)]
 
 
 def parse_lines(raw):
