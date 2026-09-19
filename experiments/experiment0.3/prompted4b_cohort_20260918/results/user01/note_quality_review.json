@@ -1,0 +1,675 @@
+{
+  "method": "Manual review by Codex of full source statements and every session note snapshot; no extra model calls. Primary unit: unique revealed field at final session, not token, claim or question. Supported requires correct current value plus stated category/brand/system/recipient scope; intent deadline is checked too. Conflicting undated values count ambiguous; incorrect values/scopes count incorrect; missing fields count missing. History completeness is audited separately in observations. Counts are descriptive, uncalibrated single-reviewer judgments, not exhaustive hallucination precision/recall.",
+  "reviewed_sessions": 10,
+  "final_time": "2026-04-10T09:01:00Z",
+  "final_field_counts": {
+    "total": 23,
+    "supported": 18,
+    "ambiguous": 1,
+    "incorrect": 1,
+    "missing": 3,
+    "supported_fraction": 0.782608695652174
+  },
+  "unsupported_mutation_examples": 1,
+  "observations": [
+    {
+      "session": 1,
+      "type": "supported",
+      "evidence_ids": [
+        "e0-0",
+        "e0-1",
+        "e0-2",
+        "e0-3",
+        "e0-4",
+        "e0-5",
+        "e0-6"
+      ],
+      "finding": "All seven substantive first-session facts are saved with category/recipient/deadline and unknown-versus-empty distinctions; café filler is excluded."
+    },
+    {
+      "session": 2,
+      "type": "temporal_ambiguity",
+      "evidence_ids": [
+        "e1-0"
+      ],
+      "quote": "Preferred materials for pants in summer: cotton (temporary until 2026-03-09T09:00:00Z), linen.",
+      "finding": "Retains deadline but leaves linen alongside cotton rather than clearly recording a cotton-only override and subsequent restoration."
+    },
+    {
+      "session": 4,
+      "type": "scope_corruption",
+      "evidence_ids": [
+        "e2-1",
+        "e3-0"
+      ],
+      "quote": "Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen.",
+      "finding": "Prior summer history is moved into the general pants field, conflicting with the independently revealed general cotton preference."
+    },
+    {
+      "session": 5,
+      "type": "missed_update",
+      "evidence_ids": [
+        "e4-0"
+      ],
+      "quote": "Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z.",
+      "finding": "Completed status is omitted. In session6 both answer arms choose expired instead of completed; this explains the sole memory-arm question failure."
+    },
+    {
+      "session": 5,
+      "type": "irrelevant_retention",
+      "evidence_ids": [
+        "e4-3",
+        "e4-4",
+        "e4-5"
+      ],
+      "quote": "Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today.",
+      "finding": "Three irrelevant filler/other-person statements enter notes and persist through session10. They are observed text, not invented preferences."
+    },
+    {
+      "session": 6,
+      "type": "history_loss",
+      "evidence_ids": [
+        "e0-6",
+        "e5-0"
+      ],
+      "quote": "Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z).",
+      "finding": "Current brand and effective date are correct, but prior Baggu/Cuyana history disappears."
+    },
+    {
+      "session": 7,
+      "type": "supported_scope",
+      "evidence_ids": [
+        "e6-1"
+      ],
+      "quote": "my New Balance shoes size in US_WOMEN: 9.",
+      "finding": "Brand and sizing system retained without conversion."
+    },
+    {
+      "session": 10,
+      "type": "hallucinated_value",
+      "evidence_ids": [
+        "e8-0"
+      ],
+      "quote": "deadline 2026-05-09T09:09:00Z",
+      "finding": "Nine-minute unsupported deadline mutation; no current statement authorized it."
+    }
+  ],
+  "fields": [
+    {
+      "key": "personal:name",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": "Maya Okafor",
+      "source_history": [
+        {
+          "id": "e0-0",
+          "timestamp": "2026-03-01T09:00:00Z",
+          "text": "For my own records, my name: Maya Okafor.",
+          "key": "personal:name",
+          "value": "Maya Okafor",
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:pants:scope0:materials",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [
+        "wool"
+      ],
+      "source_history": [
+        {
+          "id": "e0-1",
+          "timestamp": "2026-03-01T09:00:01Z",
+          "text": "For my own records, my preferred materials for pants in context summer: linen, cotton.",
+          "key": "clothing:pants:scope0:materials",
+          "value": [
+            "linen",
+            "cotton"
+          ],
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e1-0",
+          "timestamp": "2026-03-06T09:00:00Z",
+          "text": "For this temporary period only, my preferred materials for pants in context summer: cotton. This applies until 2026-03-09T09:00:00Z; after that, return to my prior preference.",
+          "key": "clothing:pants:scope0:materials",
+          "value": [
+            "cotton"
+          ],
+          "until": "2026-03-09T09:00:00Z",
+          "kind": "temporary"
+        },
+        {
+          "id": "e3-0",
+          "timestamp": "2026-03-21T09:00:00Z",
+          "text": "Update my records from today: my preferred materials for pants in context summer is now wool. This replaces the previous value from now onward.",
+          "key": "clothing:pants:scope0:materials",
+          "value": [
+            "wool"
+          ],
+          "until": null,
+          "kind": "change"
+        }
+      ]
+    },
+    {
+      "key": "clothing:hats:default_size",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": null,
+      "source_history": [
+        {
+          "id": "e0-2",
+          "timestamp": "2026-03-01T09:00:02Z",
+          "text": "For my own records, my default size for hats: explicitly unknown.",
+          "key": "clothing:hats:default_size",
+          "value": null,
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:accessories:patterns",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [],
+      "source_history": [
+        {
+          "id": "e0-3",
+          "timestamp": "2026-03-01T09:00:03Z",
+          "text": "For my own records, my preferred patterns for accessories: no stated preference.",
+          "key": "clothing:accessories:patterns",
+          "value": [],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "intent:future-trip:state",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": "active",
+      "source_history": [
+        {
+          "id": "e0-4",
+          "timestamp": "2026-03-01T09:00:04Z",
+          "text": "For my own records, the state of purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z.",
+          "key": "intent:future-trip:state",
+          "value": {
+            "status": "active",
+            "deadline": "2026-05-01T18:00:00Z"
+          },
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "intent:urgent-gift:state",
+      "status": "incorrect",
+      "reason": "State active is correct at the final session, but the deadline was corrupted from 2026-05-09T09:00:00Z to 2026-05-09T09:09:00Z in session10.",
+      "expected_current_value": "active",
+      "source_history": [
+        {
+          "id": "e0-5",
+          "timestamp": "2026-03-01T09:00:05Z",
+          "text": "For my own records, the state of purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z.",
+          "key": "intent:urgent-gift:state",
+          "value": {
+            "status": "active",
+            "deadline": "2026-03-02T18:00:00Z"
+          },
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e4-0",
+          "timestamp": "2026-03-31T09:00:00Z",
+          "text": "Update my records from today: the state of purchase intent urgent-gift (shirts, recipient gift) is now completed; deadline 2026-03-02T18:00:00Z. This replaces the previous value from now onward.",
+          "key": "intent:urgent-gift:state",
+          "value": {
+            "status": "completed",
+            "deadline": "2026-03-02T18:00:00Z"
+          },
+          "until": null,
+          "kind": "change"
+        },
+        {
+          "id": "e8-0",
+          "timestamp": "2026-04-09T09:00:00Z",
+          "text": "Update my records from today: the state of purchase intent urgent-gift (shirts, recipient gift) is now active; deadline 2026-05-09T09:00:00Z. This replaces the previous value from now onward.",
+          "key": "intent:urgent-gift:state",
+          "value": {
+            "status": "active",
+            "deadline": "2026-05-09T09:00:00Z"
+          },
+          "until": null,
+          "kind": "change"
+        }
+      ]
+    },
+    {
+      "key": "clothing:accessories:brands",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [
+        "Aster"
+      ],
+      "source_history": [
+        {
+          "id": "e0-6",
+          "timestamp": "2026-03-01T09:00:06Z",
+          "text": "For my own records, my preferred brands for accessories: Baggu, Cuyana.",
+          "key": "clothing:accessories:brands",
+          "value": [
+            "Baggu",
+            "Cuyana"
+          ],
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e5-0",
+          "timestamp": "2026-04-05T09:00:00Z",
+          "text": "Update my records from today: my preferred brands for accessories is now Aster. This replaces the previous value from now onward.",
+          "key": "clothing:accessories:brands",
+          "value": [
+            "Aster"
+          ],
+          "until": null,
+          "kind": "change"
+        }
+      ]
+    },
+    {
+      "key": "clothing:outerwear:styles",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [
+        "functional",
+        "modern"
+      ],
+      "source_history": [
+        {
+          "id": "e1-1",
+          "timestamp": "2026-03-06T09:00:01Z",
+          "text": "For my own records, my preferred styles for outerwear: functional, modern.",
+          "key": "clothing:outerwear:styles",
+          "value": [
+            "functional",
+            "modern"
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "general:occupation",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": "User experience researcher",
+      "source_history": [
+        {
+          "id": "e1-2",
+          "timestamp": "2026-03-06T09:00:02Z",
+          "text": "For my own records, my occupation: User experience researcher.",
+          "key": "general:occupation",
+          "value": "User experience researcher",
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "general:income",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": {
+        "amount": 8400,
+        "currency": "CAD",
+        "period": "month"
+      },
+      "source_history": [
+        {
+          "id": "e2-0",
+          "timestamp": "2026-03-11T09:00:00Z",
+          "text": "For my own records, my income: 8400 CAD per month.",
+          "key": "general:income",
+          "value": {
+            "amount": 8400,
+            "currency": "CAD",
+            "period": "month"
+          },
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:pants:materials",
+      "status": "ambiguous",
+      "reason": "The final note retains cotton/linen with the summer override deadline under general pants materials, then appends wool without an effective date. Current and historical/general and summer scope are mixed.",
+      "expected_current_value": [
+        "wool"
+      ],
+      "source_history": [
+        {
+          "id": "e2-1",
+          "timestamp": "2026-03-11T09:00:01Z",
+          "text": "For my own records, my preferred materials for pants: cotton.",
+          "key": "clothing:pants:materials",
+          "value": [
+            "cotton"
+          ],
+          "until": null,
+          "kind": "reveal"
+        },
+        {
+          "id": "e7-0",
+          "timestamp": "2026-04-08T09:00:00Z",
+          "text": "Update my records from today: my preferred materials for pants is now wool. This replaces the previous value from now onward.",
+          "key": "clothing:pants:materials",
+          "value": [
+            "wool"
+          ],
+          "until": null,
+          "kind": "change"
+        }
+      ]
+    },
+    {
+      "key": "clothing:shirts:cuts",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [
+        "button-down",
+        "camp collar"
+      ],
+      "source_history": [
+        {
+          "id": "e3-1",
+          "timestamp": "2026-03-21T09:00:01Z",
+          "text": "For my own records, my preferred cuts for shirts: button-down, camp collar.",
+          "key": "clothing:shirts:cuts",
+          "value": [
+            "button-down",
+            "camp collar"
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:pants:styles",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [
+        "minimal",
+        "utility"
+      ],
+      "source_history": [
+        {
+          "id": "e4-1",
+          "timestamp": "2026-03-31T09:00:01Z",
+          "text": "For my own records, my preferred styles for pants: minimal, utility.",
+          "key": "clothing:pants:styles",
+          "value": [
+            "minimal",
+            "utility"
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "preference:2",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": "dislike",
+      "source_history": [
+        {
+          "id": "e4-2",
+          "timestamp": "2026-03-31T09:00:02Z",
+          "text": "For my own records, my stance toward fast fashion (shopping, globally): dislike.",
+          "key": "preference:2",
+          "value": "dislike",
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:outerwear:colors",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [
+        "black",
+        "olive",
+        "camel"
+      ],
+      "source_history": [
+        {
+          "id": "e5-1",
+          "timestamp": "2026-04-05T09:00:01Z",
+          "text": "For my own records, my preferred colors for outerwear: black, olive, camel.",
+          "key": "clothing:outerwear:colors",
+          "value": [
+            "black",
+            "olive",
+            "camel"
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:pants:patterns",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [
+        "solid"
+      ],
+      "source_history": [
+        {
+          "id": "e5-2",
+          "timestamp": "2026-04-05T09:00:02Z",
+          "text": "For my own records, my preferred patterns for pants: solid.",
+          "key": "clothing:pants:patterns",
+          "value": [
+            "solid"
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:outerwear:cuts",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [
+        "parka",
+        "trench"
+      ],
+      "source_history": [
+        {
+          "id": "e6-0",
+          "timestamp": "2026-04-07T09:00:00Z",
+          "text": "For my own records, my preferred cuts for outerwear: parka, trench.",
+          "key": "clothing:outerwear:cuts",
+          "value": [
+            "parka",
+            "trench"
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:shoes:brand_size:New Balance:US_WOMEN",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": "9",
+      "source_history": [
+        {
+          "id": "e6-1",
+          "timestamp": "2026-04-07T09:00:01Z",
+          "text": "For my own records, my New Balance shoes size in US_WOMEN: 9.",
+          "key": "clothing:shoes:brand_size:New Balance:US_WOMEN",
+          "value": "9",
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:outerwear:fits",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": [
+        "regular",
+        "relaxed"
+      ],
+      "source_history": [
+        {
+          "id": "e7-1",
+          "timestamp": "2026-04-08T09:00:01Z",
+          "text": "For my own records, my preferred fits for outerwear: regular, relaxed.",
+          "key": "clothing:outerwear:fits",
+          "value": [
+            "regular",
+            "relaxed"
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "intent:future-trip:budget",
+      "status": "supported",
+      "reason": "Current value and stated scope are represented accurately in final notes; this does not certify complete history or all effective dates.",
+      "expected_current_value": {
+        "amount": 180,
+        "currency": "CAD"
+      },
+      "source_history": [
+        {
+          "id": "e7-2",
+          "timestamp": "2026-04-08T09:00:02Z",
+          "text": "For my own records, the budget for purchase intent future-trip: 180 CAD.",
+          "key": "intent:future-trip:budget",
+          "value": {
+            "amount": 180,
+            "currency": "CAD"
+          },
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:accessories:default_size",
+      "status": "missing",
+      "reason": "Session9 one-size / ONE_SIZE value was never saved.",
+      "expected_current_value": {
+        "sizing_system": "ONE_SIZE",
+        "size": "one-size"
+      },
+      "source_history": [
+        {
+          "id": "e8-1",
+          "timestamp": "2026-04-09T09:00:01Z",
+          "text": "For my own records, my default size for accessories: size one-size in ONE_SIZE.",
+          "key": "clothing:accessories:default_size",
+          "value": {
+            "sizing_system": "ONE_SIZE",
+            "size": "one-size"
+          },
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "general:languages",
+      "status": "missing",
+      "reason": "Session9 English/fluent, Yoruba/intermediate and French/basic were never saved.",
+      "expected_current_value": [
+        {
+          "language": "English",
+          "proficiency": "fluent"
+        },
+        {
+          "language": "Yoruba",
+          "proficiency": "intermediate"
+        },
+        {
+          "language": "French",
+          "proficiency": "basic"
+        }
+      ],
+      "source_history": [
+        {
+          "id": "e8-2",
+          "timestamp": "2026-04-09T09:00:02Z",
+          "text": "For my own records, the languages I speak: language English; proficiency fluent, language Yoruba; proficiency intermediate, language French; proficiency basic.",
+          "key": "general:languages",
+          "value": [
+            {
+              "language": "English",
+              "proficiency": "fluent"
+            },
+            {
+              "language": "Yoruba",
+              "proficiency": "intermediate"
+            },
+            {
+              "language": "French",
+              "proficiency": "basic"
+            }
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    },
+    {
+      "key": "clothing:pants:occasions",
+      "status": "missing",
+      "reason": "Session10 casual/work occasions were not saved.",
+      "expected_current_value": [
+        "casual",
+        "work"
+      ],
+      "source_history": [
+        {
+          "id": "e9-0",
+          "timestamp": "2026-04-10T09:00:00Z",
+          "text": "For my own records, my preferred occasions for pants: casual, work.",
+          "key": "clothing:pants:occasions",
+          "value": [
+            "casual",
+            "work"
+          ],
+          "until": null,
+          "kind": "reveal"
+        }
+      ]
+    }
+  ],
+  "final_note_snapshot": {
+    "user_info": "Name: Maya Okafor. Preferred brands for accessories: Aster (effective 2026-04-05T09:00:00Z). Preferred colors for outerwear: black, olive, camel. Preferred patterns for pants: solid. Preferred materials for pants in summer: wool (effective 2026-03-21T09:00:00Z). Preferred cuts for shirts: button-down, camp collar. Preferred materials for pants: cotton (temporary until 2026-03-09T09:00:00Z), linen. Default size for hats: explicitly unknown. Preferred patterns for accessories: no stated preference. Purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z. Purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-05-09T09:09:00Z. Preferred styles for outerwear: functional, modern. Occupation: User experience researcher. Income: 8400 CAD per month. Preferred styles for pants: minimal, utility. Stance toward fast fashion (shopping, globally): dislike. Other notes: A pigeon landed on the windowsill while I was waiting. My neighbor was talking about learning the violin. The elevator stopped on every floor today. For my own records, my preferred cuts for outerwear: parka, trench. For my own records, my New Balance shoes size in US_WOMEN: 9. Just confirming again: my preferred patterns for accessories: no stated preference. My preferred materials for pants is now wool. This replaces the previous value from now onward. For my own records, my preferred fits for outerwear: regular, relaxed. For my own records, the budget for purchase intent future-trip: 180 CAD."
+  }
+}

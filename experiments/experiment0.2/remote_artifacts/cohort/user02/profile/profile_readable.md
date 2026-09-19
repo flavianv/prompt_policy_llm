@@ -1,0 +1,245 @@
+# Actual Luna-generated initial profile
+
+Model: gpt-5.6-luna
+
+- schema_version: user-profile-1.1
+- profile_id: user02
+- reference_date: 2026-03-01
+- personal / name: Evan Mercer
+- personal / gender: male
+- personal / birth_date: 1991-08-14
+- personal / age: 34
+- personal / race: White
+- personal / nationality: Canadian
+- personal / marital_status: married
+- residence / city: Vancouver
+- residence / region: British Columbia
+- residence / country: Canada
+- residence / timezone: America/Vancouver
+- languages [1] / language: English
+- languages [1] / proficiency: native
+- languages [2] / language: French
+- languages [2] / proficiency: intermediate
+- professional / situation: employed
+- professional / occupation: urban transportation planner
+- professional / industry: public infrastructure
+- professional / education / level: master
+- professional / education / field: urban planning
+- professional / income / amount: 7800
+- professional / income / currency: CAD
+- professional / income / period: month
+- physical / height / value: 181
+- physical / height / unit: cm
+- physical / weight / value: 82
+- physical / weight / unit: kg
+- physical / build: average
+- physical / hair_color: dark brown
+- physical / eye_color: hazel
+- interests / hobbies: cycling, cooking, photography, hiking
+- interests / other_interests: public transit, independent films, local history
+- general_preferences [1] / topic: coffee
+- general_preferences [1] / item: medium-roast coffee
+- general_preferences [1] / stance: like
+- general_preferences [1] / scope: global
+- general_preferences [1] / category: explicitly unknown
+- general_preferences [1] / shopping_effect: background_only
+- general_preferences [2] / topic: food
+- general_preferences [2] / item: very spicy food
+- general_preferences [2] / stance: dislike
+- general_preferences [2] / scope: global
+- general_preferences [2] / category: explicitly unknown
+- general_preferences [2] / shopping_effect: background_only
+- general_preferences [3] / topic: clothing brand
+- general_preferences [3] / item: fast-fashion brands
+- general_preferences [3] / stance: dislike
+- general_preferences [3] / scope: global
+- general_preferences [3] / category: explicitly unknown
+- general_preferences [3] / shopping_effect: hard_exclusion
+- category_profiles [1] / category: shirts
+- category_profiles [1] / sizes [1] / brand: Northline
+- category_profiles [1] / sizes [1] / sizing_system: ALPHA
+- category_profiles [1] / sizes [1] / size: L
+- category_profiles [1] / sizes [2] / brand: Harbor & Pine
+- category_profiles [1] / sizes [2] / sizing_system: ALPHA
+- category_profiles [1] / sizes [2] / size: L
+- category_profiles [1] / hard [1] / field: fit
+- category_profiles [1] / hard [1] / op: in
+- category_profiles [1] / hard [1] / value: regular, relaxed
+- category_profiles [1] / default_size / sizing_system: ALPHA
+- category_profiles [1] / default_size / size: L
+- category_profiles [1] / preferences / brands: Northline, Harbor & Pine
+- category_profiles [1] / preferences / materials: cotton, linen
+- category_profiles [1] / preferences / colors: navy, white, olive
+- category_profiles [1] / preferences / patterns: solid, subtle stripes
+- category_profiles [1] / preferences / cuts: straight
+- category_profiles [1] / preferences / fits: regular, relaxed
+- category_profiles [1] / preferences / occasions: casual, work
+- category_profiles [1] / preferences / styles: minimal, smart casual
+- category_profiles [1] / scoped_overrides [1] / context / subtype: explicitly unknown
+- category_profiles [1] / scoped_overrides [1] / context / season: summer
+- category_profiles [1] / scoped_overrides [1] / context / occasion: explicitly unknown
+- category_profiles [1] / scoped_overrides [1] / preferences / brands: explicitly unknown
+- category_profiles [1] / scoped_overrides [1] / preferences / materials: linen, cotton
+- category_profiles [1] / scoped_overrides [1] / preferences / colors: white, light blue, olive
+- category_profiles [1] / scoped_overrides [1] / preferences / patterns: solid
+- category_profiles [1] / scoped_overrides [1] / preferences / cuts: explicitly unknown
+- category_profiles [1] / scoped_overrides [1] / preferences / fits: relaxed
+- category_profiles [1] / scoped_overrides [1] / preferences / occasions: explicitly unknown
+- category_profiles [1] / scoped_overrides [1] / preferences / styles: explicitly unknown
+- category_profiles [2] / category: shoes
+- category_profiles [2] / sizes [1] / brand: Trailmark
+- category_profiles [2] / sizes [1] / sizing_system: EU
+- category_profiles [2] / sizes [1] / size: 43
+- category_profiles [2] / sizes [2] / brand: Cedar Run
+- category_profiles [2] / sizes [2] / sizing_system: EU
+- category_profiles [2] / sizes [2] / size: 43
+- category_profiles [2] / hard [1] / field: width
+- category_profiles [2] / hard [1] / op: in
+- category_profiles [2] / hard [1] / value: regular
+- category_profiles [2] / default_size / sizing_system: EU
+- category_profiles [2] / default_size / size: 43
+- category_profiles [2] / preferences / brands: Trailmark, Cedar Run
+- category_profiles [2] / preferences / materials: leather, canvas
+- category_profiles [2] / preferences / colors: black, brown, charcoal
+- category_profiles [2] / preferences / patterns: solid
+- category_profiles [2] / preferences / cuts: low-top
+- category_profiles [2] / preferences / fits: regular
+- category_profiles [2] / preferences / occasions: casual, hiking, travel
+- category_profiles [2] / preferences / styles: practical, minimal
+- category_profiles [2] / preferences / widths: regular
+- category_profiles [2] / scoped_overrides [1] / context / subtype: walking shoes
+- category_profiles [2] / scoped_overrides [1] / context / season: explicitly unknown
+- category_profiles [2] / scoped_overrides [1] / context / occasion: travel
+- category_profiles [2] / scoped_overrides [1] / preferences / brands: Trailmark
+- category_profiles [2] / scoped_overrides [1] / preferences / materials: leather
+- category_profiles [2] / scoped_overrides [1] / preferences / colors: black, charcoal
+- category_profiles [2] / scoped_overrides [1] / preferences / patterns: solid
+- category_profiles [2] / scoped_overrides [1] / preferences / cuts: low-top
+- category_profiles [2] / scoped_overrides [1] / preferences / fits: regular
+- category_profiles [2] / scoped_overrides [1] / preferences / occasions: travel
+- category_profiles [2] / scoped_overrides [1] / preferences / styles: practical
+- category_profiles [2] / scoped_overrides [1] / preferences / widths: regular
+- category_profiles [3] / category: pants
+- category_profiles [3] / sizes [1] / brand: Northline
+- category_profiles [3] / sizes [1] / sizing_system: W_IN_L_IN
+- category_profiles [3] / sizes [1] / size: 34x32
+- category_profiles [3] / hard [1] / field: fit
+- category_profiles [3] / hard [1] / op: in
+- category_profiles [3] / hard [1] / value: straight, relaxed
+- category_profiles [3] / default_size / sizing_system: W_IN_L_IN
+- category_profiles [3] / default_size / size: 34x32
+- category_profiles [3] / preferences / brands: Northline
+- category_profiles [3] / preferences / materials: cotton
+- category_profiles [3] / preferences / colors: dark denim, olive, charcoal
+- category_profiles [3] / preferences / patterns: solid
+- category_profiles [3] / preferences / cuts: straight
+- category_profiles [3] / preferences / fits: straight, relaxed
+- category_profiles [3] / preferences / occasions: casual, work
+- category_profiles [3] / preferences / styles: minimal, utility
+- category_profiles [3] / scoped_overrides [1] / context / subtype: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / context / season: summer
+- category_profiles [3] / scoped_overrides [1] / context / occasion: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / brands: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / materials: linen, cotton
+- category_profiles [3] / scoped_overrides [1] / preferences / colors: olive, tan, navy
+- category_profiles [3] / scoped_overrides [1] / preferences / patterns: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / cuts: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / fits: relaxed
+- category_profiles [3] / scoped_overrides [1] / preferences / occasions: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / styles: explicitly unknown
+- category_profiles [4] / category: outerwear
+- category_profiles [4] / sizes [1] / brand: Harbor & Pine
+- category_profiles [4] / sizes [1] / sizing_system: ALPHA
+- category_profiles [4] / sizes [1] / size: L
+- category_profiles [4] / hard: explicitly no stated preference
+- category_profiles [4] / default_size / sizing_system: ALPHA
+- category_profiles [4] / default_size / size: L
+- category_profiles [4] / preferences / brands: Harbor & Pine
+- category_profiles [4] / preferences / materials: wool, recycled polyester
+- category_profiles [4] / preferences / colors: navy, charcoal, forest green
+- category_profiles [4] / preferences / patterns: solid
+- category_profiles [4] / preferences / cuts: straight
+- category_profiles [4] / preferences / fits: regular
+- category_profiles [4] / preferences / occasions: work, casual, rainy weather
+- category_profiles [4] / preferences / styles: minimal, classic
+- category_profiles [4] / scoped_overrides: explicitly no stated preference
+- category_profiles [5] / category: hats
+- category_profiles [5] / sizes [1] / brand: Cedar Run
+- category_profiles [5] / sizes [1] / sizing_system: CM
+- category_profiles [5] / sizes [1] / size: 59
+- category_profiles [5] / hard: explicitly no stated preference
+- category_profiles [5] / default_size: explicitly unknown
+- category_profiles [5] / preferences / brands: Cedar Run
+- category_profiles [5] / preferences / materials: cotton, wool
+- category_profiles [5] / preferences / colors: navy, olive, charcoal
+- category_profiles [5] / preferences / patterns: solid
+- category_profiles [5] / preferences / cuts: six-panel
+- category_profiles [5] / preferences / fits: adjustable
+- category_profiles [5] / preferences / occasions: casual, hiking
+- category_profiles [5] / preferences / styles: practical, minimal
+- category_profiles [5] / scoped_overrides: explicitly no stated preference
+- category_profiles [6] / category: accessories
+- category_profiles [6] / sizes [1] / brand: Northline
+- category_profiles [6] / sizes [1] / sizing_system: ONE_SIZE
+- category_profiles [6] / sizes [1] / size: OS
+- category_profiles [6] / hard: explicitly no stated preference
+- category_profiles [6] / default_size / sizing_system: ONE_SIZE
+- category_profiles [6] / default_size / size: OS
+- category_profiles [6] / preferences / brands: Northline
+- category_profiles [6] / preferences / materials: leather, cotton
+- category_profiles [6] / preferences / colors: brown, black, olive
+- category_profiles [6] / preferences / patterns: explicitly no stated preference
+- category_profiles [6] / preferences / cuts: simple
+- category_profiles [6] / preferences / fits: standard
+- category_profiles [6] / preferences / occasions: casual, work, travel
+- category_profiles [6] / preferences / styles: minimal, practical
+- category_profiles [6] / scoped_overrides: explicitly no stated preference
+- purchase_intents [1] / id: future-trip
+- purchase_intents [1] / category: shoes
+- purchase_intents [1] / recipient: self
+- purchase_intents [1] / created_at: 2026-03-01T09:00:00Z
+- purchase_intents [1] / deadline: 2026-05-01T18:00:00Z
+- purchase_intents [1] / status: active
+- purchase_intents [1] / budget / amount: 220
+- purchase_intents [1] / budget / currency: CAD
+- purchase_intents [1] / sizes [1] / brand: Trailmark
+- purchase_intents [1] / sizes [1] / sizing_system: EU
+- purchase_intents [1] / sizes [1] / size: 43
+- purchase_intents [1] / sizes [2] / brand: Cedar Run
+- purchase_intents [1] / sizes [2] / sizing_system: EU
+- purchase_intents [1] / sizes [2] / size: 43
+- purchase_intents [1] / hard [1] / field: width
+- purchase_intents [1] / hard [1] / op: eq
+- purchase_intents [1] / hard [1] / value: regular
+- purchase_intents [1] / hard [2] / field: use
+- purchase_intents [1] / hard [2] / op: in
+- purchase_intents [1] / hard [2] / value: walking, travel
+- purchase_intents [1] / soft [1] / field: color
+- purchase_intents [1] / soft [1] / op: in
+- purchase_intents [1] / soft [1] / value: black, charcoal, brown
+- purchase_intents [1] / soft [2] / field: style
+- purchase_intents [1] / soft [2] / op: eq
+- purchase_intents [1] / soft [2] / value: practical
+- purchase_intents [1] / use_general_preferences: True
+- purchase_intents [1] / excluded_preference_items: fast-fashion brands
+- purchase_intents [2] / id: urgent-gift
+- purchase_intents [2] / category: shirts
+- purchase_intents [2] / recipient: gift
+- purchase_intents [2] / created_at: 2026-03-01T09:00:00Z
+- purchase_intents [2] / deadline: 2026-03-02T18:00:00Z
+- purchase_intents [2] / status: active
+- purchase_intents [2] / budget / amount: 100
+- purchase_intents [2] / budget / currency: CAD
+- purchase_intents [2] / sizes: explicitly unknown
+- purchase_intents [2] / hard [1] / field: occasion
+- purchase_intents [2] / hard [1] / op: eq
+- purchase_intents [2] / hard [1] / value: gift
+- purchase_intents [2] / soft [1] / field: style
+- purchase_intents [2] / soft [1] / op: in
+- purchase_intents [2] / soft [1] / value: minimal, smart casual
+- purchase_intents [2] / soft [2] / field: color
+- purchase_intents [2] / soft [2] / op: in
+- purchase_intents [2] / soft [2] / value: navy, white, olive
+- purchase_intents [2] / use_general_preferences: False
+- purchase_intents [2] / excluded_preference_items: explicitly no stated preference
+- coherence_notes: Evan works in urban transportation planning and regularly cycles, hikes, and travels on foot., Clothing preferences emphasize practical, understated pieces suitable for Vancouver's variable weather., The urgent shirt purchase is a gift and is intentionally isolated from Evan's general preferences.

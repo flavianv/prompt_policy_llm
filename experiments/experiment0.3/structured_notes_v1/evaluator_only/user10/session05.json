@@ -1,0 +1,316 @@
+{
+  "version": "partial-profile-notes-v1",
+  "as_of": "2026-03-22T09:01:00Z",
+  "profile": {
+    "category_profiles": [
+      {
+        "category": "accessories",
+        "preferences": {
+          "occasions": [
+            "work",
+            "travel"
+          ],
+          "patterns": []
+        }
+      },
+      {
+        "category": "hats",
+        "default_size": null
+      },
+      {
+        "category": "pants",
+        "scoped_overrides": [
+          {
+            "context": {
+              "subtype": null,
+              "season": "summer",
+              "occasion": null
+            },
+            "preferences": {
+              "materials": [
+                "linen",
+                "cotton"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "category": "shirts",
+        "scoped_overrides": [
+          {
+            "context": {
+              "subtype": null,
+              "season": "summer",
+              "occasion": null
+            },
+            "preferences": {
+              "fits": null
+            }
+          }
+        ]
+      },
+      {
+        "category": "shoes",
+        "scoped_overrides": [
+          {
+            "context": {
+              "subtype": "walking shoes",
+              "season": null,
+              "occasion": "travel"
+            },
+            "preferences": {
+              "materials": [
+                "linen",
+                "cotton"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "purchase_intents": [
+      {
+        "id": "urgent-gift",
+        "category": "shirts",
+        "recipient": "gift",
+        "status": "completed",
+        "deadline": "2026-03-02T18:00:00Z"
+      },
+      {
+        "id": "future-trip",
+        "category": "shoes",
+        "recipient": "self",
+        "status": "active",
+        "deadline": "2026-05-01T18:00:00Z"
+      }
+    ],
+    "professional": {
+      "education": {
+        "level": "master",
+        "field": "Project management"
+      }
+    },
+    "physical": {
+      "height": {
+        "value": 178,
+        "unit": "cm"
+      }
+    },
+    "personal": {
+      "name": "Daniel Mwangi"
+    }
+  },
+  "history": [
+    {
+      "address": {
+        "section": "clothing",
+        "category": "accessories",
+        "field": "occasions",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-12T09:00:01Z",
+          "until": null,
+          "value": [
+            "work",
+            "travel"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "accessories",
+        "field": "patterns",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:03Z",
+          "until": null,
+          "value": []
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "hats",
+        "field": "default_size",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:02Z",
+          "until": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "pants",
+        "field": "materials",
+        "context": {
+          "season": "summer"
+        }
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:01Z",
+          "until": null,
+          "value": [
+            "linen",
+            "cotton"
+          ]
+        },
+        {
+          "at": "2026-03-06T09:00:00Z",
+          "until": "2026-03-09T09:00:00Z",
+          "value": []
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "shirts",
+        "field": "fits",
+        "context": {
+          "season": "summer"
+        }
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:06Z",
+          "until": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "intent",
+        "field": "state",
+        "intent_id": "urgent-gift",
+        "category": "shirts",
+        "recipient": "gift"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:05Z",
+          "until": null,
+          "value": {
+            "status": "active",
+            "deadline": "2026-03-02T18:00:00Z"
+          }
+        },
+        {
+          "at": "2026-03-22T09:00:00Z",
+          "until": null,
+          "value": {
+            "status": "completed",
+            "deadline": "2026-03-02T18:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "shoes",
+        "field": "materials",
+        "context": {
+          "subtype": "walking shoes",
+          "occasion": "travel"
+        }
+      },
+      "events": [
+        {
+          "at": "2026-03-11T09:00:00Z",
+          "until": null,
+          "value": [
+            "leather",
+            "mesh"
+          ]
+        },
+        {
+          "at": "2026-03-12T09:00:00Z",
+          "until": null,
+          "value": [
+            "linen",
+            "cotton"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "intent",
+        "field": "state",
+        "intent_id": "future-trip",
+        "category": "shoes",
+        "recipient": "self"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:04Z",
+          "until": null,
+          "value": {
+            "status": "active",
+            "deadline": "2026-05-01T18:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "general",
+        "field": "education"
+      },
+      "events": [
+        {
+          "at": "2026-03-06T09:00:01Z",
+          "until": null,
+          "value": {
+            "level": "master",
+            "field": "Project management"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "physical",
+        "field": "height"
+      },
+      "events": [
+        {
+          "at": "2026-03-22T09:00:01Z",
+          "until": null,
+          "value": {
+            "value": 178,
+            "unit": "cm"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "personal",
+        "field": "name"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:00Z",
+          "until": null,
+          "value": "Daniel Mwangi"
+        }
+      ]
+    }
+  ]
+}

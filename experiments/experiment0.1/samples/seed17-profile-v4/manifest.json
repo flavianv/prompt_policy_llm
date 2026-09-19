@@ -1,0 +1,27 @@
+{
+  "seed": 17,
+  "schema_version": "schema-v4",
+  "sessions": 10,
+  "questions": 58,
+  "source_hashes": {
+    "shopping_memory.py": "f1db496884471b52dc40b0647c6b773d4835816b3afb8f0062b9faaf9553c2e0",
+    "shopping_schema.py": "bee95706207894471cbf382462cd79ccaef984106e145ead23121ee1cd22fd0c"
+  },
+  "environment_sha256": "bc500aa7060aecc3db656c35adec116ce4abf28b1b18bdb2fa27694cf308b6e4",
+  "selected_categories": [
+    "shoes",
+    "shirts",
+    "pants",
+    "outerwear",
+    "hats"
+  ],
+  "inference_executed": false,
+  "support_check": "passed",
+  "files_sha256": {
+    "sessions_and_questions.md": "8d051c9b14cd5da4f006f0a3ad3b1f4be39b72411d9d1b302a602682b27fdc96",
+    "episode.json": "04201ef80eba5ab0f7dea8d2c2a9f1bc8d6195a6ab21b8c18dcb569669fd5c4a",
+    "hidden_profile.md": "91b7f1b1653ba42b21bb2b489b923139b3470a1aaf026fe6d1fd11131399a52e",
+    "catalogs.md": "d77f05923e49e7bf459ee21d21249079b877e232d447efa6cc45f6ef434a786b",
+    "answer_key.md": "c15f46411caaecad8c633026850ccc617761926f7a387adc621d2955b06d9241"
+  }
+}

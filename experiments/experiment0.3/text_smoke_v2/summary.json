@@ -1,0 +1,64 @@
+{
+  "optimizer_steps": 0,
+  "attempted_groups": 2,
+  "unique_sessions": 2,
+  "api_calls": 0,
+  "reward_mode": "extraction_count",
+  "checkpoint_reload_max_logprob_error": 0.0,
+  "training_wall_seconds": 24.076084590982646,
+  "peak_gpu_memory_bytes": 9230348288,
+  "training_metrics": {
+    "sessions": 2,
+    "target_fields": 23,
+    "candidates": 8,
+    "valid_candidates": 8,
+    "pass_at_4_sessions": 1,
+    "exact_candidate_count": 4,
+    "primary_mean_normalized_correct": 0.8333333333333333,
+    "candidate0_correct": 18,
+    "mean_correct": 18.0,
+    "best_correct": 18,
+    "worst_correct": 18,
+    "mean_missing": 5.0,
+    "mean_incorrect": 0.0,
+    "mean_unsupported": 3.0,
+    "candidate0_correct_micro_fraction": 0.782608695652174,
+    "mean_correct_micro_fraction": 0.782608695652174,
+    "best_correct_micro_fraction": 0.782608695652174,
+    "worst_correct_micro_fraction": 0.782608695652174
+  },
+  "steps": [
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

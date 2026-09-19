@@ -1,0 +1,18 @@
+{
+  "fixed_values": {
+    "reference_date": "2026-03-01",
+    "personal": {
+      "gender": "female",
+      "age": 38
+    },
+    "professional": {
+      "occupation": "Data analyst",
+      "education": {
+        "level": "master"
+      }
+    }
+  },
+  "fixed_paths": {
+    "/interests/hobbies/0": "hiking"
+  }
+}

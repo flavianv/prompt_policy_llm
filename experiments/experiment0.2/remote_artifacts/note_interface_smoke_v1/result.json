@@ -1,0 +1,9 @@
+{
+  "protocol_success": true,
+  "finished": true,
+  "valid_rounds": 3,
+  "rounds": 3,
+  "notes": {
+    "user facts": "Dated explicit facts with evidence IDs"
+  }
+}

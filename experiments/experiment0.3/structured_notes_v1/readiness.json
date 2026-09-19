@@ -1,0 +1,9 @@
+{
+  "status": "CPU data and reward validation complete; GPU training not yet launched",
+  "targets": 100,
+  "focused_tests_passed": 31,
+  "historical_files_unchanged": 445,
+  "external_calls": 0,
+  "optimizer_steps": 0,
+  "new_authorization": "All100sessions now designated training in the forthcoming run; original split metadata retained as provenance only."
+}

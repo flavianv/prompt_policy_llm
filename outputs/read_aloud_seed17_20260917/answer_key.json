@@ -1,0 +1,2702 @@
+[
+  {
+    "session": 0,
+    "time": "2026-03-01T09:00:00Z",
+    "answers": {
+      "q0": {
+        "kind": "fact",
+        "answer": "C",
+        "support_ids": [
+          "e0-0"
+        ],
+        "field": "age",
+        "at_time": "2026-03-01T09:00:00Z"
+      },
+      "q1": {
+        "kind": "fact",
+        "answer": "A",
+        "support_ids": [
+          "e0-1"
+        ],
+        "field": "gender",
+        "at_time": "2026-03-01T09:00:00Z"
+      },
+      "q2": {
+        "kind": "preference",
+        "answer": "B",
+        "support_ids": [
+          "e0-5"
+        ],
+        "at_time": "2026-03-01T09:00:00Z"
+      },
+      "q3": {
+        "kind": "recommendation",
+        "intent_status": "active",
+        "acceptable_choices": [
+          "p-9d0832e55bac9b11",
+          "p-fbf6a315fcd2bee7"
+        ],
+        "feasible_choices": [
+          "p-9d0832e55bac9b11",
+          "p-7e358f6bb2b129d7",
+          "p-fbf6a315fcd2bee7"
+        ],
+        "preference_scores": {
+          "p-9d0832e55bac9b11": 4,
+          "p-7e358f6bb2b129d7": 3,
+          "p-fbf6a315fcd2bee7": 4
+        },
+        "best_preference_score": 4,
+        "decision_type": "tie",
+        "effective_attributes": {
+          "category": "hats",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "CM",
+              "size": "56"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 120
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "work"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Cedar"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "sporty"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-04-30T17:00:00Z",
+        "support_ids": [
+          "e0-10",
+          "e0-13"
+        ]
+      },
+      "q4": {
+        "kind": "recommendation",
+        "intent_status": "active",
+        "acceptable_choices": [
+          "NONE"
+        ],
+        "feasible_choices": [],
+        "preference_scores": {},
+        "best_preference_score": null,
+        "decision_type": "no_suitable_product",
+        "effective_attributes": {
+          "category": "pants",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "EU",
+              "size": "48"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "W_IN_L_IN",
+              "size": "30x30"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "EU",
+              "size": "44"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 120
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "casual"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Boreal"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "plain"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-04-30T17:00:00Z",
+        "support_ids": [
+          "e0-8"
+        ]
+      }
+    }
+  },
+  {
+    "session": 1,
+    "time": "2026-03-02T09:00:00Z",
+    "answers": {
+      "q0": {
+        "kind": "fact",
+        "answer": "A",
+        "support_ids": [
+          "e0-0"
+        ],
+        "field": "age",
+        "at_time": "2026-03-02T09:00:00Z"
+      },
+      "q1": {
+        "kind": "fact",
+        "answer": "B",
+        "support_ids": [
+          "e0-1"
+        ],
+        "field": "gender",
+        "at_time": "2026-03-01T09:00:00Z"
+      },
+      "q2": {
+        "kind": "preference",
+        "answer": "A",
+        "support_ids": [
+          "e0-6"
+        ],
+        "at_time": "2026-03-02T09:00:00Z"
+      },
+      "q3": {
+        "kind": "recommendation",
+        "intent_status": "active",
+        "acceptable_choices": [
+          "p-5730edc3a5660730"
+        ],
+        "feasible_choices": [
+          "p-5730edc3a5660730",
+          "p-bc382229f11a113f"
+        ],
+        "preference_scores": {
+          "p-5730edc3a5660730": 4,
+          "p-bc382229f11a113f": 3
+        },
+        "best_preference_score": 4,
+        "decision_type": "ranked_choice",
+        "effective_attributes": {
+          "category": "pants",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "EU",
+              "size": "48"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "W_IN_L_IN",
+              "size": "30x30"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "EU",
+              "size": "44"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 120
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "casual"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Boreal"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "plain"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-04-30T17:00:00Z",
+        "support_ids": [
+          "e0-8"
+        ]
+      },
+      "q4": {
+        "kind": "recommendation",
+        "intent_status": "active",
+        "acceptable_choices": [
+          "p-7343ced5529b98b0",
+          "p-6150a1b43bf65a33"
+        ],
+        "feasible_choices": [
+          "p-7343ced5529b98b0",
+          "p-6150a1b43bf65a33",
+          "p-c93735df5ea5bb94"
+        ],
+        "preference_scores": {
+          "p-7343ced5529b98b0": 4,
+          "p-6150a1b43bf65a33": 4,
+          "p-c93735df5ea5bb94": 3
+        },
+        "best_preference_score": 4,
+        "decision_type": "tie",
+        "effective_attributes": {
+          "category": "hats",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "CM",
+              "size": "56"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 120
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "casual"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Cedar"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "sporty"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-03-09T17:00:00Z",
+        "support_ids": [
+          "e0-13",
+          "e1-2"
+        ]
+      },
+      "q5": {
+        "kind": "recommendation",
+        "intent_status": "completed",
+        "acceptable_choices": [
+          "NONE"
+        ],
+        "feasible_choices": [],
+        "preference_scores": {},
+        "best_preference_score": null,
+        "decision_type": "inactive",
+        "effective_attributes": {
+          "category": "hats",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "CM",
+              "size": "56"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 120
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "work"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Cedar"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "sporty"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-04-30T17:00:00Z",
+        "support_ids": [
+          "e0-13",
+          "e1-3"
+        ]
+      }
+    }
+  },
+  {
+    "session": 2,
+    "time": "2026-03-17T09:00:00Z",
+    "answers": {
+      "q0": {
+        "kind": "fact",
+        "answer": "A",
+        "support_ids": [
+          "e2-2"
+        ],
+        "field": "income",
+        "at_time": "2026-03-17T09:00:00Z"
+      },
+      "q1": {
+        "kind": "fact",
+        "answer": "B",
+        "support_ids": [
+          "e0-2"
+        ],
+        "field": "height",
+        "at_time": "2026-03-17T09:00:00Z"
+      },
+      "q2": {
+        "kind": "preference",
+        "answer": "A",
+        "support_ids": [
+          "e0-6"
+        ],
+        "at_time": "2026-03-01T09:00:00Z"
+      },
+      "q3": {
+        "kind": "recommendation",
+        "intent_status": "completed",
+        "acceptable_choices": [
+          "NONE"
+        ],
+        "feasible_choices": [],
+        "preference_scores": {},
+        "best_preference_score": null,
+        "decision_type": "inactive",
+        "effective_attributes": {
+          "category": "hats",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "CM",
+              "size": "56"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 120
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "work"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Cedar"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "sporty"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-04-30T17:00:00Z",
+        "support_ids": [
+          "e0-13",
+          "e1-3"
+        ]
+      },
+      "q4": {
+        "kind": "recommendation",
+        "intent_status": "expired",
+        "acceptable_choices": [
+          "NONE"
+        ],
+        "feasible_choices": [],
+        "preference_scores": {},
+        "best_preference_score": null,
+        "decision_type": "inactive",
+        "effective_attributes": {
+          "category": "hats",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "CM",
+              "size": "56"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 120
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "casual"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Cedar"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "sporty"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-03-09T17:00:00Z",
+        "support_ids": [
+          "e0-13",
+          "e1-2"
+        ]
+      },
+      "q5": {
+        "kind": "recommendation",
+        "intent_status": "uncertain",
+        "acceptable_choices": [
+          "NONE"
+        ],
+        "feasible_choices": [],
+        "preference_scores": {},
+        "best_preference_score": null,
+        "decision_type": "inactive",
+        "effective_attributes": {
+          "category": "pants",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "EU",
+              "size": "48"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "W_IN_L_IN",
+              "size": "30x30"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "EU",
+              "size": "44"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 120
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "casual"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Boreal"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "plain"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-04-30T17:00:00Z",
+        "support_ids": [
+          "e2-1"
+        ]
+      }
+    }
+  },
+  {
+    "session": 3,
+    "time": "2026-03-19T09:00:00Z",
+    "answers": {
+      "q0": {
+        "kind": "fact",
+        "answer": "C",
+        "support_ids": [
+          "e0-0"
+        ],
+        "field": "age",
+        "at_time": "2026-03-19T09:00:00Z"
+      },
+      "q1": {
+        "kind": "fact",
+        "answer": "B",
+        "support_ids": [
+          "e0-2"
+        ],
+        "field": "height",
+        "at_time": "2026-03-19T09:00:00Z"
+      },
+      "q2": {
+        "kind": "preference",
+        "answer": "A",
+        "support_ids": [
+          "e0-5"
+        ],
+        "at_time": "2026-03-01T09:00:00Z"
+      },
+      "q3": {
+        "kind": "recommendation",
+        "intent_status": "completed",
+        "acceptable_choices": [
+          "NONE"
+        ],
+        "feasible_choices": [],
+        "preference_scores": {},
+        "best_preference_score": null,
+        "decision_type": "inactive",
+        "effective_attributes": {
+          "category": "hats",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "CM",
+              "size": "56"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 120
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "work"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Cedar"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "sporty"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-04-30T17:00:00Z",
+        "support_ids": [
+          "e0-13",
+          "e1-3"
+        ]
+      },
+      "q4": {
+        "kind": "recommendation",
+        "intent_status": "uncertain",
+        "acceptable_choices": [
+          "NONE"
+        ],
+        "feasible_choices": [],
+        "preference_scores": {},
+        "best_preference_score": null,
+        "decision_type": "inactive",
+        "effective_attributes": {
+          "category": "pants",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "EU",
+              "size": "48"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "W_IN_L_IN",
+              "size": "30x30"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "EU",
+              "size": "44"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 120
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "casual"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Boreal"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "plain"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-04-30T17:00:00Z",
+        "support_ids": [
+          "e2-1"
+        ]
+      },
+      "q5": {
+        "kind": "recommendation",
+        "intent_status": "expired",
+        "acceptable_choices": [
+          "NONE"
+        ],
+        "feasible_choices": [],
+        "preference_scores": {},
+        "best_preference_score": null,
+        "decision_type": "inactive",
+        "effective_attributes": {
+          "category": "hats",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "CM",
+              "size": "56"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 120
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "casual"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Cedar"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "sporty"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-03-09T17:00:00Z",
+        "support_ids": [
+          "e0-13",
+          "e1-2"
+        ]
+      }
+    }
+  },
+  {
+    "session": 4,
+    "time": "2026-03-29T09:00:00Z",
+    "answers": {
+      "q0": {
+        "kind": "fact",
+        "answer": "A",
+        "support_ids": [
+          "e0-4"
+        ],
+        "field": "hair_color",
+        "at_time": "2026-03-29T09:00:00Z"
+      },
+      "q1": {
+        "kind": "fact",
+        "answer": "B",
+        "support_ids": [
+          "e4-0"
+        ],
+        "field": "build",
+        "at_time": "2026-03-29T09:00:00Z"
+      },
+      "q2": {
+        "kind": "preference",
+        "answer": "B",
+        "support_ids": [
+          "e3-2"
+        ],
+        "at_time": "2026-03-29T09:00:00Z"
+      },
+      "q3": {
+        "kind": "recommendation",
+        "intent_status": "uncertain",
+        "acceptable_choices": [
+          "NONE"
+        ],
+        "feasible_choices": [],
+        "preference_scores": {},
+        "best_preference_score": null,
+        "decision_type": "inactive",
+        "effective_attributes": {
+          "category": "pants",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "EU",
+              "size": "48"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "W_IN_L_IN",
+              "size": "30x30"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "EU",
+              "size": "44"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 120
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "casual"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Boreal"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "plain"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-04-30T17:00:00Z",
+        "support_ids": [
+          "e2-1"
+        ]
+      },
+      "q4": {
+        "kind": "recommendation",
+        "intent_status": "completed",
+        "acceptable_choices": [
+          "NONE"
+        ],
+        "feasible_choices": [],
+        "preference_scores": {},
+        "best_preference_score": null,
+        "decision_type": "inactive",
+        "effective_attributes": {
+          "category": "hats",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "CM",
+              "size": "56"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 120
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "work"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Cedar"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "sporty"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-04-30T17:00:00Z",
+        "support_ids": [
+          "e0-13",
+          "e1-3"
+        ]
+      },
+      "q5": {
+        "kind": "recommendation",
+        "intent_status": "expired",
+        "acceptable_choices": [
+          "NONE"
+        ],
+        "feasible_choices": [],
+        "preference_scores": {},
+        "best_preference_score": null,
+        "decision_type": "inactive",
+        "effective_attributes": {
+          "category": "hats",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "CM",
+              "size": "56"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 120
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "casual"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Cedar"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "sporty"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-03-09T17:00:00Z",
+        "support_ids": [
+          "e0-13",
+          "e1-2"
+        ]
+      }
+    }
+  },
+  {
+    "session": 5,
+    "time": "2026-03-30T09:00:00Z",
+    "answers": {
+      "q0": {
+        "kind": "fact",
+        "answer": "A",
+        "support_ids": [
+          "e0-2"
+        ],
+        "field": "height",
+        "at_time": "2026-03-30T09:00:00Z"
+      },
+      "q1": {
+        "kind": "fact",
+        "answer": "D",
+        "support_ids": [
+          "e4-2"
+        ],
+        "field": "age",
+        "at_time": "2026-03-30T09:00:00Z"
+      },
+      "q2": {
+        "kind": "preference",
+        "answer": "C",
+        "support_ids": [
+          "e3-2"
+        ],
+        "at_time": "2026-03-19T09:00:00Z"
+      },
+      "q3": {
+        "kind": "recommendation",
+        "intent_status": "uncertain",
+        "acceptable_choices": [
+          "NONE"
+        ],
+        "feasible_choices": [],
+        "preference_scores": {},
+        "best_preference_score": null,
+        "decision_type": "inactive",
+        "effective_attributes": {
+          "category": "pants",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "EU",
+              "size": "48"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "W_IN_L_IN",
+              "size": "30x30"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "EU",
+              "size": "44"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 120
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "casual"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Boreal"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "plain"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-04-30T17:00:00Z",
+        "support_ids": [
+          "e2-1"
+        ]
+      },
+      "q4": {
+        "kind": "recommendation",
+        "intent_status": "expired",
+        "acceptable_choices": [
+          "NONE"
+        ],
+        "feasible_choices": [],
+        "preference_scores": {},
+        "best_preference_score": null,
+        "decision_type": "inactive",
+        "effective_attributes": {
+          "category": "hats",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "CM",
+              "size": "60"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 120
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "casual"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Cedar"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "sporty"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-03-09T17:00:00Z",
+        "support_ids": [
+          "e1-2",
+          "e5-1"
+        ]
+      },
+      "q5": {
+        "kind": "recommendation",
+        "intent_status": "active",
+        "acceptable_choices": [
+          "ASK_SIZE"
+        ],
+        "feasible_choices": [],
+        "preference_scores": {},
+        "best_preference_score": null,
+        "decision_type": "insufficient_size",
+        "effective_attributes": {
+          "category": "shoes",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "EU",
+              "size": "42"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "EU",
+              "size": "38"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "US_MEN",
+              "size": "9"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 100
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "width",
+              "op": "eq",
+              "value": "wide"
+            },
+            {
+              "field": "comfort",
+              "op": "gte",
+              "value": 4
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "travel"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Aster"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "plain"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-03-31T17:00:00Z",
+        "support_ids": [
+          "e5-3",
+          "e5-4"
+        ]
+      }
+    }
+  },
+  {
+    "session": 6,
+    "time": "2026-03-31T09:00:00Z",
+    "answers": {
+      "q0": {
+        "kind": "fact",
+        "answer": "A",
+        "support_ids": [
+          "e6-2"
+        ],
+        "field": "eye_color",
+        "at_time": "2026-03-31T09:00:00Z"
+      },
+      "q1": {
+        "kind": "fact",
+        "answer": "A",
+        "support_ids": [
+          "e0-1"
+        ],
+        "field": "gender",
+        "at_time": "2026-03-01T09:00:00Z"
+      },
+      "q2": {
+        "kind": "preference",
+        "answer": "C",
+        "support_ids": [
+          "e0-5"
+        ],
+        "at_time": "2026-03-01T09:00:00Z"
+      },
+      "q3": {
+        "kind": "recommendation",
+        "intent_status": "completed",
+        "acceptable_choices": [
+          "NONE"
+        ],
+        "feasible_choices": [],
+        "preference_scores": {},
+        "best_preference_score": null,
+        "decision_type": "inactive",
+        "effective_attributes": {
+          "category": "hats",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "CM",
+              "size": "60"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 120
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "work"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Cedar"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "sporty"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-04-30T17:00:00Z",
+        "support_ids": [
+          "e1-3",
+          "e5-1"
+        ]
+      },
+      "q4": {
+        "kind": "recommendation",
+        "intent_status": "uncertain",
+        "acceptable_choices": [
+          "NONE"
+        ],
+        "feasible_choices": [],
+        "preference_scores": {},
+        "best_preference_score": null,
+        "decision_type": "inactive",
+        "effective_attributes": {
+          "category": "shoes",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "EU",
+              "size": "42"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "EU",
+              "size": "38"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "US_MEN",
+              "size": "9"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 100
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "width",
+              "op": "eq",
+              "value": "wide"
+            },
+            {
+              "field": "comfort",
+              "op": "gte",
+              "value": 4
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "travel"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Aster"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "plain"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-03-31T17:00:00Z",
+        "support_ids": [
+          "e5-3",
+          "e6-1"
+        ]
+      },
+      "q5": {
+        "kind": "recommendation",
+        "intent_status": "uncertain",
+        "acceptable_choices": [
+          "NONE"
+        ],
+        "feasible_choices": [],
+        "preference_scores": {},
+        "best_preference_score": null,
+        "decision_type": "inactive",
+        "effective_attributes": {
+          "category": "pants",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "EU",
+              "size": "48"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "W_IN_L_IN",
+              "size": "30x30"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "EU",
+              "size": "44"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 120
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "casual"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Boreal"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "plain"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-04-30T17:00:00Z",
+        "support_ids": [
+          "e2-1"
+        ]
+      }
+    }
+  },
+  {
+    "session": 7,
+    "time": "2026-04-15T09:00:00Z",
+    "answers": {
+      "q0": {
+        "kind": "fact",
+        "answer": "C",
+        "support_ids": [
+          "e0-2"
+        ],
+        "field": "height",
+        "at_time": "2026-04-15T09:00:00Z"
+      },
+      "q1": {
+        "kind": "fact",
+        "answer": "B",
+        "support_ids": [
+          "e4-2"
+        ],
+        "field": "age",
+        "at_time": "2026-04-15T09:00:00Z"
+      },
+      "q2": {
+        "kind": "preference",
+        "answer": "B",
+        "support_ids": [
+          "e3-2"
+        ],
+        "at_time": "2026-04-15T09:00:00Z"
+      },
+      "q3": {
+        "kind": "recommendation",
+        "intent_status": "active",
+        "acceptable_choices": [
+          "NONE"
+        ],
+        "feasible_choices": [],
+        "preference_scores": {},
+        "best_preference_score": null,
+        "decision_type": "no_suitable_product",
+        "effective_attributes": {
+          "category": "outerwear",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "ALPHA",
+              "size": "XL"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "EU",
+              "size": "48"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "EU",
+              "size": "48"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 80
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "regular"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "casual"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Cedar"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "plain"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "polyester"
+            }
+          ]
+        },
+        "deadline": "2026-04-22T17:00:00Z",
+        "support_ids": [
+          "e7-2"
+        ]
+      },
+      "q4": {
+        "kind": "recommendation",
+        "intent_status": "expired",
+        "acceptable_choices": [
+          "NONE"
+        ],
+        "feasible_choices": [],
+        "preference_scores": {},
+        "best_preference_score": null,
+        "decision_type": "inactive",
+        "effective_attributes": {
+          "category": "hats",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "CM",
+              "size": "60"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 120
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "casual"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Cedar"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "sporty"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-03-09T17:00:00Z",
+        "support_ids": [
+          "e1-2",
+          "e5-1"
+        ]
+      },
+      "q5": {
+        "kind": "recommendation",
+        "intent_status": "uncertain",
+        "acceptable_choices": [
+          "NONE"
+        ],
+        "feasible_choices": [],
+        "preference_scores": {},
+        "best_preference_score": null,
+        "decision_type": "inactive",
+        "effective_attributes": {
+          "category": "shoes",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "EU",
+              "size": "42"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "EU",
+              "size": "38"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "US_MEN",
+              "size": "9"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 100
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "width",
+              "op": "eq",
+              "value": "wide"
+            },
+            {
+              "field": "comfort",
+              "op": "gte",
+              "value": 4
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "travel"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Aster"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "plain"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-03-31T17:00:00Z",
+        "support_ids": [
+          "e5-3",
+          "e6-1"
+        ]
+      }
+    }
+  },
+  {
+    "session": 8,
+    "time": "2026-04-25T09:00:00Z",
+    "answers": {
+      "q0": {
+        "kind": "fact",
+        "answer": "B",
+        "support_ids": [
+          "e0-4"
+        ],
+        "field": "hair_color",
+        "at_time": "2026-04-25T09:00:00Z"
+      },
+      "q1": {
+        "kind": "fact",
+        "answer": "B",
+        "support_ids": [
+          "e8-2"
+        ],
+        "field": "age",
+        "at_time": "2026-04-25T09:00:00Z"
+      },
+      "q2": {
+        "kind": "preference",
+        "answer": "C",
+        "support_ids": [
+          "e8-1"
+        ],
+        "at_time": "2026-04-25T09:00:00Z"
+      },
+      "q3": {
+        "kind": "recommendation",
+        "intent_status": "uncertain",
+        "acceptable_choices": [
+          "NONE"
+        ],
+        "feasible_choices": [],
+        "preference_scores": {},
+        "best_preference_score": null,
+        "decision_type": "inactive",
+        "effective_attributes": {
+          "category": "shoes",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "EU",
+              "size": "42"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "EU",
+              "size": "38"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "US_MEN",
+              "size": "9"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 100
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "width",
+              "op": "eq",
+              "value": "wide"
+            },
+            {
+              "field": "comfort",
+              "op": "gte",
+              "value": 4
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "travel"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Aster"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "plain"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-03-31T17:00:00Z",
+        "support_ids": [
+          "e5-3",
+          "e6-1"
+        ]
+      },
+      "q4": {
+        "kind": "recommendation",
+        "intent_status": "completed",
+        "acceptable_choices": [
+          "NONE"
+        ],
+        "feasible_choices": [],
+        "preference_scores": {},
+        "best_preference_score": null,
+        "decision_type": "inactive",
+        "effective_attributes": {
+          "category": "hats",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "CM",
+              "size": "60"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 120
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "work"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Cedar"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "sporty"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-04-30T17:00:00Z",
+        "support_ids": [
+          "e1-3",
+          "e5-1"
+        ]
+      },
+      "q5": {
+        "kind": "recommendation",
+        "intent_status": "uncertain",
+        "acceptable_choices": [
+          "NONE"
+        ],
+        "feasible_choices": [],
+        "preference_scores": {},
+        "best_preference_score": null,
+        "decision_type": "inactive",
+        "effective_attributes": {
+          "category": "pants",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "EU",
+              "size": "48"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "W_IN_L_IN",
+              "size": "30x30"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "EU",
+              "size": "44"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 120
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "casual"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Boreal"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "plain"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-04-30T17:00:00Z",
+        "support_ids": [
+          "e2-1"
+        ]
+      }
+    }
+  },
+  {
+    "session": 9,
+    "time": "2026-04-26T09:00:00Z",
+    "answers": {
+      "q0": {
+        "kind": "fact",
+        "answer": "C",
+        "support_ids": [
+          "e0-1"
+        ],
+        "field": "gender",
+        "at_time": "2026-03-01T09:00:00Z"
+      },
+      "q1": {
+        "kind": "fact",
+        "answer": "A",
+        "support_ids": [
+          "e0-4"
+        ],
+        "field": "hair_color",
+        "at_time": "2026-04-26T09:00:00Z"
+      },
+      "q2": {
+        "kind": "preference",
+        "answer": "B",
+        "support_ids": [
+          "e9-1"
+        ],
+        "at_time": "2026-04-26T09:00:00Z"
+      },
+      "q3": {
+        "kind": "recommendation",
+        "intent_status": "completed",
+        "acceptable_choices": [
+          "NONE"
+        ],
+        "feasible_choices": [],
+        "preference_scores": {},
+        "best_preference_score": null,
+        "decision_type": "inactive",
+        "effective_attributes": {
+          "category": "hats",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "CM",
+              "size": "60"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 120
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "work"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Cedar"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "sporty"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-04-30T17:00:00Z",
+        "support_ids": [
+          "e1-3",
+          "e5-1"
+        ]
+      },
+      "q4": {
+        "kind": "recommendation",
+        "intent_status": "uncertain",
+        "acceptable_choices": [
+          "NONE"
+        ],
+        "feasible_choices": [],
+        "preference_scores": {},
+        "best_preference_score": null,
+        "decision_type": "inactive",
+        "effective_attributes": {
+          "category": "pants",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "EU",
+              "size": "48"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "W_IN_L_IN",
+              "size": "30x30"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "EU",
+              "size": "44"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 120
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "casual"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Boreal"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "plain"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-04-30T17:00:00Z",
+        "support_ids": [
+          "e2-1"
+        ]
+      },
+      "q5": {
+        "kind": "recommendation",
+        "intent_status": "active",
+        "acceptable_choices": [
+          "p-fe6cb88d977ccb56"
+        ],
+        "feasible_choices": [
+          "p-fe6cb88d977ccb56",
+          "p-55bba23f51227d64"
+        ],
+        "preference_scores": {
+          "p-fe6cb88d977ccb56": 4,
+          "p-55bba23f51227d64": 3
+        },
+        "best_preference_score": 4,
+        "decision_type": "ranked_choice",
+        "effective_attributes": {
+          "category": "hats",
+          "sizes": [
+            {
+              "brand": "Aster",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            },
+            {
+              "brand": "Boreal",
+              "sizing_system": "CM",
+              "size": "60"
+            },
+            {
+              "brand": "Cedar",
+              "sizing_system": "ALPHA",
+              "size": "L"
+            }
+          ],
+          "hard": [
+            {
+              "field": "price",
+              "op": "lte",
+              "value": 120
+            },
+            {
+              "field": "fit",
+              "op": "eq",
+              "value": "relaxed"
+            },
+            {
+              "field": "department",
+              "op": "eq",
+              "value": "unisex"
+            },
+            {
+              "field": "occasion",
+              "op": "eq",
+              "value": "casual"
+            }
+          ],
+          "soft": [
+            {
+              "field": "brand",
+              "op": "eq",
+              "value": "Cedar"
+            },
+            {
+              "field": "style",
+              "op": "eq",
+              "value": "sporty"
+            },
+            {
+              "field": "color",
+              "op": "eq",
+              "value": "navy"
+            },
+            {
+              "field": "material",
+              "op": "eq",
+              "value": "cotton"
+            }
+          ]
+        },
+        "deadline": "2026-04-27T17:00:00Z",
+        "support_ids": [
+          "e5-1",
+          "e9-2"
+        ]
+      }
+    }
+  }
+]

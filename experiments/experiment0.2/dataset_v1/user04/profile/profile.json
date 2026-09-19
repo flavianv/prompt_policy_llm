@@ -1,0 +1,754 @@
+{
+  "schema_version": "user-profile-1.1",
+  "profile_id": "user04",
+  "reference_date": "2026-03-01",
+  "personal": {
+    "name": "Rafael Mendes",
+    "gender": "male",
+    "birth_date": "1991-08-17",
+    "age": 34,
+    "race": "mixed",
+    "nationality": "Brazilian",
+    "marital_status": "partnered"
+  },
+  "residence": {
+    "city": "Curitiba",
+    "region": "Paraná",
+    "country": "Brazil",
+    "timezone": "America/Sao_Paulo"
+  },
+  "languages": [
+    {
+      "language": "Portuguese",
+      "proficiency": "native"
+    },
+    {
+      "language": "English",
+      "proficiency": "fluent"
+    },
+    {
+      "language": "Spanish",
+      "proficiency": "basic"
+    }
+  ],
+  "professional": {
+    "situation": "employed",
+    "occupation": "user-experience researcher",
+    "industry": "software and digital services",
+    "education": {
+      "level": "master",
+      "field": "human-computer interaction"
+    },
+    "income": {
+      "amount": 18500,
+      "currency": "BRL",
+      "period": "month"
+    }
+  },
+  "physical": {
+    "height": {
+      "value": 178,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 78,
+      "unit": "kg"
+    },
+    "build": "average",
+    "hair_color": "dark brown",
+    "eye_color": "brown"
+  },
+  "interests": {
+    "hobbies": [
+      "urban photography",
+      "cooking",
+      "cycling",
+      "reading contemporary fiction"
+    ],
+    "other_interests": [
+      "public transit",
+      "architecture",
+      "independent cinema"
+    ]
+  },
+  "general_preferences": [
+    {
+      "topic": "beverages",
+      "item": "specialty coffee",
+      "stance": "like",
+      "scope": "global",
+      "category": null,
+      "shopping_effect": "background_only"
+    },
+    {
+      "topic": "media",
+      "item": "independent cinema",
+      "stance": "like",
+      "scope": "global",
+      "category": null,
+      "shopping_effect": "background_only"
+    },
+    {
+      "topic": "shopping",
+      "item": "impulse purchases",
+      "stance": "dislike",
+      "scope": "global",
+      "category": null,
+      "shopping_effect": "hard_exclusion"
+    }
+  ],
+  "category_profiles": [
+    {
+      "category": "shirts",
+      "sizes": [
+        {
+          "brand": "Northline",
+          "sizing_system": "ALPHA",
+          "size": "M"
+        },
+        {
+          "brand": "Serra Studio",
+          "sizing_system": "ALPHA",
+          "size": null
+        }
+      ],
+      "hard": [
+        {
+          "field": "occasion",
+          "op": "not_in",
+          "value": [
+            "formal ceremony"
+          ]
+        }
+      ],
+      "default_size": {
+        "sizing_system": "ALPHA",
+        "size": "M"
+      },
+      "preferences": {
+        "brands": [
+          "Northline",
+          "Serra Studio"
+        ],
+        "materials": [
+          "cotton",
+          "linen"
+        ],
+        "colors": [
+          "navy",
+          "white",
+          "olive"
+        ],
+        "patterns": [
+          "solid",
+          "subtle stripes"
+        ],
+        "cuts": [
+          "regular"
+        ],
+        "fits": [
+          "regular",
+          "relaxed"
+        ],
+        "occasions": [
+          "casual",
+          "smart casual"
+        ],
+        "styles": [
+          "minimal",
+          "classic"
+        ]
+      },
+      "scoped_overrides": [
+        {
+          "context": {
+            "subtype": null,
+            "season": "summer",
+            "occasion": null
+          },
+          "preferences": {
+            "materials": [
+              "linen",
+              "cotton"
+            ],
+            "colors": [
+              "white",
+              "light blue"
+            ],
+            "patterns": [
+              "solid"
+            ],
+            "cuts": [
+              "regular"
+            ],
+            "fits": [
+              "relaxed"
+            ],
+            "occasions": [
+              "casual"
+            ],
+            "styles": [
+              "minimal"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "category": "shoes",
+      "sizes": [
+        {
+          "brand": "Caminho",
+          "sizing_system": "EU",
+          "size": "42"
+        },
+        {
+          "brand": "Lago",
+          "sizing_system": "EU",
+          "size": null
+        }
+      ],
+      "hard": [
+        {
+          "field": "width",
+          "op": "not_in",
+          "value": [
+            "narrow"
+          ]
+        }
+      ],
+      "default_size": {
+        "sizing_system": "EU",
+        "size": "42"
+      },
+      "preferences": {
+        "brands": [
+          "Caminho",
+          "Lago"
+        ],
+        "materials": [
+          "leather",
+          "canvas"
+        ],
+        "colors": [
+          "black",
+          "brown",
+          "white"
+        ],
+        "patterns": [
+          "solid"
+        ],
+        "cuts": [
+          "low-top"
+        ],
+        "fits": [
+          "standard"
+        ],
+        "occasions": [
+          "casual",
+          "travel"
+        ],
+        "styles": [
+          "minimal",
+          "retro"
+        ],
+        "widths": [
+          "standard",
+          "wide"
+        ]
+      },
+      "scoped_overrides": [
+        {
+          "context": {
+            "subtype": "walking shoes",
+            "season": null,
+            "occasion": "travel"
+          },
+          "preferences": {
+            "brands": [
+              "Caminho"
+            ],
+            "materials": [
+              "mesh",
+              "leather"
+            ],
+            "colors": [
+              "black",
+              "gray"
+            ],
+            "patterns": [
+              "solid"
+            ],
+            "cuts": [
+              "low-top"
+            ],
+            "fits": [
+              "supportive"
+            ],
+            "occasions": [
+              "travel"
+            ],
+            "styles": [
+              "minimal"
+            ],
+            "widths": [
+              "standard",
+              "wide"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "category": "pants",
+      "sizes": [
+        {
+          "brand": "Serra Studio",
+          "sizing_system": "W_IN_L_IN",
+          "size": "32/32"
+        },
+        {
+          "brand": "Northline",
+          "sizing_system": "ALPHA",
+          "size": "M"
+        }
+      ],
+      "hard": [
+        {
+          "field": "fit",
+          "op": "not_in",
+          "value": [
+            "skinny"
+          ]
+        }
+      ],
+      "default_size": {
+        "sizing_system": "W_IN_L_IN",
+        "size": "32/32"
+      },
+      "preferences": {
+        "brands": [
+          "Serra Studio",
+          "Northline"
+        ],
+        "materials": [
+          "cotton"
+        ],
+        "colors": [
+          "navy",
+          "charcoal",
+          "olive"
+        ],
+        "patterns": [
+          "solid"
+        ],
+        "cuts": [
+          "straight",
+          "tapered"
+        ],
+        "fits": [
+          "regular",
+          "relaxed"
+        ],
+        "occasions": [
+          "casual",
+          "smart casual"
+        ],
+        "styles": [
+          "minimal",
+          "workwear"
+        ]
+      },
+      "scoped_overrides": [
+        {
+          "context": {
+            "subtype": null,
+            "season": "summer",
+            "occasion": null
+          },
+          "preferences": {
+            "materials": [
+              "linen",
+              "cotton"
+            ],
+            "colors": [
+              "stone",
+              "olive",
+              "navy"
+            ],
+            "patterns": [
+              "solid"
+            ],
+            "cuts": [
+              "straight"
+            ],
+            "fits": [
+              "relaxed"
+            ],
+            "occasions": [
+              "casual"
+            ],
+            "styles": [
+              "minimal",
+              "resort"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "category": "outerwear",
+      "sizes": [
+        {
+          "brand": "Northline",
+          "sizing_system": "ALPHA",
+          "size": "M"
+        }
+      ],
+      "hard": [
+        {
+          "field": "material",
+          "op": "not_in",
+          "value": [
+            "real fur"
+          ]
+        }
+      ],
+      "default_size": {
+        "sizing_system": "ALPHA",
+        "size": "M"
+      },
+      "preferences": {
+        "brands": [
+          "Northline"
+        ],
+        "materials": [
+          "cotton",
+          "wool",
+          "recycled polyester"
+        ],
+        "colors": [
+          "navy",
+          "charcoal",
+          "olive"
+        ],
+        "patterns": [
+          "solid"
+        ],
+        "cuts": [
+          "field jacket",
+          "overshirt"
+        ],
+        "fits": [
+          "regular"
+        ],
+        "occasions": [
+          "casual",
+          "travel"
+        ],
+        "styles": [
+          "minimal",
+          "utility"
+        ]
+      },
+      "scoped_overrides": [
+        {
+          "context": {
+            "subtype": null,
+            "season": "winter",
+            "occasion": null
+          },
+          "preferences": {
+            "materials": [
+              "wool",
+              "recycled polyester"
+            ],
+            "colors": [
+              "charcoal",
+              "navy"
+            ],
+            "patterns": [
+              "solid"
+            ],
+            "cuts": [
+              "field jacket"
+            ],
+            "fits": [
+              "regular"
+            ],
+            "occasions": [
+              "casual",
+              "travel"
+            ],
+            "styles": [
+              "utility"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "category": "hats",
+      "sizes": [],
+      "hard": [],
+      "default_size": null,
+      "preferences": {
+        "brands": [
+          "Serra Studio"
+        ],
+        "materials": [
+          "cotton",
+          "wool"
+        ],
+        "colors": [
+          "navy",
+          "olive",
+          "beige"
+        ],
+        "patterns": [
+          "solid"
+        ],
+        "cuts": [
+          "baseball cap",
+          "beanie"
+        ],
+        "fits": [
+          "adjustable",
+          "standard"
+        ],
+        "occasions": [
+          "casual",
+          "outdoor"
+        ],
+        "styles": [
+          "minimal",
+          "utility"
+        ]
+      },
+      "scoped_overrides": [
+        {
+          "context": {
+            "subtype": "beanie",
+            "season": "winter",
+            "occasion": null
+          },
+          "preferences": {
+            "brands": [
+              "Serra Studio"
+            ],
+            "materials": [
+              "wool"
+            ],
+            "colors": [
+              "charcoal",
+              "navy"
+            ],
+            "patterns": [
+              "solid"
+            ],
+            "cuts": [
+              "beanie"
+            ],
+            "fits": [
+              "standard"
+            ],
+            "occasions": [
+              "casual",
+              "outdoor"
+            ],
+            "styles": [
+              "minimal"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "category": "accessories",
+      "sizes": [
+        {
+          "brand": "Serra Studio",
+          "sizing_system": "ONE_SIZE",
+          "size": "ONE_SIZE"
+        }
+      ],
+      "hard": [],
+      "default_size": {
+        "sizing_system": "ONE_SIZE",
+        "size": "ONE_SIZE"
+      },
+      "preferences": {
+        "brands": [
+          "Serra Studio",
+          "Northline"
+        ],
+        "materials": [
+          "leather",
+          "cotton",
+          "stainless steel"
+        ],
+        "colors": [
+          "black",
+          "brown",
+          "silver"
+        ],
+        "patterns": [],
+        "cuts": [
+          "slim",
+          "classic"
+        ],
+        "fits": [
+          "standard"
+        ],
+        "occasions": [
+          "casual",
+          "work"
+        ],
+        "styles": [
+          "minimal",
+          "classic"
+        ]
+      },
+      "scoped_overrides": [
+        {
+          "context": {
+            "subtype": "belt",
+            "season": null,
+            "occasion": "work"
+          },
+          "preferences": {
+            "brands": [
+              "Serra Studio"
+            ],
+            "materials": [
+              "leather"
+            ],
+            "colors": [
+              "black",
+              "brown"
+            ],
+            "patterns": [],
+            "cuts": [
+              "slim"
+            ],
+            "fits": [
+              "standard"
+            ],
+            "occasions": [
+              "work"
+            ],
+            "styles": [
+              "minimal"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "purchase_intents": [
+    {
+      "id": "future-trip",
+      "category": "shoes",
+      "recipient": "self",
+      "created_at": "2026-03-01T09:00:00Z",
+      "deadline": "2026-05-01T18:00:00Z",
+      "status": "active",
+      "budget": {
+        "amount": 700,
+        "currency": "BRL"
+      },
+      "sizes": [
+        {
+          "brand": "Caminho",
+          "sizing_system": "EU",
+          "size": "42"
+        }
+      ],
+      "hard": [
+        {
+          "field": "width",
+          "op": "in",
+          "value": [
+            "standard",
+            "wide"
+          ]
+        },
+        {
+          "field": "occasion",
+          "op": "in",
+          "value": [
+            "travel"
+          ]
+        }
+      ],
+      "soft": [
+        {
+          "field": "material",
+          "op": "in",
+          "value": [
+            "leather",
+            "mesh"
+          ]
+        },
+        {
+          "field": "color",
+          "op": "in",
+          "value": [
+            "black",
+            "gray"
+          ]
+        }
+      ],
+      "use_general_preferences": true,
+      "excluded_preference_items": []
+    },
+    {
+      "id": "urgent-gift",
+      "category": "shirts",
+      "recipient": "gift",
+      "created_at": "2026-03-01T09:00:00Z",
+      "deadline": "2026-03-02T18:00:00Z",
+      "status": "active",
+      "budget": {
+        "amount": 250,
+        "currency": "BRL"
+      },
+      "sizes": null,
+      "hard": [
+        {
+          "field": "occasion",
+          "op": "in",
+          "value": [
+            "casual",
+            "smart casual"
+          ]
+        }
+      ],
+      "soft": [
+        {
+          "field": "color",
+          "op": "in",
+          "value": [
+            "navy",
+            "white",
+            "olive"
+          ]
+        },
+        {
+          "field": "pattern",
+          "op": "in",
+          "value": [
+            "solid",
+            "subtle stripes"
+          ]
+        }
+      ],
+      "use_general_preferences": false,
+      "excluded_preference_items": []
+    }
+  ],
+  "coherence_notes": [
+    "Rafael works in digital services and enjoys photography, cooking, cycling, and architecture.",
+    "The future-trip shoe intent is for Rafael and is separate from the urgent shirt gift intent."
+  ]
+}

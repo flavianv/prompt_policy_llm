@@ -1,0 +1,591 @@
+{
+  "schema_version": "user-profile-1.1",
+  "profile_id": "user10",
+  "reference_date": "2026-03-01",
+  "personal": {
+    "name": "Daniel Mwangi",
+    "gender": "male",
+    "birth_date": "1991-07-14",
+    "age": 34,
+    "race": "Black African",
+    "nationality": "Kenyan",
+    "marital_status": "married"
+  },
+  "residence": {
+    "city": "Nairobi",
+    "region": "Nairobi County",
+    "country": "Kenya",
+    "timezone": "Africa/Nairobi"
+  },
+  "languages": [
+    {
+      "language": "English",
+      "proficiency": "fluent"
+    },
+    {
+      "language": "Swahili",
+      "proficiency": "native"
+    },
+    {
+      "language": "French",
+      "proficiency": "basic"
+    }
+  ],
+  "professional": {
+    "situation": "employed",
+    "occupation": "Project manager",
+    "industry": "Renewable energy",
+    "education": {
+      "level": "master",
+      "field": "Project management"
+    },
+    "income": {
+      "amount": 285000,
+      "currency": "KES",
+      "period": "month"
+    }
+  },
+  "physical": {
+    "height": {
+      "value": 178,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 78,
+      "unit": "kg"
+    },
+    "build": "medium",
+    "hair_color": "black",
+    "eye_color": "brown"
+  },
+  "interests": {
+    "hobbies": [
+      "cycling",
+      "photography",
+      "cooking",
+      "historical fiction"
+    ],
+    "other_interests": [
+      "renewable energy",
+      "urban design",
+      "East African history"
+    ]
+  },
+  "general_preferences": [
+    {
+      "topic": "beverages",
+      "item": "black coffee",
+      "stance": "like",
+      "scope": "global",
+      "category": null,
+      "shopping_effect": "soft_preference"
+    },
+    {
+      "topic": "literature",
+      "item": "historical fiction",
+      "stance": "like",
+      "scope": "global",
+      "category": null,
+      "shopping_effect": "background_only"
+    },
+    {
+      "topic": "colors",
+      "item": "neon colors",
+      "stance": "dislike",
+      "scope": "global",
+      "category": null,
+      "shopping_effect": "background_only"
+    },
+    {
+      "topic": "shopping",
+      "item": "online price comparison",
+      "stance": "like",
+      "scope": "global",
+      "category": null,
+      "shopping_effect": "soft_preference"
+    }
+  ],
+  "category_profiles": [
+    {
+      "category": "shirts",
+      "sizes": [
+        {
+          "brand": "Jambo Wear",
+          "sizing_system": "ALPHA",
+          "size": "L"
+        },
+        {
+          "brand": "Savanna Cotton",
+          "sizing_system": "ALPHA",
+          "size": "L"
+        }
+      ],
+      "hard": [
+        {
+          "field": "material",
+          "op": "not_in",
+          "value": [
+            "polyester"
+          ]
+        }
+      ],
+      "default_size": {
+        "sizing_system": "ALPHA",
+        "size": "L"
+      },
+      "preferences": {
+        "brands": [
+          "Jambo Wear",
+          "Savanna Cotton"
+        ],
+        "materials": [
+          "cotton",
+          "linen"
+        ],
+        "colors": [
+          "white",
+          "light blue",
+          "olive"
+        ],
+        "patterns": [
+          "solid",
+          "subtle stripes"
+        ],
+        "cuts": [
+          "regular"
+        ],
+        "fits": [
+          "regular"
+        ],
+        "occasions": [
+          "work",
+          "casual"
+        ],
+        "styles": [
+          "minimal",
+          "smart casual"
+        ]
+      },
+      "scoped_overrides": [
+        {
+          "context": {
+            "subtype": null,
+            "season": "summer",
+            "occasion": null
+          },
+          "preferences": {
+            "brands": null,
+            "materials": [
+              "linen",
+              "cotton"
+            ],
+            "colors": [
+              "white",
+              "light blue"
+            ],
+            "patterns": null,
+            "cuts": null,
+            "fits": null,
+            "occasions": null,
+            "styles": [
+              "smart casual"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "category": "shoes",
+      "sizes": [
+        {
+          "brand": "Asili Footwear",
+          "sizing_system": "EU",
+          "size": "42"
+        }
+      ],
+      "hard": [
+        {
+          "field": "width",
+          "op": "in",
+          "value": [
+            "regular"
+          ]
+        }
+      ],
+      "default_size": {
+        "sizing_system": "EU",
+        "size": "42"
+      },
+      "preferences": {
+        "brands": [
+          "Asili Footwear"
+        ],
+        "materials": [
+          "leather",
+          "canvas"
+        ],
+        "colors": [
+          "brown",
+          "black",
+          "white"
+        ],
+        "patterns": [
+          "solid"
+        ],
+        "cuts": [
+          "low-top"
+        ],
+        "fits": [
+          "regular"
+        ],
+        "occasions": [
+          "work",
+          "travel",
+          "casual"
+        ],
+        "styles": [
+          "classic",
+          "minimal"
+        ],
+        "widths": [
+          "regular"
+        ]
+      },
+      "scoped_overrides": [
+        {
+          "context": {
+            "subtype": "walking shoes",
+            "season": null,
+            "occasion": "travel"
+          },
+          "preferences": {
+            "brands": [
+              "Asili Footwear"
+            ],
+            "materials": [
+              "leather",
+              "mesh"
+            ],
+            "colors": [
+              "black",
+              "brown"
+            ],
+            "patterns": [
+              "solid"
+            ],
+            "cuts": [
+              "low-top"
+            ],
+            "fits": [
+              "regular"
+            ],
+            "occasions": [
+              "travel"
+            ],
+            "styles": [
+              "practical"
+            ],
+            "widths": [
+              "regular"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "category": "pants",
+      "sizes": [
+        {
+          "brand": "Savanna Cotton",
+          "sizing_system": "W_IN_L_IN",
+          "size": "32x32"
+        }
+      ],
+      "hard": [
+        {
+          "field": "material",
+          "op": "in",
+          "value": [
+            "cotton",
+            "linen"
+          ]
+        }
+      ],
+      "default_size": {
+        "sizing_system": "W_IN_L_IN",
+        "size": "32x32"
+      },
+      "preferences": {
+        "brands": [
+          "Savanna Cotton"
+        ],
+        "materials": [
+          "cotton"
+        ],
+        "colors": [
+          "navy",
+          "khaki",
+          "charcoal"
+        ],
+        "patterns": [
+          "solid"
+        ],
+        "cuts": [
+          "straight"
+        ],
+        "fits": [
+          "regular"
+        ],
+        "occasions": [
+          "work",
+          "casual"
+        ],
+        "styles": [
+          "minimal",
+          "smart casual"
+        ]
+      },
+      "scoped_overrides": [
+        {
+          "context": {
+            "subtype": null,
+            "season": "summer",
+            "occasion": null
+          },
+          "preferences": {
+            "brands": null,
+            "materials": [
+              "linen",
+              "cotton"
+            ],
+            "colors": null,
+            "patterns": null,
+            "cuts": null,
+            "fits": [
+              "regular"
+            ],
+            "occasions": null,
+            "styles": null
+          }
+        }
+      ]
+    },
+    {
+      "category": "outerwear",
+      "sizes": [
+        {
+          "brand": "Highland Outfitters",
+          "sizing_system": "ALPHA",
+          "size": "L"
+        }
+      ],
+      "hard": [],
+      "default_size": {
+        "sizing_system": "ALPHA",
+        "size": "L"
+      },
+      "preferences": {
+        "brands": [
+          "Highland Outfitters"
+        ],
+        "materials": [
+          "cotton",
+          "wool"
+        ],
+        "colors": [
+          "navy",
+          "charcoal",
+          "olive"
+        ],
+        "patterns": [
+          "solid"
+        ],
+        "cuts": [
+          "regular"
+        ],
+        "fits": [
+          "regular"
+        ],
+        "occasions": [
+          "travel",
+          "casual"
+        ],
+        "styles": [
+          "utility",
+          "minimal"
+        ]
+      },
+      "scoped_overrides": []
+    },
+    {
+      "category": "hats",
+      "sizes": [
+        {
+          "brand": "Kijani Headwear",
+          "sizing_system": "CM",
+          "size": "58"
+        }
+      ],
+      "hard": [],
+      "default_size": null,
+      "preferences": {
+        "brands": [
+          "Kijani Headwear"
+        ],
+        "materials": [
+          "cotton"
+        ],
+        "colors": [
+          "olive",
+          "navy",
+          "beige"
+        ],
+        "patterns": [
+          "solid"
+        ],
+        "cuts": [
+          "structured"
+        ],
+        "fits": [
+          "regular"
+        ],
+        "occasions": [
+          "casual",
+          "travel"
+        ],
+        "styles": [
+          "classic"
+        ]
+      },
+      "scoped_overrides": []
+    },
+    {
+      "category": "accessories",
+      "sizes": [
+        {
+          "brand": "Mara Goods",
+          "sizing_system": "ONE_SIZE",
+          "size": "ONE_SIZE"
+        }
+      ],
+      "hard": [],
+      "default_size": {
+        "sizing_system": "ONE_SIZE",
+        "size": "ONE_SIZE"
+      },
+      "preferences": {
+        "brands": [
+          "Mara Goods"
+        ],
+        "materials": [
+          "leather",
+          "cotton"
+        ],
+        "colors": [
+          "brown",
+          "black",
+          "olive"
+        ],
+        "patterns": [],
+        "cuts": [
+          "classic"
+        ],
+        "fits": [
+          "regular"
+        ],
+        "occasions": [
+          "work",
+          "travel"
+        ],
+        "styles": [
+          "minimal"
+        ]
+      },
+      "scoped_overrides": []
+    }
+  ],
+  "purchase_intents": [
+    {
+      "id": "future-trip",
+      "category": "shoes",
+      "recipient": "self",
+      "created_at": "2026-03-01T09:00:00Z",
+      "deadline": "2026-05-01T18:00:00Z",
+      "status": "active",
+      "budget": {
+        "amount": 18000,
+        "currency": "KES"
+      },
+      "sizes": [
+        {
+          "brand": "Asili Footwear",
+          "sizing_system": "EU",
+          "size": "42"
+        }
+      ],
+      "hard": [
+        {
+          "field": "width",
+          "op": "eq",
+          "value": "regular"
+        }
+      ],
+      "soft": [
+        {
+          "field": "occasion",
+          "op": "in",
+          "value": [
+            "travel",
+            "walking"
+          ]
+        },
+        {
+          "field": "color",
+          "op": "in",
+          "value": [
+            "black",
+            "brown"
+          ]
+        }
+      ],
+      "use_general_preferences": true,
+      "excluded_preference_items": []
+    },
+    {
+      "id": "urgent-gift",
+      "category": "shirts",
+      "recipient": "gift",
+      "created_at": "2026-03-01T09:00:00Z",
+      "deadline": "2026-03-02T18:00:00Z",
+      "status": "active",
+      "budget": {
+        "amount": 6000,
+        "currency": "KES"
+      },
+      "sizes": null,
+      "hard": [],
+      "soft": [
+        {
+          "field": "occasion",
+          "op": "eq",
+          "value": "casual"
+        },
+        {
+          "field": "color",
+          "op": "in",
+          "value": [
+            "blue",
+            "white"
+          ]
+        }
+      ],
+      "use_general_preferences": false,
+      "excluded_preference_items": []
+    }
+  ],
+  "coherence_notes": [
+    "Daniel works in renewable energy project management and often dresses in minimal smart-casual clothing for work and travel.",
+    "The urgent shirt purchase is a gift; the recipient's size and preferences are not yet known.",
+    "Summer pants preferences explicitly allow linen or cotton, while the general pants material preference remains cotton."
+  ]
+}

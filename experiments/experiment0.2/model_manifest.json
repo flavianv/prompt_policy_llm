@@ -1,0 +1,90 @@
+{
+  "repo_id": "Qwen/Qwen3-1.7B",
+  "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "size": 1570,
+      "blob_id": "52373fe24473b1aa44333d318f578ae6bf04b49b",
+      "lfs": null
+    },
+    {
+      "path": "LICENSE",
+      "size": 11343,
+      "blob_id": "6634c8cc3133b3848ec74b9f275acaaa1ea618ab",
+      "lfs": null
+    },
+    {
+      "path": "README.md",
+      "size": 13963,
+      "blob_id": "88aaef81cfe31bcdfe47203649a69ff12042826a",
+      "lfs": null
+    },
+    {
+      "path": "config.json",
+      "size": 726,
+      "blob_id": "044a86ecf7cb32238f3fae4184e55d354787edec",
+      "lfs": null
+    },
+    {
+      "path": "generation_config.json",
+      "size": 239,
+      "blob_id": "20a8a9156fc8c3f25295ca067f61fdf120d517c5",
+      "lfs": null
+    },
+    {
+      "path": "merges.txt",
+      "size": 1671853,
+      "blob_id": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+      "lfs": null
+    },
+    {
+      "path": "model-00001-of-00002.safetensors",
+      "size": 3441185608,
+      "blob_id": "1414f1bda72e17b63551d847c05c68e3396ba717",
+      "lfs": {
+        "size": 3441185608,
+        "sha256": "169ad53ec313c3a34b06c0809216e4fc072cce444a5d4ff2b59690d064130ed5",
+        "pointer_size": 135
+      }
+    },
+    {
+      "path": "model-00002-of-00002.safetensors",
+      "size": 622329984,
+      "blob_id": "4aab3b30a4b8c6c1d0437a2576e0bea08507f12c",
+      "lfs": {
+        "size": 622329984,
+        "sha256": "912becff8d60672aa8628ef08c05898d9adf17c2ad4ae3caf99b065622fdeff9",
+        "pointer_size": 134
+      }
+    },
+    {
+      "path": "model.safetensors.index.json",
+      "size": 25605,
+      "blob_id": "986d7db875b47d21f68530f6baac038f1b297b39",
+      "lfs": null
+    },
+    {
+      "path": "tokenizer.json",
+      "size": 11422654,
+      "blob_id": "cd71f61a15a522601badb3dc960d800d9cb3766c",
+      "lfs": {
+        "size": 11422654,
+        "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "pointer_size": 133
+      }
+    },
+    {
+      "path": "tokenizer_config.json",
+      "size": 9732,
+      "blob_id": "417d038a63fa3de29cfde265caedae14d1a58d92",
+      "lfs": null
+    },
+    {
+      "path": "vocab.json",
+      "size": 2776833,
+      "blob_id": "4783fe10ac3adce15ac8f358ef5462739852c569",
+      "lfs": null
+    }
+  ]
+}

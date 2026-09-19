@@ -1,0 +1,83 @@
+{
+  "config": {
+    "checkpoint": "experiment0.2-explicit-state",
+    "seed": 17,
+    "sessions": 10,
+    "questions_per_session": 2,
+    "session_gap_days": [
+      1,
+      2,
+      5,
+      10
+    ],
+    "informative_events_per_session": [
+      1,
+      2
+    ],
+    "distractors_per_session": [
+      1,
+      2
+    ],
+    "historical_question_probability": 0.35,
+    "profile_model": "gpt-5.6-luna",
+    "answer_model": "gpt-5.6-luna",
+    "profile_max_attempts": 2,
+    "profile_max_output_tokens": 10000,
+    "answer_max_output_tokens": 768,
+    "note_max_rounds": 12,
+    "note_max_output_tokens": 768,
+    "note_max_words": 1600,
+    "note_max_count": 40,
+    "templates": {
+      "reveal": "For my own records, {label}: {value}.",
+      "change": "Update my records from today: {label} is now {value}. This replaces the previous value from now onward.",
+      "temporary": "For this temporary period only, {label}: {value}. This applies until {until}; after that, return to my prior preference.",
+      "repeat": "Just confirming again: {label}: {value}.",
+      "historical_question": "Which option matches {label} at {time}?",
+      "current_question": "Which option matches {label} as of now?"
+    },
+    "distractors": {
+      "filler": [
+        "There was a long queue at the caf\u00e9 this morning.",
+        "The elevator stopped on every floor today.",
+        "A pigeon landed on the windowsill while I was waiting."
+      ],
+      "other_person": [
+        "A colleague said they love neon jackets; that is their taste, not mine.",
+        "My neighbor was talking about learning the violin."
+      ],
+      "product_description": [
+        "A shop window advertised striped linen shirts. I am only describing the display.",
+        "An advert listed leather shoes in several sizes; that says nothing about my own size."
+      ]
+    },
+    "total_statements_range": [
+      6,
+      10
+    ],
+    "initial_gap_days": [
+      5,
+      5
+    ],
+    "runtime": {
+      "qwen_identity": {
+        "model": "Qwen/Qwen3-1.7B",
+        "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+        "verified_files": 12
+      },
+      "model_path": "/home/criteo/qwen17b-work/model",
+      "torch": "2.11.0+cu130",
+      "transformers": "5.12.1",
+      "openai": "2.43.0",
+      "gpu": "NVIDIA B200 MIG 3g.90gb",
+      "qwen_thinking": false,
+      "qwen_do_sample": false,
+      "precision": "bfloat16",
+      "weight_training": false
+    }
+  },
+  "mode": "live",
+  "answer_system": "Answer only from the current dated session and prior notes, if provided.\nTrack explicit facts, lists and scope: defaults do not imply brand sizes; summer-pants materials\nare not all-pants materials. Unknown, an explicit empty preference list, and unrevealed information\nare different. Current explicit changes replace old facts from their stated time; retain history\nfor historical questions. Temporary overrides expire at their stated end, restoring prior facts.\nIntent deadlines are inclusive: expire strictly afterwards, unless completed/cancelled earlier.\nIgnore unrelated chatter, other people's preferences and product descriptions as user facts.\nNo demographic inference, preference learning, recommendation or utility calculation. Return only\nJSON mapping every question ID to its option letter. Make the best supported choice if notes lack evidence.",
+  "note_system": "Maintain explicit notes for one user from the dated statements you receive.\nPreserve dates, history, unknown values, explicitly empty/multiple preference lists, category,\nbrand/system and subtype/season/occasion scope. Do not invent sizes or convert between brands.\nChanges apply from the stated date; temporary overrides end at their deadline then restore prior\npreferences. Intent expiry is distinct from completed/cancelled, and old open/future intents persist.\nSave facts needed across sessions, including general facts and explicit dislikes/retractions.\nIgnore unrelated filler, other-person statements and product descriptions; repetition does not change state.\nCall exactly one strict JSON tool {\"tool\":\"NAME\",\"arguments\":{...}} per response.\nread_notes {} once before editing; put_note {\"name\":\"short stable topic\",\"text\":\"concise facts, dates and history\"};\ndelete_note {\"name\":\"existing topic\"}; no_op {} to finish. Upsert complete notes. Cite evidence IDs where useful.\nNo questions, product choices or rewards are available. Do not pretend to know future sessions.",
+  "source_sha256": "56c28d4b9a25c80026b42af7a88bad988a4907b2dd27bb3bce2e59e5674c6b74"
+}

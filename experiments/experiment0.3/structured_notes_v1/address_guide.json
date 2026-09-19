@@ -1,0 +1,6 @@
+{
+  "profile": "Original field names and value types; absent means unrevealed, null means explicitly unknown, [] means explicitly empty.",
+  "atomic_units": "One scalar profile field, one complete compound value (height/weight, income, residence, education, default_size, budget), one entire typed preference/hobby/language collection, or one brand size; intent status and deadline count separately.",
+  "identity_fields": "category; brand+sizing_system; scoped context; preference topic+item+scope+category; intent id+category+recipient identify records and give no standalone points.",
+  "history": "Optional list of {address, events:[{at,until,value}]}; never part of the primary current-field reward."
+}

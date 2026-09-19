@@ -1,0 +1,255 @@
+# Actual Luna-generated initial profile
+
+Model: gpt-5.6-luna
+
+- schema_version: user-profile-1.1
+- profile_id: user12
+- reference_date: 2026-03-01
+- personal / name: Omar Haddad
+- personal / gender: male
+- personal / birth_date: 1991-06-15
+- personal / age: 34
+- personal / race: Arab
+- personal / nationality: Tunisian
+- personal / marital_status: married
+- residence / city: Tunis
+- residence / region: Tunis Governorate
+- residence / country: Tunisia
+- residence / timezone: Africa/Tunis
+- languages [1] / language: Arabic
+- languages [1] / proficiency: native
+- languages [2] / language: French
+- languages [2] / proficiency: fluent
+- languages [3] / language: English
+- languages [3] / proficiency: intermediate
+- professional / situation: employed
+- professional / occupation: UX researcher
+- professional / industry: software and digital services
+- professional / education / level: master
+- professional / education / field: human-computer interaction
+- professional / income / amount: 4200
+- professional / income / currency: TND
+- professional / income / period: month
+- physical / height / value: 178
+- physical / height / unit: cm
+- physical / weight / value: 78
+- physical / weight / unit: kg
+- physical / build: average
+- physical / hair_color: dark brown
+- physical / eye_color: brown
+- interests / hobbies: urban photography, cooking, cycling, reading historical fiction
+- interests / other_interests: architecture, local food markets, travel planning
+- general_preferences [1] / topic: coffee
+- general_preferences [1] / item: dark roast coffee
+- general_preferences [1] / stance: like
+- general_preferences [1] / scope: global
+- general_preferences [1] / category: explicitly unknown
+- general_preferences [1] / shopping_effect: background_only
+- general_preferences [2] / topic: literature
+- general_preferences [2] / item: historical fiction
+- general_preferences [2] / stance: like
+- general_preferences [2] / scope: global
+- general_preferences [2] / category: explicitly unknown
+- general_preferences [2] / shopping_effect: background_only
+- general_preferences [3] / topic: clothing
+- general_preferences [3] / item: visible logos
+- general_preferences [3] / stance: dislike
+- general_preferences [3] / scope: global
+- general_preferences [3] / category: explicitly unknown
+- general_preferences [3] / shopping_effect: hard_exclusion
+- category_profiles [1] / category: shirts
+- category_profiles [1] / sizes [1] / brand: Uniqlo
+- category_profiles [1] / sizes [1] / sizing_system: ALPHA
+- category_profiles [1] / sizes [1] / size: L
+- category_profiles [1] / sizes [2] / brand: Charles Tyrwhitt
+- category_profiles [1] / sizes [2] / sizing_system: US_COLLAR_IN
+- category_profiles [1] / sizes [2] / size: 15.5
+- category_profiles [1] / hard [1] / field: condition
+- category_profiles [1] / hard [1] / op: ne
+- category_profiles [1] / hard [1] / value: dry-clean-only
+- category_profiles [1] / default_size / sizing_system: ALPHA
+- category_profiles [1] / default_size / size: L
+- category_profiles [1] / preferences / brands: Uniqlo, Muji
+- category_profiles [1] / preferences / materials: cotton, linen
+- category_profiles [1] / preferences / colors: white, navy, olive
+- category_profiles [1] / preferences / patterns: solid, subtle stripes
+- category_profiles [1] / preferences / cuts: regular
+- category_profiles [1] / preferences / fits: regular
+- category_profiles [1] / preferences / occasions: work, casual
+- category_profiles [1] / preferences / styles: minimal, smart-casual
+- category_profiles [1] / scoped_overrides [1] / context / subtype: explicitly unknown
+- category_profiles [1] / scoped_overrides [1] / context / season: summer
+- category_profiles [1] / scoped_overrides [1] / context / occasion: explicitly unknown
+- category_profiles [1] / scoped_overrides [1] / preferences / brands: explicitly unknown
+- category_profiles [1] / scoped_overrides [1] / preferences / materials: linen, cotton
+- category_profiles [1] / scoped_overrides [1] / preferences / colors: white, light blue
+- category_profiles [1] / scoped_overrides [1] / preferences / patterns: solid
+- category_profiles [1] / scoped_overrides [1] / preferences / cuts: explicitly unknown
+- category_profiles [1] / scoped_overrides [1] / preferences / fits: relaxed
+- category_profiles [1] / scoped_overrides [1] / preferences / occasions: explicitly unknown
+- category_profiles [1] / scoped_overrides [1] / preferences / styles: explicitly unknown
+- category_profiles [2] / category: shoes
+- category_profiles [2] / sizes [1] / brand: Clarks
+- category_profiles [2] / sizes [1] / sizing_system: EU
+- category_profiles [2] / sizes [1] / size: 42
+- category_profiles [2] / sizes [2] / brand: New Balance
+- category_profiles [2] / sizes [2] / sizing_system: EU
+- category_profiles [2] / sizes [2] / size: 42
+- category_profiles [2] / hard [1] / field: width
+- category_profiles [2] / hard [1] / op: ne
+- category_profiles [2] / hard [1] / value: narrow
+- category_profiles [2] / default_size / sizing_system: EU
+- category_profiles [2] / default_size / size: 42
+- category_profiles [2] / preferences / brands: Clarks, New Balance
+- category_profiles [2] / preferences / materials: leather, canvas
+- category_profiles [2] / preferences / colors: brown, white, navy
+- category_profiles [2] / preferences / patterns: solid
+- category_profiles [2] / preferences / cuts: explicitly unknown
+- category_profiles [2] / preferences / fits: comfortable
+- category_profiles [2] / preferences / occasions: walking, travel, casual
+- category_profiles [2] / preferences / styles: minimal, classic
+- category_profiles [2] / preferences / widths: regular
+- category_profiles [2] / scoped_overrides [1] / context / subtype: walking shoes
+- category_profiles [2] / scoped_overrides [1] / context / season: explicitly unknown
+- category_profiles [2] / scoped_overrides [1] / context / occasion: travel
+- category_profiles [2] / scoped_overrides [1] / preferences / brands: New Balance
+- category_profiles [2] / scoped_overrides [1] / preferences / materials: explicitly unknown
+- category_profiles [2] / scoped_overrides [1] / preferences / colors: white, navy
+- category_profiles [2] / scoped_overrides [1] / preferences / patterns: explicitly unknown
+- category_profiles [2] / scoped_overrides [1] / preferences / cuts: explicitly unknown
+- category_profiles [2] / scoped_overrides [1] / preferences / fits: supportive
+- category_profiles [2] / scoped_overrides [1] / preferences / occasions: explicitly unknown
+- category_profiles [2] / scoped_overrides [1] / preferences / styles: explicitly unknown
+- category_profiles [2] / scoped_overrides [1] / preferences / widths: regular
+- category_profiles [3] / category: pants
+- category_profiles [3] / sizes [1] / brand: Uniqlo
+- category_profiles [3] / sizes [1] / sizing_system: W_IN_L_IN
+- category_profiles [3] / sizes [1] / size: 32x32
+- category_profiles [3] / hard [1] / field: rise
+- category_profiles [3] / hard [1] / op: ne
+- category_profiles [3] / hard [1] / value: low-rise
+- category_profiles [3] / default_size / sizing_system: W_IN_L_IN
+- category_profiles [3] / default_size / size: 32x32
+- category_profiles [3] / preferences / brands: Uniqlo, Levi's
+- category_profiles [3] / preferences / materials: cotton
+- category_profiles [3] / preferences / colors: navy, olive, beige
+- category_profiles [3] / preferences / patterns: solid
+- category_profiles [3] / preferences / cuts: straight
+- category_profiles [3] / preferences / fits: regular
+- category_profiles [3] / preferences / occasions: work, casual
+- category_profiles [3] / preferences / styles: minimal, smart-casual
+- category_profiles [3] / scoped_overrides [1] / context / subtype: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / context / season: summer
+- category_profiles [3] / scoped_overrides [1] / context / occasion: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / brands: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / materials: linen, cotton
+- category_profiles [3] / scoped_overrides [1] / preferences / colors: beige, olive
+- category_profiles [3] / scoped_overrides [1] / preferences / patterns: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / cuts: straight
+- category_profiles [3] / scoped_overrides [1] / preferences / fits: relaxed
+- category_profiles [3] / scoped_overrides [1] / preferences / occasions: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / styles: explicitly unknown
+- category_profiles [4] / category: outerwear
+- category_profiles [4] / sizes [1] / brand: Patagonia
+- category_profiles [4] / sizes [1] / sizing_system: ALPHA
+- category_profiles [4] / sizes [1] / size: L
+- category_profiles [4] / hard [1] / field: condition
+- category_profiles [4] / hard [1] / op: ne
+- category_profiles [4] / hard [1] / value: dry-clean-only
+- category_profiles [4] / default_size / sizing_system: ALPHA
+- category_profiles [4] / default_size / size: L
+- category_profiles [4] / preferences / brands: Patagonia, Uniqlo
+- category_profiles [4] / preferences / materials: cotton, recycled polyester
+- category_profiles [4] / preferences / colors: navy, charcoal, olive
+- category_profiles [4] / preferences / patterns: solid
+- category_profiles [4] / preferences / cuts: regular
+- category_profiles [4] / preferences / fits: regular
+- category_profiles [4] / preferences / occasions: travel, casual
+- category_profiles [4] / preferences / styles: minimal, functional
+- category_profiles [4] / scoped_overrides [1] / context / subtype: light jacket
+- category_profiles [4] / scoped_overrides [1] / context / season: spring
+- category_profiles [4] / scoped_overrides [1] / context / occasion: explicitly unknown
+- category_profiles [4] / scoped_overrides [1] / preferences / brands: Uniqlo
+- category_profiles [4] / scoped_overrides [1] / preferences / materials: cotton, recycled polyester
+- category_profiles [4] / scoped_overrides [1] / preferences / colors: navy, olive
+- category_profiles [4] / scoped_overrides [1] / preferences / patterns: solid
+- category_profiles [4] / scoped_overrides [1] / preferences / cuts: explicitly unknown
+- category_profiles [4] / scoped_overrides [1] / preferences / fits: regular
+- category_profiles [4] / scoped_overrides [1] / preferences / occasions: explicitly unknown
+- category_profiles [4] / scoped_overrides [1] / preferences / styles: minimal
+- category_profiles [5] / category: hats
+- category_profiles [5] / sizes: explicitly no stated preference
+- category_profiles [5] / hard: explicitly no stated preference
+- category_profiles [5] / default_size: explicitly unknown
+- category_profiles [5] / preferences / brands: explicitly unknown
+- category_profiles [5] / preferences / materials: cotton
+- category_profiles [5] / preferences / colors: navy, beige
+- category_profiles [5] / preferences / patterns: solid
+- category_profiles [5] / preferences / cuts: explicitly unknown
+- category_profiles [5] / preferences / fits: adjustable
+- category_profiles [5] / preferences / occasions: sun protection, casual
+- category_profiles [5] / preferences / styles: minimal
+- category_profiles [5] / scoped_overrides: explicitly no stated preference
+- category_profiles [6] / category: accessories
+- category_profiles [6] / sizes [1] / brand: Uniqlo
+- category_profiles [6] / sizes [1] / sizing_system: ONE_SIZE
+- category_profiles [6] / sizes [1] / size: ONE_SIZE
+- category_profiles [6] / hard [1] / field: material
+- category_profiles [6] / hard [1] / op: ne
+- category_profiles [6] / hard [1] / value: genuine leather
+- category_profiles [6] / default_size / sizing_system: ONE_SIZE
+- category_profiles [6] / default_size / size: ONE_SIZE
+- category_profiles [6] / preferences / brands: Uniqlo, Fossil
+- category_profiles [6] / preferences / materials: canvas, recycled polyester
+- category_profiles [6] / preferences / colors: black, navy, brown
+- category_profiles [6] / preferences / patterns: explicitly no stated preference
+- category_profiles [6] / preferences / cuts: explicitly unknown
+- category_profiles [6] / preferences / fits: explicitly unknown
+- category_profiles [6] / preferences / occasions: travel, work
+- category_profiles [6] / preferences / styles: minimal, functional
+- category_profiles [6] / scoped_overrides [1] / context / subtype: belt
+- category_profiles [6] / scoped_overrides [1] / context / season: explicitly unknown
+- category_profiles [6] / scoped_overrides [1] / context / occasion: work
+- category_profiles [6] / scoped_overrides [1] / preferences / brands: Fossil
+- category_profiles [6] / scoped_overrides [1] / preferences / materials: recycled polyester
+- category_profiles [6] / scoped_overrides [1] / preferences / colors: black, brown
+- category_profiles [6] / scoped_overrides [1] / preferences / patterns: explicitly no stated preference
+- category_profiles [6] / scoped_overrides [1] / preferences / cuts: explicitly unknown
+- category_profiles [6] / scoped_overrides [1] / preferences / fits: explicitly unknown
+- category_profiles [6] / scoped_overrides [1] / preferences / occasions: explicitly unknown
+- category_profiles [6] / scoped_overrides [1] / preferences / styles: minimal
+- purchase_intents [1] / id: future-trip
+- purchase_intents [1] / category: shoes
+- purchase_intents [1] / recipient: self
+- purchase_intents [1] / created_at: 2026-03-01T09:00:00Z
+- purchase_intents [1] / deadline: 2026-05-01T18:00:00Z
+- purchase_intents [1] / status: active
+- purchase_intents [1] / budget / amount: 450
+- purchase_intents [1] / budget / currency: TND
+- purchase_intents [1] / sizes [1] / brand: New Balance
+- purchase_intents [1] / sizes [1] / sizing_system: EU
+- purchase_intents [1] / sizes [1] / size: 42
+- purchase_intents [1] / hard [1] / field: width
+- purchase_intents [1] / hard [1] / op: ne
+- purchase_intents [1] / hard [1] / value: narrow
+- purchase_intents [1] / soft [1] / field: use
+- purchase_intents [1] / soft [1] / op: eq
+- purchase_intents [1] / soft [1] / value: walking
+- purchase_intents [1] / use_general_preferences: True
+- purchase_intents [1] / excluded_preference_items: explicitly no stated preference
+- purchase_intents [2] / id: urgent-gift
+- purchase_intents [2] / category: shirts
+- purchase_intents [2] / recipient: gift
+- purchase_intents [2] / created_at: 2026-03-01T09:00:00Z
+- purchase_intents [2] / deadline: 2026-03-02T18:00:00Z
+- purchase_intents [2] / status: active
+- purchase_intents [2] / budget / amount: 180
+- purchase_intents [2] / budget / currency: TND
+- purchase_intents [2] / sizes: explicitly unknown
+- purchase_intents [2] / hard: explicitly no stated preference
+- purchase_intents [2] / soft [1] / field: style
+- purchase_intents [2] / soft [1] / op: eq
+- purchase_intents [2] / soft [1] / value: smart-casual
+- purchase_intents [2] / use_general_preferences: False
+- purchase_intents [2] / excluded_preference_items: explicitly no stated preference
+- coherence_notes: Omar works in a hybrid digital-services role and prefers practical, understated clothing suitable for work, travel, and everyday activities., The urgent shirt purchase is a gift and therefore does not inherit Omar's personal clothing sizes.

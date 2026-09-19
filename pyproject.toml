@@ -11,6 +11,7 @@ dependencies = []
 
 [project.optional-dependencies]
 api = ["openai>=1.99"]
+adaptgym = ["openai>=1.99", "python-dotenv>=1", "torch", "transformers>=4.51"]
 controller = ["torch", "transformers>=4.48"]
 local-hints = ["torch", "transformers>=4.55"]
 train = ["accelerate>=0.34", "torch", "transformers>=4.48"]
@@ -24,6 +25,8 @@ compare-policy = "prompt_policy_llm.compare_policy:main"
 render-traces = "prompt_policy_llm.traces:main"
 generate-teacher-hints = "prompt_policy_llm.teacher_hints:main"
 compare-critic-oracle = "prompt_policy_llm.critic_oracle:main"
+
+eval-adaptgym-pilot = "prompt_policy_llm.adaptgym_pilot:main"
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]

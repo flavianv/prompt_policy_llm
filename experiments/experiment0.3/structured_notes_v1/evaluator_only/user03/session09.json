@@ -1,0 +1,579 @@
+{
+  "version": "partial-profile-notes-v1",
+  "as_of": "2026-04-23T09:01:00Z",
+  "profile": {
+    "category_profiles": [
+      {
+        "category": "accessories",
+        "sizes": [
+          {
+            "brand": "Baggu",
+            "sizing_system": "ONE_SIZE",
+            "size": "ONE_SIZE"
+          }
+        ],
+        "scoped_overrides": [
+          {
+            "context": {
+              "subtype": "travel bag",
+              "season": null,
+              "occasion": "travel"
+            },
+            "preferences": {
+              "cuts": null
+            }
+          }
+        ],
+        "preferences": {
+          "brands": [
+            "Muji",
+            "Baggu"
+          ],
+          "patterns": []
+        }
+      },
+      {
+        "category": "hats",
+        "scoped_overrides": [
+          {
+            "context": {
+              "subtype": "sun hat",
+              "season": "summer",
+              "occasion": "hiking"
+            },
+            "preferences": {
+              "occasions": [
+                "casual",
+                "formal"
+              ]
+            }
+          }
+        ],
+        "preferences": {
+          "colors": [
+            "navy",
+            "cream",
+            "olive"
+          ],
+          "cuts": [
+            "five-panel",
+            "bucket"
+          ]
+        },
+        "default_size": null
+      },
+      {
+        "category": "outerwear",
+        "preferences": {
+          "patterns": [
+            "solid"
+          ]
+        }
+      },
+      {
+        "category": "pants",
+        "scoped_overrides": [
+          {
+            "context": {
+              "subtype": null,
+              "season": "summer",
+              "occasion": null
+            },
+            "preferences": {
+              "materials": [
+                "linen",
+                "cotton"
+              ],
+              "patterns": null
+            }
+          }
+        ],
+        "preferences": {
+          "styles": [
+            "minimal",
+            "smart casual"
+          ]
+        }
+      },
+      {
+        "category": "shirts",
+        "preferences": {
+          "brands": [
+            "Uniqlo",
+            "Everlane"
+          ]
+        }
+      },
+      {
+        "category": "shoes",
+        "scoped_overrides": [
+          {
+            "context": {
+              "subtype": "walking shoes",
+              "season": null,
+              "occasion": "travel"
+            },
+            "preferences": {
+              "cuts": [
+                "regular",
+                "relaxed"
+              ]
+            }
+          }
+        ],
+        "preferences": {
+          "occasions": [
+            "walking",
+            "travel",
+            "work"
+          ]
+        }
+      }
+    ],
+    "purchase_intents": [
+      {
+        "id": "urgent-gift",
+        "category": "shirts",
+        "recipient": "gift",
+        "status": "active",
+        "deadline": "2026-05-23T09:00:00Z"
+      },
+      {
+        "id": "future-trip",
+        "category": "shoes",
+        "recipient": "self",
+        "status": "active",
+        "deadline": "2026-05-01T18:00:00Z"
+      }
+    ],
+    "languages": [
+      {
+        "language": "Japanese",
+        "proficiency": "native"
+      },
+      {
+        "language": "English",
+        "proficiency": "fluent"
+      },
+      {
+        "language": "French",
+        "proficiency": "basic"
+      }
+    ],
+    "personal": {
+      "name": "Aiko Nakamura"
+    },
+    "professional": {
+      "occupation": "user experience researcher"
+    }
+  },
+  "history": [
+    {
+      "address": {
+        "section": "clothing",
+        "category": "accessories",
+        "field": "brand_size",
+        "context": {},
+        "brand": "Baggu",
+        "sizing_system": "ONE_SIZE"
+      },
+      "events": [
+        {
+          "at": "2026-04-13T09:00:02Z",
+          "until": null,
+          "value": "ONE_SIZE"
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "accessories",
+        "field": "cuts",
+        "context": {
+          "subtype": "travel bag",
+          "occasion": "travel"
+        }
+      },
+      "events": [
+        {
+          "at": "2026-04-02T09:00:02Z",
+          "until": null,
+          "value": [
+            "compact"
+          ]
+        },
+        {
+          "at": "2026-04-13T09:00:00Z",
+          "until": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "accessories",
+        "field": "brands",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-04-12T09:00:00Z",
+          "until": null,
+          "value": [
+            "Muji",
+            "Baggu"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "accessories",
+        "field": "patterns",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:03Z",
+          "until": null,
+          "value": []
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "hats",
+        "field": "occasions",
+        "context": {
+          "subtype": "sun hat",
+          "season": "summer",
+          "occasion": "hiking"
+        }
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:06Z",
+          "until": null,
+          "value": [
+            "hiking",
+            "sunny weather"
+          ]
+        },
+        {
+          "at": "2026-03-21T09:00:00Z",
+          "until": null,
+          "value": [
+            "casual",
+            "formal"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "hats",
+        "field": "colors",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-04-12T09:00:01Z",
+          "until": null,
+          "value": [
+            "navy",
+            "cream",
+            "olive"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "hats",
+        "field": "cuts",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-31T09:00:01Z",
+          "until": null,
+          "value": [
+            "five-panel",
+            "bucket"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "hats",
+        "field": "default_size",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:02Z",
+          "until": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "outerwear",
+        "field": "patterns",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-31T09:00:02Z",
+          "until": null,
+          "value": [
+            "solid"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "pants",
+        "field": "materials",
+        "context": {
+          "season": "summer"
+        }
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:01Z",
+          "until": null,
+          "value": [
+            "linen",
+            "cotton"
+          ]
+        },
+        {
+          "at": "2026-03-06T09:00:00Z",
+          "until": "2026-03-09T09:00:00Z",
+          "value": [
+            "wool"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "pants",
+        "field": "patterns",
+        "context": {
+          "season": "summer"
+        }
+      },
+      "events": [
+        {
+          "at": "2026-03-11T09:00:01Z",
+          "until": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "pants",
+        "field": "styles",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-04-02T09:00:01Z",
+          "until": null,
+          "value": [
+            "minimal",
+            "smart casual"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "shirts",
+        "field": "brands",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-11T09:00:00Z",
+          "until": null,
+          "value": [
+            "Uniqlo",
+            "Everlane"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "intent",
+        "field": "state",
+        "intent_id": "urgent-gift",
+        "category": "shirts",
+        "recipient": "gift"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:05Z",
+          "until": null,
+          "value": {
+            "status": "active",
+            "deadline": "2026-03-02T18:00:00Z"
+          }
+        },
+        {
+          "at": "2026-03-31T09:00:00Z",
+          "until": null,
+          "value": {
+            "status": "cancelled",
+            "deadline": "2026-03-02T18:00:00Z"
+          }
+        },
+        {
+          "at": "2026-04-23T09:00:00Z",
+          "until": null,
+          "value": {
+            "status": "active",
+            "deadline": "2026-05-23T09:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "shoes",
+        "field": "cuts",
+        "context": {
+          "subtype": "walking shoes",
+          "occasion": "travel"
+        }
+      },
+      "events": [
+        {
+          "at": "2026-03-21T09:00:01Z",
+          "until": null,
+          "value": [
+            "low-top"
+          ]
+        },
+        {
+          "at": "2026-04-02T09:00:00Z",
+          "until": null,
+          "value": [
+            "regular",
+            "relaxed"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "shoes",
+        "field": "occasions",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-04-13T09:00:01Z",
+          "until": null,
+          "value": [
+            "walking",
+            "travel",
+            "work"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "intent",
+        "field": "state",
+        "intent_id": "future-trip",
+        "category": "shoes",
+        "recipient": "self"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:04Z",
+          "until": null,
+          "value": {
+            "status": "active",
+            "deadline": "2026-05-01T18:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "general",
+        "field": "languages"
+      },
+      "events": [
+        {
+          "at": "2026-03-06T09:00:01Z",
+          "until": null,
+          "value": [
+            {
+              "language": "Japanese",
+              "proficiency": "native"
+            },
+            {
+              "language": "English",
+              "proficiency": "fluent"
+            },
+            {
+              "language": "French",
+              "proficiency": "basic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "personal",
+        "field": "name"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:00Z",
+          "until": null,
+          "value": "Aiko Nakamura"
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "general",
+        "field": "occupation"
+      },
+      "events": [
+        {
+          "at": "2026-04-23T09:00:01Z",
+          "until": null,
+          "value": "user experience researcher"
+        }
+      ]
+    }
+  ]
+}

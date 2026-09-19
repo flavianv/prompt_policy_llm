@@ -1,0 +1,3477 @@
+[
+  {
+    "id": "positive-control",
+    "title": "Positive control: correct memory helps",
+    "user_id": "user-17",
+    "producer_session_one_based": 1,
+    "evaluation_session_one_based": 2,
+    "interpretation": "The earlier mint-tea note is available; Luna chooses mint tea with notes and green tea without them. This establishes a concrete successful carryover example.",
+    "source_note_line": 1,
+    "evaluation_note_line": 2,
+    "score_line": 2,
+    "producer_trace": {
+      "rounds": [
+        {
+          "round": 0,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"For drink, I prefer mint tea.\", \"Historical note, not current: I used to prefer history for reading.\", \"If I were buying for a demo user, late afternoon for workout_time might fit; do not save that as my preference.\"]}"
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"read_notes\",\"arguments\":{}}",
+            "input_tokens": 306,
+            "output_tokens": 11,
+            "latency_s": 0.1152454111725092,
+            "hit_output_cap": false
+          },
+          "valid": true,
+          "error": null,
+          "tool_results": [
+            {
+              "tool": "read_notes",
+              "notes": {}
+            }
+          ],
+          "notes_before": {},
+          "notes_after": {}
+        },
+        {
+          "round": 1,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"For drink, I prefer mint tea.\", \"Historical note, not current: I used to prefer history for reading.\", \"If I were buying for a demo user, late afternoon for workout_time might fit; do not save that as my preference.\"]}"
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"read_notes\",\"arguments\":{}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"read_notes\", \"notes\": {}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"write_note\",\"arguments\":{\"name\":\"drink\",\"text\":\"User prefers mint tea.\"}}",
+            "input_tokens": 384,
+            "output_tokens": 21,
+            "latency_s": 0.20902646286413074,
+            "hit_output_cap": false
+          },
+          "valid": true,
+          "error": null,
+          "tool_results": [
+            {
+              "tool": "write_note",
+              "ok": true,
+              "current_notes": {
+                "drink": "User prefers mint tea."
+              }
+            }
+          ],
+          "notes_before": {},
+          "notes_after": {
+            "drink": "User prefers mint tea."
+          }
+        },
+        {
+          "round": 2,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"For drink, I prefer mint tea.\", \"Historical note, not current: I used to prefer history for reading.\", \"If I were buying for a demo user, late afternoon for workout_time might fit; do not save that as my preference.\"]}"
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"read_notes\",\"arguments\":{}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"read_notes\", \"notes\": {}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"write_note\",\"arguments\":{\"name\":\"drink\",\"text\":\"User prefers mint tea.\"}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"write_note\", \"ok\": true, \"current_notes\": {\"drink\": \"User prefers mint tea.\"}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"no_op\",\"arguments\":{}}",
+            "input_tokens": 486,
+            "output_tokens": 11,
+            "latency_s": 0.11237071501091123,
+            "hit_output_cap": false
+          },
+          "valid": true,
+          "error": null,
+          "tool_results": [
+            {
+              "tool": "no_op",
+              "ok": true
+            }
+          ],
+          "notes_before": {
+            "drink": "User prefers mint tea."
+          },
+          "notes_after": {
+            "drink": "User prefers mint tea."
+          }
+        }
+      ],
+      "finished": true,
+      "user_id": "user-17",
+      "session": 0,
+      "notes_before": {},
+      "notes_after": {
+        "drink": "User prefers mint tea."
+      }
+    },
+    "evaluation_evidence": [
+      "The app's compact layout looks nice, but that is not a preference to remember.",
+      "For travel_seat, I prefer front row.",
+      "Riley is different from me: Riley prefers espresso for drink."
+    ],
+    "score": {
+      "user_id": "user-17",
+      "session": 1,
+      "question": {
+        "id": "q0",
+        "slot": "drink",
+        "question": "What is the user's latest preference for drink?",
+        "options": {
+          "A": "green tea",
+          "B": "black coffee",
+          "C": "mint tea",
+          "D": "espresso"
+        },
+        "last_true_evidence_session": 0,
+        "evidence_delay": 1,
+        "current_text_mentions_answer": false,
+        "answer": "C"
+      },
+      "prior_notes": {
+        "drink": "User prefers mint tea."
+      },
+      "shared_identical_request": false,
+      "baseline_answer": "A",
+      "baseline_valid": true,
+      "baseline_correct": false,
+      "memory_answer": "C",
+      "memory_valid": true,
+      "memory_correct": true
+    },
+    "answer_calls": [
+      {
+        "line": 2,
+        "record": {
+          "user_id": "user-17",
+          "session": 1,
+          "arm": "baseline",
+          "shared_identical_request": false,
+          "system": "Recover the current user preferences from the supplied evidence. Current explicit statements supersede older notes. Other people, hypothetical examples, product descriptions, and historical preferences are not current user preferences. Answer every question, making your best guess if evidence is absent. Return only a JSON object mapping question IDs to one option letter each, for example {\"q0\":\"B\",\"q1\":\"A\"}.",
+          "payload": {
+            "current_session": [
+              "The app's compact layout looks nice, but that is not a preference to remember.",
+              "For travel_seat, I prefer front row.",
+              "Riley is different from me: Riley prefers espresso for drink."
+            ],
+            "prior_session_notes": {},
+            "questions": [
+              {
+                "id": "q0",
+                "question": "What is the user's latest preference for drink?",
+                "options": {
+                  "A": "green tea",
+                  "B": "black coffee",
+                  "C": "mint tea",
+                  "D": "espresso"
+                }
+              },
+              {
+                "id": "q1",
+                "question": "What is the user's latest preference for travel_seat?",
+                "options": {
+                  "A": "front row",
+                  "B": "extra legroom",
+                  "C": "aisle",
+                  "D": "window"
+                }
+              }
+            ]
+          },
+          "generation": {
+            "text": "{\"q0\":\"A\",\"q1\":\"A\"}",
+            "model": "gpt-5.6-luna",
+            "response_id": "resp_025762bfccbd57b5016aabb33606a487d2b1715ff0ba4e080b",
+            "status": "completed",
+            "input_tokens": 249,
+            "output_tokens": 15,
+            "latency_s": 1.0102302751038224,
+            "estimated_cost_usd": 6.780000000000001e-05
+          }
+        }
+      },
+      {
+        "line": 3,
+        "record": {
+          "user_id": "user-17",
+          "session": 1,
+          "arm": "memory",
+          "shared_identical_request": false,
+          "system": "Recover the current user preferences from the supplied evidence. Current explicit statements supersede older notes. Other people, hypothetical examples, product descriptions, and historical preferences are not current user preferences. Answer every question, making your best guess if evidence is absent. Return only a JSON object mapping question IDs to one option letter each, for example {\"q0\":\"B\",\"q1\":\"A\"}.",
+          "payload": {
+            "current_session": [
+              "The app's compact layout looks nice, but that is not a preference to remember.",
+              "For travel_seat, I prefer front row.",
+              "Riley is different from me: Riley prefers espresso for drink."
+            ],
+            "prior_session_notes": {
+              "drink": "User prefers mint tea."
+            },
+            "questions": [
+              {
+                "id": "q0",
+                "question": "What is the user's latest preference for drink?",
+                "options": {
+                  "A": "green tea",
+                  "B": "black coffee",
+                  "C": "mint tea",
+                  "D": "espresso"
+                }
+              },
+              {
+                "id": "q1",
+                "question": "What is the user's latest preference for travel_seat?",
+                "options": {
+                  "A": "front row",
+                  "B": "extra legroom",
+                  "C": "aisle",
+                  "D": "window"
+                }
+              }
+            ]
+          },
+          "generation": {
+            "text": "{\"q0\":\"C\",\"q1\":\"A\"}",
+            "model": "gpt-5.6-luna",
+            "response_id": "resp_00e05d0f68756f8c016aabb33706bc87d2b75926fec7d82163",
+            "status": "completed",
+            "input_tokens": 258,
+            "output_tokens": 15,
+            "latency_s": 1.0997311910614371,
+            "estimated_cost_usd": 6.96e-05
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "omission",
+    "title": "Note content: omitted user preference",
+    "user_id": "user-29",
+    "producer_session_one_based": 3,
+    "evaluation_session_one_based": 10,
+    "interpretation": "Qwen leaves the explicit extra-legroom statement unsaved and instead attempts to rewrite an existing lunch note. The later memory answer is wrong. Missing evidence and the error coexist; this is not a counterfactual proof that a correct note would force a correct answer.",
+    "source_note_line": 13,
+    "evaluation_note_line": 20,
+    "score_line": 80,
+    "producer_trace": {
+      "rounds": [
+        {
+          "round": 0,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"For travel_seat, I prefer extra legroom.\", \"The sample itinerary has a short layover, but it is only an example.\", \"If I were buying for a demo user, tacos for lunch might fit; do not save that as my preference.\"]}"
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"read_notes\",\"arguments\":{}}",
+            "input_tokens": 307,
+            "output_tokens": 11,
+            "latency_s": 0.1128195021301508,
+            "hit_output_cap": false
+          },
+          "valid": true,
+          "error": null,
+          "tool_results": [
+            {
+              "tool": "read_notes",
+              "notes": {
+                "notification_style": "end-of-day recap",
+                "lunch": "User prefers salads."
+              }
+            }
+          ],
+          "notes_before": {
+            "notification_style": "end-of-day recap",
+            "lunch": "User prefers salads."
+          },
+          "notes_after": {
+            "notification_style": "end-of-day recap",
+            "lunch": "User prefers salads."
+          }
+        },
+        {
+          "round": 1,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"For travel_seat, I prefer extra legroom.\", \"The sample itinerary has a short layover, but it is only an example.\", \"If I were buying for a demo user, tacos for lunch might fit; do not save that as my preference.\"]}"
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"read_notes\",\"arguments\":{}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"read_notes\", \"notes\": {\"notification_style\": \"end-of-day recap\", \"lunch\": \"User prefers salads.\"}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"write_note\",\"arguments\":{\"name\":\"lunch\",\"text\":\"User prefers salads.\"}}",
+            "input_tokens": 403,
+            "output_tokens": 21,
+            "latency_s": 0.19871545280329883,
+            "hit_output_cap": false
+          },
+          "valid": false,
+          "error": "write requires new name; update requires existing name",
+          "tool_results": {
+            "error": "write requires new name; update requires existing name"
+          },
+          "notes_before": {
+            "notification_style": "end-of-day recap",
+            "lunch": "User prefers salads."
+          },
+          "notes_after": {
+            "notification_style": "end-of-day recap",
+            "lunch": "User prefers salads."
+          }
+        },
+        {
+          "round": 2,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"For travel_seat, I prefer extra legroom.\", \"The sample itinerary has a short layover, but it is only an example.\", \"If I were buying for a demo user, tacos for lunch might fit; do not save that as my preference.\"]}"
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"read_notes\",\"arguments\":{}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"read_notes\", \"notes\": {\"notification_style\": \"end-of-day recap\", \"lunch\": \"User prefers salads.\"}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"write_note\",\"arguments\":{\"name\":\"lunch\",\"text\":\"User prefers salads.\"}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: {\"error\": \"write requires new name; update requires existing name\"}\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"no_op\",\"arguments\":{}}",
+            "input_tokens": 492,
+            "output_tokens": 11,
+            "latency_s": 0.10620426898822188,
+            "hit_output_cap": false
+          },
+          "valid": true,
+          "error": null,
+          "tool_results": [
+            {
+              "tool": "no_op",
+              "ok": true
+            }
+          ],
+          "notes_before": {
+            "notification_style": "end-of-day recap",
+            "lunch": "User prefers salads."
+          },
+          "notes_after": {
+            "notification_style": "end-of-day recap",
+            "lunch": "User prefers salads."
+          }
+        }
+      ],
+      "finished": true,
+      "user_id": "user-29",
+      "session": 2,
+      "notes_before": {
+        "notification_style": "end-of-day recap",
+        "lunch": "User prefers salads."
+      },
+      "notes_after": {
+        "notification_style": "end-of-day recap",
+        "lunch": "User prefers salads."
+      }
+    },
+    "evaluation_evidence": [
+      "The product description mentions only urgent alerts for notification_style, but I am only reading specs.",
+      "If I were buying for a demo user, yoga for exercise might fit; do not save that as my preference.",
+      "I changed my mind about lunch: I now prefer salads instead of sandwiches."
+    ],
+    "score": {
+      "user_id": "user-29",
+      "session": 9,
+      "question": {
+        "id": "q4",
+        "slot": "travel_seat",
+        "question": "What is the user's latest preference for travel_seat?",
+        "options": {
+          "A": "extra legroom",
+          "B": "aisle",
+          "C": "window",
+          "D": "front row"
+        },
+        "last_true_evidence_session": 2,
+        "evidence_delay": 7,
+        "current_text_mentions_answer": false,
+        "answer": "A"
+      },
+      "prior_notes": {
+        "notification_style": "User prefers morning summary instead of end-of-day recap.",
+        "lunch": "User prefers salads.",
+        "exercise": "User prefers cycling."
+      },
+      "shared_identical_request": false,
+      "baseline_answer": "A",
+      "baseline_valid": true,
+      "baseline_correct": true,
+      "memory_answer": "B",
+      "memory_valid": true,
+      "memory_correct": false
+    },
+    "answer_calls": [
+      {
+        "line": 37,
+        "record": {
+          "user_id": "user-29",
+          "session": 9,
+          "arm": "baseline",
+          "shared_identical_request": false,
+          "system": "Recover the current user preferences from the supplied evidence. Current explicit statements supersede older notes. Other people, hypothetical examples, product descriptions, and historical preferences are not current user preferences. Answer every question, making your best guess if evidence is absent. Return only a JSON object mapping question IDs to one option letter each, for example {\"q0\":\"B\",\"q1\":\"A\"}.",
+          "payload": {
+            "current_session": [
+              "The product description mentions only urgent alerts for notification_style, but I am only reading specs.",
+              "If I were buying for a demo user, yoga for exercise might fit; do not save that as my preference.",
+              "I changed my mind about lunch: I now prefer salads instead of sandwiches."
+            ],
+            "prior_session_notes": {},
+            "questions": [
+              {
+                "id": "q0",
+                "question": "What is the user's latest preference for exercise?",
+                "options": {
+                  "A": "cycling",
+                  "B": "rowing",
+                  "C": "running",
+                  "D": "yoga"
+                }
+              },
+              {
+                "id": "q1",
+                "question": "What is the user's latest preference for lunch?",
+                "options": {
+                  "A": "tacos",
+                  "B": "grain bowls",
+                  "C": "ramen",
+                  "D": "salads"
+                }
+              },
+              {
+                "id": "q2",
+                "question": "What is the user's latest preference for notification_style?",
+                "options": {
+                  "A": "weekly digest",
+                  "B": "morning summary",
+                  "C": "instant alerts",
+                  "D": "end-of-day recap"
+                }
+              },
+              {
+                "id": "q3",
+                "question": "What is the user's latest preference for reading?",
+                "options": {
+                  "A": "essays",
+                  "B": "science fiction",
+                  "C": "mysteries",
+                  "D": "biographies"
+                }
+              },
+              {
+                "id": "q4",
+                "question": "What is the user's latest preference for travel_seat?",
+                "options": {
+                  "A": "extra legroom",
+                  "B": "aisle",
+                  "C": "window",
+                  "D": "front row"
+                }
+              }
+            ]
+          },
+          "generation": {
+            "text": "{\"q0\":\"A\",\"q1\":\"D\",\"q2\":\"A\",\"q3\":\"A\",\"q4\":\"A\"}",
+            "model": "gpt-5.6-luna",
+            "response_id": "resp_027e43bdd369596b016aabb37e4ed887d2aa03f3b55f087f63",
+            "status": "completed",
+            "input_tokens": 424,
+            "output_tokens": 138,
+            "latency_s": 2.9319991290103644,
+            "estimated_cost_usd": 0.0002504
+          }
+        }
+      },
+      {
+        "line": 38,
+        "record": {
+          "user_id": "user-29",
+          "session": 9,
+          "arm": "memory",
+          "shared_identical_request": false,
+          "system": "Recover the current user preferences from the supplied evidence. Current explicit statements supersede older notes. Other people, hypothetical examples, product descriptions, and historical preferences are not current user preferences. Answer every question, making your best guess if evidence is absent. Return only a JSON object mapping question IDs to one option letter each, for example {\"q0\":\"B\",\"q1\":\"A\"}.",
+          "payload": {
+            "current_session": [
+              "The product description mentions only urgent alerts for notification_style, but I am only reading specs.",
+              "If I were buying for a demo user, yoga for exercise might fit; do not save that as my preference.",
+              "I changed my mind about lunch: I now prefer salads instead of sandwiches."
+            ],
+            "prior_session_notes": {
+              "notification_style": "User prefers morning summary instead of end-of-day recap.",
+              "lunch": "User prefers salads.",
+              "exercise": "User prefers cycling."
+            },
+            "questions": [
+              {
+                "id": "q0",
+                "question": "What is the user's latest preference for exercise?",
+                "options": {
+                  "A": "cycling",
+                  "B": "rowing",
+                  "C": "running",
+                  "D": "yoga"
+                }
+              },
+              {
+                "id": "q1",
+                "question": "What is the user's latest preference for lunch?",
+                "options": {
+                  "A": "tacos",
+                  "B": "grain bowls",
+                  "C": "ramen",
+                  "D": "salads"
+                }
+              },
+              {
+                "id": "q2",
+                "question": "What is the user's latest preference for notification_style?",
+                "options": {
+                  "A": "weekly digest",
+                  "B": "morning summary",
+                  "C": "instant alerts",
+                  "D": "end-of-day recap"
+                }
+              },
+              {
+                "id": "q3",
+                "question": "What is the user's latest preference for reading?",
+                "options": {
+                  "A": "essays",
+                  "B": "science fiction",
+                  "C": "mysteries",
+                  "D": "biographies"
+                }
+              },
+              {
+                "id": "q4",
+                "question": "What is the user's latest preference for travel_seat?",
+                "options": {
+                  "A": "extra legroom",
+                  "B": "aisle",
+                  "C": "window",
+                  "D": "front row"
+                }
+              }
+            ]
+          },
+          "generation": {
+            "text": "{\"q0\":\"A\",\"q1\":\"D\",\"q2\":\"B\",\"q3\":\"B\",\"q4\":\"B\"}",
+            "model": "gpt-5.6-luna",
+            "response_id": "resp_0e6c56ef081f052b016aabb3811f5c87d29b5488bae9709c52",
+            "status": "completed",
+            "input_tokens": 457,
+            "output_tokens": 98,
+            "latency_s": 2.456988650839776,
+            "estimated_cost_usd": 0.00020899999999999998
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "stale-update",
+    "title": "Note content: stale preference after explicit change",
+    "user_id": "user-29",
+    "producer_session_one_based": 7,
+    "evaluation_session_one_based": 8,
+    "interpretation": "The user explicitly replaces salads with sandwiches, but Qwen changes only notification_style and leaves salads in memory. Next session Luna chooses salads. The stale-note value matches the wrong answer; no internal reasoning or causal certainty is claimed.",
+    "source_note_line": 17,
+    "evaluation_note_line": 18,
+    "score_line": 67,
+    "producer_trace": {
+      "rounds": [
+        {
+          "round": 0,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"Historical note, not current: I used to prefer window for travel_seat.\", \"I changed my mind about lunch: I now prefer sandwiches instead of salads.\", \"The weather was surprisingly clear today.\"]}"
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"read_notes\",\"arguments\":{}}",
+            "input_tokens": 296,
+            "output_tokens": 11,
+            "latency_s": 0.10325719183310866,
+            "hit_output_cap": false
+          },
+          "valid": true,
+          "error": null,
+          "tool_results": [
+            {
+              "tool": "read_notes",
+              "notes": {
+                "notification_style": "User prefers morning summary instead of end-of-day recap.",
+                "lunch": "User prefers salads.",
+                "exercise": "User prefers running."
+              }
+            }
+          ],
+          "notes_before": {
+            "notification_style": "User prefers morning summary instead of end-of-day recap.",
+            "lunch": "User prefers salads.",
+            "exercise": "User prefers running."
+          },
+          "notes_after": {
+            "notification_style": "User prefers morning summary instead of end-of-day recap.",
+            "lunch": "User prefers salads.",
+            "exercise": "User prefers running."
+          }
+        },
+        {
+          "round": 1,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"Historical note, not current: I used to prefer window for travel_seat.\", \"I changed my mind about lunch: I now prefer sandwiches instead of salads.\", \"The weather was surprisingly clear today.\"]}"
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"read_notes\",\"arguments\":{}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"read_notes\", \"notes\": {\"notification_style\": \"User prefers morning summary instead of end-of-day recap.\", \"lunch\": \"User prefers salads.\", \"exercise\": \"User prefers running.\"}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"write_note\",\"arguments\":{\"name\":\"notification_style\",\"text\":\"User prefers morning summary instead of end-of-day recap.\"}}",
+            "input_tokens": 406,
+            "output_tokens": 28,
+            "latency_s": 0.2508969260379672,
+            "hit_output_cap": false
+          },
+          "valid": false,
+          "error": "write requires new name; update requires existing name",
+          "tool_results": {
+            "error": "write requires new name; update requires existing name"
+          },
+          "notes_before": {
+            "notification_style": "User prefers morning summary instead of end-of-day recap.",
+            "lunch": "User prefers salads.",
+            "exercise": "User prefers running."
+          },
+          "notes_after": {
+            "notification_style": "User prefers morning summary instead of end-of-day recap.",
+            "lunch": "User prefers salads.",
+            "exercise": "User prefers running."
+          }
+        },
+        {
+          "round": 2,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"Historical note, not current: I used to prefer window for travel_seat.\", \"I changed my mind about lunch: I now prefer sandwiches instead of salads.\", \"The weather was surprisingly clear today.\"]}"
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"read_notes\",\"arguments\":{}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"read_notes\", \"notes\": {\"notification_style\": \"User prefers morning summary instead of end-of-day recap.\", \"lunch\": \"User prefers salads.\", \"exercise\": \"User prefers running.\"}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"write_note\",\"arguments\":{\"name\":\"notification_style\",\"text\":\"User prefers morning summary instead of end-of-day recap.\"}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: {\"error\": \"write requires new name; update requires existing name\"}\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"update_note\",\"arguments\":{\"name\":\"notification_style\",\"text\":\"User prefers morning summary instead of end-of-day recap.\"}}",
+            "input_tokens": 502,
+            "output_tokens": 28,
+            "latency_s": 0.25895784911699593,
+            "hit_output_cap": false
+          },
+          "valid": true,
+          "error": null,
+          "tool_results": [
+            {
+              "tool": "update_note",
+              "ok": true,
+              "current_notes": {
+                "notification_style": "User prefers morning summary instead of end-of-day recap.",
+                "lunch": "User prefers salads.",
+                "exercise": "User prefers running."
+              }
+            }
+          ],
+          "notes_before": {
+            "notification_style": "User prefers morning summary instead of end-of-day recap.",
+            "lunch": "User prefers salads.",
+            "exercise": "User prefers running."
+          },
+          "notes_after": {
+            "notification_style": "User prefers morning summary instead of end-of-day recap.",
+            "lunch": "User prefers salads.",
+            "exercise": "User prefers running."
+          }
+        },
+        {
+          "round": 3,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"Historical note, not current: I used to prefer window for travel_seat.\", \"I changed my mind about lunch: I now prefer sandwiches instead of salads.\", \"The weather was surprisingly clear today.\"]}"
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"read_notes\",\"arguments\":{}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"read_notes\", \"notes\": {\"notification_style\": \"User prefers morning summary instead of end-of-day recap.\", \"lunch\": \"User prefers salads.\", \"exercise\": \"User prefers running.\"}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"write_note\",\"arguments\":{\"name\":\"notification_style\",\"text\":\"User prefers morning summary instead of end-of-day recap.\"}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: {\"error\": \"write requires new name; update requires existing name\"}\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"update_note\",\"arguments\":{\"name\":\"notification_style\",\"text\":\"User prefers morning summary instead of end-of-day recap.\"}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"update_note\", \"ok\": true, \"current_notes\": {\"notification_style\": \"User prefers morning summary instead of end-of-day recap.\", \"lunch\": \"User prefers salads.\", \"exercise\": \"User prefers running.\"}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"no_op\",\"arguments\":{}}",
+            "input_tokens": 635,
+            "output_tokens": 11,
+            "latency_s": 0.1016900991089642,
+            "hit_output_cap": false
+          },
+          "valid": true,
+          "error": null,
+          "tool_results": [
+            {
+              "tool": "no_op",
+              "ok": true
+            }
+          ],
+          "notes_before": {
+            "notification_style": "User prefers morning summary instead of end-of-day recap.",
+            "lunch": "User prefers salads.",
+            "exercise": "User prefers running."
+          },
+          "notes_after": {
+            "notification_style": "User prefers morning summary instead of end-of-day recap.",
+            "lunch": "User prefers salads.",
+            "exercise": "User prefers running."
+          }
+        }
+      ],
+      "finished": true,
+      "user_id": "user-29",
+      "session": 6,
+      "notes_before": {
+        "notification_style": "User prefers morning summary instead of end-of-day recap.",
+        "lunch": "User prefers salads.",
+        "exercise": "User prefers running."
+      },
+      "notes_after": {
+        "notification_style": "User prefers morning summary instead of end-of-day recap.",
+        "lunch": "User prefers salads.",
+        "exercise": "User prefers running."
+      }
+    },
+    "evaluation_evidence": [
+      "The product description mentions science fiction for reading, but I am only reading specs.",
+      "The weather was surprisingly clear today.",
+      "I changed my mind about exercise: I now prefer cycling instead of running."
+    ],
+    "score": {
+      "user_id": "user-29",
+      "session": 7,
+      "question": {
+        "id": "q1",
+        "slot": "lunch",
+        "question": "What is the user's latest preference for lunch?",
+        "options": {
+          "A": "tacos",
+          "B": "sandwiches",
+          "C": "ramen",
+          "D": "salads"
+        },
+        "last_true_evidence_session": 6,
+        "evidence_delay": 1,
+        "current_text_mentions_answer": false,
+        "answer": "B"
+      },
+      "prior_notes": {
+        "notification_style": "User prefers morning summary instead of end-of-day recap.",
+        "lunch": "User prefers salads.",
+        "exercise": "User prefers running."
+      },
+      "shared_identical_request": false,
+      "baseline_answer": "A",
+      "baseline_valid": true,
+      "baseline_correct": false,
+      "memory_answer": "D",
+      "memory_valid": true,
+      "memory_correct": false
+    },
+    "answer_calls": [
+      {
+        "line": 33,
+        "record": {
+          "user_id": "user-29",
+          "session": 7,
+          "arm": "baseline",
+          "shared_identical_request": false,
+          "system": "Recover the current user preferences from the supplied evidence. Current explicit statements supersede older notes. Other people, hypothetical examples, product descriptions, and historical preferences are not current user preferences. Answer every question, making your best guess if evidence is absent. Return only a JSON object mapping question IDs to one option letter each, for example {\"q0\":\"B\",\"q1\":\"A\"}.",
+          "payload": {
+            "current_session": [
+              "The product description mentions science fiction for reading, but I am only reading specs.",
+              "The weather was surprisingly clear today.",
+              "I changed my mind about exercise: I now prefer cycling instead of running."
+            ],
+            "prior_session_notes": {},
+            "questions": [
+              {
+                "id": "q0",
+                "question": "What is the user's latest preference for exercise?",
+                "options": {
+                  "A": "running",
+                  "B": "cycling",
+                  "C": "yoga",
+                  "D": "pilates"
+                }
+              },
+              {
+                "id": "q1",
+                "question": "What is the user's latest preference for lunch?",
+                "options": {
+                  "A": "tacos",
+                  "B": "sandwiches",
+                  "C": "ramen",
+                  "D": "salads"
+                }
+              },
+              {
+                "id": "q2",
+                "question": "What is the user's latest preference for notification_style?",
+                "options": {
+                  "A": "morning summary",
+                  "B": "weekly digest",
+                  "C": "end-of-day recap",
+                  "D": "instant alerts"
+                }
+              },
+              {
+                "id": "q3",
+                "question": "What is the user's latest preference for reading?",
+                "options": {
+                  "A": "biographies",
+                  "B": "essays",
+                  "C": "mysteries",
+                  "D": "history"
+                }
+              },
+              {
+                "id": "q4",
+                "question": "What is the user's latest preference for travel_seat?",
+                "options": {
+                  "A": "window",
+                  "B": "aisle",
+                  "C": "quiet car",
+                  "D": "extra legroom"
+                }
+              }
+            ]
+          },
+          "generation": {
+            "text": "{\"q0\":\"B\",\"q1\":\"A\",\"q2\":\"A\",\"q3\":\"A\",\"q4\":\"A\"}",
+            "model": "gpt-5.6-luna",
+            "response_id": "resp_012a9a8826ed986b016aabb374bad887d28faf90c288563098",
+            "status": "completed",
+            "input_tokens": 407,
+            "output_tokens": 30,
+            "latency_s": 1.8901903610676527,
+            "estimated_cost_usd": 0.00011740000000000001
+          }
+        }
+      },
+      {
+        "line": 34,
+        "record": {
+          "user_id": "user-29",
+          "session": 7,
+          "arm": "memory",
+          "shared_identical_request": false,
+          "system": "Recover the current user preferences from the supplied evidence. Current explicit statements supersede older notes. Other people, hypothetical examples, product descriptions, and historical preferences are not current user preferences. Answer every question, making your best guess if evidence is absent. Return only a JSON object mapping question IDs to one option letter each, for example {\"q0\":\"B\",\"q1\":\"A\"}.",
+          "payload": {
+            "current_session": [
+              "The product description mentions science fiction for reading, but I am only reading specs.",
+              "The weather was surprisingly clear today.",
+              "I changed my mind about exercise: I now prefer cycling instead of running."
+            ],
+            "prior_session_notes": {
+              "notification_style": "User prefers morning summary instead of end-of-day recap.",
+              "lunch": "User prefers salads.",
+              "exercise": "User prefers running."
+            },
+            "questions": [
+              {
+                "id": "q0",
+                "question": "What is the user's latest preference for exercise?",
+                "options": {
+                  "A": "running",
+                  "B": "cycling",
+                  "C": "yoga",
+                  "D": "pilates"
+                }
+              },
+              {
+                "id": "q1",
+                "question": "What is the user's latest preference for lunch?",
+                "options": {
+                  "A": "tacos",
+                  "B": "sandwiches",
+                  "C": "ramen",
+                  "D": "salads"
+                }
+              },
+              {
+                "id": "q2",
+                "question": "What is the user's latest preference for notification_style?",
+                "options": {
+                  "A": "morning summary",
+                  "B": "weekly digest",
+                  "C": "end-of-day recap",
+                  "D": "instant alerts"
+                }
+              },
+              {
+                "id": "q3",
+                "question": "What is the user's latest preference for reading?",
+                "options": {
+                  "A": "biographies",
+                  "B": "essays",
+                  "C": "mysteries",
+                  "D": "history"
+                }
+              },
+              {
+                "id": "q4",
+                "question": "What is the user's latest preference for travel_seat?",
+                "options": {
+                  "A": "window",
+                  "B": "aisle",
+                  "C": "quiet car",
+                  "D": "extra legroom"
+                }
+              }
+            ]
+          },
+          "generation": {
+            "text": "{\"q0\":\"B\",\"q1\":\"D\",\"q2\":\"A\",\"q3\":\"D\",\"q4\":\"A\"}",
+            "model": "gpt-5.6-luna",
+            "response_id": "resp_001772750d6bd1dc016aabb376917487d2869e91a29383cccf",
+            "status": "completed",
+            "input_tokens": 440,
+            "output_tokens": 115,
+            "latency_s": 2.235459181945771,
+            "estimated_cost_usd": 0.000226
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "wrong-person",
+    "title": "Note content: another person replaces the user",
+    "user_id": "user-43",
+    "producer_session_one_based": 3,
+    "evaluation_session_one_based": 4,
+    "interpretation": "The same session says Sam prefers biographies and the user prefers essays. Qwen stores Sam's fact. Next session Luna chooses biographies. This is both a wrong-person storage error and a downstream answer error, so categories overlap.",
+    "source_note_line": 23,
+    "evaluation_note_line": 24,
+    "score_line": 89,
+    "producer_trace": {
+      "rounds": [
+        {
+          "round": 0,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"Sam is different from me: Sam prefers biographies for reading.\", \"For reading, I prefer essays.\", \"Historical note, not current: I used to prefer eggs for breakfast.\"]}"
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"read_notes\",\"arguments\":{}}",
+            "input_tokens": 293,
+            "output_tokens": 11,
+            "latency_s": 0.10471332515589893,
+            "hit_output_cap": false
+          },
+          "valid": true,
+          "error": null,
+          "tool_results": [
+            {
+              "tool": "read_notes",
+              "notes": {
+                "reading_preferences": "Jordan prefers mysteries for reading.",
+                "coding_music_preferences": "Jordan prefers lo-fi for coding_music.",
+                "travel_seat": "User prefers extra legroom."
+              }
+            }
+          ],
+          "notes_before": {
+            "reading_preferences": "Jordan prefers mysteries for reading.",
+            "coding_music_preferences": "Jordan prefers lo-fi for coding_music.",
+            "travel_seat": "User prefers extra legroom."
+          },
+          "notes_after": {
+            "reading_preferences": "Jordan prefers mysteries for reading.",
+            "coding_music_preferences": "Jordan prefers lo-fi for coding_music.",
+            "travel_seat": "User prefers extra legroom."
+          }
+        },
+        {
+          "round": 1,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"Sam is different from me: Sam prefers biographies for reading.\", \"For reading, I prefer essays.\", \"Historical note, not current: I used to prefer eggs for breakfast.\"]}"
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"read_notes\",\"arguments\":{}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"read_notes\", \"notes\": {\"reading_preferences\": \"Jordan prefers mysteries for reading.\", \"coding_music_preferences\": \"Jordan prefers lo-fi for coding_music.\", \"travel_seat\": \"User prefers extra legroom.\"}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"write_note\",\"arguments\":{\"name\":\"reading_preferences\",\"text\":\"Sam prefers biographies for reading.\"}}",
+            "input_tokens": 406,
+            "output_tokens": 24,
+            "latency_s": 0.21963060996495187,
+            "hit_output_cap": false
+          },
+          "valid": false,
+          "error": "write requires new name; update requires existing name",
+          "tool_results": {
+            "error": "write requires new name; update requires existing name"
+          },
+          "notes_before": {
+            "reading_preferences": "Jordan prefers mysteries for reading.",
+            "coding_music_preferences": "Jordan prefers lo-fi for coding_music.",
+            "travel_seat": "User prefers extra legroom."
+          },
+          "notes_after": {
+            "reading_preferences": "Jordan prefers mysteries for reading.",
+            "coding_music_preferences": "Jordan prefers lo-fi for coding_music.",
+            "travel_seat": "User prefers extra legroom."
+          }
+        },
+        {
+          "round": 2,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"Sam is different from me: Sam prefers biographies for reading.\", \"For reading, I prefer essays.\", \"Historical note, not current: I used to prefer eggs for breakfast.\"]}"
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"read_notes\",\"arguments\":{}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"read_notes\", \"notes\": {\"reading_preferences\": \"Jordan prefers mysteries for reading.\", \"coding_music_preferences\": \"Jordan prefers lo-fi for coding_music.\", \"travel_seat\": \"User prefers extra legroom.\"}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"write_note\",\"arguments\":{\"name\":\"reading_preferences\",\"text\":\"Sam prefers biographies for reading.\"}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: {\"error\": \"write requires new name; update requires existing name\"}\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"update_note\",\"arguments\":{\"name\":\"reading_preferences\",\"text\":\"Sam prefers biographies for reading.\"}}",
+            "input_tokens": 498,
+            "output_tokens": 24,
+            "latency_s": 0.2189125658478588,
+            "hit_output_cap": false
+          },
+          "valid": true,
+          "error": null,
+          "tool_results": [
+            {
+              "tool": "update_note",
+              "ok": true,
+              "current_notes": {
+                "reading_preferences": "Sam prefers biographies for reading.",
+                "coding_music_preferences": "Jordan prefers lo-fi for coding_music.",
+                "travel_seat": "User prefers extra legroom."
+              }
+            }
+          ],
+          "notes_before": {
+            "reading_preferences": "Jordan prefers mysteries for reading.",
+            "coding_music_preferences": "Jordan prefers lo-fi for coding_music.",
+            "travel_seat": "User prefers extra legroom."
+          },
+          "notes_after": {
+            "reading_preferences": "Sam prefers biographies for reading.",
+            "coding_music_preferences": "Jordan prefers lo-fi for coding_music.",
+            "travel_seat": "User prefers extra legroom."
+          }
+        },
+        {
+          "round": 3,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"Sam is different from me: Sam prefers biographies for reading.\", \"For reading, I prefer essays.\", \"Historical note, not current: I used to prefer eggs for breakfast.\"]}"
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"read_notes\",\"arguments\":{}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"read_notes\", \"notes\": {\"reading_preferences\": \"Jordan prefers mysteries for reading.\", \"coding_music_preferences\": \"Jordan prefers lo-fi for coding_music.\", \"travel_seat\": \"User prefers extra legroom.\"}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"write_note\",\"arguments\":{\"name\":\"reading_preferences\",\"text\":\"Sam prefers biographies for reading.\"}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: {\"error\": \"write requires new name; update requires existing name\"}\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"update_note\",\"arguments\":{\"name\":\"reading_preferences\",\"text\":\"Sam prefers biographies for reading.\"}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"update_note\", \"ok\": true, \"current_notes\": {\"reading_preferences\": \"Sam prefers biographies for reading.\", \"coding_music_preferences\": \"Jordan prefers lo-fi for coding_music.\", \"travel_seat\": \"User prefers extra legroom.\"}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"no_op\",\"arguments\":{}}",
+            "input_tokens": 631,
+            "output_tokens": 11,
+            "latency_s": 0.10096607101149857,
+            "hit_output_cap": false
+          },
+          "valid": true,
+          "error": null,
+          "tool_results": [
+            {
+              "tool": "no_op",
+              "ok": true
+            }
+          ],
+          "notes_before": {
+            "reading_preferences": "Sam prefers biographies for reading.",
+            "coding_music_preferences": "Jordan prefers lo-fi for coding_music.",
+            "travel_seat": "User prefers extra legroom."
+          },
+          "notes_after": {
+            "reading_preferences": "Sam prefers biographies for reading.",
+            "coding_music_preferences": "Jordan prefers lo-fi for coding_music.",
+            "travel_seat": "User prefers extra legroom."
+          }
+        }
+      ],
+      "finished": true,
+      "user_id": "user-43",
+      "session": 2,
+      "notes_before": {
+        "reading_preferences": "Jordan prefers mysteries for reading.",
+        "coding_music_preferences": "Jordan prefers lo-fi for coding_music.",
+        "travel_seat": "User prefers extra legroom."
+      },
+      "notes_after": {
+        "reading_preferences": "Sam prefers biographies for reading.",
+        "coding_music_preferences": "Jordan prefers lo-fi for coding_music.",
+        "travel_seat": "User prefers extra legroom."
+      }
+    },
+    "evaluation_evidence": [
+      "I had a busy morning and moved a few errands around.",
+      "As background only, I previously said I still prefer synthwave for music.",
+      "For music, I prefer synthwave."
+    ],
+    "score": {
+      "user_id": "user-43",
+      "session": 3,
+      "question": {
+        "id": "q2",
+        "slot": "reading",
+        "question": "What is the user's latest preference for reading?",
+        "options": {
+          "A": "essays",
+          "B": "biographies",
+          "C": "science fiction",
+          "D": "history"
+        },
+        "last_true_evidence_session": 2,
+        "evidence_delay": 1,
+        "current_text_mentions_answer": false,
+        "answer": "A"
+      },
+      "prior_notes": {
+        "reading_preferences": "Sam prefers biographies for reading.",
+        "coding_music_preferences": "Jordan prefers lo-fi for coding_music.",
+        "travel_seat": "User prefers extra legroom."
+      },
+      "shared_identical_request": false,
+      "baseline_answer": "C",
+      "baseline_valid": true,
+      "baseline_correct": false,
+      "memory_answer": "B",
+      "memory_valid": true,
+      "memory_correct": false
+    },
+    "answer_calls": [
+      {
+        "line": 44,
+        "record": {
+          "user_id": "user-43",
+          "session": 3,
+          "arm": "baseline",
+          "shared_identical_request": false,
+          "system": "Recover the current user preferences from the supplied evidence. Current explicit statements supersede older notes. Other people, hypothetical examples, product descriptions, and historical preferences are not current user preferences. Answer every question, making your best guess if evidence is absent. Return only a JSON object mapping question IDs to one option letter each, for example {\"q0\":\"B\",\"q1\":\"A\"}.",
+          "payload": {
+            "current_session": [
+              "I had a busy morning and moved a few errands around.",
+              "As background only, I previously said I still prefer synthwave for music.",
+              "For music, I prefer synthwave."
+            ],
+            "prior_session_notes": {},
+            "questions": [
+              {
+                "id": "q0",
+                "question": "What is the user's latest preference for breakfast?",
+                "options": {
+                  "A": "oatmeal",
+                  "B": "smoothies",
+                  "C": "toast",
+                  "D": "yogurt"
+                }
+              },
+              {
+                "id": "q1",
+                "question": "What is the user's latest preference for music?",
+                "options": {
+                  "A": "classical",
+                  "B": "ambient",
+                  "C": "jazz",
+                  "D": "synthwave"
+                }
+              },
+              {
+                "id": "q2",
+                "question": "What is the user's latest preference for reading?",
+                "options": {
+                  "A": "essays",
+                  "B": "biographies",
+                  "C": "science fiction",
+                  "D": "history"
+                }
+              },
+              {
+                "id": "q3",
+                "question": "What is the user's latest preference for travel_seat?",
+                "options": {
+                  "A": "quiet car",
+                  "B": "aisle",
+                  "C": "front row",
+                  "D": "extra legroom"
+                }
+              }
+            ]
+          },
+          "generation": {
+            "text": "{\"q0\":\"A\",\"q1\":\"D\",\"q2\":\"C\",\"q3\":\"D\"}",
+            "model": "gpt-5.6-luna",
+            "response_id": "resp_0429be1e3f7998ad016aabb390b4c487d29be0ace11250eebb",
+            "status": "completed",
+            "input_tokens": 350,
+            "output_tokens": 91,
+            "latency_s": 3.4624128642026335,
+            "estimated_cost_usd": 0.0001792
+          }
+        }
+      },
+      {
+        "line": 45,
+        "record": {
+          "user_id": "user-43",
+          "session": 3,
+          "arm": "memory",
+          "shared_identical_request": false,
+          "system": "Recover the current user preferences from the supplied evidence. Current explicit statements supersede older notes. Other people, hypothetical examples, product descriptions, and historical preferences are not current user preferences. Answer every question, making your best guess if evidence is absent. Return only a JSON object mapping question IDs to one option letter each, for example {\"q0\":\"B\",\"q1\":\"A\"}.",
+          "payload": {
+            "current_session": [
+              "I had a busy morning and moved a few errands around.",
+              "As background only, I previously said I still prefer synthwave for music.",
+              "For music, I prefer synthwave."
+            ],
+            "prior_session_notes": {
+              "reading_preferences": "Sam prefers biographies for reading.",
+              "coding_music_preferences": "Jordan prefers lo-fi for coding_music.",
+              "travel_seat": "User prefers extra legroom."
+            },
+            "questions": [
+              {
+                "id": "q0",
+                "question": "What is the user's latest preference for breakfast?",
+                "options": {
+                  "A": "oatmeal",
+                  "B": "smoothies",
+                  "C": "toast",
+                  "D": "yogurt"
+                }
+              },
+              {
+                "id": "q1",
+                "question": "What is the user's latest preference for music?",
+                "options": {
+                  "A": "classical",
+                  "B": "ambient",
+                  "C": "jazz",
+                  "D": "synthwave"
+                }
+              },
+              {
+                "id": "q2",
+                "question": "What is the user's latest preference for reading?",
+                "options": {
+                  "A": "essays",
+                  "B": "biographies",
+                  "C": "science fiction",
+                  "D": "history"
+                }
+              },
+              {
+                "id": "q3",
+                "question": "What is the user's latest preference for travel_seat?",
+                "options": {
+                  "A": "quiet car",
+                  "B": "aisle",
+                  "C": "front row",
+                  "D": "extra legroom"
+                }
+              }
+            ]
+          },
+          "generation": {
+            "text": "{\"q0\":\"A\",\"q1\":\"D\",\"q2\":\"B\",\"q3\":\"D\"}",
+            "model": "gpt-5.6-luna",
+            "response_id": "resp_0d14b45d717c7ea1016aabb3942e2c87d286b70422fd6823e2",
+            "status": "completed",
+            "input_tokens": 387,
+            "output_tokens": 25,
+            "latency_s": 1.228659125044942,
+            "estimated_cost_usd": 0.00010740000000000001
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "irrelevant",
+    "title": "Note content: irrelevant transient detail",
+    "user_id": "user-59",
+    "producer_session_one_based": 8,
+    "evaluation_session_one_based": 9,
+    "interpretation": "Qwen adds a possible short walk as work_schedule even though it is not a stable evaluated preference. The following exercise answer is shown for context; no observed exercise error is attributed to this irrelevant note.",
+    "source_note_line": 38,
+    "evaluation_note_line": 39,
+    "score_line": 153,
+    "producer_trace": {
+      "rounds": [
+        {
+          "round": 0,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"The product description mentions oatmeal for breakfast, but I am only reading specs.\", \"I might take a short walk after work.\", \"For coding_music, I prefer piano.\"]}"
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"read_notes\",\"arguments\":{}}",
+            "input_tokens": 291,
+            "output_tokens": 11,
+            "latency_s": 0.113003064179793,
+            "hit_output_cap": false
+          },
+          "valid": true,
+          "error": null,
+          "tool_results": [
+            {
+              "tool": "read_notes",
+              "notes": {
+                "breakfast": "User prefers oatmeal.",
+                "meeting_style": "User prefers silent docs.",
+                "coding_music": "User prefers piano.",
+                "music": "User prefers classical.",
+                "exercise": "User prefers cycling."
+              }
+            }
+          ],
+          "notes_before": {
+            "breakfast": "User prefers oatmeal.",
+            "meeting_style": "User prefers silent docs.",
+            "coding_music": "User prefers piano.",
+            "music": "User prefers classical.",
+            "exercise": "User prefers cycling."
+          },
+          "notes_after": {
+            "breakfast": "User prefers oatmeal.",
+            "meeting_style": "User prefers silent docs.",
+            "coding_music": "User prefers piano.",
+            "music": "User prefers classical.",
+            "exercise": "User prefers cycling."
+          }
+        },
+        {
+          "round": 1,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"The product description mentions oatmeal for breakfast, but I am only reading specs.\", \"I might take a short walk after work.\", \"For coding_music, I prefer piano.\"]}"
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"read_notes\",\"arguments\":{}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"read_notes\", \"notes\": {\"breakfast\": \"User prefers oatmeal.\", \"meeting_style\": \"User prefers silent docs.\", \"coding_music\": \"User prefers piano.\", \"music\": \"User prefers classical.\", \"exercise\": \"User prefers cycling.\"}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"write_note\",\"arguments\":{\"name\":\"work_schedule\",\"text\":\"User might take a short walk after work.\"}}",
+            "input_tokens": 413,
+            "output_tokens": 26,
+            "latency_s": 0.2595840389840305,
+            "hit_output_cap": false
+          },
+          "valid": true,
+          "error": null,
+          "tool_results": [
+            {
+              "tool": "write_note",
+              "ok": true,
+              "current_notes": {
+                "breakfast": "User prefers oatmeal.",
+                "meeting_style": "User prefers silent docs.",
+                "coding_music": "User prefers piano.",
+                "music": "User prefers classical.",
+                "exercise": "User prefers cycling.",
+                "work_schedule": "User might take a short walk after work."
+              }
+            }
+          ],
+          "notes_before": {
+            "breakfast": "User prefers oatmeal.",
+            "meeting_style": "User prefers silent docs.",
+            "coding_music": "User prefers piano.",
+            "music": "User prefers classical.",
+            "exercise": "User prefers cycling."
+          },
+          "notes_after": {
+            "breakfast": "User prefers oatmeal.",
+            "meeting_style": "User prefers silent docs.",
+            "coding_music": "User prefers piano.",
+            "music": "User prefers classical.",
+            "exercise": "User prefers cycling.",
+            "work_schedule": "User might take a short walk after work."
+          }
+        },
+        {
+          "round": 2,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"The product description mentions oatmeal for breakfast, but I am only reading specs.\", \"I might take a short walk after work.\", \"For coding_music, I prefer piano.\"]}"
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"read_notes\",\"arguments\":{}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"read_notes\", \"notes\": {\"breakfast\": \"User prefers oatmeal.\", \"meeting_style\": \"User prefers silent docs.\", \"coding_music\": \"User prefers piano.\", \"music\": \"User prefers classical.\", \"exercise\": \"User prefers cycling.\"}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"write_note\",\"arguments\":{\"name\":\"work_schedule\",\"text\":\"User might take a short walk after work.\"}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"write_note\", \"ok\": true, \"current_notes\": {\"breakfast\": \"User prefers oatmeal.\", \"meeting_style\": \"User prefers silent docs.\", \"coding_music\": \"User prefers piano.\", \"music\": \"User prefers classical.\", \"exercise\": \"User prefers cycling.\", \"work_schedule\": \"User might take a short walk after work.\"}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"no_op\",\"arguments\":{}}",
+            "input_tokens": 570,
+            "output_tokens": 11,
+            "latency_s": 0.10960339801385999,
+            "hit_output_cap": false
+          },
+          "valid": true,
+          "error": null,
+          "tool_results": [
+            {
+              "tool": "no_op",
+              "ok": true
+            }
+          ],
+          "notes_before": {
+            "breakfast": "User prefers oatmeal.",
+            "meeting_style": "User prefers silent docs.",
+            "coding_music": "User prefers piano.",
+            "music": "User prefers classical.",
+            "exercise": "User prefers cycling.",
+            "work_schedule": "User might take a short walk after work."
+          },
+          "notes_after": {
+            "breakfast": "User prefers oatmeal.",
+            "meeting_style": "User prefers silent docs.",
+            "coding_music": "User prefers piano.",
+            "music": "User prefers classical.",
+            "exercise": "User prefers cycling.",
+            "work_schedule": "User might take a short walk after work."
+          }
+        }
+      ],
+      "finished": true,
+      "user_id": "user-59",
+      "session": 7,
+      "notes_before": {
+        "breakfast": "User prefers oatmeal.",
+        "meeting_style": "User prefers silent docs.",
+        "coding_music": "User prefers piano.",
+        "music": "User prefers classical.",
+        "exercise": "User prefers cycling."
+      },
+      "notes_after": {
+        "breakfast": "User prefers oatmeal.",
+        "meeting_style": "User prefers silent docs.",
+        "coding_music": "User prefers piano.",
+        "music": "User prefers classical.",
+        "exercise": "User prefers cycling.",
+        "work_schedule": "User might take a short walk after work."
+      }
+    },
+    "evaluation_evidence": [
+      "For meeting_style, I prefer silent docs.",
+      "If I were buying for a demo user, toast for breakfast might fit; do not save that as my preference.",
+      "I noticed the quiet lobby music, but I am not choosing a music preference here."
+    ],
+    "score": {
+      "user_id": "user-59",
+      "session": 8,
+      "question": {
+        "id": "q2",
+        "slot": "exercise",
+        "question": "What is the user's latest preference for exercise?",
+        "options": {
+          "A": "yoga",
+          "B": "rowing",
+          "C": "cycling",
+          "D": "pilates"
+        },
+        "last_true_evidence_session": 6,
+        "evidence_delay": 2,
+        "current_text_mentions_answer": false,
+        "answer": "C"
+      },
+      "prior_notes": {
+        "breakfast": "User prefers oatmeal.",
+        "meeting_style": "User prefers silent docs.",
+        "coding_music": "User prefers piano.",
+        "music": "User prefers classical.",
+        "exercise": "User prefers cycling.",
+        "work_schedule": "User might take a short walk after work."
+      },
+      "shared_identical_request": false,
+      "baseline_answer": "A",
+      "baseline_valid": true,
+      "baseline_correct": false,
+      "memory_answer": "C",
+      "memory_valid": true,
+      "memory_correct": true
+    },
+    "answer_calls": [
+      {
+        "line": 73,
+        "record": {
+          "user_id": "user-59",
+          "session": 8,
+          "arm": "baseline",
+          "shared_identical_request": false,
+          "system": "Recover the current user preferences from the supplied evidence. Current explicit statements supersede older notes. Other people, hypothetical examples, product descriptions, and historical preferences are not current user preferences. Answer every question, making your best guess if evidence is absent. Return only a JSON object mapping question IDs to one option letter each, for example {\"q0\":\"B\",\"q1\":\"A\"}.",
+          "payload": {
+            "current_session": [
+              "For meeting_style, I prefer silent docs.",
+              "If I were buying for a demo user, toast for breakfast might fit; do not save that as my preference.",
+              "I noticed the quiet lobby music, but I am not choosing a music preference here."
+            ],
+            "prior_session_notes": {},
+            "questions": [
+              {
+                "id": "q0",
+                "question": "What is the user's latest preference for breakfast?",
+                "options": {
+                  "A": "smoothies",
+                  "B": "oatmeal",
+                  "C": "toast",
+                  "D": "eggs"
+                }
+              },
+              {
+                "id": "q1",
+                "question": "What is the user's latest preference for coding_music?",
+                "options": {
+                  "A": "lo-fi",
+                  "B": "silence",
+                  "C": "piano",
+                  "D": "instrumental jazz"
+                }
+              },
+              {
+                "id": "q2",
+                "question": "What is the user's latest preference for exercise?",
+                "options": {
+                  "A": "yoga",
+                  "B": "rowing",
+                  "C": "cycling",
+                  "D": "pilates"
+                }
+              },
+              {
+                "id": "q3",
+                "question": "What is the user's latest preference for meeting_style?",
+                "options": {
+                  "A": "silent docs",
+                  "B": "whiteboards",
+                  "C": "bullet agendas",
+                  "D": "freeform discussion"
+                }
+              },
+              {
+                "id": "q4",
+                "question": "What is the user's latest preference for music?",
+                "options": {
+                  "A": "classical",
+                  "B": "ambient",
+                  "C": "synthwave",
+                  "D": "salsa"
+                }
+              }
+            ]
+          },
+          "generation": {
+            "text": "{\"q0\":\"A\",\"q1\":\"B\",\"q2\":\"A\",\"q3\":\"A\",\"q4\":\"A\"}",
+            "model": "gpt-5.6-luna",
+            "response_id": "resp_0f6265a875340050016aabb3e2aae887d2afbcb239466cdabd",
+            "status": "completed",
+            "input_tokens": 415,
+            "output_tokens": 30,
+            "latency_s": 1.0143671319819987,
+            "estimated_cost_usd": 0.00011899999999999999
+          }
+        }
+      },
+      {
+        "line": 74,
+        "record": {
+          "user_id": "user-59",
+          "session": 8,
+          "arm": "memory",
+          "shared_identical_request": false,
+          "system": "Recover the current user preferences from the supplied evidence. Current explicit statements supersede older notes. Other people, hypothetical examples, product descriptions, and historical preferences are not current user preferences. Answer every question, making your best guess if evidence is absent. Return only a JSON object mapping question IDs to one option letter each, for example {\"q0\":\"B\",\"q1\":\"A\"}.",
+          "payload": {
+            "current_session": [
+              "For meeting_style, I prefer silent docs.",
+              "If I were buying for a demo user, toast for breakfast might fit; do not save that as my preference.",
+              "I noticed the quiet lobby music, but I am not choosing a music preference here."
+            ],
+            "prior_session_notes": {
+              "breakfast": "User prefers oatmeal.",
+              "meeting_style": "User prefers silent docs.",
+              "coding_music": "User prefers piano.",
+              "music": "User prefers classical.",
+              "exercise": "User prefers cycling.",
+              "work_schedule": "User might take a short walk after work."
+            },
+            "questions": [
+              {
+                "id": "q0",
+                "question": "What is the user's latest preference for breakfast?",
+                "options": {
+                  "A": "smoothies",
+                  "B": "oatmeal",
+                  "C": "toast",
+                  "D": "eggs"
+                }
+              },
+              {
+                "id": "q1",
+                "question": "What is the user's latest preference for coding_music?",
+                "options": {
+                  "A": "lo-fi",
+                  "B": "silence",
+                  "C": "piano",
+                  "D": "instrumental jazz"
+                }
+              },
+              {
+                "id": "q2",
+                "question": "What is the user's latest preference for exercise?",
+                "options": {
+                  "A": "yoga",
+                  "B": "rowing",
+                  "C": "cycling",
+                  "D": "pilates"
+                }
+              },
+              {
+                "id": "q3",
+                "question": "What is the user's latest preference for meeting_style?",
+                "options": {
+                  "A": "silent docs",
+                  "B": "whiteboards",
+                  "C": "bullet agendas",
+                  "D": "freeform discussion"
+                }
+              },
+              {
+                "id": "q4",
+                "question": "What is the user's latest preference for music?",
+                "options": {
+                  "A": "classical",
+                  "B": "ambient",
+                  "C": "synthwave",
+                  "D": "salsa"
+                }
+              }
+            ]
+          },
+          "generation": {
+            "text": "{\"q0\":\"B\",\"q1\":\"C\",\"q2\":\"C\",\"q3\":\"A\",\"q4\":\"A\"}",
+            "model": "gpt-5.6-luna",
+            "response_id": "resp_00f0c4da04b2898d016aabb3e3af8487d2b28f2781f8e34af0",
+            "status": "completed",
+            "input_tokens": 473,
+            "output_tokens": 30,
+            "latency_s": 2.1657923629973084,
+            "estimated_cost_usd": 0.0001306
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "duplicate",
+    "title": "Note content: duplicate key and missed update",
+    "user_id": "user-17",
+    "producer_session_one_based": 10,
+    "evaluation_session_one_based": 10,
+    "interpretation": "Qwen writes travel while travel_seat already records the identical front-row preference. It also leaves the explicit workout-time change unsaved. The displayed session-10 answer was scored BEFORE this write; there is no session 11, so this trace cannot establish downstream harm from the new duplicate.",
+    "source_note_line": 10,
+    "evaluation_note_line": 10,
+    "score_line": 39,
+    "producer_trace": {
+      "rounds": [
+        {
+          "round": 0,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"The app's compact layout looks nice, but that is not a preference to remember.\", \"I changed my mind about workout_time: I now prefer lunch break instead of evening.\", \"Historical note, not current: I used to prefer essays for reading.\"]}"
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"read_notes\",\"arguments\":{}}",
+            "input_tokens": 307,
+            "output_tokens": 11,
+            "latency_s": 0.1045887591317296,
+            "hit_output_cap": false
+          },
+          "valid": true,
+          "error": null,
+          "tool_results": [
+            {
+              "tool": "read_notes",
+              "notes": {
+                "drink": "User prefers mint tea.",
+                "workout_time": "User prefers evening instead of morning.",
+                "reading": "User prefers science fiction.",
+                "preferences": "User prefers mint tea, morning workout, and science fiction.",
+                "travel_seat": "User prefers front row."
+              }
+            }
+          ],
+          "notes_before": {
+            "drink": "User prefers mint tea.",
+            "workout_time": "User prefers evening instead of morning.",
+            "reading": "User prefers science fiction.",
+            "preferences": "User prefers mint tea, morning workout, and science fiction.",
+            "travel_seat": "User prefers front row."
+          },
+          "notes_after": {
+            "drink": "User prefers mint tea.",
+            "workout_time": "User prefers evening instead of morning.",
+            "reading": "User prefers science fiction.",
+            "preferences": "User prefers mint tea, morning workout, and science fiction.",
+            "travel_seat": "User prefers front row."
+          }
+        },
+        {
+          "round": 1,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"The app's compact layout looks nice, but that is not a preference to remember.\", \"I changed my mind about workout_time: I now prefer lunch break instead of evening.\", \"Historical note, not current: I used to prefer essays for reading.\"]}"
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"read_notes\",\"arguments\":{}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"read_notes\", \"notes\": {\"drink\": \"User prefers mint tea.\", \"workout_time\": \"User prefers evening instead of morning.\", \"reading\": \"User prefers science fiction.\", \"preferences\": \"User prefers mint tea, morning workout, and science fiction.\", \"travel_seat\": \"User prefers front row.\"}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"write_note\",\"arguments\":{\"name\":\"travel\",\"text\":\"User prefers front row.\"}}",
+            "input_tokens": 441,
+            "output_tokens": 21,
+            "latency_s": 0.1961525089573115,
+            "hit_output_cap": false
+          },
+          "valid": true,
+          "error": null,
+          "tool_results": [
+            {
+              "tool": "write_note",
+              "ok": true,
+              "current_notes": {
+                "drink": "User prefers mint tea.",
+                "workout_time": "User prefers evening instead of morning.",
+                "reading": "User prefers science fiction.",
+                "preferences": "User prefers mint tea, morning workout, and science fiction.",
+                "travel_seat": "User prefers front row.",
+                "travel": "User prefers front row."
+              }
+            }
+          ],
+          "notes_before": {
+            "drink": "User prefers mint tea.",
+            "workout_time": "User prefers evening instead of morning.",
+            "reading": "User prefers science fiction.",
+            "preferences": "User prefers mint tea, morning workout, and science fiction.",
+            "travel_seat": "User prefers front row."
+          },
+          "notes_after": {
+            "drink": "User prefers mint tea.",
+            "workout_time": "User prefers evening instead of morning.",
+            "reading": "User prefers science fiction.",
+            "preferences": "User prefers mint tea, morning workout, and science fiction.",
+            "travel_seat": "User prefers front row.",
+            "travel": "User prefers front row."
+          }
+        },
+        {
+          "round": 2,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"The app's compact layout looks nice, but that is not a preference to remember.\", \"I changed my mind about workout_time: I now prefer lunch break instead of evening.\", \"Historical note, not current: I used to prefer essays for reading.\"]}"
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"read_notes\",\"arguments\":{}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"read_notes\", \"notes\": {\"drink\": \"User prefers mint tea.\", \"workout_time\": \"User prefers evening instead of morning.\", \"reading\": \"User prefers science fiction.\", \"preferences\": \"User prefers mint tea, morning workout, and science fiction.\", \"travel_seat\": \"User prefers front row.\"}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"write_note\",\"arguments\":{\"name\":\"travel\",\"text\":\"User prefers front row.\"}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"write_note\", \"ok\": true, \"current_notes\": {\"drink\": \"User prefers mint tea.\", \"workout_time\": \"User prefers evening instead of morning.\", \"reading\": \"User prefers science fiction.\", \"preferences\": \"User prefers mint tea, morning workout, and science fiction.\", \"travel_seat\": \"User prefers front row.\", \"travel\": \"User prefers front row.\"}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"no_op\",\"arguments\":{}}",
+            "input_tokens": 600,
+            "output_tokens": 11,
+            "latency_s": 0.10410305694676936,
+            "hit_output_cap": false
+          },
+          "valid": true,
+          "error": null,
+          "tool_results": [
+            {
+              "tool": "no_op",
+              "ok": true
+            }
+          ],
+          "notes_before": {
+            "drink": "User prefers mint tea.",
+            "workout_time": "User prefers evening instead of morning.",
+            "reading": "User prefers science fiction.",
+            "preferences": "User prefers mint tea, morning workout, and science fiction.",
+            "travel_seat": "User prefers front row.",
+            "travel": "User prefers front row."
+          },
+          "notes_after": {
+            "drink": "User prefers mint tea.",
+            "workout_time": "User prefers evening instead of morning.",
+            "reading": "User prefers science fiction.",
+            "preferences": "User prefers mint tea, morning workout, and science fiction.",
+            "travel_seat": "User prefers front row.",
+            "travel": "User prefers front row."
+          }
+        }
+      ],
+      "finished": true,
+      "user_id": "user-17",
+      "session": 9,
+      "notes_before": {
+        "drink": "User prefers mint tea.",
+        "workout_time": "User prefers evening instead of morning.",
+        "reading": "User prefers science fiction.",
+        "preferences": "User prefers mint tea, morning workout, and science fiction.",
+        "travel_seat": "User prefers front row."
+      },
+      "notes_after": {
+        "drink": "User prefers mint tea.",
+        "workout_time": "User prefers evening instead of morning.",
+        "reading": "User prefers science fiction.",
+        "preferences": "User prefers mint tea, morning workout, and science fiction.",
+        "travel_seat": "User prefers front row.",
+        "travel": "User prefers front row."
+      }
+    },
+    "evaluation_evidence": [
+      "The app's compact layout looks nice, but that is not a preference to remember.",
+      "I changed my mind about workout_time: I now prefer lunch break instead of evening.",
+      "Historical note, not current: I used to prefer essays for reading."
+    ],
+    "score": {
+      "user_id": "user-17",
+      "session": 9,
+      "question": {
+        "id": "q3",
+        "slot": "travel_seat",
+        "question": "What is the user's latest preference for travel_seat?",
+        "options": {
+          "A": "front row",
+          "B": "window",
+          "C": "quiet car",
+          "D": "aisle"
+        },
+        "last_true_evidence_session": 1,
+        "evidence_delay": 8,
+        "current_text_mentions_answer": false,
+        "answer": "A"
+      },
+      "prior_notes": {
+        "drink": "User prefers mint tea.",
+        "workout_time": "User prefers evening instead of morning.",
+        "reading": "User prefers science fiction.",
+        "preferences": "User prefers mint tea, morning workout, and science fiction.",
+        "travel_seat": "User prefers front row."
+      },
+      "shared_identical_request": false,
+      "memory_answer": "A",
+      "memory_valid": true,
+      "memory_correct": true,
+      "baseline_answer": "B",
+      "baseline_valid": true,
+      "baseline_correct": false
+    },
+    "answer_calls": [
+      {
+        "line": 18,
+        "record": {
+          "user_id": "user-17",
+          "session": 9,
+          "arm": "memory",
+          "shared_identical_request": false,
+          "system": "Recover the current user preferences from the supplied evidence. Current explicit statements supersede older notes. Other people, hypothetical examples, product descriptions, and historical preferences are not current user preferences. Answer every question, making your best guess if evidence is absent. Return only a JSON object mapping question IDs to one option letter each, for example {\"q0\":\"B\",\"q1\":\"A\"}.",
+          "payload": {
+            "current_session": [
+              "The app's compact layout looks nice, but that is not a preference to remember.",
+              "I changed my mind about workout_time: I now prefer lunch break instead of evening.",
+              "Historical note, not current: I used to prefer essays for reading."
+            ],
+            "prior_session_notes": {
+              "drink": "User prefers mint tea.",
+              "workout_time": "User prefers evening instead of morning.",
+              "reading": "User prefers science fiction.",
+              "preferences": "User prefers mint tea, morning workout, and science fiction.",
+              "travel_seat": "User prefers front row."
+            },
+            "questions": [
+              {
+                "id": "q0",
+                "question": "What is the user's latest preference for drink?",
+                "options": {
+                  "A": "green tea",
+                  "B": "espresso",
+                  "C": "sparkling water",
+                  "D": "mint tea"
+                }
+              },
+              {
+                "id": "q1",
+                "question": "What is the user's latest preference for notification_style?",
+                "options": {
+                  "A": "morning summary",
+                  "B": "instant alerts",
+                  "C": "end-of-day recap",
+                  "D": "only urgent alerts"
+                }
+              },
+              {
+                "id": "q2",
+                "question": "What is the user's latest preference for reading?",
+                "options": {
+                  "A": "essays",
+                  "B": "science fiction",
+                  "C": "biographies",
+                  "D": "mysteries"
+                }
+              },
+              {
+                "id": "q3",
+                "question": "What is the user's latest preference for travel_seat?",
+                "options": {
+                  "A": "front row",
+                  "B": "window",
+                  "C": "quiet car",
+                  "D": "aisle"
+                }
+              },
+              {
+                "id": "q4",
+                "question": "What is the user's latest preference for workout_time?",
+                "options": {
+                  "A": "weekend only",
+                  "B": "lunch break",
+                  "C": "late afternoon",
+                  "D": "morning"
+                }
+              }
+            ]
+          },
+          "generation": {
+            "text": "{\"q0\":\"D\",\"q1\":\"A\",\"q2\":\"B\",\"q3\":\"A\",\"q4\":\"B\"}",
+            "model": "gpt-5.6-luna",
+            "response_id": "resp_0c71d89e7a16a9f2016aabb354ce1887d2aed4203ccc1751ea",
+            "status": "completed",
+            "input_tokens": 480,
+            "output_tokens": 30,
+            "latency_s": 1.7060649611521512,
+            "estimated_cost_usd": 0.000132
+          }
+        }
+      },
+      {
+        "line": 19,
+        "record": {
+          "user_id": "user-17",
+          "session": 9,
+          "arm": "baseline",
+          "shared_identical_request": false,
+          "system": "Recover the current user preferences from the supplied evidence. Current explicit statements supersede older notes. Other people, hypothetical examples, product descriptions, and historical preferences are not current user preferences. Answer every question, making your best guess if evidence is absent. Return only a JSON object mapping question IDs to one option letter each, for example {\"q0\":\"B\",\"q1\":\"A\"}.",
+          "payload": {
+            "current_session": [
+              "The app's compact layout looks nice, but that is not a preference to remember.",
+              "I changed my mind about workout_time: I now prefer lunch break instead of evening.",
+              "Historical note, not current: I used to prefer essays for reading."
+            ],
+            "prior_session_notes": {},
+            "questions": [
+              {
+                "id": "q0",
+                "question": "What is the user's latest preference for drink?",
+                "options": {
+                  "A": "green tea",
+                  "B": "espresso",
+                  "C": "sparkling water",
+                  "D": "mint tea"
+                }
+              },
+              {
+                "id": "q1",
+                "question": "What is the user's latest preference for notification_style?",
+                "options": {
+                  "A": "morning summary",
+                  "B": "instant alerts",
+                  "C": "end-of-day recap",
+                  "D": "only urgent alerts"
+                }
+              },
+              {
+                "id": "q2",
+                "question": "What is the user's latest preference for reading?",
+                "options": {
+                  "A": "essays",
+                  "B": "science fiction",
+                  "C": "biographies",
+                  "D": "mysteries"
+                }
+              },
+              {
+                "id": "q3",
+                "question": "What is the user's latest preference for travel_seat?",
+                "options": {
+                  "A": "front row",
+                  "B": "window",
+                  "C": "quiet car",
+                  "D": "aisle"
+                }
+              },
+              {
+                "id": "q4",
+                "question": "What is the user's latest preference for workout_time?",
+                "options": {
+                  "A": "weekend only",
+                  "B": "lunch break",
+                  "C": "late afternoon",
+                  "D": "morning"
+                }
+              }
+            ]
+          },
+          "generation": {
+            "text": "{\"q0\":\"A\",\"q1\":\"A\",\"q2\":\"B\",\"q3\":\"B\",\"q4\":\"B\"}",
+            "model": "gpt-5.6-luna",
+            "response_id": "resp_0326f58017817adc016aabb35681d087d2915ffb1b73186e23",
+            "status": "completed",
+            "input_tokens": 422,
+            "output_tokens": 128,
+            "latency_s": 2.120480512967333,
+            "estimated_cost_usd": 0.00023799999999999998
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "tool-recovery",
+    "title": "Tool execution: rejected write followed by valid update",
+    "user_id": "user-29",
+    "producer_session_one_based": 8,
+    "evaluation_session_one_based": 9,
+    "interpretation": "write_note against existing exercise is rejected without changing the store. Qwen then issues update_note successfully and finishes. This is a rejected attempt with recovery, not a failed final session. Note-content correctness is a separate check.",
+    "source_note_line": 18,
+    "evaluation_note_line": 19,
+    "score_line": 71,
+    "producer_trace": {
+      "rounds": [
+        {
+          "round": 0,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"The product description mentions science fiction for reading, but I am only reading specs.\", \"The weather was surprisingly clear today.\", \"I changed my mind about exercise: I now prefer cycling instead of running.\"]}"
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"read_notes\",\"arguments\":{}}",
+            "input_tokens": 296,
+            "output_tokens": 11,
+            "latency_s": 0.1001838471274823,
+            "hit_output_cap": false
+          },
+          "valid": true,
+          "error": null,
+          "tool_results": [
+            {
+              "tool": "read_notes",
+              "notes": {
+                "notification_style": "User prefers morning summary instead of end-of-day recap.",
+                "lunch": "User prefers salads.",
+                "exercise": "User prefers running."
+              }
+            }
+          ],
+          "notes_before": {
+            "notification_style": "User prefers morning summary instead of end-of-day recap.",
+            "lunch": "User prefers salads.",
+            "exercise": "User prefers running."
+          },
+          "notes_after": {
+            "notification_style": "User prefers morning summary instead of end-of-day recap.",
+            "lunch": "User prefers salads.",
+            "exercise": "User prefers running."
+          }
+        },
+        {
+          "round": 1,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"The product description mentions science fiction for reading, but I am only reading specs.\", \"The weather was surprisingly clear today.\", \"I changed my mind about exercise: I now prefer cycling instead of running.\"]}"
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"read_notes\",\"arguments\":{}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"read_notes\", \"notes\": {\"notification_style\": \"User prefers morning summary instead of end-of-day recap.\", \"lunch\": \"User prefers salads.\", \"exercise\": \"User prefers running.\"}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers cycling.\"}}",
+            "input_tokens": 406,
+            "output_tokens": 20,
+            "latency_s": 0.1849580490961671,
+            "hit_output_cap": false
+          },
+          "valid": false,
+          "error": "write requires new name; update requires existing name",
+          "tool_results": {
+            "error": "write requires new name; update requires existing name"
+          },
+          "notes_before": {
+            "notification_style": "User prefers morning summary instead of end-of-day recap.",
+            "lunch": "User prefers salads.",
+            "exercise": "User prefers running."
+          },
+          "notes_after": {
+            "notification_style": "User prefers morning summary instead of end-of-day recap.",
+            "lunch": "User prefers salads.",
+            "exercise": "User prefers running."
+          }
+        },
+        {
+          "round": 2,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"The product description mentions science fiction for reading, but I am only reading specs.\", \"The weather was surprisingly clear today.\", \"I changed my mind about exercise: I now prefer cycling instead of running.\"]}"
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"read_notes\",\"arguments\":{}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"read_notes\", \"notes\": {\"notification_style\": \"User prefers morning summary instead of end-of-day recap.\", \"lunch\": \"User prefers salads.\", \"exercise\": \"User prefers running.\"}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers cycling.\"}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: {\"error\": \"write requires new name; update requires existing name\"}\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"update_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers cycling.\"}}",
+            "input_tokens": 494,
+            "output_tokens": 20,
+            "latency_s": 0.1770801490638405,
+            "hit_output_cap": false
+          },
+          "valid": true,
+          "error": null,
+          "tool_results": [
+            {
+              "tool": "update_note",
+              "ok": true,
+              "current_notes": {
+                "notification_style": "User prefers morning summary instead of end-of-day recap.",
+                "lunch": "User prefers salads.",
+                "exercise": "User prefers cycling."
+              }
+            }
+          ],
+          "notes_before": {
+            "notification_style": "User prefers morning summary instead of end-of-day recap.",
+            "lunch": "User prefers salads.",
+            "exercise": "User prefers running."
+          },
+          "notes_after": {
+            "notification_style": "User prefers morning summary instead of end-of-day recap.",
+            "lunch": "User prefers salads.",
+            "exercise": "User prefers cycling."
+          }
+        },
+        {
+          "round": 3,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"The product description mentions science fiction for reading, but I am only reading specs.\", \"The weather was surprisingly clear today.\", \"I changed my mind about exercise: I now prefer cycling instead of running.\"]}"
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"read_notes\",\"arguments\":{}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"read_notes\", \"notes\": {\"notification_style\": \"User prefers morning summary instead of end-of-day recap.\", \"lunch\": \"User prefers salads.\", \"exercise\": \"User prefers running.\"}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers cycling.\"}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: {\"error\": \"write requires new name; update requires existing name\"}\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"update_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers cycling.\"}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"update_note\", \"ok\": true, \"current_notes\": {\"notification_style\": \"User prefers morning summary instead of end-of-day recap.\", \"lunch\": \"User prefers salads.\", \"exercise\": \"User prefers cycling.\"}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"no_op\",\"arguments\":{}}",
+            "input_tokens": 619,
+            "output_tokens": 11,
+            "latency_s": 0.10027841804549098,
+            "hit_output_cap": false
+          },
+          "valid": true,
+          "error": null,
+          "tool_results": [
+            {
+              "tool": "no_op",
+              "ok": true
+            }
+          ],
+          "notes_before": {
+            "notification_style": "User prefers morning summary instead of end-of-day recap.",
+            "lunch": "User prefers salads.",
+            "exercise": "User prefers cycling."
+          },
+          "notes_after": {
+            "notification_style": "User prefers morning summary instead of end-of-day recap.",
+            "lunch": "User prefers salads.",
+            "exercise": "User prefers cycling."
+          }
+        }
+      ],
+      "finished": true,
+      "user_id": "user-29",
+      "session": 7,
+      "notes_before": {
+        "notification_style": "User prefers morning summary instead of end-of-day recap.",
+        "lunch": "User prefers salads.",
+        "exercise": "User prefers running."
+      },
+      "notes_after": {
+        "notification_style": "User prefers morning summary instead of end-of-day recap.",
+        "lunch": "User prefers salads.",
+        "exercise": "User prefers cycling."
+      }
+    },
+    "evaluation_evidence": [
+      "I changed my mind about reading: I now prefer mysteries instead of history.",
+      "I had a busy morning and moved a few errands around.",
+      "I like the blue label on that package, but it does not change what I prefer."
+    ],
+    "score": {
+      "user_id": "user-29",
+      "session": 8,
+      "question": {
+        "id": "q0",
+        "slot": "exercise",
+        "question": "What is the user's latest preference for exercise?",
+        "options": {
+          "A": "pilates",
+          "B": "cycling",
+          "C": "rowing",
+          "D": "running"
+        },
+        "last_true_evidence_session": 7,
+        "evidence_delay": 1,
+        "current_text_mentions_answer": false,
+        "answer": "B"
+      },
+      "prior_notes": {
+        "notification_style": "User prefers morning summary instead of end-of-day recap.",
+        "lunch": "User prefers salads.",
+        "exercise": "User prefers cycling."
+      },
+      "shared_identical_request": false,
+      "baseline_answer": "A",
+      "baseline_valid": true,
+      "baseline_correct": false,
+      "memory_answer": "B",
+      "memory_valid": true,
+      "memory_correct": true
+    },
+    "answer_calls": [
+      {
+        "line": 35,
+        "record": {
+          "user_id": "user-29",
+          "session": 8,
+          "arm": "baseline",
+          "shared_identical_request": false,
+          "system": "Recover the current user preferences from the supplied evidence. Current explicit statements supersede older notes. Other people, hypothetical examples, product descriptions, and historical preferences are not current user preferences. Answer every question, making your best guess if evidence is absent. Return only a JSON object mapping question IDs to one option letter each, for example {\"q0\":\"B\",\"q1\":\"A\"}.",
+          "payload": {
+            "current_session": [
+              "I changed my mind about reading: I now prefer mysteries instead of history.",
+              "I had a busy morning and moved a few errands around.",
+              "I like the blue label on that package, but it does not change what I prefer."
+            ],
+            "prior_session_notes": {},
+            "questions": [
+              {
+                "id": "q0",
+                "question": "What is the user's latest preference for exercise?",
+                "options": {
+                  "A": "pilates",
+                  "B": "cycling",
+                  "C": "rowing",
+                  "D": "running"
+                }
+              },
+              {
+                "id": "q1",
+                "question": "What is the user's latest preference for lunch?",
+                "options": {
+                  "A": "grain bowls",
+                  "B": "tacos",
+                  "C": "ramen",
+                  "D": "sandwiches"
+                }
+              },
+              {
+                "id": "q2",
+                "question": "What is the user's latest preference for notification_style?",
+                "options": {
+                  "A": "weekly digest",
+                  "B": "morning summary",
+                  "C": "end-of-day recap",
+                  "D": "instant alerts"
+                }
+              },
+              {
+                "id": "q3",
+                "question": "What is the user's latest preference for reading?",
+                "options": {
+                  "A": "mysteries",
+                  "B": "history",
+                  "C": "essays",
+                  "D": "science fiction"
+                }
+              },
+              {
+                "id": "q4",
+                "question": "What is the user's latest preference for travel_seat?",
+                "options": {
+                  "A": "quiet car",
+                  "B": "front row",
+                  "C": "extra legroom",
+                  "D": "aisle"
+                }
+              }
+            ]
+          },
+          "generation": {
+            "text": "{\"q0\":\"A\",\"q1\":\"A\",\"q2\":\"A\",\"q3\":\"A\",\"q4\":\"A\"}",
+            "model": "gpt-5.6-luna",
+            "response_id": "resp_0fcafc22bf38668b016aabb379638487d29b63320d5fb7045d",
+            "status": "completed",
+            "input_tokens": 414,
+            "output_tokens": 30,
+            "latency_s": 1.1009517810307443,
+            "estimated_cost_usd": 0.00011880000000000001
+          }
+        }
+      },
+      {
+        "line": 36,
+        "record": {
+          "user_id": "user-29",
+          "session": 8,
+          "arm": "memory",
+          "shared_identical_request": false,
+          "system": "Recover the current user preferences from the supplied evidence. Current explicit statements supersede older notes. Other people, hypothetical examples, product descriptions, and historical preferences are not current user preferences. Answer every question, making your best guess if evidence is absent. Return only a JSON object mapping question IDs to one option letter each, for example {\"q0\":\"B\",\"q1\":\"A\"}.",
+          "payload": {
+            "current_session": [
+              "I changed my mind about reading: I now prefer mysteries instead of history.",
+              "I had a busy morning and moved a few errands around.",
+              "I like the blue label on that package, but it does not change what I prefer."
+            ],
+            "prior_session_notes": {
+              "notification_style": "User prefers morning summary instead of end-of-day recap.",
+              "lunch": "User prefers salads.",
+              "exercise": "User prefers cycling."
+            },
+            "questions": [
+              {
+                "id": "q0",
+                "question": "What is the user's latest preference for exercise?",
+                "options": {
+                  "A": "pilates",
+                  "B": "cycling",
+                  "C": "rowing",
+                  "D": "running"
+                }
+              },
+              {
+                "id": "q1",
+                "question": "What is the user's latest preference for lunch?",
+                "options": {
+                  "A": "grain bowls",
+                  "B": "tacos",
+                  "C": "ramen",
+                  "D": "sandwiches"
+                }
+              },
+              {
+                "id": "q2",
+                "question": "What is the user's latest preference for notification_style?",
+                "options": {
+                  "A": "weekly digest",
+                  "B": "morning summary",
+                  "C": "end-of-day recap",
+                  "D": "instant alerts"
+                }
+              },
+              {
+                "id": "q3",
+                "question": "What is the user's latest preference for reading?",
+                "options": {
+                  "A": "mysteries",
+                  "B": "history",
+                  "C": "essays",
+                  "D": "science fiction"
+                }
+              },
+              {
+                "id": "q4",
+                "question": "What is the user's latest preference for travel_seat?",
+                "options": {
+                  "A": "quiet car",
+                  "B": "front row",
+                  "C": "extra legroom",
+                  "D": "aisle"
+                }
+              }
+            ]
+          },
+          "generation": {
+            "text": "{\"q0\":\"B\",\"q1\":\"A\",\"q2\":\"B\",\"q3\":\"A\",\"q4\":\"C\"}",
+            "model": "gpt-5.6-luna",
+            "response_id": "resp_0dd6d4502797a4a2016aabb37a767087d2ae9c80df2722fcd0",
+            "status": "completed",
+            "input_tokens": 447,
+            "output_tokens": 141,
+            "latency_s": 2.8855304890312254,
+            "estimated_cost_usd": 0.0002586
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "answerer-error",
+    "title": "Luna answer failure despite correct prior note",
+    "user_id": "user-59",
+    "producer_session_one_based": 7,
+    "evaluation_session_one_based": 8,
+    "interpretation": "Before session 8, notes explicitly say the user prefers cycling. Luna still returns q2=A (rowing) rather than B (cycling). The current evidence contains no new exercise preference. This is an observed failure to use correct supplied evidence; the trace does not identify why it happened.",
+    "source_note_line": 37,
+    "evaluation_note_line": 38,
+    "score_line": 148,
+    "producer_trace": {
+      "rounds": [
+        {
+          "round": 0,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"As background only, I previously said I still prefer classical for music.\", \"Jordan is different from me: Jordan prefers pilates for exercise.\", \"For exercise, I prefer cycling.\"]}"
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"read_notes\",\"arguments\":{}}",
+            "input_tokens": 292,
+            "output_tokens": 11,
+            "latency_s": 0.10199530213139951,
+            "hit_output_cap": false
+          },
+          "valid": true,
+          "error": null,
+          "tool_results": [
+            {
+              "tool": "read_notes",
+              "notes": {
+                "breakfast": "User prefers oatmeal.",
+                "meeting_style": "User prefers silent docs.",
+                "coding_music": "User prefers piano.",
+                "music": "User prefers classical."
+              }
+            }
+          ],
+          "notes_before": {
+            "breakfast": "User prefers oatmeal.",
+            "meeting_style": "User prefers silent docs.",
+            "coding_music": "User prefers piano.",
+            "music": "User prefers classical."
+          },
+          "notes_after": {
+            "breakfast": "User prefers oatmeal.",
+            "meeting_style": "User prefers silent docs.",
+            "coding_music": "User prefers piano.",
+            "music": "User prefers classical."
+          }
+        },
+        {
+          "round": 1,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"As background only, I previously said I still prefer classical for music.\", \"Jordan is different from me: Jordan prefers pilates for exercise.\", \"For exercise, I prefer cycling.\"]}"
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"read_notes\",\"arguments\":{}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"read_notes\", \"notes\": {\"breakfast\": \"User prefers oatmeal.\", \"meeting_style\": \"User prefers silent docs.\", \"coding_music\": \"User prefers piano.\", \"music\": \"User prefers classical.\"}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers cycling.\"}}",
+            "input_tokens": 406,
+            "output_tokens": 20,
+            "latency_s": 0.17710115993395448,
+            "hit_output_cap": false
+          },
+          "valid": true,
+          "error": null,
+          "tool_results": [
+            {
+              "tool": "write_note",
+              "ok": true,
+              "current_notes": {
+                "breakfast": "User prefers oatmeal.",
+                "meeting_style": "User prefers silent docs.",
+                "coding_music": "User prefers piano.",
+                "music": "User prefers classical.",
+                "exercise": "User prefers cycling."
+              }
+            }
+          ],
+          "notes_before": {
+            "breakfast": "User prefers oatmeal.",
+            "meeting_style": "User prefers silent docs.",
+            "coding_music": "User prefers piano.",
+            "music": "User prefers classical."
+          },
+          "notes_after": {
+            "breakfast": "User prefers oatmeal.",
+            "meeting_style": "User prefers silent docs.",
+            "coding_music": "User prefers piano.",
+            "music": "User prefers classical.",
+            "exercise": "User prefers cycling."
+          }
+        },
+        {
+          "round": 2,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"As background only, I previously said I still prefer classical for music.\", \"Jordan is different from me: Jordan prefers pilates for exercise.\", \"For exercise, I prefer cycling.\"]}"
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"read_notes\",\"arguments\":{}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"read_notes\", \"notes\": {\"breakfast\": \"User prefers oatmeal.\", \"meeting_style\": \"User prefers silent docs.\", \"coding_music\": \"User prefers piano.\", \"music\": \"User prefers classical.\"}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers cycling.\"}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"write_note\", \"ok\": true, \"current_notes\": {\"breakfast\": \"User prefers oatmeal.\", \"meeting_style\": \"User prefers silent docs.\", \"coding_music\": \"User prefers piano.\", \"music\": \"User prefers classical.\", \"exercise\": \"User prefers cycling.\"}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"no_op\",\"arguments\":{}}",
+            "input_tokens": 543,
+            "output_tokens": 11,
+            "latency_s": 0.10097235790453851,
+            "hit_output_cap": false
+          },
+          "valid": true,
+          "error": null,
+          "tool_results": [
+            {
+              "tool": "no_op",
+              "ok": true
+            }
+          ],
+          "notes_before": {
+            "breakfast": "User prefers oatmeal.",
+            "meeting_style": "User prefers silent docs.",
+            "coding_music": "User prefers piano.",
+            "music": "User prefers classical.",
+            "exercise": "User prefers cycling."
+          },
+          "notes_after": {
+            "breakfast": "User prefers oatmeal.",
+            "meeting_style": "User prefers silent docs.",
+            "coding_music": "User prefers piano.",
+            "music": "User prefers classical.",
+            "exercise": "User prefers cycling."
+          }
+        }
+      ],
+      "finished": true,
+      "user_id": "user-59",
+      "session": 6,
+      "notes_before": {
+        "breakfast": "User prefers oatmeal.",
+        "meeting_style": "User prefers silent docs.",
+        "coding_music": "User prefers piano.",
+        "music": "User prefers classical."
+      },
+      "notes_after": {
+        "breakfast": "User prefers oatmeal.",
+        "meeting_style": "User prefers silent docs.",
+        "coding_music": "User prefers piano.",
+        "music": "User prefers classical.",
+        "exercise": "User prefers cycling."
+      }
+    },
+    "evaluation_evidence": [
+      "The product description mentions oatmeal for breakfast, but I am only reading specs.",
+      "I might take a short walk after work.",
+      "For coding_music, I prefer piano."
+    ],
+    "score": {
+      "user_id": "user-59",
+      "session": 7,
+      "question": {
+        "id": "q2",
+        "slot": "exercise",
+        "question": "What is the user's latest preference for exercise?",
+        "options": {
+          "A": "rowing",
+          "B": "cycling",
+          "C": "running",
+          "D": "yoga"
+        },
+        "last_true_evidence_session": 6,
+        "evidence_delay": 1,
+        "current_text_mentions_answer": false,
+        "answer": "B"
+      },
+      "prior_notes": {
+        "breakfast": "User prefers oatmeal.",
+        "meeting_style": "User prefers silent docs.",
+        "coding_music": "User prefers piano.",
+        "music": "User prefers classical.",
+        "exercise": "User prefers cycling."
+      },
+      "shared_identical_request": false,
+      "memory_answer": "A",
+      "memory_valid": true,
+      "memory_correct": false,
+      "baseline_answer": "A",
+      "baseline_valid": true,
+      "baseline_correct": false
+    },
+    "answer_calls": [
+      {
+        "line": 71,
+        "record": {
+          "user_id": "user-59",
+          "session": 7,
+          "arm": "memory",
+          "shared_identical_request": false,
+          "system": "Recover the current user preferences from the supplied evidence. Current explicit statements supersede older notes. Other people, hypothetical examples, product descriptions, and historical preferences are not current user preferences. Answer every question, making your best guess if evidence is absent. Return only a JSON object mapping question IDs to one option letter each, for example {\"q0\":\"B\",\"q1\":\"A\"}.",
+          "payload": {
+            "current_session": [
+              "The product description mentions oatmeal for breakfast, but I am only reading specs.",
+              "I might take a short walk after work.",
+              "For coding_music, I prefer piano."
+            ],
+            "prior_session_notes": {
+              "breakfast": "User prefers oatmeal.",
+              "meeting_style": "User prefers silent docs.",
+              "coding_music": "User prefers piano.",
+              "music": "User prefers classical.",
+              "exercise": "User prefers cycling."
+            },
+            "questions": [
+              {
+                "id": "q0",
+                "question": "What is the user's latest preference for breakfast?",
+                "options": {
+                  "A": "smoothies",
+                  "B": "eggs",
+                  "C": "oatmeal",
+                  "D": "toast"
+                }
+              },
+              {
+                "id": "q1",
+                "question": "What is the user's latest preference for coding_music?",
+                "options": {
+                  "A": "silence",
+                  "B": "rain sounds",
+                  "C": "instrumental jazz",
+                  "D": "piano"
+                }
+              },
+              {
+                "id": "q2",
+                "question": "What is the user's latest preference for exercise?",
+                "options": {
+                  "A": "rowing",
+                  "B": "cycling",
+                  "C": "running",
+                  "D": "yoga"
+                }
+              },
+              {
+                "id": "q3",
+                "question": "What is the user's latest preference for meeting_style?",
+                "options": {
+                  "A": "bullet agendas",
+                  "B": "demo-first meetings",
+                  "C": "freeform discussion",
+                  "D": "silent docs"
+                }
+              },
+              {
+                "id": "q4",
+                "question": "What is the user's latest preference for music?",
+                "options": {
+                  "A": "ambient",
+                  "B": "classical",
+                  "C": "synthwave",
+                  "D": "salsa"
+                }
+              }
+            ]
+          },
+          "generation": {
+            "text": "{\"q0\":\"A\",\"q1\":\"D\",\"q2\":\"A\",\"q3\":\"A\",\"q4\":\"A\"}",
+            "model": "gpt-5.6-luna",
+            "response_id": "resp_060d4c573a66020f016aabb3d7cea487d2aa8d8862eb08f2d3",
+            "status": "completed",
+            "input_tokens": 442,
+            "output_tokens": 517,
+            "latency_s": 7.867252229014412,
+            "estimated_cost_usd": 0.0007088
+          }
+        }
+      },
+      {
+        "line": 72,
+        "record": {
+          "user_id": "user-59",
+          "session": 7,
+          "arm": "baseline",
+          "shared_identical_request": false,
+          "system": "Recover the current user preferences from the supplied evidence. Current explicit statements supersede older notes. Other people, hypothetical examples, product descriptions, and historical preferences are not current user preferences. Answer every question, making your best guess if evidence is absent. Return only a JSON object mapping question IDs to one option letter each, for example {\"q0\":\"B\",\"q1\":\"A\"}.",
+          "payload": {
+            "current_session": [
+              "The product description mentions oatmeal for breakfast, but I am only reading specs.",
+              "I might take a short walk after work.",
+              "For coding_music, I prefer piano."
+            ],
+            "prior_session_notes": {},
+            "questions": [
+              {
+                "id": "q0",
+                "question": "What is the user's latest preference for breakfast?",
+                "options": {
+                  "A": "smoothies",
+                  "B": "eggs",
+                  "C": "oatmeal",
+                  "D": "toast"
+                }
+              },
+              {
+                "id": "q1",
+                "question": "What is the user's latest preference for coding_music?",
+                "options": {
+                  "A": "silence",
+                  "B": "rain sounds",
+                  "C": "instrumental jazz",
+                  "D": "piano"
+                }
+              },
+              {
+                "id": "q2",
+                "question": "What is the user's latest preference for exercise?",
+                "options": {
+                  "A": "rowing",
+                  "B": "cycling",
+                  "C": "running",
+                  "D": "yoga"
+                }
+              },
+              {
+                "id": "q3",
+                "question": "What is the user's latest preference for meeting_style?",
+                "options": {
+                  "A": "bullet agendas",
+                  "B": "demo-first meetings",
+                  "C": "freeform discussion",
+                  "D": "silent docs"
+                }
+              },
+              {
+                "id": "q4",
+                "question": "What is the user's latest preference for music?",
+                "options": {
+                  "A": "ambient",
+                  "B": "classical",
+                  "C": "synthwave",
+                  "D": "salsa"
+                }
+              }
+            ]
+          },
+          "generation": {
+            "text": "{\"q0\":\"A\",\"q1\":\"D\",\"q2\":\"A\",\"q3\":\"A\",\"q4\":\"A\"}",
+            "model": "gpt-5.6-luna",
+            "response_id": "resp_00ffcf68b7da3371016aabb3df47b087d28a31bb0fae008df6",
+            "status": "completed",
+            "input_tokens": 398,
+            "output_tokens": 125,
+            "latency_s": 2.900067620910704,
+            "estimated_cost_usd": 0.0002296
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "tool-schema",
+    "title": "Tool format: extra argument rejected, then removed",
+    "interpretation": "The read already succeeded. This rejection is specifically the unexpected category argument, despite the generic error message mentioning read/name/text. Removing category produces a valid call. The accepted text still describes Riley, illustrating that schema recovery does not repair wrong-person content.",
+    "user_id": "user-71",
+    "producer_session_one_based": 1,
+    "evaluation_session_one_based": 2,
+    "source_note_line": 41,
+    "evaluation_note_line": 42,
+    "score_line": 162,
+    "producer_trace": {
+      "rounds": [
+        {
+          "round": 0,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"Riley is different from me: Riley prefers front row for travel_seat.\", \"For travel_seat, I prefer window.\", \"I had a busy morning and moved a few errands around.\"]}"
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"read_notes\",\"arguments\":{}}",
+            "input_tokens": 294,
+            "output_tokens": 11,
+            "latency_s": 0.12336700200103223,
+            "hit_output_cap": false
+          },
+          "valid": true,
+          "error": null,
+          "tool_results": [
+            {
+              "tool": "read_notes",
+              "notes": {}
+            }
+          ],
+          "notes_before": {},
+          "notes_after": {}
+        },
+        {
+          "round": 1,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"Riley is different from me: Riley prefers front row for travel_seat.\", \"For travel_seat, I prefer window.\", \"I had a busy morning and moved a few errands around.\"]}"
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"read_notes\",\"arguments\":{}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"read_notes\", \"notes\": {}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"write_note\",\"arguments\":{\"name\":\"travel_seat\",\"text\":\"Riley prefers front row.\",\"category\":\"travel_seat\"}}",
+            "input_tokens": 372,
+            "output_tokens": 27,
+            "latency_s": 0.27183611784130335,
+            "hit_output_cap": false
+          },
+          "valid": false,
+          "error": "read first; name and text required",
+          "tool_results": {
+            "error": "read first; name and text required"
+          },
+          "notes_before": {},
+          "notes_after": {}
+        },
+        {
+          "round": 2,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"Riley is different from me: Riley prefers front row for travel_seat.\", \"For travel_seat, I prefer window.\", \"I had a busy morning and moved a few errands around.\"]}"
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"read_notes\",\"arguments\":{}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"read_notes\", \"notes\": {}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"write_note\",\"arguments\":{\"name\":\"travel_seat\",\"text\":\"Riley prefers front row.\",\"category\":\"travel_seat\"}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: {\"error\": \"read first; name and text required\"}\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"write_note\",\"arguments\":{\"name\":\"travel_seat\",\"text\":\"Riley prefers front row.\"}}",
+            "input_tokens": 465,
+            "output_tokens": 23,
+            "latency_s": 0.23421088000759482,
+            "hit_output_cap": false
+          },
+          "valid": true,
+          "error": null,
+          "tool_results": [
+            {
+              "tool": "write_note",
+              "ok": true,
+              "current_notes": {
+                "travel_seat": "Riley prefers front row."
+              }
+            }
+          ],
+          "notes_before": {},
+          "notes_after": {
+            "travel_seat": "Riley prefers front row."
+          }
+        },
+        {
+          "round": 3,
+          "messages": [
+            {
+              "role": "system",
+              "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+            },
+            {
+              "role": "user",
+              "content": "{\"current_session\": [\"Riley is different from me: Riley prefers front row for travel_seat.\", \"For travel_seat, I prefer window.\", \"I had a busy morning and moved a few errands around.\"]}"
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"read_notes\",\"arguments\":{}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"read_notes\", \"notes\": {}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"write_note\",\"arguments\":{\"name\":\"travel_seat\",\"text\":\"Riley prefers front row.\",\"category\":\"travel_seat\"}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: {\"error\": \"read first; name and text required\"}\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            },
+            {
+              "role": "assistant",
+              "content": "{\"tool\":\"write_note\",\"arguments\":{\"name\":\"travel_seat\",\"text\":\"Riley prefers front row.\"}}"
+            },
+            {
+              "role": "user",
+              "content": "Tool results: [{\"tool\": \"write_note\", \"ok\": true, \"current_notes\": {\"travel_seat\": \"Riley prefers front row.\"}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+            }
+          ],
+          "generation": {
+            "text": "{\"tool\":\"no_op\",\"arguments\":{}}",
+            "input_tokens": 571,
+            "output_tokens": 11,
+            "latency_s": 0.11171110696159303,
+            "hit_output_cap": false
+          },
+          "valid": true,
+          "error": null,
+          "tool_results": [
+            {
+              "tool": "no_op",
+              "ok": true
+            }
+          ],
+          "notes_before": {
+            "travel_seat": "Riley prefers front row."
+          },
+          "notes_after": {
+            "travel_seat": "Riley prefers front row."
+          }
+        }
+      ],
+      "finished": true,
+      "user_id": "user-71",
+      "session": 0,
+      "notes_before": {},
+      "notes_after": {
+        "travel_seat": "Riley prefers front row."
+      }
+    },
+    "evaluation_evidence": [
+      "The product description mentions weekend only for workout_time, but I am only reading specs.",
+      "For workout_time, I prefer late afternoon.",
+      "I might take a short walk after work."
+    ],
+    "score": {
+      "user_id": "user-71",
+      "session": 1,
+      "question": {
+        "id": "q0",
+        "slot": "travel_seat",
+        "question": "What is the user's latest preference for travel_seat?",
+        "options": {
+          "A": "extra legroom",
+          "B": "window",
+          "C": "quiet car",
+          "D": "aisle"
+        },
+        "last_true_evidence_session": 0,
+        "evidence_delay": 1,
+        "current_text_mentions_answer": false,
+        "answer": "B"
+      },
+      "prior_notes": {
+        "travel_seat": "Riley prefers front row."
+      },
+      "shared_identical_request": false,
+      "memory_answer": "A",
+      "memory_valid": true,
+      "memory_correct": false,
+      "baseline_answer": "A",
+      "baseline_valid": true,
+      "baseline_correct": false
+    },
+    "answer_calls": [
+      {
+        "line": 78,
+        "record": {
+          "user_id": "user-71",
+          "session": 1,
+          "arm": "memory",
+          "shared_identical_request": false,
+          "system": "Recover the current user preferences from the supplied evidence. Current explicit statements supersede older notes. Other people, hypothetical examples, product descriptions, and historical preferences are not current user preferences. Answer every question, making your best guess if evidence is absent. Return only a JSON object mapping question IDs to one option letter each, for example {\"q0\":\"B\",\"q1\":\"A\"}.",
+          "payload": {
+            "current_session": [
+              "The product description mentions weekend only for workout_time, but I am only reading specs.",
+              "For workout_time, I prefer late afternoon.",
+              "I might take a short walk after work."
+            ],
+            "prior_session_notes": {
+              "travel_seat": "Riley prefers front row."
+            },
+            "questions": [
+              {
+                "id": "q0",
+                "question": "What is the user's latest preference for travel_seat?",
+                "options": {
+                  "A": "extra legroom",
+                  "B": "window",
+                  "C": "quiet car",
+                  "D": "aisle"
+                }
+              },
+              {
+                "id": "q1",
+                "question": "What is the user's latest preference for workout_time?",
+                "options": {
+                  "A": "evening",
+                  "B": "weekend only",
+                  "C": "late afternoon",
+                  "D": "morning"
+                }
+              }
+            ]
+          },
+          "generation": {
+            "text": "{\"q0\":\"A\",\"q1\":\"C\"}",
+            "model": "gpt-5.6-luna",
+            "response_id": "resp_03f123914e241494016aabb3ecb89c87d2ac8abf9225849dd1",
+            "status": "completed",
+            "input_tokens": 259,
+            "output_tokens": 115,
+            "latency_s": 2.5254143700003624,
+            "estimated_cost_usd": 0.0001898
+          }
+        }
+      },
+      {
+        "line": 79,
+        "record": {
+          "user_id": "user-71",
+          "session": 1,
+          "arm": "baseline",
+          "shared_identical_request": false,
+          "system": "Recover the current user preferences from the supplied evidence. Current explicit statements supersede older notes. Other people, hypothetical examples, product descriptions, and historical preferences are not current user preferences. Answer every question, making your best guess if evidence is absent. Return only a JSON object mapping question IDs to one option letter each, for example {\"q0\":\"B\",\"q1\":\"A\"}.",
+          "payload": {
+            "current_session": [
+              "The product description mentions weekend only for workout_time, but I am only reading specs.",
+              "For workout_time, I prefer late afternoon.",
+              "I might take a short walk after work."
+            ],
+            "prior_session_notes": {},
+            "questions": [
+              {
+                "id": "q0",
+                "question": "What is the user's latest preference for travel_seat?",
+                "options": {
+                  "A": "extra legroom",
+                  "B": "window",
+                  "C": "quiet car",
+                  "D": "aisle"
+                }
+              },
+              {
+                "id": "q1",
+                "question": "What is the user's latest preference for workout_time?",
+                "options": {
+                  "A": "evening",
+                  "B": "weekend only",
+                  "C": "late afternoon",
+                  "D": "morning"
+                }
+              }
+            ]
+          },
+          "generation": {
+            "text": "{\"q0\":\"A\",\"q1\":\"C\"}",
+            "model": "gpt-5.6-luna",
+            "response_id": "resp_0840d74eefd6d31c016aabb3ef3e4487d286e9079c217d6794",
+            "status": "completed",
+            "input_tokens": 247,
+            "output_tokens": 47,
+            "latency_s": 1.526872131973505,
+            "estimated_cost_usd": 0.0001058
+          }
+        }
+      }
+    ]
+  }
+]

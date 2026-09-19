@@ -1,0 +1,1706 @@
+[
+  {
+    "name": "perfect",
+    "candidate": {
+      "version": "partial-profile-notes-v1",
+      "as_of": "2026-03-01T09:01:00Z",
+      "profile": {
+        "category_profiles": [
+          {
+            "category": "accessories",
+            "preferences": {
+              "brands": [
+                "Baggu",
+                "Cuyana"
+              ],
+              "patterns": []
+            }
+          },
+          {
+            "category": "hats",
+            "default_size": null
+          },
+          {
+            "category": "pants",
+            "scoped_overrides": [
+              {
+                "context": {
+                  "subtype": null,
+                  "season": "summer",
+                  "occasion": null
+                },
+                "preferences": {
+                  "materials": [
+                    "linen",
+                    "cotton"
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "purchase_intents": [
+          {
+            "id": "urgent-gift",
+            "category": "shirts",
+            "recipient": "gift",
+            "status": "active",
+            "deadline": "2026-03-02T18:00:00Z"
+          },
+          {
+            "id": "future-trip",
+            "category": "shoes",
+            "recipient": "self",
+            "status": "active",
+            "deadline": "2026-05-01T18:00:00Z"
+          }
+        ],
+        "personal": {
+          "name": "Maya Okafor"
+        }
+      },
+      "history": [
+        {
+          "address": {
+            "section": "clothing",
+            "category": "accessories",
+            "field": "brands",
+            "context": {}
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:06Z",
+              "until": null,
+              "value": [
+                "Baggu",
+                "Cuyana"
+              ]
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "clothing",
+            "category": "accessories",
+            "field": "patterns",
+            "context": {}
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:03Z",
+              "until": null,
+              "value": []
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "clothing",
+            "category": "hats",
+            "field": "default_size",
+            "context": {}
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:02Z",
+              "until": null,
+              "value": null
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "clothing",
+            "category": "pants",
+            "field": "materials",
+            "context": {
+              "season": "summer"
+            }
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:01Z",
+              "until": null,
+              "value": [
+                "linen",
+                "cotton"
+              ]
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "intent",
+            "field": "state",
+            "intent_id": "urgent-gift",
+            "category": "shirts",
+            "recipient": "gift"
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:05Z",
+              "until": null,
+              "value": {
+                "status": "active",
+                "deadline": "2026-03-02T18:00:00Z"
+              }
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "intent",
+            "field": "state",
+            "intent_id": "future-trip",
+            "category": "shoes",
+            "recipient": "self"
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:04Z",
+              "until": null,
+              "value": {
+                "status": "active",
+                "deadline": "2026-05-01T18:00:00Z"
+              }
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "personal",
+            "field": "name"
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:00Z",
+              "until": null,
+              "value": "Maya Okafor"
+            }
+          ]
+        }
+      ]
+    },
+    "score": {
+      "reward": 9,
+      "correct": 9,
+      "target_count": 9,
+      "missing": 0,
+      "incorrect": 0,
+      "unsupported": 0,
+      "schema_valid": true,
+      "exact_state": true,
+      "correct_fraction": 1.0,
+      "history_required_for_reward": false,
+      "normalization": "none; fraction is diagnostic only",
+      "correct_addresses": [
+        {
+          "section": "personal",
+          "field": "name"
+        },
+        {
+          "section": "clothing",
+          "field": "brands",
+          "category": "accessories",
+          "context": {}
+        },
+        {
+          "section": "clothing",
+          "field": "patterns",
+          "category": "accessories",
+          "context": {}
+        },
+        {
+          "section": "clothing",
+          "field": "default_size",
+          "category": "hats",
+          "context": {}
+        },
+        {
+          "section": "clothing",
+          "field": "materials",
+          "category": "pants",
+          "context": {
+            "season": "summer"
+          }
+        },
+        {
+          "section": "intent",
+          "field": "status",
+          "intent_id": "urgent-gift",
+          "category": "shirts",
+          "recipient": "gift"
+        },
+        {
+          "section": "intent",
+          "field": "deadline",
+          "intent_id": "urgent-gift",
+          "category": "shirts",
+          "recipient": "gift"
+        },
+        {
+          "section": "intent",
+          "field": "status",
+          "intent_id": "future-trip",
+          "category": "shoes",
+          "recipient": "self"
+        },
+        {
+          "section": "intent",
+          "field": "deadline",
+          "intent_id": "future-trip",
+          "category": "shoes",
+          "recipient": "self"
+        }
+      ],
+      "missing_addresses": [],
+      "incorrect_addresses": [],
+      "unsupported_addresses": [],
+      "history_diagnostic": {
+        "correct": 7,
+        "expected": 7,
+        "predicted": 7,
+        "exact": true
+      }
+    }
+  },
+  {
+    "name": "one_missing",
+    "candidate": {
+      "version": "partial-profile-notes-v1",
+      "as_of": "2026-03-01T09:01:00Z",
+      "profile": {
+        "category_profiles": [
+          {
+            "category": "accessories",
+            "preferences": {
+              "brands": [
+                "Baggu",
+                "Cuyana"
+              ],
+              "patterns": []
+            }
+          },
+          {
+            "category": "hats",
+            "default_size": null
+          },
+          {
+            "category": "pants",
+            "scoped_overrides": [
+              {
+                "context": {
+                  "subtype": null,
+                  "season": "summer",
+                  "occasion": null
+                },
+                "preferences": {
+                  "materials": [
+                    "linen",
+                    "cotton"
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "purchase_intents": [
+          {
+            "id": "urgent-gift",
+            "category": "shirts",
+            "recipient": "gift",
+            "status": "active",
+            "deadline": "2026-03-02T18:00:00Z"
+          },
+          {
+            "id": "future-trip",
+            "category": "shoes",
+            "recipient": "self",
+            "status": "active",
+            "deadline": "2026-05-01T18:00:00Z"
+          }
+        ],
+        "personal": {}
+      },
+      "history": [
+        {
+          "address": {
+            "section": "clothing",
+            "category": "accessories",
+            "field": "brands",
+            "context": {}
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:06Z",
+              "until": null,
+              "value": [
+                "Baggu",
+                "Cuyana"
+              ]
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "clothing",
+            "category": "accessories",
+            "field": "patterns",
+            "context": {}
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:03Z",
+              "until": null,
+              "value": []
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "clothing",
+            "category": "hats",
+            "field": "default_size",
+            "context": {}
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:02Z",
+              "until": null,
+              "value": null
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "clothing",
+            "category": "pants",
+            "field": "materials",
+            "context": {
+              "season": "summer"
+            }
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:01Z",
+              "until": null,
+              "value": [
+                "linen",
+                "cotton"
+              ]
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "intent",
+            "field": "state",
+            "intent_id": "urgent-gift",
+            "category": "shirts",
+            "recipient": "gift"
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:05Z",
+              "until": null,
+              "value": {
+                "status": "active",
+                "deadline": "2026-03-02T18:00:00Z"
+              }
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "intent",
+            "field": "state",
+            "intent_id": "future-trip",
+            "category": "shoes",
+            "recipient": "self"
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:04Z",
+              "until": null,
+              "value": {
+                "status": "active",
+                "deadline": "2026-05-01T18:00:00Z"
+              }
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "personal",
+            "field": "name"
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:00Z",
+              "until": null,
+              "value": "Maya Okafor"
+            }
+          ]
+        }
+      ]
+    },
+    "score": {
+      "reward": 8,
+      "correct": 8,
+      "target_count": 9,
+      "missing": 1,
+      "incorrect": 0,
+      "unsupported": 0,
+      "schema_valid": true,
+      "exact_state": false,
+      "correct_fraction": 0.8888888888888888,
+      "history_required_for_reward": false,
+      "normalization": "none; fraction is diagnostic only",
+      "correct_addresses": [
+        {
+          "section": "clothing",
+          "field": "brands",
+          "category": "accessories",
+          "context": {}
+        },
+        {
+          "section": "clothing",
+          "field": "patterns",
+          "category": "accessories",
+          "context": {}
+        },
+        {
+          "section": "clothing",
+          "field": "default_size",
+          "category": "hats",
+          "context": {}
+        },
+        {
+          "section": "clothing",
+          "field": "materials",
+          "category": "pants",
+          "context": {
+            "season": "summer"
+          }
+        },
+        {
+          "section": "intent",
+          "field": "status",
+          "intent_id": "urgent-gift",
+          "category": "shirts",
+          "recipient": "gift"
+        },
+        {
+          "section": "intent",
+          "field": "deadline",
+          "intent_id": "urgent-gift",
+          "category": "shirts",
+          "recipient": "gift"
+        },
+        {
+          "section": "intent",
+          "field": "status",
+          "intent_id": "future-trip",
+          "category": "shoes",
+          "recipient": "self"
+        },
+        {
+          "section": "intent",
+          "field": "deadline",
+          "intent_id": "future-trip",
+          "category": "shoes",
+          "recipient": "self"
+        }
+      ],
+      "missing_addresses": [
+        {
+          "section": "personal",
+          "field": "name"
+        }
+      ],
+      "incorrect_addresses": [],
+      "unsupported_addresses": [],
+      "history_diagnostic": {
+        "correct": 7,
+        "expected": 7,
+        "predicted": 7,
+        "exact": true
+      }
+    }
+  },
+  {
+    "name": "wrong_value",
+    "candidate": {
+      "version": "partial-profile-notes-v1",
+      "as_of": "2026-03-01T09:01:00Z",
+      "profile": {
+        "category_profiles": [
+          {
+            "category": "accessories",
+            "preferences": {
+              "brands": [
+                "Baggu",
+                "Cuyana"
+              ],
+              "patterns": []
+            }
+          },
+          {
+            "category": "hats",
+            "default_size": null
+          },
+          {
+            "category": "pants",
+            "scoped_overrides": [
+              {
+                "context": {
+                  "subtype": null,
+                  "season": "summer",
+                  "occasion": null
+                },
+                "preferences": {
+                  "materials": [
+                    "linen",
+                    "cotton"
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "purchase_intents": [
+          {
+            "id": "urgent-gift",
+            "category": "shirts",
+            "recipient": "gift",
+            "status": "active",
+            "deadline": "2026-03-02T18:00:00Z"
+          },
+          {
+            "id": "future-trip",
+            "category": "shoes",
+            "recipient": "self",
+            "status": "active",
+            "deadline": "2026-05-01T18:00:00Z"
+          }
+        ],
+        "personal": {
+          "name": "Wrong Name"
+        }
+      },
+      "history": [
+        {
+          "address": {
+            "section": "clothing",
+            "category": "accessories",
+            "field": "brands",
+            "context": {}
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:06Z",
+              "until": null,
+              "value": [
+                "Baggu",
+                "Cuyana"
+              ]
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "clothing",
+            "category": "accessories",
+            "field": "patterns",
+            "context": {}
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:03Z",
+              "until": null,
+              "value": []
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "clothing",
+            "category": "hats",
+            "field": "default_size",
+            "context": {}
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:02Z",
+              "until": null,
+              "value": null
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "clothing",
+            "category": "pants",
+            "field": "materials",
+            "context": {
+              "season": "summer"
+            }
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:01Z",
+              "until": null,
+              "value": [
+                "linen",
+                "cotton"
+              ]
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "intent",
+            "field": "state",
+            "intent_id": "urgent-gift",
+            "category": "shirts",
+            "recipient": "gift"
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:05Z",
+              "until": null,
+              "value": {
+                "status": "active",
+                "deadline": "2026-03-02T18:00:00Z"
+              }
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "intent",
+            "field": "state",
+            "intent_id": "future-trip",
+            "category": "shoes",
+            "recipient": "self"
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:04Z",
+              "until": null,
+              "value": {
+                "status": "active",
+                "deadline": "2026-05-01T18:00:00Z"
+              }
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "personal",
+            "field": "name"
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:00Z",
+              "until": null,
+              "value": "Maya Okafor"
+            }
+          ]
+        }
+      ]
+    },
+    "score": {
+      "reward": 8,
+      "correct": 8,
+      "target_count": 9,
+      "missing": 0,
+      "incorrect": 1,
+      "unsupported": 0,
+      "schema_valid": true,
+      "exact_state": false,
+      "correct_fraction": 0.8888888888888888,
+      "history_required_for_reward": false,
+      "normalization": "none; fraction is diagnostic only",
+      "correct_addresses": [
+        {
+          "section": "clothing",
+          "field": "brands",
+          "category": "accessories",
+          "context": {}
+        },
+        {
+          "section": "clothing",
+          "field": "patterns",
+          "category": "accessories",
+          "context": {}
+        },
+        {
+          "section": "clothing",
+          "field": "default_size",
+          "category": "hats",
+          "context": {}
+        },
+        {
+          "section": "clothing",
+          "field": "materials",
+          "category": "pants",
+          "context": {
+            "season": "summer"
+          }
+        },
+        {
+          "section": "intent",
+          "field": "status",
+          "intent_id": "urgent-gift",
+          "category": "shirts",
+          "recipient": "gift"
+        },
+        {
+          "section": "intent",
+          "field": "deadline",
+          "intent_id": "urgent-gift",
+          "category": "shirts",
+          "recipient": "gift"
+        },
+        {
+          "section": "intent",
+          "field": "status",
+          "intent_id": "future-trip",
+          "category": "shoes",
+          "recipient": "self"
+        },
+        {
+          "section": "intent",
+          "field": "deadline",
+          "intent_id": "future-trip",
+          "category": "shoes",
+          "recipient": "self"
+        }
+      ],
+      "missing_addresses": [],
+      "incorrect_addresses": [
+        {
+          "section": "personal",
+          "field": "name"
+        }
+      ],
+      "unsupported_addresses": [],
+      "history_diagnostic": {
+        "correct": 7,
+        "expected": 7,
+        "predicted": 7,
+        "exact": true
+      }
+    }
+  },
+  {
+    "name": "list_superset",
+    "candidate": {
+      "version": "partial-profile-notes-v1",
+      "as_of": "2026-03-01T09:01:00Z",
+      "profile": {
+        "category_profiles": [
+          {
+            "category": "accessories",
+            "preferences": {
+              "brands": [
+                "Baggu",
+                "Cuyana"
+              ],
+              "patterns": []
+            }
+          },
+          {
+            "category": "hats",
+            "default_size": null
+          },
+          {
+            "category": "pants",
+            "scoped_overrides": [
+              {
+                "context": {
+                  "subtype": null,
+                  "season": "summer",
+                  "occasion": null
+                },
+                "preferences": {
+                  "materials": [
+                    "linen",
+                    "cotton",
+                    "wool"
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "purchase_intents": [
+          {
+            "id": "urgent-gift",
+            "category": "shirts",
+            "recipient": "gift",
+            "status": "active",
+            "deadline": "2026-03-02T18:00:00Z"
+          },
+          {
+            "id": "future-trip",
+            "category": "shoes",
+            "recipient": "self",
+            "status": "active",
+            "deadline": "2026-05-01T18:00:00Z"
+          }
+        ],
+        "personal": {
+          "name": "Maya Okafor"
+        }
+      },
+      "history": [
+        {
+          "address": {
+            "section": "clothing",
+            "category": "accessories",
+            "field": "brands",
+            "context": {}
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:06Z",
+              "until": null,
+              "value": [
+                "Baggu",
+                "Cuyana"
+              ]
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "clothing",
+            "category": "accessories",
+            "field": "patterns",
+            "context": {}
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:03Z",
+              "until": null,
+              "value": []
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "clothing",
+            "category": "hats",
+            "field": "default_size",
+            "context": {}
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:02Z",
+              "until": null,
+              "value": null
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "clothing",
+            "category": "pants",
+            "field": "materials",
+            "context": {
+              "season": "summer"
+            }
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:01Z",
+              "until": null,
+              "value": [
+                "linen",
+                "cotton"
+              ]
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "intent",
+            "field": "state",
+            "intent_id": "urgent-gift",
+            "category": "shirts",
+            "recipient": "gift"
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:05Z",
+              "until": null,
+              "value": {
+                "status": "active",
+                "deadline": "2026-03-02T18:00:00Z"
+              }
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "intent",
+            "field": "state",
+            "intent_id": "future-trip",
+            "category": "shoes",
+            "recipient": "self"
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:04Z",
+              "until": null,
+              "value": {
+                "status": "active",
+                "deadline": "2026-05-01T18:00:00Z"
+              }
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "personal",
+            "field": "name"
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:00Z",
+              "until": null,
+              "value": "Maya Okafor"
+            }
+          ]
+        }
+      ]
+    },
+    "score": {
+      "reward": 8,
+      "correct": 8,
+      "target_count": 9,
+      "missing": 0,
+      "incorrect": 1,
+      "unsupported": 0,
+      "schema_valid": true,
+      "exact_state": false,
+      "correct_fraction": 0.8888888888888888,
+      "history_required_for_reward": false,
+      "normalization": "none; fraction is diagnostic only",
+      "correct_addresses": [
+        {
+          "section": "personal",
+          "field": "name"
+        },
+        {
+          "section": "clothing",
+          "field": "brands",
+          "category": "accessories",
+          "context": {}
+        },
+        {
+          "section": "clothing",
+          "field": "patterns",
+          "category": "accessories",
+          "context": {}
+        },
+        {
+          "section": "clothing",
+          "field": "default_size",
+          "category": "hats",
+          "context": {}
+        },
+        {
+          "section": "intent",
+          "field": "status",
+          "intent_id": "urgent-gift",
+          "category": "shirts",
+          "recipient": "gift"
+        },
+        {
+          "section": "intent",
+          "field": "deadline",
+          "intent_id": "urgent-gift",
+          "category": "shirts",
+          "recipient": "gift"
+        },
+        {
+          "section": "intent",
+          "field": "status",
+          "intent_id": "future-trip",
+          "category": "shoes",
+          "recipient": "self"
+        },
+        {
+          "section": "intent",
+          "field": "deadline",
+          "intent_id": "future-trip",
+          "category": "shoes",
+          "recipient": "self"
+        }
+      ],
+      "missing_addresses": [],
+      "incorrect_addresses": [
+        {
+          "section": "clothing",
+          "field": "materials",
+          "category": "pants",
+          "context": {
+            "season": "summer"
+          }
+        }
+      ],
+      "unsupported_addresses": [],
+      "history_diagnostic": {
+        "correct": 7,
+        "expected": 7,
+        "predicted": 7,
+        "exact": true
+      }
+    }
+  },
+  {
+    "name": "duplicate_address",
+    "candidate": {
+      "version": "partial-profile-notes-v1",
+      "as_of": "2026-03-01T09:01:00Z",
+      "profile": {
+        "category_profiles": [
+          {
+            "category": "accessories",
+            "preferences": {
+              "brands": [
+                "Baggu",
+                "Cuyana"
+              ],
+              "patterns": []
+            }
+          },
+          {
+            "category": "hats",
+            "default_size": null
+          },
+          {
+            "category": "pants",
+            "scoped_overrides": [
+              {
+                "context": {
+                  "subtype": null,
+                  "season": "summer",
+                  "occasion": null
+                },
+                "preferences": {
+                  "materials": [
+                    "linen",
+                    "cotton"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "category": "accessories",
+            "preferences": {
+              "brands": [
+                "Baggu",
+                "Cuyana"
+              ],
+              "patterns": []
+            }
+          }
+        ],
+        "purchase_intents": [
+          {
+            "id": "urgent-gift",
+            "category": "shirts",
+            "recipient": "gift",
+            "status": "active",
+            "deadline": "2026-03-02T18:00:00Z"
+          },
+          {
+            "id": "future-trip",
+            "category": "shoes",
+            "recipient": "self",
+            "status": "active",
+            "deadline": "2026-05-01T18:00:00Z"
+          }
+        ],
+        "personal": {
+          "name": "Maya Okafor"
+        }
+      },
+      "history": [
+        {
+          "address": {
+            "section": "clothing",
+            "category": "accessories",
+            "field": "brands",
+            "context": {}
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:06Z",
+              "until": null,
+              "value": [
+                "Baggu",
+                "Cuyana"
+              ]
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "clothing",
+            "category": "accessories",
+            "field": "patterns",
+            "context": {}
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:03Z",
+              "until": null,
+              "value": []
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "clothing",
+            "category": "hats",
+            "field": "default_size",
+            "context": {}
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:02Z",
+              "until": null,
+              "value": null
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "clothing",
+            "category": "pants",
+            "field": "materials",
+            "context": {
+              "season": "summer"
+            }
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:01Z",
+              "until": null,
+              "value": [
+                "linen",
+                "cotton"
+              ]
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "intent",
+            "field": "state",
+            "intent_id": "urgent-gift",
+            "category": "shirts",
+            "recipient": "gift"
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:05Z",
+              "until": null,
+              "value": {
+                "status": "active",
+                "deadline": "2026-03-02T18:00:00Z"
+              }
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "intent",
+            "field": "state",
+            "intent_id": "future-trip",
+            "category": "shoes",
+            "recipient": "self"
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:04Z",
+              "until": null,
+              "value": {
+                "status": "active",
+                "deadline": "2026-05-01T18:00:00Z"
+              }
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "personal",
+            "field": "name"
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:00Z",
+              "until": null,
+              "value": "Maya Okafor"
+            }
+          ]
+        }
+      ]
+    },
+    "score": {
+      "reward": 0,
+      "correct": 0,
+      "target_count": 9,
+      "missing": 9,
+      "incorrect": 0,
+      "unsupported": 0,
+      "schema_valid": false,
+      "exact_state": false,
+      "correct_fraction": 0.0,
+      "history_required_for_reward": false,
+      "normalization": "none; fraction is diagnostic only",
+      "error": "duplicate/unknown category"
+    }
+  },
+  {
+    "name": "hidden_unknown",
+    "candidate": {
+      "version": "partial-profile-notes-v1",
+      "as_of": "2026-03-01T09:01:00Z",
+      "profile": {
+        "category_profiles": [
+          {
+            "category": "accessories",
+            "preferences": {
+              "brands": [
+                "Baggu",
+                "Cuyana"
+              ],
+              "patterns": []
+            }
+          },
+          {
+            "category": "hats",
+            "default_size": null
+          },
+          {
+            "category": "pants",
+            "scoped_overrides": [
+              {
+                "context": {
+                  "subtype": null,
+                  "season": "summer",
+                  "occasion": null
+                },
+                "preferences": {
+                  "materials": [
+                    "linen",
+                    "cotton"
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "purchase_intents": [
+          {
+            "id": "urgent-gift",
+            "category": "shirts",
+            "recipient": "gift",
+            "status": "active",
+            "deadline": "2026-03-02T18:00:00Z"
+          },
+          {
+            "id": "future-trip",
+            "category": "shoes",
+            "recipient": "self",
+            "status": "active",
+            "deadline": "2026-05-01T18:00:00Z"
+          }
+        ],
+        "personal": {
+          "name": "Maya Okafor"
+        },
+        "physical": {
+          "hair_color": null
+        }
+      },
+      "history": [
+        {
+          "address": {
+            "section": "clothing",
+            "category": "accessories",
+            "field": "brands",
+            "context": {}
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:06Z",
+              "until": null,
+              "value": [
+                "Baggu",
+                "Cuyana"
+              ]
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "clothing",
+            "category": "accessories",
+            "field": "patterns",
+            "context": {}
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:03Z",
+              "until": null,
+              "value": []
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "clothing",
+            "category": "hats",
+            "field": "default_size",
+            "context": {}
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:02Z",
+              "until": null,
+              "value": null
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "clothing",
+            "category": "pants",
+            "field": "materials",
+            "context": {
+              "season": "summer"
+            }
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:01Z",
+              "until": null,
+              "value": [
+                "linen",
+                "cotton"
+              ]
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "intent",
+            "field": "state",
+            "intent_id": "urgent-gift",
+            "category": "shirts",
+            "recipient": "gift"
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:05Z",
+              "until": null,
+              "value": {
+                "status": "active",
+                "deadline": "2026-03-02T18:00:00Z"
+              }
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "intent",
+            "field": "state",
+            "intent_id": "future-trip",
+            "category": "shoes",
+            "recipient": "self"
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:04Z",
+              "until": null,
+              "value": {
+                "status": "active",
+                "deadline": "2026-05-01T18:00:00Z"
+              }
+            }
+          ]
+        },
+        {
+          "address": {
+            "section": "personal",
+            "field": "name"
+          },
+          "events": [
+            {
+              "at": "2026-03-01T09:00:00Z",
+              "until": null,
+              "value": "Maya Okafor"
+            }
+          ]
+        }
+      ]
+    },
+    "score": {
+      "reward": 9,
+      "correct": 9,
+      "target_count": 9,
+      "missing": 0,
+      "incorrect": 0,
+      "unsupported": 1,
+      "schema_valid": true,
+      "exact_state": false,
+      "correct_fraction": 1.0,
+      "history_required_for_reward": false,
+      "normalization": "none; fraction is diagnostic only",
+      "correct_addresses": [
+        {
+          "section": "personal",
+          "field": "name"
+        },
+        {
+          "section": "clothing",
+          "field": "brands",
+          "category": "accessories",
+          "context": {}
+        },
+        {
+          "section": "clothing",
+          "field": "patterns",
+          "category": "accessories",
+          "context": {}
+        },
+        {
+          "section": "clothing",
+          "field": "default_size",
+          "category": "hats",
+          "context": {}
+        },
+        {
+          "section": "clothing",
+          "field": "materials",
+          "category": "pants",
+          "context": {
+            "season": "summer"
+          }
+        },
+        {
+          "section": "intent",
+          "field": "status",
+          "intent_id": "urgent-gift",
+          "category": "shirts",
+          "recipient": "gift"
+        },
+        {
+          "section": "intent",
+          "field": "deadline",
+          "intent_id": "urgent-gift",
+          "category": "shirts",
+          "recipient": "gift"
+        },
+        {
+          "section": "intent",
+          "field": "status",
+          "intent_id": "future-trip",
+          "category": "shoes",
+          "recipient": "self"
+        },
+        {
+          "section": "intent",
+          "field": "deadline",
+          "intent_id": "future-trip",
+          "category": "shoes",
+          "recipient": "self"
+        }
+      ],
+      "missing_addresses": [],
+      "incorrect_addresses": [],
+      "unsupported_addresses": [
+        {
+          "section": "physical",
+          "field": "hair_color"
+        }
+      ],
+      "history_diagnostic": {
+        "correct": 7,
+        "expected": 7,
+        "predicted": 7,
+        "exact": true
+      }
+    }
+  },
+  {
+    "name": "no_history",
+    "candidate": {
+      "version": "partial-profile-notes-v1",
+      "as_of": "2026-03-01T09:01:00Z",
+      "profile": {
+        "category_profiles": [
+          {
+            "category": "accessories",
+            "preferences": {
+              "brands": [
+                "Baggu",
+                "Cuyana"
+              ],
+              "patterns": []
+            }
+          },
+          {
+            "category": "hats",
+            "default_size": null
+          },
+          {
+            "category": "pants",
+            "scoped_overrides": [
+              {
+                "context": {
+                  "subtype": null,
+                  "season": "summer",
+                  "occasion": null
+                },
+                "preferences": {
+                  "materials": [
+                    "linen",
+                    "cotton"
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "purchase_intents": [
+          {
+            "id": "urgent-gift",
+            "category": "shirts",
+            "recipient": "gift",
+            "status": "active",
+            "deadline": "2026-03-02T18:00:00Z"
+          },
+          {
+            "id": "future-trip",
+            "category": "shoes",
+            "recipient": "self",
+            "status": "active",
+            "deadline": "2026-05-01T18:00:00Z"
+          }
+        ],
+        "personal": {
+          "name": "Maya Okafor"
+        }
+      }
+    },
+    "score": {
+      "reward": 9,
+      "correct": 9,
+      "target_count": 9,
+      "missing": 0,
+      "incorrect": 0,
+      "unsupported": 0,
+      "schema_valid": true,
+      "exact_state": true,
+      "correct_fraction": 1.0,
+      "history_required_for_reward": false,
+      "normalization": "none; fraction is diagnostic only",
+      "correct_addresses": [
+        {
+          "section": "personal",
+          "field": "name"
+        },
+        {
+          "section": "clothing",
+          "field": "brands",
+          "category": "accessories",
+          "context": {}
+        },
+        {
+          "section": "clothing",
+          "field": "patterns",
+          "category": "accessories",
+          "context": {}
+        },
+        {
+          "section": "clothing",
+          "field": "default_size",
+          "category": "hats",
+          "context": {}
+        },
+        {
+          "section": "clothing",
+          "field": "materials",
+          "category": "pants",
+          "context": {
+            "season": "summer"
+          }
+        },
+        {
+          "section": "intent",
+          "field": "status",
+          "intent_id": "urgent-gift",
+          "category": "shirts",
+          "recipient": "gift"
+        },
+        {
+          "section": "intent",
+          "field": "deadline",
+          "intent_id": "urgent-gift",
+          "category": "shirts",
+          "recipient": "gift"
+        },
+        {
+          "section": "intent",
+          "field": "status",
+          "intent_id": "future-trip",
+          "category": "shoes",
+          "recipient": "self"
+        },
+        {
+          "section": "intent",
+          "field": "deadline",
+          "intent_id": "future-trip",
+          "category": "shoes",
+          "recipient": "self"
+        }
+      ],
+      "missing_addresses": [],
+      "incorrect_addresses": [],
+      "unsupported_addresses": [],
+      "history_diagnostic": {
+        "correct": 0,
+        "expected": 7,
+        "predicted": 0,
+        "exact": false
+      }
+    }
+  },
+  {
+    "name": "invalid_json",
+    "candidate_raw": "{",
+    "score": {
+      "reward": 0,
+      "correct": 0,
+      "target_count": 9,
+      "missing": 9,
+      "incorrect": 0,
+      "unsupported": 0,
+      "schema_valid": false,
+      "exact_state": false,
+      "correct_fraction": 0.0,
+      "history_required_for_reward": false,
+      "normalization": "none; fraction is diagnostic only",
+      "error": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)"
+    }
+  }
+]

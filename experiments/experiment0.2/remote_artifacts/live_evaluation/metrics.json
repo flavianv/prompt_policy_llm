@@ -1,0 +1,58 @@
+{
+  "mode": "live",
+  "overall": {
+    "questions": 20,
+    "baseline": {
+      "correct": 8,
+      "accuracy": 0.4,
+      "invalid": 0
+    },
+    "memory": {
+      "correct": 10,
+      "accuracy": 0.5,
+      "invalid": 0
+    }
+  },
+  "historical": {
+    "questions": 3,
+    "baseline": {
+      "correct": 0,
+      "accuracy": 0.0,
+      "invalid": 0
+    },
+    "memory": {
+      "correct": 0,
+      "accuracy": 0.0,
+      "invalid": 0
+    }
+  },
+  "earlier_session_evidence": {
+    "questions": 15,
+    "baseline": {
+      "correct": 3,
+      "accuracy": 0.2,
+      "invalid": 0
+    },
+    "memory": {
+      "correct": 5,
+      "accuracy": 0.3333333333333333,
+      "invalid": 0
+    }
+  },
+  "memory_only_wins": 2,
+  "baseline_only_wins": 0,
+  "answer_calls": 20,
+  "actual_answer_models": [
+    "gpt-5.6-luna"
+  ],
+  "note_sessions_finished": 0,
+  "note_rounds": 120,
+  "note_invalid_rounds": 120,
+  "note_output_caps": 0,
+  "answer_usage": {
+    "input_tokens": 14614,
+    "output_tokens": 3446,
+    "estimated_cost_usd": 0.007058,
+    "latency_s": 66.96147589758039
+  }
+}

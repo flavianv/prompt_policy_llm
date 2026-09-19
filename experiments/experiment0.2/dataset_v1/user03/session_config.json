@@ -1,0 +1,61 @@
+{
+  "checkpoint": "experiment0.2-explicit-state",
+  "seed": 19,
+  "sessions": 10,
+  "questions_per_session": 2,
+  "session_gap_days": [
+    1,
+    2,
+    5,
+    10
+  ],
+  "informative_events_per_session": [
+    1,
+    2
+  ],
+  "distractors_per_session": [
+    1,
+    2
+  ],
+  "historical_question_probability": 0.35,
+  "profile_model": "gpt-5.6-luna",
+  "answer_model": "gpt-5.6-luna",
+  "profile_max_attempts": 2,
+  "profile_max_output_tokens": 10000,
+  "answer_max_output_tokens": 768,
+  "note_max_rounds": 12,
+  "note_max_output_tokens": 768,
+  "note_max_words": 1600,
+  "note_max_count": 40,
+  "templates": {
+    "reveal": "For my own records, {label}: {value}.",
+    "change": "Update my records from today: {label} is now {value}. This replaces the previous value from now onward.",
+    "temporary": "For this temporary period only, {label}: {value}. This applies until {until}; after that, return to my prior preference.",
+    "repeat": "Just confirming again: {label}: {value}.",
+    "historical_question": "Which option matches {label} at {time}?",
+    "current_question": "Which option matches {label} as of now?"
+  },
+  "distractors": {
+    "filler": [
+      "There was a long queue at the caf\u00e9 this morning.",
+      "The elevator stopped on every floor today.",
+      "A pigeon landed on the windowsill while I was waiting."
+    ],
+    "other_person": [
+      "A colleague said they love neon jackets; that is their taste, not mine.",
+      "My neighbor was talking about learning the violin."
+    ],
+    "product_description": [
+      "A shop window advertised striped linen shirts. I am only describing the display.",
+      "An advert listed leather shoes in several sizes; that says nothing about my own size."
+    ]
+  },
+  "total_statements_range": [
+    6,
+    10
+  ],
+  "initial_gap_days": [
+    5,
+    5
+  ]
+}

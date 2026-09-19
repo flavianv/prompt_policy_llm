@@ -1,0 +1,1712 @@
+{
+  "optimizer_steps": 16,
+  "attempted_groups": 100,
+  "unique_sessions": 100,
+  "api_calls": 0,
+  "reward_mode": "extraction_count",
+  "checkpoint_reload_max_logprob_error": 0.0,
+  "training_wall_seconds": 700.3650485021062,
+  "peak_gpu_memory_bytes": 13510809600,
+  "training_metrics": {
+    "sessions": 100,
+    "target_fields": 1423,
+    "candidates": 400,
+    "valid_candidates": 400,
+    "pass_at_4_sessions": 19,
+    "exact_candidate_count": 66,
+    "primary_mean_normalized_correct": 0.8542503089637252,
+    "candidate0_correct": 1223,
+    "mean_correct": 1220.75,
+    "best_correct": 1235,
+    "worst_correct": 1206,
+    "mean_missing": 202.25,
+    "mean_incorrect": 0.0,
+    "mean_unsupported": 145.25,
+    "candidate0_correct_micro_fraction": 0.859451862262825,
+    "mean_correct_micro_fraction": 0.8578706957132818,
+    "best_correct_micro_fraction": 0.8678847505270555,
+    "worst_correct_micro_fraction": 0.8475052705551651
+  },
+  "steps": [
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": true,
+      "rewards": [
+        10,
+        11,
+        11,
+        10
+      ],
+      "advantages": [
+        -1.0,
+        1.0,
+        1.0,
+        -1.0
+      ],
+      "reward_std": 0.5,
+      "loss": 0.40800002217292786,
+      "reference_kl": 0.0,
+      "gradient_norm": 2.3904035091400146,
+      "adapter_parameter_delta_l1": 176.0667972215524,
+      "assistant_loss_tokens": 250
+    },
+    {
+      "updated": true,
+      "rewards": [
+        13,
+        12,
+        12,
+        12
+      ],
+      "advantages": [
+        1.7320508075688774,
+        -0.5773502691896258,
+        -0.5773502691896258,
+        -0.5773502691896258
+      ],
+      "reward_std": 0.4330127018922193,
+      "loss": -0.18804092705249786,
+      "reference_kl": 0.0005135362488882882,
+      "gradient_norm": 1.6711392402648926,
+      "adapter_parameter_delta_l1": 209.33976383507252,
+      "assistant_loss_tokens": 350
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        15,
+        15,
+        15,
+        15
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        17,
+        17,
+        17,
+        17
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        19,
+        19,
+        19,
+        19
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        20,
+        20,
+        20,
+        20
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": true,
+      "rewards": [
+        20,
+        19,
+        19,
+        19
+      ],
+      "advantages": [
+        1.7320508075688774,
+        -0.5773502691896258,
+        -0.5773502691896258,
+        -0.5773502691896258
+      ],
+      "reward_std": 0.4330127018922193,
+      "loss": 0.13270814716815948,
+      "reference_kl": 0.0012584016436622257,
+      "gradient_norm": 1.0632894039154053,
+      "adapter_parameter_delta_l1": 175.70460160821676,
+      "assistant_loss_tokens": 483
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        21,
+        21,
+        21,
+        21
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": true,
+      "rewards": [
+        8,
+        5,
+        5,
+        8
+      ],
+      "advantages": [
+        1.0,
+        -1.0,
+        -1.0,
+        1.0
+      ],
+      "reward_std": 1.5,
+      "loss": -0.09773465991020203,
+      "reference_kl": 0.00048289128712245395,
+      "gradient_norm": 1.0215357542037964,
+      "adapter_parameter_delta_l1": 156.0527084507048,
+      "assistant_loss_tokens": 532
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        11,
+        11,
+        11,
+        11
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        13,
+        13,
+        13,
+        13
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        15,
+        15,
+        15,
+        15
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        17,
+        17,
+        17,
+        17
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        19,
+        19,
+        19,
+        19
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        19,
+        19,
+        19,
+        19
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": true,
+      "rewards": [
+        5,
+        5,
+        5,
+        8
+      ],
+      "advantages": [
+        -0.5773502691896257,
+        -0.5773502691896257,
+        -0.5773502691896257,
+        1.7320508075688772
+      ],
+      "reward_std": 1.299038105676658,
+      "loss": -0.08127941191196442,
+      "reference_kl": 0.0004061881170376113,
+      "gradient_norm": 1.0048162937164307,
+      "adapter_parameter_delta_l1": 162.8658623546362,
+      "assistant_loss_tokens": 554
+    },
+    {
+      "updated": true,
+      "rewards": [
+        6,
+        5,
+        6,
+        6
+      ],
+      "advantages": [
+        0.5773502691896258,
+        -1.7320508075688774,
+        0.5773502691896258,
+        0.5773502691896258
+      ],
+      "reward_std": 0.4330127018922193,
+      "loss": 0.012678548693656921,
+      "reference_kl": 0.0017889376974453892,
+      "gradient_norm": 2.9524528980255127,
+      "adapter_parameter_delta_l1": 148.78331780806184,
+      "assistant_loss_tokens": 137
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        7,
+        7,
+        7,
+        7
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        9,
+        9,
+        9,
+        9
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        11,
+        11,
+        11,
+        11
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        13,
+        13,
+        13,
+        13
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        14,
+        14,
+        14,
+        14
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        15,
+        15,
+        15,
+        15
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": true,
+      "rewards": [
+        16,
+        16,
+        13,
+        16
+      ],
+      "advantages": [
+        0.5773502691896257,
+        0.5773502691896257,
+        -1.7320508075688772,
+        0.5773502691896257
+      ],
+      "reward_std": 1.299038105676658,
+      "loss": 0.6409451588988304,
+      "reference_kl": 0.0016735620591618598,
+      "gradient_norm": 0.9305802583694458,
+      "adapter_parameter_delta_l1": 136.6405378393829,
+      "assistant_loss_tokens": 872
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        11,
+        11,
+        11,
+        11
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        13,
+        13,
+        13,
+        13
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        14,
+        14,
+        14,
+        14
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": true,
+      "rewards": [
+        15,
+        16,
+        15,
+        15
+      ],
+      "advantages": [
+        -0.5773502691896258,
+        1.7320508075688774,
+        -0.5773502691896258,
+        -0.5773502691896258
+      ],
+      "reward_std": 0.4330127018922193,
+      "loss": -0.06435494869947433,
+      "reference_kl": 0.0014787886216827894,
+      "gradient_norm": 1.04434072971344,
+      "adapter_parameter_delta_l1": 127.06857812032104,
+      "assistant_loss_tokens": 547
+    },
+    {
+      "updated": true,
+      "rewards": [
+        17,
+        16,
+        16,
+        16
+      ],
+      "advantages": [
+        1.7320508075688774,
+        -0.5773502691896258,
+        -0.5773502691896258,
+        -0.5773502691896258
+      ],
+      "reward_std": 0.4330127018922193,
+      "loss": 0.10190936177968979,
+      "reference_kl": 0.0012019225487522052,
+      "gradient_norm": 1.32869291305542,
+      "adapter_parameter_delta_l1": 104.20023262500763,
+      "assistant_loss_tokens": 408
+    },
+    {
+      "updated": true,
+      "rewards": [
+        5,
+        5,
+        5,
+        8
+      ],
+      "advantages": [
+        -0.5773502691896257,
+        -0.5773502691896257,
+        -0.5773502691896257,
+        1.7320508075688772
+      ],
+      "reward_std": 1.299038105676658,
+      "loss": -0.08624875545501709,
+      "reference_kl": 0.0011001711147498355,
+      "gradient_norm": 1.1068966388702393,
+      "adapter_parameter_delta_l1": 116.79600043222308,
+      "assistant_loss_tokens": 522
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": true,
+      "rewards": [
+        6,
+        6,
+        7,
+        7
+      ],
+      "advantages": [
+        -1.0,
+        -1.0,
+        1.0,
+        1.0
+      ],
+      "reward_std": 0.5,
+      "loss": -0.2848426103591919,
+      "reference_kl": 0.0002935389677683512,
+      "gradient_norm": 1.722774624824524,
+      "adapter_parameter_delta_l1": 108.18616423383355,
+      "assistant_loss_tokens": 330
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        11,
+        11,
+        11,
+        11
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        11,
+        11,
+        11,
+        11
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        13,
+        13,
+        13,
+        13
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": true,
+      "rewards": [
+        8,
+        8,
+        5,
+        8
+      ],
+      "advantages": [
+        0.5773502691896257,
+        0.5773502691896257,
+        -1.7320508075688772,
+        0.5773502691896257
+      ],
+      "reward_std": 1.299038105676658,
+      "loss": -0.07802312076091766,
+      "reference_kl": 0.021606083946360946,
+      "gradient_norm": 0.9541191458702087,
+      "adapter_parameter_delta_l1": 125.46385407075286,
+      "assistant_loss_tokens": 574
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        9,
+        9,
+        9,
+        9
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        11,
+        11,
+        11,
+        11
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        11,
+        11,
+        11,
+        11
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        13,
+        13,
+        13,
+        13
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        14,
+        14,
+        14,
+        14
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        14,
+        14,
+        14,
+        14
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        14,
+        14,
+        14,
+        14
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": true,
+      "rewards": [
+        8,
+        8,
+        8,
+        4
+      ],
+      "advantages": [
+        0.5773502691896258,
+        0.5773502691896258,
+        0.5773502691896258,
+        -1.7320508075688774
+      ],
+      "reward_std": 1.7320508075688772,
+      "loss": -0.08070279657840729,
+      "reference_kl": 0.017317962088659277,
+      "gradient_norm": 0.8867452144622803,
+      "adapter_parameter_delta_l1": 142.33169235661626,
+      "assistant_loss_tokens": 577
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        9,
+        9,
+        9,
+        9
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": true,
+      "rewards": [
+        10,
+        10,
+        11,
+        10
+      ],
+      "advantages": [
+        -0.5773502691896258,
+        -0.5773502691896258,
+        1.7320508075688774,
+        -0.5773502691896258
+      ],
+      "reward_std": 0.4330127018922193,
+      "loss": -0.012941911816596985,
+      "reference_kl": 0.004052930487725968,
+      "gradient_norm": 1.6080185174942017,
+      "adapter_parameter_delta_l1": 124.96145426109433,
+      "assistant_loss_tokens": 665
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        14,
+        14,
+        14,
+        14
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        15,
+        15,
+        15,
+        15
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        17,
+        17,
+        17,
+        17
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        9,
+        9,
+        9,
+        9
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        13,
+        13,
+        13,
+        13
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        13,
+        13,
+        13,
+        13
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        14,
+        14,
+        14,
+        14
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        20,
+        20,
+        20,
+        20
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        7,
+        7,
+        7,
+        7
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        9,
+        9,
+        9,
+        9
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        9,
+        9,
+        9,
+        9
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": true,
+      "rewards": [
+        12,
+        13,
+        12,
+        13
+      ],
+      "advantages": [
+        -1.0,
+        1.0,
+        -1.0,
+        1.0
+      ],
+      "reward_std": 0.5,
+      "loss": -0.11395353078842163,
+      "reference_kl": 0.0012475235487825127,
+      "gradient_norm": 1.0799535512924194,
+      "adapter_parameter_delta_l1": 115.99630308151245,
+      "assistant_loss_tokens": 465
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        13,
+        13,
+        13,
+        13
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        14,
+        14,
+        14,
+        14
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        7,
+        7,
+        7,
+        7
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        7,
+        7,
+        7,
+        7
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        13,
+        13,
+        13,
+        13
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        15,
+        15,
+        15,
+        15
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        17,
+        17,
+        17,
+        17
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": false,
+      "reason": "zero_variance",
+      "rewards": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "updated": true,
+      "rewards": [
+        16,
+        17,
+        17,
+        17
+      ],
+      "advantages": [
+        -1.7320508075688774,
+        0.5773502691896258,
+        0.5773502691896258,
+        0.5773502691896258
+      ],
+      "reward_std": 0.4330127018922193,
+      "loss": 0.28612659871578217,
+      "reference_kl": 0.003551417600005162,
+      "gradient_norm": 1.9961601495742798,
+      "adapter_parameter_delta_l1": 111.0885876789689,
+      "assistant_loss_tokens": 551
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "identity": {
+    "model": "Qwen/Qwen3-1.7B",
+    "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "verified_files": 12
+  },
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "read_notes",
+        "description": "Read existing user notes. Call once before all other tools.",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "put_note",
+        "description": "Save or replace one named note. Include dates, history, scope and evidence IDs.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "text"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "delete_note",
+        "description": "Delete an existing named note.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "no_op",
+        "description": "Finish after all relevant facts have been saved.",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false
+        }
+      }
+    }
+  ],
+  "system": "You maintain persistent notes for one user. Use the supplied tools, exactly one call per turn.\nFirst call read_notes with empty arguments {}. Wait for its result. Then call put_note to save useful facts. Finish with no_op and empty arguments {}.\nOnly read_notes, put_note, delete_note and no_op exist. Never invent a tool name or add extra arguments.\nPreserve explicit user facts, dates, historical changes, unknown and empty preference lists, category/brand/season scope, temporary expiry and intent deadlines. Do not infer facts or convert sizes. Ignore unrelated chatter, other-person facts and product descriptions. A single concise note may group all new facts. Retain old facts/history when updating it.\nExample first response: <tool_call>{\"name\":\"read_notes\",\"arguments\":{}}</tool_call>\nExample write format: <tool_call>{\"name\":\"put_note\",\"arguments\":{\"name\":\"user facts\",\"text\":\"Dated explicit facts with evidence IDs\"}}</tool_call>\nExample finish: <tool_call>{\"name\":\"no_op\",\"arguments\":{}}</tool_call>",
+  "observation": {
+    "current_time": "2026-03-01T09:01:00Z",
+    "statements": [
+      {
+        "id": "e0-0",
+        "timestamp": "2026-03-01T09:00:00Z",
+        "text": "For my own records, my name: Maya Okafor."
+      },
+      {
+        "id": "e0-1",
+        "timestamp": "2026-03-01T09:00:01Z",
+        "text": "For my own records, my preferred materials for pants in context summer: linen, cotton."
+      },
+      {
+        "id": "e0-2",
+        "timestamp": "2026-03-01T09:00:02Z",
+        "text": "For my own records, my default size for hats: explicitly unknown."
+      },
+      {
+        "id": "e0-3",
+        "timestamp": "2026-03-01T09:00:03Z",
+        "text": "For my own records, my preferred patterns for accessories: no stated preference."
+      },
+      {
+        "id": "e0-4",
+        "timestamp": "2026-03-01T09:00:04Z",
+        "text": "For my own records, the state of purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z."
+      },
+      {
+        "id": "e0-5",
+        "timestamp": "2026-03-01T09:00:05Z",
+        "text": "For my own records, the state of purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z."
+      },
+      {
+        "id": "e0-6",
+        "timestamp": "2026-03-01T09:00:06Z",
+        "text": "For my own records, my preferred brands for accessories: Baggu, Cuyana."
+      },
+      {
+        "id": "e0-7",
+        "timestamp": "2026-03-01T09:00:07Z",
+        "text": "There was a long queue at the caf\u00e9 this morning."
+      }
+    ]
+  },
+  "decoding": {
+    "do_sample": false,
+    "enable_thinking": false,
+    "max_new_tokens": 768
+  },
+  "max_rounds": 12,
+  "weight_training": false,
+  "scope": "one session, note only; no Luna calls"
+}

@@ -1,0 +1,475 @@
+{
+  "version": "partial-profile-notes-v1",
+  "as_of": "2026-04-16T09:01:00Z",
+  "profile": {
+    "category_profiles": [
+      {
+        "category": "accessories",
+        "preferences": {
+          "brands": [
+            "Mara Goods"
+          ],
+          "fits": [
+            "regular"
+          ],
+          "occasions": [
+            "work",
+            "travel"
+          ],
+          "patterns": []
+        }
+      },
+      {
+        "category": "hats",
+        "default_size": null
+      },
+      {
+        "category": "outerwear",
+        "preferences": {
+          "brands": [
+            "Highland Outfitters"
+          ]
+        }
+      },
+      {
+        "category": "pants",
+        "scoped_overrides": [
+          {
+            "context": {
+              "subtype": null,
+              "season": "summer",
+              "occasion": null
+            },
+            "preferences": {
+              "materials": [
+                "linen"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "category": "shirts",
+        "scoped_overrides": [
+          {
+            "context": {
+              "subtype": null,
+              "season": "summer",
+              "occasion": null
+            },
+            "preferences": {
+              "fits": [
+                "relaxed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "category": "shoes",
+        "scoped_overrides": [
+          {
+            "context": {
+              "subtype": "walking shoes",
+              "season": null,
+              "occasion": "travel"
+            },
+            "preferences": {
+              "materials": [
+                "linen",
+                "cotton"
+              ],
+              "styles": [
+                "practical"
+              ]
+            }
+          }
+        ],
+        "preferences": {
+          "fits": [
+            "regular"
+          ]
+        }
+      }
+    ],
+    "purchase_intents": [
+      {
+        "id": "urgent-gift",
+        "category": "shirts",
+        "recipient": "gift",
+        "status": "active",
+        "deadline": "2026-05-16T09:00:00Z"
+      },
+      {
+        "id": "future-trip",
+        "category": "shoes",
+        "recipient": "self",
+        "status": "active",
+        "deadline": "2026-05-01T18:00:00Z"
+      }
+    ],
+    "professional": {
+      "education": {
+        "level": "master",
+        "field": "Project management"
+      }
+    },
+    "physical": {
+      "height": {
+        "value": 178,
+        "unit": "cm"
+      }
+    },
+    "interests": {
+      "hobbies": [
+        "cycling",
+        "photography",
+        "cooking",
+        "historical fiction"
+      ]
+    },
+    "personal": {
+      "name": "Daniel Mwangi"
+    }
+  },
+  "history": [
+    {
+      "address": {
+        "section": "clothing",
+        "category": "accessories",
+        "field": "brands",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-04-11T09:00:01Z",
+          "until": null,
+          "value": [
+            "Mara Goods"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "accessories",
+        "field": "fits",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-04-01T09:00:02Z",
+          "until": null,
+          "value": [
+            "regular"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "accessories",
+        "field": "occasions",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-12T09:00:01Z",
+          "until": null,
+          "value": [
+            "work",
+            "travel"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "accessories",
+        "field": "patterns",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:03Z",
+          "until": null,
+          "value": []
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "hats",
+        "field": "default_size",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:02Z",
+          "until": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "outerwear",
+        "field": "brands",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-04-06T09:00:00Z",
+          "until": null,
+          "value": [
+            "Highland Outfitters"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "pants",
+        "field": "materials",
+        "context": {
+          "season": "summer"
+        }
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:01Z",
+          "until": null,
+          "value": [
+            "linen",
+            "cotton"
+          ]
+        },
+        {
+          "at": "2026-03-06T09:00:00Z",
+          "until": "2026-03-09T09:00:00Z",
+          "value": []
+        },
+        {
+          "at": "2026-04-11T09:00:00Z",
+          "until": null,
+          "value": [
+            "linen"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "shirts",
+        "field": "fits",
+        "context": {
+          "season": "summer"
+        }
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:06Z",
+          "until": null,
+          "value": null
+        },
+        {
+          "at": "2026-04-01T09:00:00Z",
+          "until": null,
+          "value": [
+            "relaxed"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "intent",
+        "field": "state",
+        "intent_id": "urgent-gift",
+        "category": "shirts",
+        "recipient": "gift"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:05Z",
+          "until": null,
+          "value": {
+            "status": "active",
+            "deadline": "2026-03-02T18:00:00Z"
+          }
+        },
+        {
+          "at": "2026-03-22T09:00:00Z",
+          "until": null,
+          "value": {
+            "status": "completed",
+            "deadline": "2026-03-02T18:00:00Z"
+          }
+        },
+        {
+          "at": "2026-04-16T09:00:00Z",
+          "until": null,
+          "value": {
+            "status": "active",
+            "deadline": "2026-05-16T09:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "shoes",
+        "field": "materials",
+        "context": {
+          "subtype": "walking shoes",
+          "occasion": "travel"
+        }
+      },
+      "events": [
+        {
+          "at": "2026-03-11T09:00:00Z",
+          "until": null,
+          "value": [
+            "leather",
+            "mesh"
+          ]
+        },
+        {
+          "at": "2026-03-12T09:00:00Z",
+          "until": null,
+          "value": [
+            "linen",
+            "cotton"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "shoes",
+        "field": "styles",
+        "context": {
+          "subtype": "walking shoes",
+          "occasion": "travel"
+        }
+      },
+      "events": [
+        {
+          "at": "2026-04-01T09:00:01Z",
+          "until": null,
+          "value": [
+            "practical"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "shoes",
+        "field": "fits",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-04-16T09:00:01Z",
+          "until": null,
+          "value": [
+            "regular"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "intent",
+        "field": "state",
+        "intent_id": "future-trip",
+        "category": "shoes",
+        "recipient": "self"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:04Z",
+          "until": null,
+          "value": {
+            "status": "active",
+            "deadline": "2026-05-01T18:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "general",
+        "field": "education"
+      },
+      "events": [
+        {
+          "at": "2026-03-06T09:00:01Z",
+          "until": null,
+          "value": {
+            "level": "master",
+            "field": "Project management"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "physical",
+        "field": "height"
+      },
+      "events": [
+        {
+          "at": "2026-03-22T09:00:01Z",
+          "until": null,
+          "value": {
+            "value": 178,
+            "unit": "cm"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "general",
+        "field": "hobbies"
+      },
+      "events": [
+        {
+          "at": "2026-04-06T09:00:01Z",
+          "until": null,
+          "value": [
+            "cycling",
+            "photography",
+            "cooking",
+            "historical fiction"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "personal",
+        "field": "name"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:00Z",
+          "until": null,
+          "value": "Daniel Mwangi"
+        }
+      ]
+    }
+  ]
+}

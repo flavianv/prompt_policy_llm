@@ -1,0 +1,505 @@
+{
+  "user": "user09",
+  "sessions": [
+    {
+      "session": 0,
+      "observation": {
+        "current_time": "2026-03-01T09:01:00Z",
+        "statements": [
+          {
+            "id": "e0-0",
+            "timestamp": "2026-03-01T09:00:00Z",
+            "text": "For my own records, my name: Giulia Bianchi."
+          },
+          {
+            "id": "e0-1",
+            "timestamp": "2026-03-01T09:00:01Z",
+            "text": "For my own records, my preferred materials for pants in context summer: linen, cotton."
+          },
+          {
+            "id": "e0-2",
+            "timestamp": "2026-03-01T09:00:02Z",
+            "text": "For my own records, my default size for hats: explicitly unknown."
+          },
+          {
+            "id": "e0-3",
+            "timestamp": "2026-03-01T09:00:03Z",
+            "text": "For my own records, my preferred patterns for accessories: no stated preference."
+          },
+          {
+            "id": "e0-4",
+            "timestamp": "2026-03-01T09:00:04Z",
+            "text": "For my own records, the state of purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-01T18:00:00Z."
+          },
+          {
+            "id": "e0-5",
+            "timestamp": "2026-03-01T09:00:05Z",
+            "text": "For my own records, the state of purchase intent urgent-gift (shirts, recipient gift): active; deadline 2026-03-02T18:00:00Z."
+          },
+          {
+            "id": "e0-6",
+            "timestamp": "2026-03-01T09:00:06Z",
+            "text": "For my own records, my Arket outerwear size in ALPHA: explicitly unknown."
+          },
+          {
+            "id": "e0-7",
+            "timestamp": "2026-03-01T09:00:07Z",
+            "text": "The elevator stopped on every floor today."
+          }
+        ]
+      }
+    },
+    {
+      "session": 1,
+      "observation": {
+        "current_time": "2026-03-06T09:01:00Z",
+        "statements": [
+          {
+            "id": "e1-0",
+            "timestamp": "2026-03-06T09:00:00Z",
+            "text": "For this temporary period only, my preferred materials for pants in context summer: cotton. This applies until 2026-03-09T09:00:00Z; after that, return to my prior preference."
+          },
+          {
+            "id": "e1-1",
+            "timestamp": "2026-03-06T09:00:01Z",
+            "text": "For my own records, my preferred brands for shoes: Veja, Geox."
+          },
+          {
+            "id": "e1-2",
+            "timestamp": "2026-03-06T09:00:02Z",
+            "text": "The elevator stopped on every floor today."
+          },
+          {
+            "id": "e1-3",
+            "timestamp": "2026-03-06T09:00:03Z",
+            "text": "A pigeon landed on the windowsill while I was waiting."
+          },
+          {
+            "id": "e1-4",
+            "timestamp": "2026-03-06T09:00:04Z",
+            "text": "A colleague said they love neon jackets; that is their taste, not mine."
+          },
+          {
+            "id": "e1-5",
+            "timestamp": "2026-03-06T09:00:05Z",
+            "text": "My neighbor was talking about learning the violin."
+          },
+          {
+            "id": "e1-6",
+            "timestamp": "2026-03-06T09:00:06Z",
+            "text": "A pigeon landed on the windowsill while I was waiting."
+          },
+          {
+            "id": "e1-7",
+            "timestamp": "2026-03-06T09:00:07Z",
+            "text": "A shop window advertised striped linen shirts. I am only describing the display."
+          },
+          {
+            "id": "e1-8",
+            "timestamp": "2026-03-06T09:00:08Z",
+            "text": "A pigeon landed on the windowsill while I was waiting."
+          }
+        ]
+      }
+    },
+    {
+      "session": 2,
+      "observation": {
+        "current_time": "2026-03-11T09:01:00Z",
+        "statements": [
+          {
+            "id": "e2-0",
+            "timestamp": "2026-03-11T09:00:00Z",
+            "text": "For my own records, my preferred cuts for pants in context summer: wide-leg."
+          },
+          {
+            "id": "e2-1",
+            "timestamp": "2026-03-11T09:00:01Z",
+            "text": "For my own records, my residence: city Bologna; region Emilia-Romagna; country Italy; timezone Europe/Rome."
+          },
+          {
+            "id": "e2-2",
+            "timestamp": "2026-03-11T09:00:02Z",
+            "text": "The elevator stopped on every floor today."
+          },
+          {
+            "id": "e2-3",
+            "timestamp": "2026-03-11T09:00:03Z",
+            "text": "The elevator stopped on every floor today."
+          },
+          {
+            "id": "e2-4",
+            "timestamp": "2026-03-11T09:00:04Z",
+            "text": "A pigeon landed on the windowsill while I was waiting."
+          },
+          {
+            "id": "e2-5",
+            "timestamp": "2026-03-11T09:00:05Z",
+            "text": "My neighbor was talking about learning the violin."
+          },
+          {
+            "id": "e2-6",
+            "timestamp": "2026-03-11T09:00:06Z",
+            "text": "Just confirming again: my name: Giulia Bianchi."
+          },
+          {
+            "id": "e2-7",
+            "timestamp": "2026-03-11T09:00:07Z",
+            "text": "My neighbor was talking about learning the violin."
+          },
+          {
+            "id": "e2-8",
+            "timestamp": "2026-03-11T09:00:08Z",
+            "text": "Just confirming again: the state of purchase intent urgent-gift (shirts, recipient gift): expired; deadline 2026-03-02T18:00:00Z."
+          },
+          {
+            "id": "e2-9",
+            "timestamp": "2026-03-11T09:00:09Z",
+            "text": "The elevator stopped on every floor today."
+          }
+        ]
+      }
+    },
+    {
+      "session": 3,
+      "observation": {
+        "current_time": "2026-03-13T09:01:00Z",
+        "statements": [
+          {
+            "id": "e3-0",
+            "timestamp": "2026-03-13T09:00:00Z",
+            "text": "Update my records from today: my preferred brands for shoes is now Cedar. This replaces the previous value from now onward."
+          },
+          {
+            "id": "e3-1",
+            "timestamp": "2026-03-13T09:00:01Z",
+            "text": "For my own records, my education: level master; field Human-computer interaction."
+          },
+          {
+            "id": "e3-2",
+            "timestamp": "2026-03-13T09:00:02Z",
+            "text": "The elevator stopped on every floor today."
+          },
+          {
+            "id": "e3-3",
+            "timestamp": "2026-03-13T09:00:03Z",
+            "text": "A colleague said they love neon jackets; that is their taste, not mine."
+          },
+          {
+            "id": "e3-4",
+            "timestamp": "2026-03-13T09:00:04Z",
+            "text": "A pigeon landed on the windowsill while I was waiting."
+          },
+          {
+            "id": "e3-5",
+            "timestamp": "2026-03-13T09:00:05Z",
+            "text": "Just confirming again: my preferred materials for pants in context summer: linen, cotton."
+          }
+        ]
+      }
+    },
+    {
+      "session": 4,
+      "observation": {
+        "current_time": "2026-03-23T09:01:00Z",
+        "statements": [
+          {
+            "id": "e4-0",
+            "timestamp": "2026-03-23T09:00:00Z",
+            "text": "Update my records from today: the state of purchase intent urgent-gift (shirts, recipient gift) is now completed; deadline 2026-03-02T18:00:00Z. This replaces the previous value from now onward."
+          },
+          {
+            "id": "e4-1",
+            "timestamp": "2026-03-23T09:00:01Z",
+            "text": "For my own records, my preferred occasions for outerwear: travel, casual, work."
+          },
+          {
+            "id": "e4-2",
+            "timestamp": "2026-03-23T09:00:02Z",
+            "text": "There was a long queue at the café this morning."
+          },
+          {
+            "id": "e4-3",
+            "timestamp": "2026-03-23T09:00:03Z",
+            "text": "A shop window advertised striped linen shirts. I am only describing the display."
+          },
+          {
+            "id": "e4-4",
+            "timestamp": "2026-03-23T09:00:04Z",
+            "text": "Just confirming again: my Arket outerwear size in ALPHA: explicitly unknown."
+          },
+          {
+            "id": "e4-5",
+            "timestamp": "2026-03-23T09:00:05Z",
+            "text": "A pigeon landed on the windowsill while I was waiting."
+          },
+          {
+            "id": "e4-6",
+            "timestamp": "2026-03-23T09:00:06Z",
+            "text": "A shop window advertised striped linen shirts. I am only describing the display."
+          },
+          {
+            "id": "e4-7",
+            "timestamp": "2026-03-23T09:00:07Z",
+            "text": "The elevator stopped on every floor today."
+          },
+          {
+            "id": "e4-8",
+            "timestamp": "2026-03-23T09:00:08Z",
+            "text": "An advert listed leather shoes in several sizes; that says nothing about my own size."
+          },
+          {
+            "id": "e4-9",
+            "timestamp": "2026-03-23T09:00:09Z",
+            "text": "There was a long queue at the café this morning."
+          }
+        ]
+      }
+    },
+    {
+      "session": 5,
+      "observation": {
+        "current_time": "2026-03-24T09:01:00Z",
+        "statements": [
+          {
+            "id": "e5-0",
+            "timestamp": "2026-03-24T09:00:00Z",
+            "text": "Update my records from today: my preferred patterns for accessories is now plain, striped. This replaces the previous value from now onward."
+          },
+          {
+            "id": "e5-1",
+            "timestamp": "2026-03-24T09:00:01Z",
+            "text": "For my own records, my preferred materials for hats: cotton, wool."
+          },
+          {
+            "id": "e5-2",
+            "timestamp": "2026-03-24T09:00:02Z",
+            "text": "For my own records, my marital status: partnered."
+          },
+          {
+            "id": "e5-3",
+            "timestamp": "2026-03-24T09:00:03Z",
+            "text": "The elevator stopped on every floor today."
+          },
+          {
+            "id": "e5-4",
+            "timestamp": "2026-03-24T09:00:04Z",
+            "text": "My neighbor was talking about learning the violin."
+          },
+          {
+            "id": "e5-5",
+            "timestamp": "2026-03-24T09:00:05Z",
+            "text": "An advert listed leather shoes in several sizes; that says nothing about my own size."
+          },
+          {
+            "id": "e5-6",
+            "timestamp": "2026-03-24T09:00:06Z",
+            "text": "Just confirming again: my education: level master; field Human-computer interaction."
+          }
+        ]
+      }
+    },
+    {
+      "session": 6,
+      "observation": {
+        "current_time": "2026-03-25T09:01:00Z",
+        "statements": [
+          {
+            "id": "e6-0",
+            "timestamp": "2026-03-25T09:00:00Z",
+            "text": "For my own records, my stance toward historical fiction (media, globally): like."
+          },
+          {
+            "id": "e6-1",
+            "timestamp": "2026-03-25T09:00:01Z",
+            "text": "The elevator stopped on every floor today."
+          },
+          {
+            "id": "e6-2",
+            "timestamp": "2026-03-25T09:00:02Z",
+            "text": "A shop window advertised striped linen shirts. I am only describing the display."
+          },
+          {
+            "id": "e6-3",
+            "timestamp": "2026-03-25T09:00:03Z",
+            "text": "Just confirming again: my preferred materials for hats: cotton, wool."
+          },
+          {
+            "id": "e6-4",
+            "timestamp": "2026-03-25T09:00:04Z",
+            "text": "The elevator stopped on every floor today."
+          },
+          {
+            "id": "e6-5",
+            "timestamp": "2026-03-25T09:00:05Z",
+            "text": "My neighbor was talking about learning the violin."
+          },
+          {
+            "id": "e6-6",
+            "timestamp": "2026-03-25T09:00:06Z",
+            "text": "A shop window advertised striped linen shirts. I am only describing the display."
+          },
+          {
+            "id": "e6-7",
+            "timestamp": "2026-03-25T09:00:07Z",
+            "text": "A shop window advertised striped linen shirts. I am only describing the display."
+          },
+          {
+            "id": "e6-8",
+            "timestamp": "2026-03-25T09:00:08Z",
+            "text": "A colleague said they love neon jackets; that is their taste, not mine."
+          },
+          {
+            "id": "e6-9",
+            "timestamp": "2026-03-25T09:00:09Z",
+            "text": "A colleague said they love neon jackets; that is their taste, not mine."
+          }
+        ]
+      }
+    },
+    {
+      "session": 7,
+      "observation": {
+        "current_time": "2026-04-04T09:01:00Z",
+        "statements": [
+          {
+            "id": "e7-0",
+            "timestamp": "2026-04-04T09:00:00Z",
+            "text": "Update my records from today: my preferred materials for pants in context summer is now explicitly unknown. This replaces the previous value from now onward."
+          },
+          {
+            "id": "e7-1",
+            "timestamp": "2026-04-04T09:00:01Z",
+            "text": "For my own records, my preferred materials for outerwear: recycled polyester, wool, cotton."
+          },
+          {
+            "id": "e7-2",
+            "timestamp": "2026-04-04T09:00:02Z",
+            "text": "For my own records, my Geox shoes size in EU: explicitly unknown."
+          },
+          {
+            "id": "e7-3",
+            "timestamp": "2026-04-04T09:00:03Z",
+            "text": "There was a long queue at the café this morning."
+          },
+          {
+            "id": "e7-4",
+            "timestamp": "2026-04-04T09:00:04Z",
+            "text": "A pigeon landed on the windowsill while I was waiting."
+          },
+          {
+            "id": "e7-5",
+            "timestamp": "2026-04-04T09:00:05Z",
+            "text": "A colleague said they love neon jackets; that is their taste, not mine."
+          },
+          {
+            "id": "e7-6",
+            "timestamp": "2026-04-04T09:00:06Z",
+            "text": "Just confirming again: my default size for hats: explicitly unknown."
+          }
+        ]
+      }
+    },
+    {
+      "session": 8,
+      "observation": {
+        "current_time": "2026-04-05T09:01:00Z",
+        "statements": [
+          {
+            "id": "e8-0",
+            "timestamp": "2026-04-05T09:00:00Z",
+            "text": "Update my records from today: the state of purchase intent future-trip (shoes, recipient self) is now active; deadline 2026-05-05T09:00:00Z. This replaces the previous value from now onward."
+          },
+          {
+            "id": "e8-1",
+            "timestamp": "2026-04-05T09:00:01Z",
+            "text": "For my own records, my preferred patterns for pants: solid."
+          },
+          {
+            "id": "e8-2",
+            "timestamp": "2026-04-05T09:00:02Z",
+            "text": "There was a long queue at the café this morning."
+          },
+          {
+            "id": "e8-3",
+            "timestamp": "2026-04-05T09:00:03Z",
+            "text": "There was a long queue at the café this morning."
+          },
+          {
+            "id": "e8-4",
+            "timestamp": "2026-04-05T09:00:04Z",
+            "text": "A shop window advertised striped linen shirts. I am only describing the display."
+          },
+          {
+            "id": "e8-5",
+            "timestamp": "2026-04-05T09:00:05Z",
+            "text": "Just confirming again: the state of purchase intent future-trip (shoes, recipient self): active; deadline 2026-05-05T09:00:00Z."
+          },
+          {
+            "id": "e8-6",
+            "timestamp": "2026-04-05T09:00:06Z",
+            "text": "A pigeon landed on the windowsill while I was waiting."
+          },
+          {
+            "id": "e8-7",
+            "timestamp": "2026-04-05T09:00:07Z",
+            "text": "My neighbor was talking about learning the violin."
+          }
+        ]
+      }
+    },
+    {
+      "session": 9,
+      "observation": {
+        "current_time": "2026-04-07T09:01:00Z",
+        "statements": [
+          {
+            "id": "e9-0",
+            "timestamp": "2026-04-07T09:00:00Z",
+            "text": "For my own records, my preferred colors for pants: navy, black, beige."
+          },
+          {
+            "id": "e9-1",
+            "timestamp": "2026-04-07T09:00:01Z",
+            "text": "For my own records, my height: 168 cm."
+          },
+          {
+            "id": "e9-2",
+            "timestamp": "2026-04-07T09:00:02Z",
+            "text": "There was a long queue at the café this morning."
+          },
+          {
+            "id": "e9-3",
+            "timestamp": "2026-04-07T09:00:03Z",
+            "text": "A colleague said they love neon jackets; that is their taste, not mine."
+          },
+          {
+            "id": "e9-4",
+            "timestamp": "2026-04-07T09:00:04Z",
+            "text": "Just confirming again: my preferred occasions for outerwear: travel, casual, work."
+          },
+          {
+            "id": "e9-5",
+            "timestamp": "2026-04-07T09:00:05Z",
+            "text": "A colleague said they love neon jackets; that is their taste, not mine."
+          },
+          {
+            "id": "e9-6",
+            "timestamp": "2026-04-07T09:00:06Z",
+            "text": "My neighbor was talking about learning the violin."
+          },
+          {
+            "id": "e9-7",
+            "timestamp": "2026-04-07T09:00:07Z",
+            "text": "An advert listed leather shoes in several sizes; that says nothing about my own size."
+          },
+          {
+            "id": "e9-8",
+            "timestamp": "2026-04-07T09:00:08Z",
+            "text": "There was a long queue at the café this morning."
+          }
+        ]
+      }
+    }
+  ]
+}

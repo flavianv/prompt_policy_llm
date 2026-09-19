@@ -1,0 +1,12 @@
+# Recorded inference environment, Python 3.12.11, Linux, NVIDIA B200 MIG 3g.90gb.
+# CUDA Torch wheel source is explicit; dry validation needs only Python >=3.9.
+--extra-index-url https://download.pytorch.org/whl/cu130
+torch==2.11.0+cu130
+transformers==5.12.1
+openai==2.43.0
+python-dotenv==1.2.2
+tokenizers==0.22.2
+huggingface-hub==1.19.0
+safetensors==0.8.0
+numpy==2.4.6
+accelerate==1.14.0

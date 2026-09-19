@@ -1,0 +1,213 @@
+# Actual Luna-generated initial profile
+
+- schema_version: user-profile-1.1
+- profile_id: user05
+- reference_date: 2026-03-01
+- personal / name: Claire Moreau
+- personal / gender: female
+- personal / birth_date: 1993-07-14
+- personal / age: 32
+- personal / race: White
+- personal / nationality: French
+- personal / marital_status: partnered
+- residence / city: Lyon
+- residence / region: Auvergne-Rhône-Alpes
+- residence / country: France
+- residence / timezone: Europe/Paris
+- languages [1] / language: French
+- languages [1] / proficiency: native
+- languages [2] / language: English
+- languages [2] / proficiency: fluent
+- professional / situation: employed
+- professional / occupation: urban planner
+- professional / industry: local government
+- professional / education / level: master
+- professional / education / field: urban planning
+- professional / income / amount: 4200
+- professional / income / currency: EUR
+- professional / income / period: month
+- physical / height / value: 168
+- physical / height / unit: cm
+- physical / weight / value: 62
+- physical / weight / unit: kg
+- physical / build: average
+- physical / hair_color: dark brown
+- physical / eye_color: hazel
+- interests / hobbies: cycling, photography, cooking, museum visits
+- interests / other_interests: sustainable urban design, contemporary art, regional travel
+- general_preferences [1] / topic: food
+- general_preferences [1] / item: seasonal Mediterranean cuisine
+- general_preferences [1] / stance: like
+- general_preferences [1] / scope: global
+- general_preferences [1] / category: explicitly unknown
+- general_preferences [1] / shopping_effect: background_only
+- general_preferences [2] / topic: travel
+- general_preferences [2] / item: train travel
+- general_preferences [2] / stance: like
+- general_preferences [2] / scope: global
+- general_preferences [2] / category: explicitly unknown
+- general_preferences [2] / shopping_effect: background_only
+- general_preferences [3] / topic: clothing
+- general_preferences [3] / item: fast fashion
+- general_preferences [3] / stance: dislike
+- general_preferences [3] / scope: global
+- general_preferences [3] / category: explicitly unknown
+- general_preferences [3] / shopping_effect: hard_exclusion
+- category_profiles [1] / category: shirts
+- category_profiles [1] / sizes [1] / brand: Sezane
+- category_profiles [1] / sizes [1] / sizing_system: ALPHA
+- category_profiles [1] / sizes [1] / size: S
+- category_profiles [1] / sizes [2] / brand: Uniqlo
+- category_profiles [1] / sizes [2] / sizing_system: ALPHA
+- category_profiles [1] / sizes [2] / size: S
+- category_profiles [1] / hard [1] / field: material
+- category_profiles [1] / hard [1] / op: not_in
+- category_profiles [1] / hard [1] / value: polyester
+- category_profiles [1] / default_size / sizing_system: ALPHA
+- category_profiles [1] / default_size / size: S
+- category_profiles [1] / preferences / brands: Sezane, Uniqlo
+- category_profiles [1] / preferences / materials: cotton, linen
+- category_profiles [1] / preferences / colors: white, navy, sage green
+- category_profiles [1] / preferences / patterns: stripes
+- category_profiles [1] / preferences / cuts: straight
+- category_profiles [1] / preferences / fits: regular
+- category_profiles [1] / preferences / occasions: work, casual
+- category_profiles [1] / preferences / styles: minimal, classic
+- category_profiles [1] / scoped_overrides: explicitly no stated preference
+- category_profiles [2] / category: shoes
+- category_profiles [2] / sizes [1] / brand: Veja
+- category_profiles [2] / sizes [1] / sizing_system: EU
+- category_profiles [2] / sizes [1] / size: 39
+- category_profiles [2] / sizes [2] / brand: Clarks
+- category_profiles [2] / sizes [2] / sizing_system: EU
+- category_profiles [2] / sizes [2] / size: 39
+- category_profiles [2] / hard [1] / field: width
+- category_profiles [2] / hard [1] / op: not_in
+- category_profiles [2] / hard [1] / value: narrow
+- category_profiles [2] / default_size / sizing_system: EU
+- category_profiles [2] / default_size / size: 39
+- category_profiles [2] / preferences / brands: Veja, Clarks
+- category_profiles [2] / preferences / materials: leather, canvas
+- category_profiles [2] / preferences / colors: white, black, tan
+- category_profiles [2] / preferences / patterns: explicitly unknown
+- category_profiles [2] / preferences / cuts: explicitly unknown
+- category_profiles [2] / preferences / fits: regular
+- category_profiles [2] / preferences / occasions: commuting, casual, travel
+- category_profiles [2] / preferences / styles: minimal, classic
+- category_profiles [2] / preferences / widths: regular, wide
+- category_profiles [2] / scoped_overrides: explicitly no stated preference
+- category_profiles [3] / category: pants
+- category_profiles [3] / sizes [1] / brand: Uniqlo
+- category_profiles [3] / sizes [1] / sizing_system: EU
+- category_profiles [3] / sizes [1] / size: 38
+- category_profiles [3] / sizes [2] / brand: Levi's
+- category_profiles [3] / sizes [2] / sizing_system: EU
+- category_profiles [3] / sizes [2] / size: 28
+- category_profiles [3] / hard [1] / field: fit
+- category_profiles [3] / hard [1] / op: not_in
+- category_profiles [3] / hard [1] / value: skinny
+- category_profiles [3] / default_size / sizing_system: EU
+- category_profiles [3] / default_size / size: 38
+- category_profiles [3] / preferences / brands: Uniqlo, Levi's
+- category_profiles [3] / preferences / materials: cotton
+- category_profiles [3] / preferences / colors: navy, black, beige
+- category_profiles [3] / preferences / patterns: explicitly no stated preference
+- category_profiles [3] / preferences / cuts: straight, wide-leg
+- category_profiles [3] / preferences / fits: regular, relaxed
+- category_profiles [3] / preferences / occasions: work, casual
+- category_profiles [3] / preferences / styles: minimal, classic
+- category_profiles [3] / scoped_overrides [1] / context / subtype: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / context / season: summer
+- category_profiles [3] / scoped_overrides [1] / context / occasion: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / brands: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / materials: linen, cotton
+- category_profiles [3] / scoped_overrides [1] / preferences / colors: white, beige, light blue
+- category_profiles [3] / scoped_overrides [1] / preferences / patterns: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / cuts: wide-leg
+- category_profiles [3] / scoped_overrides [1] / preferences / fits: relaxed
+- category_profiles [3] / scoped_overrides [1] / preferences / occasions: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / styles: minimal, resort
+- category_profiles [4] / category: outerwear
+- category_profiles [4] / sizes [1] / brand: Patagonia
+- category_profiles [4] / sizes [1] / sizing_system: ALPHA
+- category_profiles [4] / sizes [1] / size: S
+- category_profiles [4] / hard [1] / field: material
+- category_profiles [4] / hard [1] / op: not_in
+- category_profiles [4] / hard [1] / value: fur
+- category_profiles [4] / default_size / sizing_system: ALPHA
+- category_profiles [4] / default_size / size: S
+- category_profiles [4] / preferences / brands: Patagonia, Aigle
+- category_profiles [4] / preferences / materials: wool, cotton, recycled polyester
+- category_profiles [4] / preferences / colors: navy, olive, camel
+- category_profiles [4] / preferences / patterns: explicitly unknown
+- category_profiles [4] / preferences / cuts: straight
+- category_profiles [4] / preferences / fits: regular
+- category_profiles [4] / preferences / occasions: commuting, travel
+- category_profiles [4] / preferences / styles: classic, functional
+- category_profiles [4] / scoped_overrides: explicitly no stated preference
+- category_profiles [5] / category: hats
+- category_profiles [5] / sizes: explicitly no stated preference
+- category_profiles [5] / hard: explicitly no stated preference
+- category_profiles [5] / default_size: explicitly unknown
+- category_profiles [5] / preferences / brands: explicitly unknown
+- category_profiles [5] / preferences / materials: cotton, wool
+- category_profiles [5] / preferences / colors: navy, beige
+- category_profiles [5] / preferences / patterns: explicitly unknown
+- category_profiles [5] / preferences / cuts: explicitly unknown
+- category_profiles [5] / preferences / fits: regular
+- category_profiles [5] / preferences / occasions: travel, casual
+- category_profiles [5] / preferences / styles: classic, functional
+- category_profiles [5] / scoped_overrides: explicitly no stated preference
+- category_profiles [6] / category: accessories
+- category_profiles [6] / sizes [1] / brand: A.P.C.
+- category_profiles [6] / sizes [1] / sizing_system: ONE_SIZE
+- category_profiles [6] / sizes [1] / size: ONE_SIZE
+- category_profiles [6] / hard: explicitly no stated preference
+- category_profiles [6] / default_size / sizing_system: ONE_SIZE
+- category_profiles [6] / default_size / size: ONE_SIZE
+- category_profiles [6] / preferences / brands: A.P.C., Fjällräven
+- category_profiles [6] / preferences / materials: leather, canvas
+- category_profiles [6] / preferences / colors: black, tan, navy
+- category_profiles [6] / preferences / patterns: explicitly no stated preference
+- category_profiles [6] / preferences / cuts: explicitly unknown
+- category_profiles [6] / preferences / fits: explicitly unknown
+- category_profiles [6] / preferences / occasions: work, travel
+- category_profiles [6] / preferences / styles: minimal, functional
+- category_profiles [6] / scoped_overrides: explicitly no stated preference
+- purchase_intents [1] / id: future-trip
+- purchase_intents [1] / category: shoes
+- purchase_intents [1] / recipient: self
+- purchase_intents [1] / created_at: 2026-03-01T09:00:00Z
+- purchase_intents [1] / deadline: 2026-05-01T18:00:00Z
+- purchase_intents [1] / status: active
+- purchase_intents [1] / budget / amount: 150
+- purchase_intents [1] / budget / currency: EUR
+- purchase_intents [1] / sizes [1] / brand: Veja
+- purchase_intents [1] / sizes [1] / sizing_system: EU
+- purchase_intents [1] / sizes [1] / size: 39
+- purchase_intents [1] / hard [1] / field: width
+- purchase_intents [1] / hard [1] / op: in
+- purchase_intents [1] / hard [1] / value: regular, wide
+- purchase_intents [1] / soft [1] / field: occasion
+- purchase_intents [1] / soft [1] / op: in
+- purchase_intents [1] / soft [1] / value: travel, walking
+- purchase_intents [1] / use_general_preferences: True
+- purchase_intents [1] / excluded_preference_items: explicitly no stated preference
+- purchase_intents [2] / id: urgent-gift
+- purchase_intents [2] / category: shirts
+- purchase_intents [2] / recipient: gift
+- purchase_intents [2] / created_at: 2026-03-01T09:00:00Z
+- purchase_intents [2] / deadline: 2026-03-02T18:00:00Z
+- purchase_intents [2] / status: active
+- purchase_intents [2] / budget / amount: 80
+- purchase_intents [2] / budget / currency: EUR
+- purchase_intents [2] / sizes: explicitly unknown
+- purchase_intents [2] / hard [1] / field: recipient_age_group
+- purchase_intents [2] / hard [1] / op: eq
+- purchase_intents [2] / hard [1] / value: adult
+- purchase_intents [2] / soft [1] / field: style
+- purchase_intents [2] / soft [1] / op: in
+- purchase_intents [2] / soft [1] / value: classic, minimal
+- purchase_intents [2] / use_general_preferences: False
+- purchase_intents [2] / excluded_preference_items: explicitly no stated preference
+- coherence_notes: Claire works in urban planning and favors practical, understated clothing suitable for commuting, office work, and travel., The urgent shirt purchase is a gift and does not inherit Claire's personal shirt size or preferences.

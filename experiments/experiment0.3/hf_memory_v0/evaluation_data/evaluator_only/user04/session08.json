@@ -1,0 +1,392 @@
+{
+  "version": "partial-profile-notes-v1",
+  "as_of": "2026-03-30T09:01:00Z",
+  "profile": {
+    "category_profiles": [
+      {
+        "category": "pants",
+        "sizes": [
+          {
+            "brand": "Serra Studio",
+            "sizing_system": "W_IN_L_IN",
+            "size": "32/32"
+          }
+        ],
+        "scoped_overrides": [
+          {
+            "context": {
+              "subtype": null,
+              "season": "summer",
+              "occasion": null
+            },
+            "preferences": {
+              "cuts": [
+                "straight"
+              ],
+              "materials": [
+                "linen",
+                "cotton"
+              ]
+            }
+          }
+        ],
+        "preferences": {
+          "materials": [
+            "cotton"
+          ]
+        }
+      },
+      {
+        "category": "accessories",
+        "preferences": {
+          "cuts": [
+            "relaxed"
+          ],
+          "patterns": []
+        }
+      },
+      {
+        "category": "hats",
+        "preferences": {
+          "cuts": [
+            "baseball cap",
+            "beanie"
+          ],
+          "styles": [
+            "minimal",
+            "utility"
+          ]
+        },
+        "default_size": null
+      },
+      {
+        "category": "shirts",
+        "preferences": {
+          "brands": [
+            "Northline",
+            "Serra Studio"
+          ]
+        }
+      },
+      {
+        "category": "shoes",
+        "preferences": {
+          "materials": [
+            "wool"
+          ]
+        }
+      }
+    ],
+    "purchase_intents": [
+      {
+        "id": "urgent-gift",
+        "category": "shirts",
+        "recipient": "gift",
+        "status": "completed",
+        "deadline": "2026-03-02T18:00:00Z"
+      },
+      {
+        "id": "future-trip",
+        "category": "shoes",
+        "recipient": "self",
+        "status": "active",
+        "deadline": "2026-05-01T18:00:00Z"
+      }
+    ],
+    "personal": {
+      "birth_date": "1991-08-17",
+      "name": "Rafael Mendes"
+    }
+  },
+  "history": [
+    {
+      "address": {
+        "section": "clothing",
+        "category": "pants",
+        "field": "brand_size",
+        "context": {},
+        "brand": "Serra Studio",
+        "sizing_system": "W_IN_L_IN"
+      },
+      "events": [
+        {
+          "at": "2026-03-12T09:00:01Z",
+          "until": null,
+          "value": "32/32"
+        },
+        {
+          "at": "2026-03-19T09:00:00Z",
+          "until": null,
+          "value": "32/32"
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "accessories",
+        "field": "cuts",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-06T09:00:01Z",
+          "until": null,
+          "value": [
+            "slim",
+            "classic"
+          ]
+        },
+        {
+          "at": "2026-03-12T09:00:00Z",
+          "until": null,
+          "value": [
+            "relaxed"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "accessories",
+        "field": "patterns",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:03Z",
+          "until": null,
+          "value": []
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "hats",
+        "field": "cuts",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-11T09:00:00Z",
+          "until": null,
+          "value": [
+            "baseball cap",
+            "beanie"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "hats",
+        "field": "default_size",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:02Z",
+          "until": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "hats",
+        "field": "styles",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-20T09:00:00Z",
+          "until": null,
+          "value": [
+            "minimal",
+            "utility"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "pants",
+        "field": "cuts",
+        "context": {
+          "season": "summer"
+        }
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:06Z",
+          "until": null,
+          "value": [
+            "straight"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "pants",
+        "field": "materials",
+        "context": {
+          "season": "summer"
+        }
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:01Z",
+          "until": null,
+          "value": [
+            "linen",
+            "cotton"
+          ]
+        },
+        {
+          "at": "2026-03-06T09:00:00Z",
+          "until": "2026-03-09T09:00:00Z",
+          "value": null
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "pants",
+        "field": "materials",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-30T09:00:01Z",
+          "until": null,
+          "value": [
+            "cotton"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "shirts",
+        "field": "brands",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-14T09:00:01Z",
+          "until": null,
+          "value": [
+            "Northline",
+            "Serra Studio"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "intent",
+        "field": "state",
+        "intent_id": "urgent-gift",
+        "category": "shirts",
+        "recipient": "gift"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:05Z",
+          "until": null,
+          "value": {
+            "status": "active",
+            "deadline": "2026-03-02T18:00:00Z"
+          }
+        },
+        {
+          "at": "2026-03-14T09:00:00Z",
+          "until": null,
+          "value": {
+            "status": "completed",
+            "deadline": "2026-03-02T18:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "clothing",
+        "category": "shoes",
+        "field": "materials",
+        "context": {}
+      },
+      "events": [
+        {
+          "at": "2026-03-19T09:00:01Z",
+          "until": null,
+          "value": [
+            "leather",
+            "canvas"
+          ]
+        },
+        {
+          "at": "2026-03-30T09:00:00Z",
+          "until": null,
+          "value": [
+            "wool"
+          ]
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "intent",
+        "field": "state",
+        "intent_id": "future-trip",
+        "category": "shoes",
+        "recipient": "self"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:04Z",
+          "until": null,
+          "value": {
+            "status": "active",
+            "deadline": "2026-05-01T18:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "personal",
+        "field": "birth_date"
+      },
+      "events": [
+        {
+          "at": "2026-03-20T09:00:01Z",
+          "until": null,
+          "value": "1991-08-17"
+        }
+      ]
+    },
+    {
+      "address": {
+        "section": "personal",
+        "field": "name"
+      },
+      "events": [
+        {
+          "at": "2026-03-01T09:00:00Z",
+          "until": null,
+          "value": "Rafael Mendes"
+        }
+      ]
+    }
+  ]
+}

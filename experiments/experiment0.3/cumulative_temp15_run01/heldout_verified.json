@@ -1,0 +1,18 @@
+[
+  {
+    "phase": "baseline",
+    "macro_recall": 0.6699457896120048,
+    "matched": 747,
+    "targets": 1088,
+    "unsupported": 228,
+    "valid": 80
+  },
+  {
+    "phase": "trained",
+    "macro_recall": 0.8092948208911831,
+    "matched": 888,
+    "targets": 1088,
+    "unsupported": 133,
+    "valid": 80
+  }
+]

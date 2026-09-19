@@ -1,0 +1,294 @@
+# Actual Luna-generated initial profile
+
+Model: gpt-5.6-luna
+
+- schema_version: user-profile-1.1
+- profile_id: user03
+- reference_date: 2026-03-01
+- personal / name: Aiko Nakamura
+- personal / gender: female
+- personal / birth_date: 1994-08-17
+- personal / age: 31
+- personal / race: East Asian
+- personal / nationality: Japanese
+- personal / marital_status: single
+- residence / city: Vancouver
+- residence / region: British Columbia
+- residence / country: Canada
+- residence / timezone: America/Vancouver
+- languages [1] / language: Japanese
+- languages [1] / proficiency: native
+- languages [2] / language: English
+- languages [2] / proficiency: fluent
+- languages [3] / language: French
+- languages [3] / proficiency: basic
+- professional / situation: employed
+- professional / occupation: user experience researcher
+- professional / industry: software and digital services
+- professional / education / level: master
+- professional / education / field: human-computer interaction
+- professional / income / amount: 6800
+- professional / income / currency: CAD
+- professional / income / period: month
+- physical / height / value: 162
+- physical / height / unit: cm
+- physical / weight / value: 54
+- physical / weight / unit: kg
+- physical / build: slim
+- physical / hair_color: dark brown
+- physical / eye_color: brown
+- interests / hobbies: urban photography, weekend hiking, cooking seasonal Japanese dishes, visiting independent bookstores
+- interests / other_interests: sustainable design, contemporary illustration, local coffee shops
+- general_preferences [1] / topic: beverages
+- general_preferences [1] / item: black coffee
+- general_preferences [1] / stance: like
+- general_preferences [1] / scope: global
+- general_preferences [1] / category: explicitly unknown
+- general_preferences [1] / shopping_effect: background_only
+- general_preferences [2] / topic: travel
+- general_preferences [2] / item: small-group cultural trips
+- general_preferences [2] / stance: like
+- general_preferences [2] / scope: global
+- general_preferences [2] / category: explicitly unknown
+- general_preferences [2] / shopping_effect: background_only
+- general_preferences [3] / topic: clothing
+- general_preferences [3] / item: visible brand logos
+- general_preferences [3] / stance: dislike
+- general_preferences [3] / scope: global
+- general_preferences [3] / category: explicitly unknown
+- general_preferences [3] / shopping_effect: hard_exclusion
+- general_preferences [4] / topic: materials
+- general_preferences [4] / item: leather
+- general_preferences [4] / stance: dislike
+- general_preferences [4] / scope: category
+- general_preferences [4] / category: shoes
+- general_preferences [4] / shopping_effect: hard_exclusion
+- category_profiles [1] / category: shirts
+- category_profiles [1] / sizes [1] / brand: Uniqlo
+- category_profiles [1] / sizes [1] / sizing_system: ALPHA
+- category_profiles [1] / sizes [1] / size: S
+- category_profiles [1] / sizes [2] / brand: Everlane
+- category_profiles [1] / sizes [2] / sizing_system: ALPHA
+- category_profiles [1] / sizes [2] / size: XS
+- category_profiles [1] / hard [1] / field: material
+- category_profiles [1] / hard [1] / op: not_in
+- category_profiles [1] / hard [1] / value: wool
+- category_profiles [1] / default_size / sizing_system: ALPHA
+- category_profiles [1] / default_size / size: S
+- category_profiles [1] / preferences / brands: Uniqlo, Everlane
+- category_profiles [1] / preferences / materials: cotton, linen
+- category_profiles [1] / preferences / colors: white, navy, pale blue
+- category_profiles [1] / preferences / patterns: solid, fine stripe
+- category_profiles [1] / preferences / cuts: relaxed
+- category_profiles [1] / preferences / fits: regular
+- category_profiles [1] / preferences / occasions: work, casual
+- category_profiles [1] / preferences / styles: minimal, smart casual
+- category_profiles [1] / scoped_overrides [1] / context / subtype: explicitly unknown
+- category_profiles [1] / scoped_overrides [1] / context / season: summer
+- category_profiles [1] / scoped_overrides [1] / context / occasion: explicitly unknown
+- category_profiles [1] / scoped_overrides [1] / preferences / brands: explicitly unknown
+- category_profiles [1] / scoped_overrides [1] / preferences / materials: linen, cotton
+- category_profiles [1] / scoped_overrides [1] / preferences / colors: white, pale blue
+- category_profiles [1] / scoped_overrides [1] / preferences / patterns: solid
+- category_profiles [1] / scoped_overrides [1] / preferences / cuts: explicitly unknown
+- category_profiles [1] / scoped_overrides [1] / preferences / fits: relaxed
+- category_profiles [1] / scoped_overrides [1] / preferences / occasions: explicitly unknown
+- category_profiles [1] / scoped_overrides [1] / preferences / styles: explicitly unknown
+- category_profiles [2] / category: shoes
+- category_profiles [2] / sizes [1] / brand: New Balance
+- category_profiles [2] / sizes [1] / sizing_system: US_WOMEN
+- category_profiles [2] / sizes [1] / size: 7
+- category_profiles [2] / sizes [2] / brand: Clarks
+- category_profiles [2] / sizes [2] / sizing_system: EU
+- category_profiles [2] / sizes [2] / size: 37
+- category_profiles [2] / hard [1] / field: width
+- category_profiles [2] / hard [1] / op: not_in
+- category_profiles [2] / hard [1] / value: narrow
+- category_profiles [2] / default_size / sizing_system: EU
+- category_profiles [2] / default_size / size: 37
+- category_profiles [2] / preferences / brands: New Balance, Clarks
+- category_profiles [2] / preferences / materials: canvas, smooth leather
+- category_profiles [2] / preferences / colors: white, black, tan
+- category_profiles [2] / preferences / patterns: solid
+- category_profiles [2] / preferences / cuts: low-top
+- category_profiles [2] / preferences / fits: comfortable
+- category_profiles [2] / preferences / occasions: walking, travel, work
+- category_profiles [2] / preferences / styles: minimal, practical
+- category_profiles [2] / preferences / widths: medium, wide
+- category_profiles [2] / scoped_overrides [1] / context / subtype: walking shoes
+- category_profiles [2] / scoped_overrides [1] / context / season: explicitly unknown
+- category_profiles [2] / scoped_overrides [1] / context / occasion: travel
+- category_profiles [2] / scoped_overrides [1] / preferences / brands: New Balance
+- category_profiles [2] / scoped_overrides [1] / preferences / materials: mesh, synthetic
+- category_profiles [2] / scoped_overrides [1] / preferences / colors: black, gray
+- category_profiles [2] / scoped_overrides [1] / preferences / patterns: solid
+- category_profiles [2] / scoped_overrides [1] / preferences / cuts: low-top
+- category_profiles [2] / scoped_overrides [1] / preferences / fits: supportive
+- category_profiles [2] / scoped_overrides [1] / preferences / occasions: travel
+- category_profiles [2] / scoped_overrides [1] / preferences / styles: sport casual
+- category_profiles [2] / scoped_overrides [1] / preferences / widths: medium, wide
+- category_profiles [3] / category: pants
+- category_profiles [3] / sizes [1] / brand: Uniqlo
+- category_profiles [3] / sizes [1] / sizing_system: ALPHA
+- category_profiles [3] / sizes [1] / size: S
+- category_profiles [3] / sizes [2] / brand: Everlane
+- category_profiles [3] / sizes [2] / sizing_system: W_IN_L_IN
+- category_profiles [3] / sizes [2] / size: 27/28
+- category_profiles [3] / hard [1] / field: fit
+- category_profiles [3] / hard [1] / op: not_in
+- category_profiles [3] / hard [1] / value: skinny
+- category_profiles [3] / default_size / sizing_system: ALPHA
+- category_profiles [3] / default_size / size: S
+- category_profiles [3] / preferences / brands: Uniqlo, Everlane
+- category_profiles [3] / preferences / materials: cotton
+- category_profiles [3] / preferences / colors: navy, black, beige
+- category_profiles [3] / preferences / patterns: solid
+- category_profiles [3] / preferences / cuts: straight, wide-leg
+- category_profiles [3] / preferences / fits: regular, relaxed
+- category_profiles [3] / preferences / occasions: work, casual
+- category_profiles [3] / preferences / styles: minimal, smart casual
+- category_profiles [3] / scoped_overrides [1] / context / subtype: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / context / season: summer
+- category_profiles [3] / scoped_overrides [1] / context / occasion: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / brands: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / materials: linen, cotton
+- category_profiles [3] / scoped_overrides [1] / preferences / colors: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / patterns: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / cuts: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / fits: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / occasions: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / styles: explicitly unknown
+- category_profiles [4] / category: outerwear
+- category_profiles [4] / sizes [1] / brand: Patagonia
+- category_profiles [4] / sizes [1] / sizing_system: ALPHA
+- category_profiles [4] / sizes [1] / size: S
+- category_profiles [4] / sizes [2] / brand: Aritzia
+- category_profiles [4] / sizes [2] / sizing_system: ALPHA
+- category_profiles [4] / sizes [2] / size: XS
+- category_profiles [4] / hard [1] / field: material
+- category_profiles [4] / hard [1] / op: not_in
+- category_profiles [4] / hard [1] / value: real fur
+- category_profiles [4] / default_size / sizing_system: ALPHA
+- category_profiles [4] / default_size / size: S
+- category_profiles [4] / preferences / brands: Patagonia, Aritzia
+- category_profiles [4] / preferences / materials: recycled polyester, cotton
+- category_profiles [4] / preferences / colors: olive, navy, charcoal
+- category_profiles [4] / preferences / patterns: solid
+- category_profiles [4] / preferences / cuts: straight
+- category_profiles [4] / preferences / fits: regular, layering
+- category_profiles [4] / preferences / occasions: rainy weather, travel, casual
+- category_profiles [4] / preferences / styles: functional, minimal
+- category_profiles [4] / scoped_overrides [1] / context / subtype: rain jacket
+- category_profiles [4] / scoped_overrides [1] / context / season: spring
+- category_profiles [4] / scoped_overrides [1] / context / occasion: explicitly unknown
+- category_profiles [4] / scoped_overrides [1] / preferences / brands: Patagonia
+- category_profiles [4] / scoped_overrides [1] / preferences / materials: recycled polyester
+- category_profiles [4] / scoped_overrides [1] / preferences / colors: olive, navy
+- category_profiles [4] / scoped_overrides [1] / preferences / patterns: solid
+- category_profiles [4] / scoped_overrides [1] / preferences / cuts: straight
+- category_profiles [4] / scoped_overrides [1] / preferences / fits: layering
+- category_profiles [4] / scoped_overrides [1] / preferences / occasions: rainy weather
+- category_profiles [4] / scoped_overrides [1] / preferences / styles: functional
+- category_profiles [5] / category: hats
+- category_profiles [5] / sizes [1] / brand: Janji
+- category_profiles [5] / sizes [1] / sizing_system: CM
+- category_profiles [5] / sizes [1] / size: 56
+- category_profiles [5] / sizes [2] / brand: Uniqlo
+- category_profiles [5] / sizes [2] / sizing_system: ALPHA
+- category_profiles [5] / sizes [2] / size: M
+- category_profiles [5] / hard: explicitly no stated preference
+- category_profiles [5] / default_size: explicitly unknown
+- category_profiles [5] / preferences / brands: Janji, Uniqlo
+- category_profiles [5] / preferences / materials: cotton, recycled polyester
+- category_profiles [5] / preferences / colors: navy, cream, olive
+- category_profiles [5] / preferences / patterns: solid
+- category_profiles [5] / preferences / cuts: five-panel, bucket
+- category_profiles [5] / preferences / fits: adjustable
+- category_profiles [5] / preferences / occasions: hiking, sunny weather, casual
+- category_profiles [5] / preferences / styles: minimal, outdoor
+- category_profiles [5] / scoped_overrides [1] / context / subtype: sun hat
+- category_profiles [5] / scoped_overrides [1] / context / season: summer
+- category_profiles [5] / scoped_overrides [1] / context / occasion: hiking
+- category_profiles [5] / scoped_overrides [1] / preferences / brands: explicitly unknown
+- category_profiles [5] / scoped_overrides [1] / preferences / materials: cotton
+- category_profiles [5] / scoped_overrides [1] / preferences / colors: cream, olive
+- category_profiles [5] / scoped_overrides [1] / preferences / patterns: solid
+- category_profiles [5] / scoped_overrides [1] / preferences / cuts: bucket
+- category_profiles [5] / scoped_overrides [1] / preferences / fits: adjustable
+- category_profiles [5] / scoped_overrides [1] / preferences / occasions: hiking, sunny weather
+- category_profiles [5] / scoped_overrides [1] / preferences / styles: outdoor
+- category_profiles [6] / category: accessories
+- category_profiles [6] / sizes [1] / brand: Muji
+- category_profiles [6] / sizes [1] / sizing_system: ONE_SIZE
+- category_profiles [6] / sizes [1] / size: ONE_SIZE
+- category_profiles [6] / sizes [2] / brand: Baggu
+- category_profiles [6] / sizes [2] / sizing_system: ONE_SIZE
+- category_profiles [6] / sizes [2] / size: ONE_SIZE
+- category_profiles [6] / hard: explicitly no stated preference
+- category_profiles [6] / default_size / sizing_system: ONE_SIZE
+- category_profiles [6] / default_size / size: ONE_SIZE
+- category_profiles [6] / preferences / brands: Muji, Baggu
+- category_profiles [6] / preferences / materials: cotton canvas, nylon, recycled polyester
+- category_profiles [6] / preferences / colors: black, navy, natural
+- category_profiles [6] / preferences / patterns: explicitly no stated preference
+- category_profiles [6] / preferences / cuts: compact, structured
+- category_profiles [6] / preferences / fits: adjustable
+- category_profiles [6] / preferences / occasions: work, travel, casual
+- category_profiles [6] / preferences / styles: minimal, functional
+- category_profiles [6] / scoped_overrides [1] / context / subtype: travel bag
+- category_profiles [6] / scoped_overrides [1] / context / season: explicitly unknown
+- category_profiles [6] / scoped_overrides [1] / context / occasion: travel
+- category_profiles [6] / scoped_overrides [1] / preferences / brands: Baggu
+- category_profiles [6] / scoped_overrides [1] / preferences / materials: recycled polyester, nylon
+- category_profiles [6] / scoped_overrides [1] / preferences / colors: black, navy
+- category_profiles [6] / scoped_overrides [1] / preferences / patterns: explicitly no stated preference
+- category_profiles [6] / scoped_overrides [1] / preferences / cuts: compact
+- category_profiles [6] / scoped_overrides [1] / preferences / fits: adjustable
+- category_profiles [6] / scoped_overrides [1] / preferences / occasions: travel
+- category_profiles [6] / scoped_overrides [1] / preferences / styles: functional
+- purchase_intents [1] / id: future-trip
+- purchase_intents [1] / category: shoes
+- purchase_intents [1] / recipient: self
+- purchase_intents [1] / created_at: 2026-03-01T09:00:00Z
+- purchase_intents [1] / deadline: 2026-05-01T18:00:00Z
+- purchase_intents [1] / status: active
+- purchase_intents [1] / budget / amount: 180
+- purchase_intents [1] / budget / currency: CAD
+- purchase_intents [1] / sizes [1] / brand: New Balance
+- purchase_intents [1] / sizes [1] / sizing_system: US_WOMEN
+- purchase_intents [1] / sizes [1] / size: 7
+- purchase_intents [1] / sizes [2] / brand: Clarks
+- purchase_intents [1] / sizes [2] / sizing_system: EU
+- purchase_intents [1] / sizes [2] / size: 37
+- purchase_intents [1] / hard [1] / field: use
+- purchase_intents [1] / hard [1] / op: eq
+- purchase_intents [1] / hard [1] / value: comfortable walking
+- purchase_intents [1] / soft [1] / field: color
+- purchase_intents [1] / soft [1] / op: in
+- purchase_intents [1] / soft [1] / value: black, gray, tan
+- purchase_intents [1] / soft [2] / field: width
+- purchase_intents [1] / soft [2] / op: in
+- purchase_intents [1] / soft [2] / value: medium, wide
+- purchase_intents [1] / use_general_preferences: True
+- purchase_intents [1] / excluded_preference_items: explicitly no stated preference
+- purchase_intents [2] / id: urgent-gift
+- purchase_intents [2] / category: shirts
+- purchase_intents [2] / recipient: gift
+- purchase_intents [2] / created_at: 2026-03-01T09:00:00Z
+- purchase_intents [2] / deadline: 2026-03-02T18:00:00Z
+- purchase_intents [2] / status: active
+- purchase_intents [2] / budget / amount: 90
+- purchase_intents [2] / budget / currency: CAD
+- purchase_intents [2] / sizes: explicitly unknown
+- purchase_intents [2] / hard [1] / field: recipient_gender
+- purchase_intents [2] / hard [1] / op: eq
+- purchase_intents [2] / hard [1] / value: unknown
+- purchase_intents [2] / soft [1] / field: style
+- purchase_intents [2] / soft [1] / op: eq
+- purchase_intents [2] / soft [1] / value: minimal
+- purchase_intents [2] / soft [2] / field: color
+- purchase_intents [2] / soft [2] / op: in
+- purchase_intents [2] / soft [2] / value: navy, white
+- purchase_intents [2] / use_general_preferences: False
+- purchase_intents [2] / excluded_preference_items: explicitly no stated preference
+- coherence_notes: Aiko lives in Vancouver and works in a digital-services research role., Her clothing preferences emphasize understated, practical pieces suitable for commuting, travel, and outdoor activities., The urgent shirt purchase is a gift; the profile does not infer the recipient's size from Aiko's measurements.

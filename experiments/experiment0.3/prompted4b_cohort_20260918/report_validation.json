@@ -1,0 +1,25 @@
+{
+  "model_calls_for_rendering": 0,
+  "incremental_rebuild_equivalence_test": "passed",
+  "focused_cpu_tests": "18 passed",
+  "users": {
+    "user01": {
+      "session_headings": 10,
+      "full_statements_notes_and_decisions_present": true,
+      "rendered_summary_and_quality_tables": 2,
+      "protocol_audit_passed": true
+    },
+    "user02": {
+      "session_headings": 10,
+      "full_statements_notes_and_decisions_present": true,
+      "rendered_summary_and_quality_tables": 2,
+      "protocol_audit_passed": true
+    },
+    "user03": {
+      "session_headings": 10,
+      "full_statements_notes_and_decisions_present": true,
+      "rendered_summary_and_quality_tables": 2,
+      "protocol_audit_passed": true
+    }
+  }
+}

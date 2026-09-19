@@ -1,0 +1,119 @@
+{
+  "version": "clothing-categories-1.0",
+  "scope": "clothing_only",
+  "categories": {
+    "shirts": {
+      "label": "shirts",
+      "preference_attributes": [
+        "brands",
+        "materials",
+        "colors",
+        "patterns",
+        "cuts",
+        "fits",
+        "occasions",
+        "styles"
+      ],
+      "sizing_system_examples": [
+        "ALPHA",
+        "US_COLLAR_IN"
+      ]
+    },
+    "outerwear": {
+      "label": "jackets and outerwear",
+      "preference_attributes": [
+        "brands",
+        "materials",
+        "colors",
+        "patterns",
+        "cuts",
+        "fits",
+        "occasions",
+        "styles"
+      ],
+      "sizing_system_examples": [
+        "ALPHA",
+        "EU"
+      ]
+    },
+    "pants": {
+      "label": "pants and trousers",
+      "preference_attributes": [
+        "brands",
+        "materials",
+        "colors",
+        "patterns",
+        "cuts",
+        "fits",
+        "occasions",
+        "styles"
+      ],
+      "sizing_system_examples": [
+        "ALPHA",
+        "W_IN_L_IN",
+        "EU"
+      ]
+    },
+    "shoes": {
+      "label": "shoes",
+      "preference_attributes": [
+        "brands",
+        "materials",
+        "colors",
+        "patterns",
+        "cuts",
+        "fits",
+        "occasions",
+        "styles",
+        "widths"
+      ],
+      "sizing_system_examples": [
+        "EU",
+        "US_MEN",
+        "US_WOMEN"
+      ]
+    },
+    "hats": {
+      "label": "hats",
+      "preference_attributes": [
+        "brands",
+        "materials",
+        "colors",
+        "patterns",
+        "cuts",
+        "fits",
+        "occasions",
+        "styles"
+      ],
+      "sizing_system_examples": [
+        "CM",
+        "ALPHA"
+      ]
+    },
+    "accessories": {
+      "label": "clothing accessories",
+      "preference_attributes": [
+        "brands",
+        "materials",
+        "colors",
+        "patterns",
+        "cuts",
+        "fits",
+        "occasions",
+        "styles"
+      ],
+      "sizing_system_examples": [
+        "ONE_SIZE",
+        "CM"
+      ]
+    }
+  },
+  "semantics": {
+    "omitted_scoped_attribute": "inherit category default",
+    "null": "explicitly unknown",
+    "empty_list": "explicitly no stated preference",
+    "nonempty_list": "all explicitly preferred alternatives; unordered set semantics for evaluation unless order asked",
+    "scope_precedence": "matching overrides applied by ascending number of specified context fields; ties in array order; later wins",
+    "size_rule": "default size never implies a brand size or a conversion"
+  }
+}

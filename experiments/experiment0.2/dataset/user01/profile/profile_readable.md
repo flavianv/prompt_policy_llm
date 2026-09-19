@@ -1,0 +1,209 @@
+# Actual Luna-generated initial profile
+
+Model: gpt-5.6-luna
+
+- schema_version: user-profile-1.1
+- profile_id: profile-7f3c2a91
+- reference_date: 2026-03-01
+- personal / name: Maya Okafor
+- personal / gender: female
+- personal / birth_date: 1992-08-17
+- personal / age: 33
+- personal / race: Black
+- personal / nationality: Nigerian
+- personal / marital_status: single
+- residence / city: Toronto
+- residence / region: Ontario
+- residence / country: Canada
+- residence / timezone: America/Toronto
+- languages [1] / language: English
+- languages [1] / proficiency: fluent
+- languages [2] / language: Yoruba
+- languages [2] / proficiency: intermediate
+- languages [3] / language: French
+- languages [3] / proficiency: basic
+- professional / situation: employed
+- professional / occupation: User experience researcher
+- professional / industry: Financial technology
+- professional / education / level: master
+- professional / education / field: Human-computer interaction
+- professional / income / amount: 8400
+- professional / income / currency: CAD
+- professional / income / period: month
+- physical / height / value: 168
+- physical / height / unit: cm
+- physical / weight / value: 67
+- physical / weight / unit: kg
+- physical / build: medium
+- physical / hair_color: black
+- physical / eye_color: brown
+- interests / hobbies: street photography, cooking, hiking, live music
+- interests / other_interests: urban design, independent films, community volunteering
+- general_preferences [1] / topic: music
+- general_preferences [1] / item: live jazz
+- general_preferences [1] / stance: like
+- general_preferences [1] / scope: global
+- general_preferences [1] / category: explicitly unknown
+- general_preferences [1] / shopping_effect: background_only
+- general_preferences [2] / topic: food
+- general_preferences [2] / item: very spicy dishes
+- general_preferences [2] / stance: like
+- general_preferences [2] / scope: global
+- general_preferences [2] / category: explicitly unknown
+- general_preferences [2] / shopping_effect: background_only
+- general_preferences [3] / topic: shopping
+- general_preferences [3] / item: fast fashion
+- general_preferences [3] / stance: dislike
+- general_preferences [3] / scope: global
+- general_preferences [3] / category: explicitly unknown
+- general_preferences [3] / shopping_effect: hard_exclusion
+- category_profiles [1] / category: shirts
+- category_profiles [1] / sizes [1] / brand: Everlane
+- category_profiles [1] / sizes [1] / sizing_system: ALPHA
+- category_profiles [1] / sizes [1] / size: M
+- category_profiles [1] / sizes [2] / brand: Uniqlo
+- category_profiles [1] / sizes [2] / sizing_system: ALPHA
+- category_profiles [1] / sizes [2] / size: M
+- category_profiles [1] / hard [1] / field: material
+- category_profiles [1] / hard [1] / op: not_in
+- category_profiles [1] / hard [1] / value: wool
+- category_profiles [1] / default_size / sizing_system: ALPHA
+- category_profiles [1] / default_size / size: M
+- category_profiles [1] / preferences / brands: Everlane, Uniqlo
+- category_profiles [1] / preferences / materials: cotton, linen
+- category_profiles [1] / preferences / colors: navy, cream, forest green
+- category_profiles [1] / preferences / patterns: solid, subtle stripe
+- category_profiles [1] / preferences / cuts: button-down, camp collar
+- category_profiles [1] / preferences / fits: regular, relaxed
+- category_profiles [1] / preferences / occasions: casual, work
+- category_profiles [1] / preferences / styles: minimal, contemporary
+- category_profiles [1] / scoped_overrides: explicitly no stated preference
+- category_profiles [2] / category: shoes
+- category_profiles [2] / sizes [1] / brand: New Balance
+- category_profiles [2] / sizes [1] / sizing_system: US_WOMEN
+- category_profiles [2] / sizes [1] / size: 9
+- category_profiles [2] / hard [1] / field: width
+- category_profiles [2] / hard [1] / op: in
+- category_profiles [2] / hard [1] / value: medium, wide
+- category_profiles [2] / default_size / sizing_system: US_WOMEN
+- category_profiles [2] / default_size / size: 9
+- category_profiles [2] / preferences / brands: New Balance, Veja
+- category_profiles [2] / preferences / materials: leather, canvas
+- category_profiles [2] / preferences / colors: white, black, tan
+- category_profiles [2] / preferences / patterns: solid
+- category_profiles [2] / preferences / cuts: low-top
+- category_profiles [2] / preferences / fits: standard
+- category_profiles [2] / preferences / occasions: walking, travel, casual
+- category_profiles [2] / preferences / styles: clean, practical
+- category_profiles [2] / preferences / widths: medium, wide
+- category_profiles [2] / scoped_overrides: explicitly no stated preference
+- category_profiles [3] / category: pants
+- category_profiles [3] / sizes [1] / brand: Levi's
+- category_profiles [3] / sizes [1] / sizing_system: W_IN_L_IN
+- category_profiles [3] / sizes [1] / size: 29x30
+- category_profiles [3] / hard [1] / field: rise
+- category_profiles [3] / hard [1] / op: in
+- category_profiles [3] / hard [1] / value: mid-rise, high-rise
+- category_profiles [3] / default_size / sizing_system: W_IN_L_IN
+- category_profiles [3] / default_size / size: 29x30
+- category_profiles [3] / preferences / brands: Levi's, COS
+- category_profiles [3] / preferences / materials: cotton
+- category_profiles [3] / preferences / colors: dark denim, black, olive
+- category_profiles [3] / preferences / patterns: solid
+- category_profiles [3] / preferences / cuts: straight-leg, wide-leg
+- category_profiles [3] / preferences / fits: regular, relaxed
+- category_profiles [3] / preferences / occasions: casual, work
+- category_profiles [3] / preferences / styles: minimal, utility
+- category_profiles [3] / scoped_overrides [1] / context / subtype: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / context / season: summer
+- category_profiles [3] / scoped_overrides [1] / context / occasion: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / materials: linen, cotton
+- category_profiles [4] / category: outerwear
+- category_profiles [4] / sizes [1] / brand: Patagonia
+- category_profiles [4] / sizes [1] / sizing_system: ALPHA
+- category_profiles [4] / sizes [1] / size: M
+- category_profiles [4] / hard [1] / field: insulation
+- category_profiles [4] / hard [1] / op: not_in
+- category_profiles [4] / hard [1] / value: down
+- category_profiles [4] / default_size / sizing_system: ALPHA
+- category_profiles [4] / default_size / size: M
+- category_profiles [4] / preferences / brands: Patagonia, Uniqlo
+- category_profiles [4] / preferences / materials: recycled polyester, cotton
+- category_profiles [4] / preferences / colors: black, olive, camel
+- category_profiles [4] / preferences / patterns: solid
+- category_profiles [4] / preferences / cuts: parka, trench
+- category_profiles [4] / preferences / fits: regular, relaxed
+- category_profiles [4] / preferences / occasions: commuting, travel
+- category_profiles [4] / preferences / styles: functional, modern
+- category_profiles [4] / scoped_overrides: explicitly no stated preference
+- category_profiles [5] / category: hats
+- category_profiles [5] / sizes [1] / brand: New Era
+- category_profiles [5] / sizes [1] / sizing_system: ALPHA
+- category_profiles [5] / sizes [1] / size: one-size
+- category_profiles [5] / hard: explicitly no stated preference
+- category_profiles [5] / default_size: explicitly unknown
+- category_profiles [5] / preferences / brands: New Era
+- category_profiles [5] / preferences / materials: cotton
+- category_profiles [5] / preferences / colors: black, cream
+- category_profiles [5] / preferences / patterns: solid
+- category_profiles [5] / preferences / cuts: baseball cap
+- category_profiles [5] / preferences / fits: adjustable
+- category_profiles [5] / preferences / occasions: casual, outdoors
+- category_profiles [5] / preferences / styles: sporty, simple
+- category_profiles [5] / scoped_overrides: explicitly no stated preference
+- category_profiles [6] / category: accessories
+- category_profiles [6] / sizes [1] / brand: Baggu
+- category_profiles [6] / sizes [1] / sizing_system: ONE_SIZE
+- category_profiles [6] / sizes [1] / size: one-size
+- category_profiles [6] / hard: explicitly no stated preference
+- category_profiles [6] / default_size / sizing_system: ONE_SIZE
+- category_profiles [6] / default_size / size: one-size
+- category_profiles [6] / preferences / brands: Baggu, Cuyana
+- category_profiles [6] / preferences / materials: canvas, leather
+- category_profiles [6] / preferences / colors: black, tan, cobalt
+- category_profiles [6] / preferences / patterns: explicitly no stated preference
+- category_profiles [6] / preferences / cuts: tote, crossbody
+- category_profiles [6] / preferences / fits: standard
+- category_profiles [6] / preferences / occasions: work, travel, everyday
+- category_profiles [6] / preferences / styles: functional, understated
+- category_profiles [6] / scoped_overrides: explicitly no stated preference
+- purchase_intents [1] / id: future-trip
+- purchase_intents [1] / category: shoes
+- purchase_intents [1] / recipient: self
+- purchase_intents [1] / created_at: 2026-03-01T09:00:00Z
+- purchase_intents [1] / deadline: 2026-05-01T18:00:00Z
+- purchase_intents [1] / status: active
+- purchase_intents [1] / budget / amount: 180
+- purchase_intents [1] / budget / currency: CAD
+- purchase_intents [1] / sizes [1] / brand: New Balance
+- purchase_intents [1] / sizes [1] / sizing_system: US_WOMEN
+- purchase_intents [1] / sizes [1] / size: 9
+- purchase_intents [1] / hard [1] / field: width
+- purchase_intents [1] / hard [1] / op: in
+- purchase_intents [1] / hard [1] / value: medium, wide
+- purchase_intents [1] / soft [1] / field: occasion
+- purchase_intents [1] / soft [1] / op: in
+- purchase_intents [1] / soft [1] / value: travel, walking
+- purchase_intents [1] / soft [2] / field: color
+- purchase_intents [1] / soft [2] / op: in
+- purchase_intents [1] / soft [2] / value: black, white, tan
+- purchase_intents [1] / use_general_preferences: True
+- purchase_intents [1] / excluded_preference_items: explicitly no stated preference
+- purchase_intents [2] / id: urgent-gift
+- purchase_intents [2] / category: shirts
+- purchase_intents [2] / recipient: gift
+- purchase_intents [2] / created_at: 2026-03-01T09:00:00Z
+- purchase_intents [2] / deadline: 2026-03-02T18:00:00Z
+- purchase_intents [2] / status: active
+- purchase_intents [2] / budget / amount: 90
+- purchase_intents [2] / budget / currency: CAD
+- purchase_intents [2] / sizes: explicitly unknown
+- purchase_intents [2] / hard [1] / field: material
+- purchase_intents [2] / hard [1] / op: not_in
+- purchase_intents [2] / hard [1] / value: wool
+- purchase_intents [2] / soft [1] / field: style
+- purchase_intents [2] / soft [1] / op: in
+- purchase_intents [2] / soft [1] / value: minimal, contemporary
+- purchase_intents [2] / use_general_preferences: False
+- purchase_intents [2] / excluded_preference_items: explicitly no stated preference
+- coherence_notes: Maya works in a hybrid research role and favors practical, understated clothing suitable for commuting, travel, and casual settings., The urgent shirt gift is for another person, so Maya's clothing sizes and personal preferences are not automatically applied.

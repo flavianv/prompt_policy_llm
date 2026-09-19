@@ -1,0 +1,52 @@
+{
+  "seed": 2718,
+  "group_size": 4,
+  "smoke_steps": 3,
+  "pilot_steps": 25,
+  "learning_rate": 1e-05,
+  "lora_rank": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.0,
+  "lora_targets": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj",
+    "gate_proj",
+    "up_proj",
+    "down_proj"
+  ],
+  "init_lora_weights": true,
+  "temperature": 1.5,
+  "clip_epsilon": 0.2,
+  "kl_beta": 0.02,
+  "max_grad_norm": 1.0,
+  "note_max_rounds": 12,
+  "note_max_output_tokens": 768,
+  "note_max_words": 1600,
+  "note_max_count": 40,
+  "max_context_tokens": 16384,
+  "reward_variant": "raw correct current original-profile fields; history diagnostic only",
+  "split_users": {
+    "train": 3,
+    "dev": 5,
+    "validation": 2
+  },
+  "precision": "BF16 frozen base; FP32 LoRA adapters; BF16 autocast",
+  "base_weights_frozen": true,
+  "load_in_4bit": false,
+  "gradient_checkpointing": true,
+  "optimizer": "AdamW",
+  "skill": "/Users/f.vasile/.claude/skills/lora-tuning/SKILL.md",
+  "model": "Qwen/Qwen3-4B",
+  "model_path": "/home/criteo/qwen17b-work/qwen3-4b",
+  "reward_mode": "extraction_count",
+  "structured_max_output_tokens": 8192,
+  "structured_smoke_sessions": [
+    0,
+    4,
+    9
+  ],
+  "evaluation_seed": 7319,
+  "checkpoint_every": 25
+}

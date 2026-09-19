@@ -1,0 +1,219 @@
+{
+  "completed": [
+    "user01",
+    "user02",
+    "user03",
+    "user04"
+  ],
+  "last_metrics": {
+    "overall": {
+      "questions": 20,
+      "baseline": {
+        "correct": 7,
+        "accuracy": 0.35,
+        "invalid": 0
+      },
+      "memory": {
+        "correct": 16,
+        "accuracy": 0.8,
+        "invalid": 0
+      }
+    },
+    "earlier_session_evidence": {
+      "questions": 17,
+      "baseline": {
+        "correct": 4,
+        "accuracy": 0.23529411764705882,
+        "invalid": 0
+      },
+      "memory": {
+        "correct": 13,
+        "accuracy": 0.7647058823529411,
+        "invalid": 0
+      }
+    },
+    "current_session_evidence": {
+      "questions": 3,
+      "baseline": {
+        "correct": 3,
+        "accuracy": 1.0,
+        "invalid": 0
+      },
+      "memory": {
+        "correct": 3,
+        "accuracy": 1.0,
+        "invalid": 0
+      }
+    },
+    "historical": {
+      "questions": 7,
+      "baseline": {
+        "correct": 1,
+        "accuracy": 0.14285714285714285,
+        "invalid": 0
+      },
+      "memory": {
+        "correct": 3,
+        "accuracy": 0.42857142857142855,
+        "invalid": 0
+      }
+    },
+    "per_session": [
+      {
+        "session": 1,
+        "questions": 2,
+        "baseline": {
+          "correct": 2,
+          "accuracy": 1.0,
+          "invalid": 0
+        },
+        "memory": {
+          "correct": 2,
+          "accuracy": 1.0,
+          "invalid": 0
+        }
+      },
+      {
+        "session": 2,
+        "questions": 2,
+        "baseline": {
+          "correct": 1,
+          "accuracy": 0.5,
+          "invalid": 0
+        },
+        "memory": {
+          "correct": 2,
+          "accuracy": 1.0,
+          "invalid": 0
+        }
+      },
+      {
+        "session": 3,
+        "questions": 2,
+        "baseline": {
+          "correct": 2,
+          "accuracy": 1.0,
+          "invalid": 0
+        },
+        "memory": {
+          "correct": 2,
+          "accuracy": 1.0,
+          "invalid": 0
+        }
+      },
+      {
+        "session": 4,
+        "questions": 2,
+        "baseline": {
+          "correct": 0,
+          "accuracy": 0.0,
+          "invalid": 0
+        },
+        "memory": {
+          "correct": 2,
+          "accuracy": 1.0,
+          "invalid": 0
+        }
+      },
+      {
+        "session": 5,
+        "questions": 2,
+        "baseline": {
+          "correct": 0,
+          "accuracy": 0.0,
+          "invalid": 0
+        },
+        "memory": {
+          "correct": 2,
+          "accuracy": 1.0,
+          "invalid": 0
+        }
+      },
+      {
+        "session": 6,
+        "questions": 2,
+        "baseline": {
+          "correct": 0,
+          "accuracy": 0.0,
+          "invalid": 0
+        },
+        "memory": {
+          "correct": 1,
+          "accuracy": 0.5,
+          "invalid": 0
+        }
+      },
+      {
+        "session": 7,
+        "questions": 2,
+        "baseline": {
+          "correct": 0,
+          "accuracy": 0.0,
+          "invalid": 0
+        },
+        "memory": {
+          "correct": 1,
+          "accuracy": 0.5,
+          "invalid": 0
+        }
+      },
+      {
+        "session": 8,
+        "questions": 2,
+        "baseline": {
+          "correct": 1,
+          "accuracy": 0.5,
+          "invalid": 0
+        },
+        "memory": {
+          "correct": 1,
+          "accuracy": 0.5,
+          "invalid": 0
+        }
+      },
+      {
+        "session": 9,
+        "questions": 2,
+        "baseline": {
+          "correct": 1,
+          "accuracy": 0.5,
+          "invalid": 0
+        },
+        "memory": {
+          "correct": 2,
+          "accuracy": 1.0,
+          "invalid": 0
+        }
+      },
+      {
+        "session": 10,
+        "questions": 2,
+        "baseline": {
+          "correct": 0,
+          "accuracy": 0.0,
+          "invalid": 0
+        },
+        "memory": {
+          "correct": 1,
+          "accuracy": 0.5,
+          "invalid": 0
+        }
+      }
+    ],
+    "paired": {
+      "memory_only": 9,
+      "baseline_only": 0,
+      "both_correct": 7,
+      "both_wrong": 4
+    },
+    "note_rounds": 40,
+    "invalid_note_rounds": 0,
+    "note_sessions_finished": 10,
+    "actual_answer_model": "gpt-5.6-luna",
+    "api_calls_this_process": 19,
+    "cache_hits": 1,
+    "wall_seconds": 87.85575338685885,
+    "peak_gpu_memory_bytes": 8607739392,
+    "completed_at": "2026-09-18T09:23:19.781555+00:00"
+  }
+}

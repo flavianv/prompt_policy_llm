@@ -1,0 +1,1221 @@
+{
+  "schema_version": "schema-v3",
+  "operators": [
+    "eq",
+    "ne",
+    "in",
+    "not_in",
+    "lte",
+    "gte"
+  ],
+  "categories": {
+    "shoes": {
+      "label": "shoes",
+      "attributes": {
+        "brand": {
+          "type": "enum",
+          "values": [
+            "Aster",
+            "Boreal",
+            "Cedar"
+          ]
+        },
+        "style": {
+          "type": "enum",
+          "values": [
+            "plain",
+            "floral",
+            "sporty"
+          ]
+        },
+        "color": {
+          "type": "enum",
+          "values": [
+            "navy",
+            "red",
+            "green"
+          ]
+        },
+        "material": {
+          "type": "enum",
+          "values": [
+            "cotton",
+            "linen",
+            "polyester"
+          ]
+        },
+        "fit": {
+          "type": "enum",
+          "values": [
+            "regular",
+            "relaxed",
+            "slim"
+          ]
+        },
+        "occasion": {
+          "type": "enum",
+          "values": [
+            "casual",
+            "work",
+            "travel",
+            "rain"
+          ]
+        },
+        "department": {
+          "type": "enum",
+          "values": [
+            "mens",
+            "womens",
+            "unisex"
+          ]
+        },
+        "price": {
+          "type": "number",
+          "values": [
+            20,
+            40,
+            60,
+            80,
+            100,
+            120,
+            160,
+            200
+          ]
+        },
+        "width": {
+          "type": "enum",
+          "values": [
+            "narrow",
+            "regular",
+            "wide"
+          ]
+        },
+        "comfort": {
+          "type": "integer",
+          "values": [
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      },
+      "size_systems": {
+        "EU": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42",
+          "43"
+        ],
+        "US_MEN": [
+          "8",
+          "9",
+          "10"
+        ]
+      },
+      "profile": {
+        "hard": [
+          {
+            "field": "price",
+            "op": "lte",
+            "values": [
+              80,
+              100,
+              120
+            ]
+          },
+          {
+            "field": "fit",
+            "op": "eq",
+            "values": [
+              "regular",
+              "relaxed"
+            ]
+          },
+          {
+            "field": "department",
+            "op": "eq",
+            "values": [
+              "unisex"
+            ]
+          },
+          {
+            "field": "width",
+            "op": "eq",
+            "values": [
+              "regular",
+              "wide"
+            ]
+          },
+          {
+            "field": "comfort",
+            "op": "gte",
+            "values": [
+              3,
+              4
+            ]
+          }
+        ],
+        "soft": [
+          {
+            "field": "brand",
+            "op": "eq",
+            "values": [
+              "Aster",
+              "Boreal",
+              "Cedar"
+            ]
+          },
+          {
+            "field": "style",
+            "op": "eq",
+            "values": [
+              "plain",
+              "sporty"
+            ]
+          },
+          {
+            "field": "color",
+            "op": "eq",
+            "values": [
+              "navy",
+              "green"
+            ]
+          },
+          {
+            "field": "material",
+            "op": "eq",
+            "values": [
+              "cotton",
+              "polyester"
+            ]
+          }
+        ]
+      },
+      "intent": {
+        "hard": [
+          {
+            "field": "occasion",
+            "op": "eq",
+            "values": [
+              "casual",
+              "work",
+              "travel"
+            ]
+          }
+        ],
+        "soft": []
+      },
+      "preference_topics": [
+        "clothing_brands"
+      ]
+    },
+    "shirts": {
+      "label": "shirts",
+      "attributes": {
+        "brand": {
+          "type": "enum",
+          "values": [
+            "Aster",
+            "Boreal",
+            "Cedar"
+          ]
+        },
+        "style": {
+          "type": "enum",
+          "values": [
+            "plain",
+            "floral",
+            "sporty"
+          ]
+        },
+        "color": {
+          "type": "enum",
+          "values": [
+            "navy",
+            "red",
+            "green"
+          ]
+        },
+        "material": {
+          "type": "enum",
+          "values": [
+            "cotton",
+            "linen",
+            "polyester"
+          ]
+        },
+        "fit": {
+          "type": "enum",
+          "values": [
+            "regular",
+            "relaxed",
+            "slim"
+          ]
+        },
+        "occasion": {
+          "type": "enum",
+          "values": [
+            "casual",
+            "work",
+            "travel",
+            "rain"
+          ]
+        },
+        "department": {
+          "type": "enum",
+          "values": [
+            "mens",
+            "womens",
+            "unisex"
+          ]
+        },
+        "price": {
+          "type": "number",
+          "values": [
+            20,
+            40,
+            60,
+            80,
+            100,
+            120,
+            160,
+            200
+          ]
+        }
+      },
+      "size_systems": {
+        "ALPHA": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "US_COLLAR_IN": [
+          "15",
+          "15.5",
+          "16"
+        ]
+      },
+      "profile": {
+        "hard": [
+          {
+            "field": "price",
+            "op": "lte",
+            "values": [
+              80,
+              100,
+              120
+            ]
+          },
+          {
+            "field": "fit",
+            "op": "eq",
+            "values": [
+              "regular",
+              "relaxed"
+            ]
+          },
+          {
+            "field": "department",
+            "op": "eq",
+            "values": [
+              "unisex"
+            ]
+          }
+        ],
+        "soft": [
+          {
+            "field": "brand",
+            "op": "eq",
+            "values": [
+              "Aster",
+              "Boreal",
+              "Cedar"
+            ]
+          },
+          {
+            "field": "style",
+            "op": "eq",
+            "values": [
+              "floral"
+            ]
+          },
+          {
+            "field": "color",
+            "op": "eq",
+            "values": [
+              "navy",
+              "green"
+            ]
+          },
+          {
+            "field": "material",
+            "op": "eq",
+            "values": [
+              "cotton",
+              "polyester"
+            ]
+          }
+        ]
+      },
+      "intent": {
+        "hard": [
+          {
+            "field": "occasion",
+            "op": "eq",
+            "values": [
+              "casual",
+              "work",
+              "travel"
+            ]
+          }
+        ],
+        "soft": []
+      },
+      "preference_topics": [
+        "clothing_brands"
+      ]
+    },
+    "pants": {
+      "label": "pants",
+      "attributes": {
+        "brand": {
+          "type": "enum",
+          "values": [
+            "Aster",
+            "Boreal",
+            "Cedar"
+          ]
+        },
+        "style": {
+          "type": "enum",
+          "values": [
+            "plain",
+            "floral",
+            "sporty"
+          ]
+        },
+        "color": {
+          "type": "enum",
+          "values": [
+            "navy",
+            "red",
+            "green"
+          ]
+        },
+        "material": {
+          "type": "enum",
+          "values": [
+            "cotton",
+            "linen",
+            "polyester"
+          ]
+        },
+        "fit": {
+          "type": "enum",
+          "values": [
+            "regular",
+            "relaxed",
+            "slim"
+          ]
+        },
+        "occasion": {
+          "type": "enum",
+          "values": [
+            "casual",
+            "work",
+            "travel",
+            "rain"
+          ]
+        },
+        "department": {
+          "type": "enum",
+          "values": [
+            "mens",
+            "womens",
+            "unisex"
+          ]
+        },
+        "price": {
+          "type": "number",
+          "values": [
+            20,
+            40,
+            60,
+            80,
+            100,
+            120,
+            160,
+            200
+          ]
+        }
+      },
+      "size_systems": {
+        "W_IN_L_IN": [
+          "30x30",
+          "32x30",
+          "34x32"
+        ],
+        "EU": [
+          "44",
+          "46",
+          "48"
+        ]
+      },
+      "profile": {
+        "hard": [
+          {
+            "field": "price",
+            "op": "lte",
+            "values": [
+              80,
+              100,
+              120
+            ]
+          },
+          {
+            "field": "fit",
+            "op": "eq",
+            "values": [
+              "regular",
+              "relaxed"
+            ]
+          },
+          {
+            "field": "department",
+            "op": "eq",
+            "values": [
+              "unisex"
+            ]
+          }
+        ],
+        "soft": [
+          {
+            "field": "brand",
+            "op": "eq",
+            "values": [
+              "Aster",
+              "Boreal",
+              "Cedar"
+            ]
+          },
+          {
+            "field": "style",
+            "op": "eq",
+            "values": [
+              "plain",
+              "sporty"
+            ]
+          },
+          {
+            "field": "color",
+            "op": "eq",
+            "values": [
+              "navy",
+              "green"
+            ]
+          },
+          {
+            "field": "material",
+            "op": "eq",
+            "values": [
+              "cotton",
+              "polyester"
+            ]
+          }
+        ]
+      },
+      "intent": {
+        "hard": [
+          {
+            "field": "occasion",
+            "op": "eq",
+            "values": [
+              "casual",
+              "work",
+              "travel"
+            ]
+          }
+        ],
+        "soft": []
+      },
+      "preference_topics": [
+        "clothing_brands"
+      ]
+    },
+    "outerwear": {
+      "label": "outerwear",
+      "attributes": {
+        "brand": {
+          "type": "enum",
+          "values": [
+            "Aster",
+            "Boreal",
+            "Cedar"
+          ]
+        },
+        "style": {
+          "type": "enum",
+          "values": [
+            "plain",
+            "floral",
+            "sporty"
+          ]
+        },
+        "color": {
+          "type": "enum",
+          "values": [
+            "navy",
+            "red",
+            "green"
+          ]
+        },
+        "material": {
+          "type": "enum",
+          "values": [
+            "cotton",
+            "linen",
+            "polyester"
+          ]
+        },
+        "fit": {
+          "type": "enum",
+          "values": [
+            "regular",
+            "relaxed",
+            "slim"
+          ]
+        },
+        "occasion": {
+          "type": "enum",
+          "values": [
+            "casual",
+            "work",
+            "travel",
+            "rain"
+          ]
+        },
+        "department": {
+          "type": "enum",
+          "values": [
+            "mens",
+            "womens",
+            "unisex"
+          ]
+        },
+        "price": {
+          "type": "number",
+          "values": [
+            20,
+            40,
+            60,
+            80,
+            100,
+            120,
+            160,
+            200
+          ]
+        }
+      },
+      "size_systems": {
+        "ALPHA": [
+          "M",
+          "L",
+          "XL"
+        ],
+        "EU": [
+          "46",
+          "48",
+          "50"
+        ]
+      },
+      "profile": {
+        "hard": [
+          {
+            "field": "price",
+            "op": "lte",
+            "values": [
+              80,
+              100,
+              120
+            ]
+          },
+          {
+            "field": "fit",
+            "op": "eq",
+            "values": [
+              "regular",
+              "relaxed"
+            ]
+          },
+          {
+            "field": "department",
+            "op": "eq",
+            "values": [
+              "unisex"
+            ]
+          }
+        ],
+        "soft": [
+          {
+            "field": "brand",
+            "op": "eq",
+            "values": [
+              "Aster",
+              "Boreal",
+              "Cedar"
+            ]
+          },
+          {
+            "field": "style",
+            "op": "eq",
+            "values": [
+              "plain",
+              "sporty"
+            ]
+          },
+          {
+            "field": "color",
+            "op": "eq",
+            "values": [
+              "navy",
+              "green"
+            ]
+          },
+          {
+            "field": "material",
+            "op": "eq",
+            "values": [
+              "cotton",
+              "polyester"
+            ]
+          }
+        ]
+      },
+      "intent": {
+        "hard": [
+          {
+            "field": "occasion",
+            "op": "eq",
+            "values": [
+              "casual",
+              "work",
+              "travel"
+            ]
+          }
+        ],
+        "soft": []
+      },
+      "preference_topics": [
+        "clothing_brands"
+      ]
+    },
+    "hats": {
+      "label": "hats",
+      "attributes": {
+        "brand": {
+          "type": "enum",
+          "values": [
+            "Aster",
+            "Boreal",
+            "Cedar"
+          ]
+        },
+        "style": {
+          "type": "enum",
+          "values": [
+            "plain",
+            "floral",
+            "sporty"
+          ]
+        },
+        "color": {
+          "type": "enum",
+          "values": [
+            "navy",
+            "red",
+            "green"
+          ]
+        },
+        "material": {
+          "type": "enum",
+          "values": [
+            "cotton",
+            "linen",
+            "polyester"
+          ]
+        },
+        "fit": {
+          "type": "enum",
+          "values": [
+            "regular",
+            "relaxed",
+            "slim"
+          ]
+        },
+        "occasion": {
+          "type": "enum",
+          "values": [
+            "casual",
+            "work",
+            "travel",
+            "rain"
+          ]
+        },
+        "department": {
+          "type": "enum",
+          "values": [
+            "mens",
+            "womens",
+            "unisex"
+          ]
+        },
+        "price": {
+          "type": "number",
+          "values": [
+            20,
+            40,
+            60,
+            80,
+            100,
+            120,
+            160,
+            200
+          ]
+        }
+      },
+      "size_systems": {
+        "CM": [
+          "56",
+          "58",
+          "60"
+        ],
+        "ALPHA": [
+          "S",
+          "M",
+          "L"
+        ]
+      },
+      "profile": {
+        "hard": [
+          {
+            "field": "price",
+            "op": "lte",
+            "values": [
+              80,
+              100,
+              120
+            ]
+          },
+          {
+            "field": "fit",
+            "op": "eq",
+            "values": [
+              "regular",
+              "relaxed"
+            ]
+          },
+          {
+            "field": "department",
+            "op": "eq",
+            "values": [
+              "unisex"
+            ]
+          }
+        ],
+        "soft": [
+          {
+            "field": "brand",
+            "op": "eq",
+            "values": [
+              "Aster",
+              "Boreal",
+              "Cedar"
+            ]
+          },
+          {
+            "field": "style",
+            "op": "eq",
+            "values": [
+              "plain",
+              "sporty"
+            ]
+          },
+          {
+            "field": "color",
+            "op": "eq",
+            "values": [
+              "navy",
+              "green"
+            ]
+          },
+          {
+            "field": "material",
+            "op": "eq",
+            "values": [
+              "cotton",
+              "polyester"
+            ]
+          }
+        ]
+      },
+      "intent": {
+        "hard": [
+          {
+            "field": "occasion",
+            "op": "eq",
+            "values": [
+              "casual",
+              "work",
+              "travel"
+            ]
+          }
+        ],
+        "soft": []
+      },
+      "preference_topics": [
+        "clothing_brands"
+      ]
+    }
+  },
+  "general_fields": {
+    "birth_date": {
+      "values": [
+        "1987-03-12",
+        "1994-09-20",
+        "2000-01-05"
+      ],
+      "update_policy": "correction_only"
+    },
+    "age": {
+      "derived": {
+        "operator": "age_years",
+        "source": "birth_date"
+      },
+      "update_policy": "derived"
+    },
+    "gender": {
+      "values": [
+        "woman",
+        "man",
+        "nonbinary"
+      ],
+      "update_policy": "correction_only"
+    },
+    "education": {
+      "values": [
+        "secondary",
+        "bachelor",
+        "master"
+      ],
+      "update_policy": "mutable"
+    },
+    "income": {
+      "values": [
+        {
+          "amount": 35000,
+          "currency": "EUR",
+          "period": "year"
+        },
+        {
+          "amount": 55000,
+          "currency": "EUR",
+          "period": "year"
+        },
+        {
+          "amount": 70000,
+          "currency": "USD",
+          "period": "year"
+        }
+      ],
+      "update_policy": "mutable"
+    },
+    "marital_status": {
+      "values": [
+        "single",
+        "married",
+        "divorced"
+      ],
+      "update_policy": "mutable"
+    },
+    "weight": {
+      "values": [
+        {
+          "value": 65,
+          "unit": "kg"
+        },
+        {
+          "value": 72,
+          "unit": "kg"
+        },
+        {
+          "value": 80,
+          "unit": "kg"
+        }
+      ],
+      "update_policy": "mutable"
+    },
+    "height": {
+      "values": [
+        {
+          "value": 165,
+          "unit": "cm"
+        },
+        {
+          "value": 175,
+          "unit": "cm"
+        },
+        {
+          "value": 185,
+          "unit": "cm"
+        }
+      ],
+      "update_policy": "correction_only"
+    },
+    "build": {
+      "values": [
+        "slim",
+        "average",
+        "broad"
+      ],
+      "update_policy": "mutable"
+    },
+    "hair_color": {
+      "values": [
+        "black",
+        "brown",
+        "blond"
+      ],
+      "update_policy": "mutable"
+    },
+    "eye_color": {
+      "values": [
+        "brown",
+        "blue",
+        "green"
+      ],
+      "update_policy": "correction_only"
+    },
+    "residence": {
+      "values": [
+        {
+          "city": "Paris",
+          "country": "France"
+        },
+        {
+          "city": "Lyon",
+          "country": "France"
+        },
+        {
+          "city": "Berlin",
+          "country": "Germany"
+        }
+      ],
+      "update_policy": "mutable"
+    },
+    "nationality": {
+      "values": [
+        "French",
+        "German",
+        "Italian"
+      ],
+      "update_policy": "correction_only"
+    },
+    "spoken_languages": {
+      "values": [
+        [
+          "French"
+        ],
+        [
+          "French",
+          "English"
+        ],
+        [
+          "German",
+          "English"
+        ]
+      ],
+      "update_policy": "mutable"
+    }
+  },
+  "preference_topics": {
+    "cities": {
+      "values": [
+        "Paris",
+        "Lyon",
+        "Berlin"
+      ],
+      "scopes": [
+        "global"
+      ],
+      "recommendation": null
+    },
+    "countryside": {
+      "values": [
+        "mountains",
+        "coast",
+        "forests"
+      ],
+      "scopes": [
+        "global"
+      ],
+      "recommendation": null
+    },
+    "other_brands": {
+      "values": [
+        "AcmeAudio",
+        "MapleBooks",
+        "RiverTech"
+      ],
+      "scopes": [
+        "global"
+      ],
+      "recommendation": null
+    },
+    "movies": {
+      "values": [
+        "Arrival",
+        "Spirited Away",
+        "Dune"
+      ],
+      "scopes": [
+        "global"
+      ],
+      "recommendation": null
+    },
+    "authors": {
+      "values": [
+        "Ursula Le Guin",
+        "Toni Morrison",
+        "Italo Calvino"
+      ],
+      "scopes": [
+        "global"
+      ],
+      "recommendation": null
+    },
+    "hobbies": {
+      "values": [
+        "hiking",
+        "painting",
+        "chess"
+      ],
+      "scopes": [
+        "global"
+      ],
+      "recommendation": null
+    },
+    "clothing_brands": {
+      "values": [
+        "Aster",
+        "Boreal",
+        "Cedar"
+      ],
+      "scopes": [
+        "global",
+        "category"
+      ],
+      "recommendation": {
+        "field": "brand",
+        "like_operator": "eq",
+        "dislike_operator": "ne",
+        "like_mode": "soft",
+        "dislike_mode": "hard"
+      }
+    }
+  },
+  "generation": {
+    "selected_categories": [
+      "shoes",
+      "shirts",
+      "pants",
+      "outerwear",
+      "hats"
+    ],
+    "sessions": 10,
+    "start_dates": [
+      "2026-01-01T09:00:00Z",
+      "2026-03-01T09:00:00Z",
+      "2026-09-01T09:00:00Z"
+    ],
+    "gap_days": [
+      1,
+      2,
+      5,
+      10,
+      15
+    ],
+    "events_per_session": [
+      3,
+      4,
+      5
+    ],
+    "initial_fact_count": 4,
+    "initial_preferences": 2,
+    "initial_intents": 2,
+    "max_intents": 5,
+    "deadline_days": [
+      0,
+      1,
+      7,
+      30,
+      60,
+      null
+    ],
+    "gift_probability": 0.25,
+    "event_weights": {
+      "reveal_fact": 3,
+      "update_fact": 2,
+      "correct_fact": 1,
+      "preference": 3,
+      "retract_preference": 1,
+      "category_update": 2,
+      "create_intent": 3,
+      "complete_intent": 1,
+      "cancel_intent": 1,
+      "reopen_intent": 1,
+      "uncertain_intent": 1,
+      "intent_override": 2,
+      "clear_override": 1,
+      "distractor": 3
+    },
+    "questions": {
+      "facts": 2,
+      "preferences": 1,
+      "recommendations": 3,
+      "historical_probability": 0.35
+    },
+    "catalog_size": 10,
+    "cross_category_distractors": 2,
+    "catalog_modes": [
+      "ranked",
+      "tie",
+      "none",
+      "unknown_size"
+    ]
+  },
+  "rendering": {
+    "fact": "Explicit fact {field}, valid from {time}: {value}.",
+    "fact_update": "Update {field} from {time}: {value}. This supersedes my previous value from now.",
+    "fact_correction": "Correction to {field}, valid from {time}: {value}. Keep the previous statement as history, not current truth.",
+    "preference": "From {time}, my stance toward {item} in topic {topic} is {stance}, scope {scope}, category {category}. {effect}",
+    "category": "My current category profile for {category}, valid from {time}: {value}. Hard rules are requirements; soft rules are negotiable. Sizes apply only to the stated brand/category/system.",
+    "intent": "Purchase intent {label}, valid from {time}: {value}. A gift never inherits my own profile.",
+    "distractor": "Unrelated observation: {text}. This is not a statement of my preferences."
+  },
+  "distractors": [
+    "A friend likes floral shoes.",
+    "A store advertises slim red shirts.",
+    "A fictional film character moved to Rome.",
+    "Yesterday a magazine featured expensive hats."
+  ],
+  "notes": {
+    "max_notes": 64,
+    "max_words": 6500,
+    "max_characters": 65000,
+    "max_rounds": 20
+  }
+}

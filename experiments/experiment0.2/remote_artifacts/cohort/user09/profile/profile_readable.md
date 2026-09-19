@@ -1,0 +1,228 @@
+# Actual Luna-generated initial profile
+
+Model: gpt-5.6-luna
+
+- schema_version: user-profile-1.1
+- profile_id: user09
+- reference_date: 2026-03-01
+- personal / name: Giulia Bianchi
+- personal / gender: female
+- personal / birth_date: 1992-07-14
+- personal / age: 33
+- personal / race: White
+- personal / nationality: Italian
+- personal / marital_status: partnered
+- residence / city: Bologna
+- residence / region: Emilia-Romagna
+- residence / country: Italy
+- residence / timezone: Europe/Rome
+- languages [1] / language: Italian
+- languages [1] / proficiency: native
+- languages [2] / language: English
+- languages [2] / proficiency: fluent
+- languages [3] / language: French
+- languages [3] / proficiency: basic
+- professional / situation: employed
+- professional / occupation: User experience researcher
+- professional / industry: Digital services
+- professional / education / level: master
+- professional / education / field: Human-computer interaction
+- professional / income / amount: 3600
+- professional / income / currency: EUR
+- professional / income / period: month
+- physical / height / value: 168
+- physical / height / unit: cm
+- physical / weight / value: 62
+- physical / weight / unit: kg
+- physical / build: medium
+- physical / hair_color: dark brown
+- physical / eye_color: hazel
+- interests / hobbies: urban photography, cooking, cycling, reading contemporary fiction
+- interests / other_interests: architecture, sustainable design, local food markets
+- general_preferences [1] / topic: food
+- general_preferences [1] / item: spicy food
+- general_preferences [1] / stance: like
+- general_preferences [1] / scope: global
+- general_preferences [1] / category: explicitly unknown
+- general_preferences [1] / shopping_effect: background_only
+- general_preferences [2] / topic: media
+- general_preferences [2] / item: historical fiction
+- general_preferences [2] / stance: like
+- general_preferences [2] / scope: global
+- general_preferences [2] / category: explicitly unknown
+- general_preferences [2] / shopping_effect: background_only
+- general_preferences [3] / topic: brand
+- general_preferences [3] / item: fast-fashion brands
+- general_preferences [3] / stance: dislike
+- general_preferences [3] / scope: global
+- general_preferences [3] / category: explicitly unknown
+- general_preferences [3] / shopping_effect: hard_exclusion
+- category_profiles [1] / category: shirts
+- category_profiles [1] / sizes [1] / brand: Uniqlo
+- category_profiles [1] / sizes [1] / sizing_system: ALPHA
+- category_profiles [1] / sizes [1] / size: M
+- category_profiles [1] / sizes [2] / brand: Arket
+- category_profiles [1] / sizes [2] / sizing_system: ALPHA
+- category_profiles [1] / sizes [2] / size: explicitly unknown
+- category_profiles [1] / hard [1] / field: material
+- category_profiles [1] / hard [1] / op: not_in
+- category_profiles [1] / hard [1] / value: acrylic
+- category_profiles [1] / default_size / sizing_system: ALPHA
+- category_profiles [1] / default_size / size: M
+- category_profiles [1] / preferences / brands: Arket, Uniqlo
+- category_profiles [1] / preferences / materials: cotton, linen
+- category_profiles [1] / preferences / colors: white, navy, olive
+- category_profiles [1] / preferences / patterns: solid, thin stripes
+- category_profiles [1] / preferences / cuts: straight, relaxed
+- category_profiles [1] / preferences / fits: regular, relaxed
+- category_profiles [1] / preferences / occasions: work, casual
+- category_profiles [1] / preferences / styles: minimal, smart casual
+- category_profiles [1] / scoped_overrides: explicitly no stated preference
+- category_profiles [2] / category: shoes
+- category_profiles [2] / sizes [1] / brand: Veja
+- category_profiles [2] / sizes [1] / sizing_system: EU
+- category_profiles [2] / sizes [1] / size: 39
+- category_profiles [2] / sizes [2] / brand: Geox
+- category_profiles [2] / sizes [2] / sizing_system: EU
+- category_profiles [2] / sizes [2] / size: explicitly unknown
+- category_profiles [2] / hard [1] / field: heel_height_cm
+- category_profiles [2] / hard [1] / op: lte
+- category_profiles [2] / hard [1] / value: 4
+- category_profiles [2] / default_size / sizing_system: EU
+- category_profiles [2] / default_size / size: 39
+- category_profiles [2] / preferences / brands: Veja, Geox
+- category_profiles [2] / preferences / materials: leather, canvas
+- category_profiles [2] / preferences / colors: white, black, tan
+- category_profiles [2] / preferences / patterns: solid
+- category_profiles [2] / preferences / cuts: explicitly unknown
+- category_profiles [2] / preferences / fits: regular
+- category_profiles [2] / preferences / occasions: walking, travel, casual
+- category_profiles [2] / preferences / styles: minimal, classic
+- category_profiles [2] / preferences / widths: regular
+- category_profiles [2] / scoped_overrides: explicitly no stated preference
+- category_profiles [3] / category: pants
+- category_profiles [3] / sizes [1] / brand: Arket
+- category_profiles [3] / sizes [1] / sizing_system: ALPHA
+- category_profiles [3] / sizes [1] / size: M
+- category_profiles [3] / sizes [2] / brand: Levi's
+- category_profiles [3] / sizes [2] / sizing_system: W_IN_L_IN
+- category_profiles [3] / sizes [2] / size: 28W/30L
+- category_profiles [3] / hard [1] / field: rise
+- category_profiles [3] / hard [1] / op: in
+- category_profiles [3] / hard [1] / value: mid-rise, high-rise
+- category_profiles [3] / default_size / sizing_system: ALPHA
+- category_profiles [3] / default_size / size: M
+- category_profiles [3] / preferences / brands: Arket, Levi's
+- category_profiles [3] / preferences / materials: cotton
+- category_profiles [3] / preferences / colors: navy, black, beige
+- category_profiles [3] / preferences / patterns: solid
+- category_profiles [3] / preferences / cuts: straight, wide-leg
+- category_profiles [3] / preferences / fits: regular, relaxed
+- category_profiles [3] / preferences / occasions: work, casual
+- category_profiles [3] / preferences / styles: minimal, smart casual
+- category_profiles [3] / scoped_overrides [1] / context / subtype: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / context / season: summer
+- category_profiles [3] / scoped_overrides [1] / context / occasion: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / brands: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / materials: linen, cotton
+- category_profiles [3] / scoped_overrides [1] / preferences / colors: white, beige
+- category_profiles [3] / scoped_overrides [1] / preferences / patterns: explicitly unknown
+- category_profiles [3] / scoped_overrides [1] / preferences / cuts: wide-leg
+- category_profiles [3] / scoped_overrides [1] / preferences / fits: relaxed
+- category_profiles [3] / scoped_overrides [1] / preferences / occasions: casual, travel
+- category_profiles [3] / scoped_overrides [1] / preferences / styles: minimal, relaxed
+- category_profiles [4] / category: outerwear
+- category_profiles [4] / sizes [1] / brand: Patagonia
+- category_profiles [4] / sizes [1] / sizing_system: ALPHA
+- category_profiles [4] / sizes [1] / size: M
+- category_profiles [4] / sizes [2] / brand: Arket
+- category_profiles [4] / sizes [2] / sizing_system: ALPHA
+- category_profiles [4] / sizes [2] / size: explicitly unknown
+- category_profiles [4] / hard [1] / field: material
+- category_profiles [4] / hard [1] / op: not_in
+- category_profiles [4] / hard [1] / value: real fur
+- category_profiles [4] / default_size / sizing_system: ALPHA
+- category_profiles [4] / default_size / size: M
+- category_profiles [4] / preferences / brands: Patagonia, Arket
+- category_profiles [4] / preferences / materials: recycled polyester, wool, cotton
+- category_profiles [4] / preferences / colors: navy, olive, camel
+- category_profiles [4] / preferences / patterns: solid
+- category_profiles [4] / preferences / cuts: straight, oversized
+- category_profiles [4] / preferences / fits: regular, relaxed
+- category_profiles [4] / preferences / occasions: travel, casual, work
+- category_profiles [4] / preferences / styles: minimal, practical
+- category_profiles [4] / scoped_overrides: explicitly no stated preference
+- category_profiles [5] / category: hats
+- category_profiles [5] / sizes [1] / brand: Brixton
+- category_profiles [5] / sizes [1] / sizing_system: CM
+- category_profiles [5] / sizes [1] / size: explicitly unknown
+- category_profiles [5] / hard: explicitly no stated preference
+- category_profiles [5] / default_size: explicitly unknown
+- category_profiles [5] / preferences / brands: Brixton
+- category_profiles [5] / preferences / materials: cotton, wool
+- category_profiles [5] / preferences / colors: navy, beige
+- category_profiles [5] / preferences / patterns: solid
+- category_profiles [5] / preferences / cuts: structured
+- category_profiles [5] / preferences / fits: regular
+- category_profiles [5] / preferences / occasions: travel, casual
+- category_profiles [5] / preferences / styles: classic, minimal
+- category_profiles [5] / scoped_overrides: explicitly no stated preference
+- category_profiles [6] / category: accessories
+- category_profiles [6] / sizes [1] / brand: Fjällräven
+- category_profiles [6] / sizes [1] / sizing_system: ONE_SIZE
+- category_profiles [6] / sizes [1] / size: ONE_SIZE
+- category_profiles [6] / hard: explicitly no stated preference
+- category_profiles [6] / default_size / sizing_system: ONE_SIZE
+- category_profiles [6] / default_size / size: ONE_SIZE
+- category_profiles [6] / preferences / brands: Fjällräven
+- category_profiles [6] / preferences / materials: leather, cotton, recycled polyester
+- category_profiles [6] / preferences / colors: black, tan, olive
+- category_profiles [6] / preferences / patterns: explicitly no stated preference
+- category_profiles [6] / preferences / cuts: explicitly unknown
+- category_profiles [6] / preferences / fits: explicitly unknown
+- category_profiles [6] / preferences / occasions: travel, casual
+- category_profiles [6] / preferences / styles: practical, minimal
+- category_profiles [6] / scoped_overrides: explicitly no stated preference
+- purchase_intents [1] / id: future-trip
+- purchase_intents [1] / category: shoes
+- purchase_intents [1] / recipient: self
+- purchase_intents [1] / created_at: 2026-03-01T09:00:00Z
+- purchase_intents [1] / deadline: 2026-05-01T18:00:00Z
+- purchase_intents [1] / status: active
+- purchase_intents [1] / budget / amount: 160
+- purchase_intents [1] / budget / currency: EUR
+- purchase_intents [1] / sizes [1] / brand: Veja
+- purchase_intents [1] / sizes [1] / sizing_system: EU
+- purchase_intents [1] / sizes [1] / size: 39
+- purchase_intents [1] / hard [1] / field: width
+- purchase_intents [1] / hard [1] / op: eq
+- purchase_intents [1] / hard [1] / value: regular
+- purchase_intents [1] / soft [1] / field: style
+- purchase_intents [1] / soft [1] / op: in
+- purchase_intents [1] / soft [1] / value: minimal, classic
+- purchase_intents [1] / soft [2] / field: color
+- purchase_intents [1] / soft [2] / op: in
+- purchase_intents [1] / soft [2] / value: white, black, tan
+- purchase_intents [1] / use_general_preferences: True
+- purchase_intents [1] / excluded_preference_items: explicitly no stated preference
+- purchase_intents [2] / id: urgent-gift
+- purchase_intents [2] / category: shirts
+- purchase_intents [2] / recipient: gift
+- purchase_intents [2] / created_at: 2026-03-01T09:00:00Z
+- purchase_intents [2] / deadline: 2026-03-02T18:00:00Z
+- purchase_intents [2] / status: active
+- purchase_intents [2] / budget / amount: 90
+- purchase_intents [2] / budget / currency: EUR
+- purchase_intents [2] / sizes: explicitly unknown
+- purchase_intents [2] / hard [1] / field: recipient_gender
+- purchase_intents [2] / hard [1] / op: eq
+- purchase_intents [2] / hard [1] / value: male
+- purchase_intents [2] / soft [1] / field: style
+- purchase_intents [2] / soft [1] / op: in
+- purchase_intents [2] / soft [1] / value: classic, smart casual
+- purchase_intents [2] / soft [2] / field: color
+- purchase_intents [2] / soft [2] / op: in
+- purchase_intents [2] / soft [2] / value: navy, white
+- purchase_intents [2] / use_general_preferences: False
+- purchase_intents [2] / excluded_preference_items: explicitly no stated preference
+- coherence_notes: Giulia lives in Bologna and works in digital services, with a practical wardrobe suited to commuting, travel, and smart-casual work settings., The active shoe purchase is for her own upcoming trip; the active shirt purchase is a separate gift intent and does not inherit her personal size or preferences.

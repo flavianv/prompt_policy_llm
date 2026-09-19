@@ -1,0 +1,18 @@
+[
+  {
+    "repo": "flavianv/prompt-policy-memory-v0",
+    "type": "dataset",
+    "revision": "81a56e848d378f07ef43cee63d03bc66103d983d",
+    "tag": "v0",
+    "private": false,
+    "verified": true
+  },
+  {
+    "repo": "flavianv/prompt-policy-memory-grpo-v0",
+    "type": "model",
+    "revision": "0bcde2b6adeb85951e5c7cdec16ce71b357d1bcc",
+    "tag": "v0",
+    "private": false,
+    "verified": true
+  }
+]

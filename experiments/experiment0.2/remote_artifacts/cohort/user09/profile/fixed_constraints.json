@@ -1,0 +1,45 @@
+{
+  "fixed_values": {
+    "reference_date": "2026-03-01",
+    "profile_id": "user09",
+    "personal": {
+      "nationality": "Italian",
+      "gender": "female"
+    }
+  },
+  "fixed_paths": {
+    "/category_profiles/0/category": "shirts",
+    "/category_profiles/1/category": "shoes",
+    "/category_profiles/2/category": "pants",
+    "/category_profiles/3/category": "outerwear",
+    "/category_profiles/4/category": "hats",
+    "/category_profiles/5/category": "accessories",
+    "/category_profiles/2/preferences/materials": [
+      "cotton"
+    ],
+    "/category_profiles/2/scoped_overrides/0/context": {
+      "subtype": null,
+      "season": "summer",
+      "occasion": null
+    },
+    "/category_profiles/2/scoped_overrides/0/preferences/materials": [
+      "linen",
+      "cotton"
+    ],
+    "/category_profiles/4/default_size": null,
+    "/category_profiles/5/preferences/patterns": [],
+    "/purchase_intents/0/id": "future-trip",
+    "/purchase_intents/0/category": "shoes",
+    "/purchase_intents/0/recipient": "self",
+    "/purchase_intents/0/status": "active",
+    "/purchase_intents/0/created_at": "2026-03-01T09:00:00Z",
+    "/purchase_intents/0/deadline": "2026-05-01T18:00:00Z",
+    "/purchase_intents/1/id": "urgent-gift",
+    "/purchase_intents/1/category": "shirts",
+    "/purchase_intents/1/recipient": "gift",
+    "/purchase_intents/1/status": "active",
+    "/purchase_intents/1/created_at": "2026-03-01T09:00:00Z",
+    "/purchase_intents/1/deadline": "2026-03-02T18:00:00Z",
+    "/purchase_intents/1/use_general_preferences": false
+  }
+}

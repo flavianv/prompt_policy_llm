@@ -1,0 +1,190 @@
+{
+  "seeds": [
+    17,
+    29,
+    43,
+    59,
+    71,
+    89,
+    101,
+    113,
+    127,
+    139
+  ],
+  "sessions": 10,
+  "profile_size": 5,
+  "update_rate": 0.35,
+  "distractors_per_session": 2,
+  "choices_per_question": 4,
+  "note_budget_words": 120,
+  "model_path": "/home/criteo/qwen17b-work/model",
+  "qwen_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "qwen": {
+    "fixed_weights": true,
+    "thinking": false,
+    "do_sample": false,
+    "max_new_tokens": 384,
+    "max_tool_rounds": 6,
+    "precision": "bfloat16",
+    "tool_protocol": "strict JSON executed by local dispatcher; not native API tool_calls"
+  },
+  "luna": {
+    "model": "gpt-5.6-luna",
+    "reasoning_effort": "low",
+    "max_output_tokens": 1024,
+    "temperature": null,
+    "seed": null,
+    "store": false,
+    "max_retries": 0
+  },
+  "protocol": "score each session using prior notes, then update; all notes supplied; identical requests shared",
+  "versions": {
+    "torch": "2.11.0+cu130",
+    "transformers": "5.12.1",
+    "openai": "2.43.0"
+  },
+  "gpu": "NVIDIA B200 MIG 3g.90gb",
+  "wall_time_s": 436.1528439319227,
+  "qwen_context_limit": 40960,
+  "max_observed_qwen_input_tokens": 816,
+  "max_observed_luna_input_tokens": 495,
+  "pilot_source_sha256": "8f5fcf0dfcd520b07f7a33f6bd7005de5cfe26bafc454a665dcc17e0b5e741bb",
+  "smoke_luna": {
+    "text": "{\"q0\":\"A\"}",
+    "model": "gpt-5.6-luna",
+    "response_id": "resp_0c753d0def6722e3016aabb32de6d487d2b221d057c0b53cd9",
+    "status": "completed",
+    "input_tokens": 141,
+    "output_tokens": 10,
+    "latency_s": 1.4660019599832594,
+    "estimated_cost_usd": 4.02e-05
+  },
+  "smoke_qwen": {
+    "rounds": [
+      {
+        "round": 0,
+        "messages": [
+          {
+            "role": "system",
+            "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+          },
+          {
+            "role": "user",
+            "content": "{\"current_session\": [\"For drink, I prefer green tea.\"]}"
+          }
+        ],
+        "generation": {
+          "text": "{\"tool\":\"read_notes\",\"arguments\":{}}",
+          "input_tokens": 264,
+          "output_tokens": 11,
+          "latency_s": 0.3588113421574235,
+          "hit_output_cap": false
+        },
+        "valid": true,
+        "error": null,
+        "tool_results": [
+          {
+            "tool": "read_notes",
+            "notes": {}
+          }
+        ],
+        "notes_before": {},
+        "notes_after": {}
+      },
+      {
+        "round": 1,
+        "messages": [
+          {
+            "role": "system",
+            "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+          },
+          {
+            "role": "user",
+            "content": "{\"current_session\": [\"For drink, I prefer green tea.\"]}"
+          },
+          {
+            "role": "assistant",
+            "content": "{\"tool\":\"read_notes\",\"arguments\":{}}"
+          },
+          {
+            "role": "user",
+            "content": "Tool results: [{\"tool\": \"read_notes\", \"notes\": {}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+          }
+        ],
+        "generation": {
+          "text": "{\"tool\":\"write_note\",\"arguments\":{\"name\":\"drink\",\"text\":\"User prefers green tea.\"}}",
+          "input_tokens": 342,
+          "output_tokens": 21,
+          "latency_s": 0.21922735800035298,
+          "hit_output_cap": false
+        },
+        "valid": true,
+        "error": null,
+        "tool_results": [
+          {
+            "tool": "write_note",
+            "ok": true,
+            "current_notes": {
+              "drink": "User prefers green tea."
+            }
+          }
+        ],
+        "notes_before": {},
+        "notes_after": {
+          "drink": "User prefers green tea."
+        }
+      },
+      {
+        "round": 2,
+        "messages": [
+          {
+            "role": "system",
+            "content": "Maintain persistent notes about ONE user's current preferences.\nSave explicit current preferences; ignore other people, hypotheticals, product\nspecifications and historical facts. Replace superseded preferences. Do not infer\ndemographic tastes. Use category names, at most 12 notes and 120 words total.\nYou are a note manager, not an answerer. Call exactly ONE tool per response.\nReturn only a single JSON object with keys tool and arguments; no prose or markdown.\nTools:\nread_notes: arguments {}. Read all notes once before changes.\nwrite_note: arguments {\"name\":\"category\",\"text\":\"concise current fact\"}. Creates NEW name.\nupdate_note: arguments {\"name\":\"existing category\",\"text\":\"replacement current fact\"}.\nno_op: arguments {}. Finish after needed changes, or immediately if none needed.\nFirst call example: {\"tool\":\"read_notes\",\"arguments\":{}}\nA write example: {\"tool\":\"write_note\",\"arguments\":{\"name\":\"exercise\",\"text\":\"User prefers swimming.\"}}\nFinish example: {\"tool\":\"no_op\",\"arguments\":{}}\nWait for the tool result before your next call. Do NOT emit multiple calls at once.\n"
+          },
+          {
+            "role": "user",
+            "content": "{\"current_session\": [\"For drink, I prefer green tea.\"]}"
+          },
+          {
+            "role": "assistant",
+            "content": "{\"tool\":\"read_notes\",\"arguments\":{}}"
+          },
+          {
+            "role": "user",
+            "content": "Tool results: [{\"tool\": \"read_notes\", \"notes\": {}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+          },
+          {
+            "role": "assistant",
+            "content": "{\"tool\":\"write_note\",\"arguments\":{\"name\":\"drink\",\"text\":\"User prefers green tea.\"}}"
+          },
+          {
+            "role": "user",
+            "content": "Tool results: [{\"tool\": \"write_note\", \"ok\": true, \"current_notes\": {\"drink\": \"User prefers green tea.\"}}]\nRead is complete. Return ONE write_note for a new category, update_note for an existing category, or no_op if all current facts are saved. Do not read again. Return exactly one JSON tool call."
+          }
+        ],
+        "generation": {
+          "text": "{\"tool\":\"no_op\",\"arguments\":{}}",
+          "input_tokens": 444,
+          "output_tokens": 11,
+          "latency_s": 0.11160130496136844,
+          "hit_output_cap": false
+        },
+        "valid": true,
+        "error": null,
+        "tool_results": [
+          {
+            "tool": "no_op",
+            "ok": true
+          }
+        ],
+        "notes_before": {
+          "drink": "User prefers green tea."
+        },
+        "notes_after": {
+          "drink": "User prefers green tea."
+        }
+      }
+    ],
+    "finished": true
+  }
+}

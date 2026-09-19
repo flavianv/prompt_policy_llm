@@ -1,0 +1,35 @@
+{
+  "version": "v0",
+  "splits": {
+    "train": {
+      "users": 10,
+      "sessions": 100
+    },
+    "test": {
+      "users": 2,
+      "sessions": 20
+    }
+  },
+  "user_disjoint": true,
+  "profile_hash_disjoint": true,
+  "canonical_references_self_score": true,
+  "train_source": "experiments/experiment0.2/dataset_v1",
+  "test_source": "experiments/experiment0.3/test_users_v0/dataset",
+  "profiles_sha256": {
+    "user01": "46738d9a19d2e3d54b9ce50b9ab55a624a4940bbd796a4735d0fd28135d355b7",
+    "user02": "ff23af68bd65ae54fd596d123b0e8b81129892da7602bc6d9f20521d839263e0",
+    "user03": "2464d1b496bf3c88c4136b79eb1700d44ec0722e589b7e23c31fd638311e8191",
+    "user04": "377ed9120f743e5166efa8a98cfec393e25e75110ec78a159ba0d7f0b6773be8",
+    "user05": "9f55ef12ef04cebe246b9636cf282d9a30126603424392a8a7e0e8581837251e",
+    "user06": "7832d5275171f4a49d7982b7ab9ab82169741bf45c569586ea2123b790cf0d96",
+    "user07": "9f080814f2d8a8107473ce83823d7f14a71f39adfb24efe535534c43af6728fd",
+    "user08": "3cb3a6eb177e2fdeb9efae5ef9c24289a682b3c41b4b5fdde628b58d783d60a5",
+    "user09": "d5606d4ee289762e2fe25e595bc4e499aab1daaf28ee1c0da945b2e14786a157",
+    "user10": "b021ba9beb8bb2517e81c40df2adbdff925205f7a40b884da95a24ad6b7a4652",
+    "user11": "526734aa95368abfb9489a1ba56b94a3edfdedacf5bf1047c4cf15cc7be38fa7",
+    "user12": "137d2f8450e241f5f6e38e303f1e798911430eefa188e0350816571a6ec1034a"
+  },
+  "training_checkpoint_source_commit": "bf6422316125c6a8376d5e7da18e3582c9747311",
+  "frozen_test_policy": "No training or tuning on test users. Evaluate frozen and saved GRPO checkpoint.",
+  "limitations": "Fresh users/session seeds, same schema/templates and fixed temporal probes. Canonical full-note SFT references from cumulative revealed prefix; no teacher-forced previous gold memory."
+}
